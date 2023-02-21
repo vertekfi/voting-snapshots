@@ -1,0 +1,1037 @@
+[
+  {
+    "who": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "when": "Thu, 09 Feb 2023 00:07:07 GMT",
+    "whenTimestamp": 1675901227,
+    "weightUsed": 1500,
+    "gauge": "0xb5c57d37cc7cCEC7Cf22836A087DEC280daB99f5",
+    "blockNumber": 25502739,
+    "txHash": "0x644e65bf99fd3a181700256b7fc3914c887a824ef36409bbd8e75185db7dcf46"
+  },
+  {
+    "who": "0xB0C4B5f561147B63CFA81F502113c18a8b8C8643",
+    "when": "Thu, 09 Feb 2023 00:10:28 GMT",
+    "whenTimestamp": 1675901428,
+    "weightUsed": 10000,
+    "gauge": "0x355827abb16998a07700FAF52AeE09f2b01Fad4C",
+    "blockNumber": 25502806,
+    "txHash": "0xe03cfbec1f41b521d24ee647439b1881c267a7099227d8b8638265920a80fe67"
+  },
+  {
+    "who": "0x111fbf7b389e024d09F35fb091D7D4479b321B0A",
+    "when": "Thu, 09 Feb 2023 01:49:51 GMT",
+    "whenTimestamp": 1675907391,
+    "weightUsed": 9000,
+    "gauge": "0xFf71E6499f492Ce41c84Eefbf727774165dC5aBa",
+    "blockNumber": 25504791,
+    "txHash": "0x63c6bb31d6cdbdd2115ef688a2a1c3fa42e39de014d37b117a3863f3b474e705"
+  },
+  {
+    "who": "0x9FCeeE71BB655746180795C7A7c276118e8488c3",
+    "when": "Thu, 09 Feb 2023 03:37:13 GMT",
+    "whenTimestamp": 1675913833,
+    "weightUsed": 10000,
+    "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+    "blockNumber": 25506905,
+    "txHash": "0x2284a9c7bb8af0165ba0428d56cd41c0bb9aa1f2ea410a723a610156712fc964"
+  },
+  {
+    "who": "0x170Ca91deeEF8141e57881f8566Ff6Aaa291320d",
+    "when": "Thu, 09 Feb 2023 03:41:01 GMT",
+    "whenTimestamp": 1675914061,
+    "weightUsed": 10000,
+    "gauge": "0x355827abb16998a07700FAF52AeE09f2b01Fad4C",
+    "blockNumber": 25506981,
+    "txHash": "0x639f29fb1145bbb8be57ae5a18d6c36121bfeab10280edfacd454d96cb6c1c1f"
+  },
+  {
+    "who": "0x861143467Af3520607aABbD023675039C3cd0367",
+    "when": "Thu, 09 Feb 2023 04:56:27 GMT",
+    "whenTimestamp": 1675918587,
+    "weightUsed": 10000,
+    "gauge": "0x355827abb16998a07700FAF52AeE09f2b01Fad4C",
+    "blockNumber": 25508454,
+    "txHash": "0xd1988f144cf72cfe24769de8b5997c6b3d5369d5337ebc5c9c30fe6ae0a521f9"
+  },
+  {
+    "who": "0x3c58860b8019E6455A8dfdebE6eA845Ef9b3e3a0",
+    "when": "Thu, 09 Feb 2023 18:16:37 GMT",
+    "whenTimestamp": 1675966597,
+    "weightUsed": 5000,
+    "gauge": "0x7916972323a4e881eF4b12c6c6AED6e0C5C6377E",
+    "blockNumber": 25524340,
+    "txHash": "0xddae6914b6ca6dca2e22f02ed6aa16ccfada8c1a5e7a8d9dcefcd8cd877134b4"
+  },
+  {
+    "who": "0x3c58860b8019E6455A8dfdebE6eA845Ef9b3e3a0",
+    "when": "Thu, 09 Feb 2023 18:17:04 GMT",
+    "whenTimestamp": 1675966624,
+    "weightUsed": 5000,
+    "gauge": "0x9E7dF5b7B29d46B10C28b4AB5fb0E7b6A4ffAE55",
+    "blockNumber": 25524349,
+    "txHash": "0xecf4099caa38a606945c6e210ee3e05bd5fddcfa71a488c9a0c3b173abfad620"
+  },
+  {
+    "who": "0xD6dc4a8465b36E4AF645dd83a39c5ccc18B22313",
+    "when": "Thu, 09 Feb 2023 21:45:14 GMT",
+    "whenTimestamp": 1675979114,
+    "weightUsed": 5000,
+    "gauge": "0xb5c57d37cc7cCEC7Cf22836A087DEC280daB99f5",
+    "blockNumber": 25528485,
+    "txHash": "0x5311b28d85fa5966ad0d5479f0369007345d9600f2e6da608a9fc513ff7876c8"
+  },
+  {
+    "who": "0xD6dc4a8465b36E4AF645dd83a39c5ccc18B22313",
+    "when": "Thu, 09 Feb 2023 21:45:32 GMT",
+    "whenTimestamp": 1675979132,
+    "weightUsed": 5000,
+    "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+    "blockNumber": 25528491,
+    "txHash": "0xa98e75f939d168c335ef080312017b669816d8cde0e07e4713e0921836e25587"
+  },
+  {
+    "who": "0x91C05e14F60c759398056EC06c1e44EB0d431817",
+    "when": "Thu, 09 Feb 2023 22:22:19 GMT",
+    "whenTimestamp": 1675981339,
+    "weightUsed": 10000,
+    "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+    "blockNumber": 25529223,
+    "txHash": "0xd8ee29d521687fe26e8ea1a6529ff4a0ae7cfa74c62c3d488e9d89a55855987b"
+  },
+  {
+    "who": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+    "when": "Thu, 09 Feb 2023 22:43:38 GMT",
+    "whenTimestamp": 1675982618,
+    "weightUsed": 10000,
+    "gauge": "0x7916972323a4e881eF4b12c6c6AED6e0C5C6377E",
+    "blockNumber": 25529639,
+    "txHash": "0x6823b6c48e38776a5967c01929a8beb18ae856545940c1902925060f9f0076d1"
+  },
+  {
+    "who": "0xb234182Bd57526686CD6DB545c34dAa04942DAa8",
+    "when": "Fri, 10 Feb 2023 03:19:13 GMT",
+    "whenTimestamp": 1675999153,
+    "weightUsed": 10000,
+    "gauge": "0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0",
+    "blockNumber": 25535056,
+    "txHash": "0xd9ad5006ae2f4fe7b036a29c4fde2e030b0450989f89ed8b35a62a2ad65136f1"
+  },
+  {
+    "who": "0xd8b87A01980eB792e3BC030bDEc42Db2b9B5CBfc",
+    "when": "Fri, 10 Feb 2023 03:52:43 GMT",
+    "whenTimestamp": 1676001163,
+    "weightUsed": 10000,
+    "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+    "blockNumber": 25535710,
+    "txHash": "0x9f30fd5883f6c8cfb77530728d6c484d7d57596eacf543e79e4e25d70f12e021"
+  },
+  {
+    "who": "0xCe53076A174312c06dAfA8dDCcD826Ff2e76500c",
+    "when": "Fri, 10 Feb 2023 04:42:31 GMT",
+    "whenTimestamp": 1676004151,
+    "weightUsed": 10000,
+    "gauge": "0x9C4e2444d40508dF540466cCBD83855e39E5972B",
+    "blockNumber": 25536696,
+    "txHash": "0x9ceb54b60411294497fb546e400a30e336ede7329011df1af36147cea4b3f09d"
+  },
+  {
+    "who": "0xd7B470De6FdAD29aDa4d52FEe70D7CaeAc3C21fB",
+    "when": "Fri, 10 Feb 2023 06:21:36 GMT",
+    "whenTimestamp": 1676010096,
+    "weightUsed": 10000,
+    "gauge": "0x7916972323a4e881eF4b12c6c6AED6e0C5C6377E",
+    "blockNumber": 25538654,
+    "txHash": "0x4d35c9a87f5932cd9a92f27bf624315a552d31a30d0e6ea8b65d6201a81c9e81"
+  },
+  {
+    "who": "0x019C16CA8633Ea36b94a87C5eDCcEb6E2BF20a1c",
+    "when": "Fri, 10 Feb 2023 15:16:45 GMT",
+    "whenTimestamp": 1676042205,
+    "weightUsed": 10000,
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "blockNumber": 25549248,
+    "txHash": "0x77e393d93cc394c64e0542a86d81dbba40c2ee53a6cd07f174e9ea0c5e8d0560"
+  },
+  {
+    "who": "0x05aB06939adB5A0c4C5B5e4E35716296e69e456B",
+    "when": "Fri, 10 Feb 2023 17:18:17 GMT",
+    "whenTimestamp": 1676049497,
+    "weightUsed": 5000,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25551674,
+    "txHash": "0x26e50d1933635023029fdfc9f1d6a95bf3b2afb539aa036106c6cfbf1a671ab7"
+  },
+  {
+    "who": "0x05aB06939adB5A0c4C5B5e4E35716296e69e456B",
+    "when": "Fri, 10 Feb 2023 17:18:38 GMT",
+    "whenTimestamp": 1676049518,
+    "weightUsed": 5000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25551681,
+    "txHash": "0x9e5f1a7a6fac3ebdbf83e087d4dd82fbe37655a3a871e9880c9cc9b397872a61"
+  },
+  {
+    "who": "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E",
+    "when": "Fri, 10 Feb 2023 18:22:09 GMT",
+    "whenTimestamp": 1676053329,
+    "weightUsed": 5000,
+    "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+    "blockNumber": 25552951,
+    "txHash": "0x8ada8cfe315965758679a65b2d96a61dcca74679bf910b2c49063e3624014da3"
+  },
+  {
+    "who": "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E",
+    "when": "Fri, 10 Feb 2023 18:22:24 GMT",
+    "whenTimestamp": 1676053344,
+    "weightUsed": 5000,
+    "gauge": "0xb49e0053C1d6ccF4250FCD21F3906f624727b722",
+    "blockNumber": 25552956,
+    "txHash": "0x237dce70bb19078c157068aa676cf765f1b26bbfa32d1d7f668eccefd511486a"
+  },
+  {
+    "who": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "when": "Fri, 10 Feb 2023 19:11:02 GMT",
+    "whenTimestamp": 1676056262,
+    "weightUsed": 400,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25553913,
+    "txHash": "0x599937d445e5f431de54278a261e2d4c5c4e8b9a10aa43167e2117f97b2b3132"
+  },
+  {
+    "who": "0xe547446348DF88a45ddF14c8EA7474C714850281",
+    "when": "Fri, 10 Feb 2023 19:17:06 GMT",
+    "whenTimestamp": 1676056626,
+    "weightUsed": 2000,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25554017,
+    "txHash": "0x4bb658ff1f94c69e5c1af4dbf85416a6ec291132aeb061e32dbe47fa08b2c9b9"
+  },
+  {
+    "who": "0xe547446348DF88a45ddF14c8EA7474C714850281",
+    "when": "Fri, 10 Feb 2023 19:17:28 GMT",
+    "whenTimestamp": 1676056648,
+    "weightUsed": 2500,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25554024,
+    "txHash": "0x40cdac9f00d1089ba24163680c359e4345c9e0791f58c1d56680a08b0267d84e"
+  },
+  {
+    "who": "0xF24A6E2E1971b006f72a2eA061A45E1961F46189",
+    "when": "Fri, 10 Feb 2023 20:22:25 GMT",
+    "whenTimestamp": 1676060545,
+    "weightUsed": 10000,
+    "gauge": "0x7916972323a4e881eF4b12c6c6AED6e0C5C6377E",
+    "blockNumber": 25555295,
+    "txHash": "0xf75445314425e5590629cb4dfc8b9d68250ae5c384a9cde0314ff0fe98a51552"
+  },
+  {
+    "who": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+    "when": "Fri, 10 Feb 2023 22:06:33 GMT",
+    "whenTimestamp": 1676066793,
+    "weightUsed": 10000,
+    "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+    "blockNumber": 25557372,
+    "txHash": "0x262c5ea2808b1c71dbe83111ae71843c9240ce5b5e7df233185e604ceb056ce5"
+  },
+  {
+    "who": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+    "when": "Fri, 10 Feb 2023 23:52:33 GMT",
+    "whenTimestamp": 1676073153,
+    "weightUsed": 1000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25559475,
+    "txHash": "0xff8ed981a09d70afbc05eafa337d7b563358a54f0153069824c448a47deee9a6"
+  },
+  {
+    "who": "0x798053C2314e944cF3595C8175116d406a5CE717",
+    "when": "Fri, 10 Feb 2023 23:54:45 GMT",
+    "whenTimestamp": 1676073285,
+    "weightUsed": 10000,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25559519,
+    "txHash": "0xe29158d9ad8ce714edc1803b74ce6a7a5b57b61f75029d4544802d31714b1c9b"
+  },
+  {
+    "who": "0x19b893a8c7C49407420e856aa38C84B4f046C8d0",
+    "when": "Sat, 11 Feb 2023 04:15:31 GMT",
+    "whenTimestamp": 1676088931,
+    "weightUsed": 10000,
+    "gauge": "0x9C4e2444d40508dF540466cCBD83855e39E5972B",
+    "blockNumber": 25564657,
+    "txHash": "0xdcfd1b32e4fa1d3ead90b5fc0451119a41cc492235b3aa91e654dec32e221fa9"
+  },
+  {
+    "who": "0x193Ec8449E83EaaF3b8c8235821b6846d5Aa8b23",
+    "when": "Sat, 11 Feb 2023 07:17:11 GMT",
+    "whenTimestamp": 1676099831,
+    "weightUsed": 10000,
+    "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+    "blockNumber": 25568279,
+    "txHash": "0xc4b543438442f050ca4289722f889dd65d44f10c41dff56211b71da86758f34d"
+  },
+  {
+    "who": "0x60BBb1c69977e3648811c74B6aA3D2fD43322083",
+    "when": "Sat, 11 Feb 2023 12:23:30 GMT",
+    "whenTimestamp": 1676118210,
+    "weightUsed": 10000,
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "blockNumber": 25574357,
+    "txHash": "0xf6fb441bbd21a4155b94c03f2c000570b1b2c77cb5202b2d003ad9b0a260757a"
+  },
+  {
+    "who": "0x8089186e8B3f7d79B8AEaB6D6d120C4214D464e8",
+    "when": "Sat, 11 Feb 2023 13:41:46 GMT",
+    "whenTimestamp": 1676122906,
+    "weightUsed": 5000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25575897,
+    "txHash": "0x51be7d88ec6666595a04151d1fc6d0230f95a5e6474abdd38ff9a98c0c73bf3e"
+  },
+  {
+    "who": "0x154A1799C339F1D2EaB56b46A5985D79F9C42874",
+    "when": "Sat, 11 Feb 2023 22:28:17 GMT",
+    "whenTimestamp": 1676154497,
+    "weightUsed": 7000,
+    "gauge": "0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0",
+    "blockNumber": 25586352,
+    "txHash": "0xa54234748e09ed3cbad9470136d17f30f310fb6c9dd1a2846213b24d39fc7f8a"
+  },
+  {
+    "who": "0x154A1799C339F1D2EaB56b46A5985D79F9C42874",
+    "when": "Sat, 11 Feb 2023 22:28:53 GMT",
+    "whenTimestamp": 1676154533,
+    "weightUsed": 3000,
+    "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+    "blockNumber": 25586364,
+    "txHash": "0xd869ecff9e30d0fa81de4a1b6a07a737217cd0bb0e6b66f9fcf61cb4bcead3c0"
+  },
+  {
+    "who": "0x453227d4be3D8aB37F38E71a266ACF7A71d76173",
+    "when": "Sat, 11 Feb 2023 22:32:02 GMT",
+    "whenTimestamp": 1676154722,
+    "weightUsed": 5000,
+    "gauge": "0x7916972323a4e881eF4b12c6c6AED6e0C5C6377E",
+    "blockNumber": 25586427,
+    "txHash": "0x73d33449c9f19f5db38fa8d50b2f746143faa83eaae99af3d5b3821fa47a2b04"
+  },
+  {
+    "who": "0x453227d4be3D8aB37F38E71a266ACF7A71d76173",
+    "when": "Sat, 11 Feb 2023 22:32:23 GMT",
+    "whenTimestamp": 1676154743,
+    "weightUsed": 5000,
+    "gauge": "0x9E7dF5b7B29d46B10C28b4AB5fb0E7b6A4ffAE55",
+    "blockNumber": 25586434,
+    "txHash": "0x542a31ca40b6d44cb55b62d61963106e31d34abe286466bcdfa9a17cab9312c5"
+  },
+  {
+    "who": "0x6d1B0BA383CD362F180cCFe01733b19260cA2459",
+    "when": "Sun, 12 Feb 2023 02:31:43 GMT",
+    "whenTimestamp": 1676169103,
+    "weightUsed": 10000,
+    "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+    "blockNumber": 25591216,
+    "txHash": "0xa26ff2a9c17194a5c0b0b196514ca5f91867d9abd686c1202311805695d02c50"
+  },
+  {
+    "who": "0xB7BbEa1200426defa0b7b76E3D23CF3DFDfBF21A",
+    "when": "Sun, 12 Feb 2023 08:52:49 GMT",
+    "whenTimestamp": 1676191969,
+    "weightUsed": 10000,
+    "gauge": "0xb49e0053C1d6ccF4250FCD21F3906f624727b722",
+    "blockNumber": 25598801,
+    "txHash": "0x5ca65e9d54fc0c0e3f650039c865ea2ef1eb95aca467622bc2dd1b8a9f604396"
+  },
+  {
+    "who": "0xf7fa6A0642E2593F7BDd7b2E0A2673600d53BBE9",
+    "when": "Sun, 12 Feb 2023 11:04:47 GMT",
+    "whenTimestamp": 1676199887,
+    "weightUsed": 3500,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25601426,
+    "txHash": "0xe6e5cbf44b3744a2fe6aad0e48d15a335ad66a453d544605a848c675a9ae2608"
+  },
+  {
+    "who": "0xf7fa6A0642E2593F7BDd7b2E0A2673600d53BBE9",
+    "when": "Sun, 12 Feb 2023 11:04:53 GMT",
+    "whenTimestamp": 1676199893,
+    "weightUsed": 3500,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25601428,
+    "txHash": "0x34394f0623964a77fe6a1b2fca3e3c80db99dfa3c3953a24bd941675797c60fe"
+  },
+  {
+    "who": "0x3C135760b7d7759689a41f3eFD24a18eE453F199",
+    "when": "Sun, 12 Feb 2023 11:05:26 GMT",
+    "whenTimestamp": 1676199926,
+    "weightUsed": 5000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25601439,
+    "txHash": "0x623e9844ef1437e3879b09ace8f156140077b9543ba88767362fee65d8f03752"
+  },
+  {
+    "who": "0x3C135760b7d7759689a41f3eFD24a18eE453F199",
+    "when": "Sun, 12 Feb 2023 11:05:38 GMT",
+    "whenTimestamp": 1676199938,
+    "weightUsed": 5000,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25601443,
+    "txHash": "0xb93e1c7d03385d74fa4ce50787948bb9008db4ae5582bbda40b94e771bb12876"
+  },
+  {
+    "who": "0x0075e788EB9cD476C2f2c13c0c7ef6e52DA8fcbF",
+    "when": "Sun, 12 Feb 2023 18:06:40 GMT",
+    "whenTimestamp": 1676225200,
+    "weightUsed": 10000,
+    "gauge": "0x9E7dF5b7B29d46B10C28b4AB5fb0E7b6A4ffAE55",
+    "blockNumber": 25609741,
+    "txHash": "0x2b57376ed02265334f3e27a177567295fd499849ef533640ddfc43ed2b8abfca"
+  },
+  {
+    "who": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+    "when": "Mon, 13 Feb 2023 07:10:29 GMT",
+    "whenTimestamp": 1676272229,
+    "weightUsed": 10000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25625269,
+    "txHash": "0x5fc614b7a60313a7d3ccd247afa5008fcea9017904b7fd3a2b98738a4f35aacf"
+  },
+  {
+    "who": "0x37e014215902BA306dA13464A613F2E38578A6d0",
+    "when": "Mon, 13 Feb 2023 19:24:29 GMT",
+    "whenTimestamp": 1676316269,
+    "weightUsed": 10000,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25639855,
+    "txHash": "0x789660548f8b3529745a25e35a40971ff773d37a896c8ef7c7e89935721f66bc"
+  },
+  {
+    "who": "0x8809D43470541aEB1a201BC2eD05a390Adb2F080",
+    "when": "Tue, 14 Feb 2023 00:32:48 GMT",
+    "whenTimestamp": 1676334768,
+    "weightUsed": 10000,
+    "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+    "blockNumber": 25645993,
+    "txHash": "0x86a5f53112c58e8979ec014c10ae5e44e5184d1250d2bde91c6b138118b2ffc3"
+  },
+  {
+    "who": "0xc748A0E296E261251cd0d08d5a8d18bbCD999E33",
+    "when": "Tue, 14 Feb 2023 12:31:27 GMT",
+    "whenTimestamp": 1676377887,
+    "weightUsed": 10000,
+    "gauge": "0xEAaECFEc3DC43c1702A477D8CbC7c92749adCD87",
+    "blockNumber": 25660206,
+    "txHash": "0x4f98db240f6a403afc1ebeeff042b858b3c05f9c35e765bb1cdea2f7bf0d6431"
+  },
+  {
+    "who": "0xA3a758D2Bb94db24d5A6Ebe3e002f59F592d61f6",
+    "when": "Tue, 14 Feb 2023 14:43:18 GMT",
+    "whenTimestamp": 1676385798,
+    "weightUsed": 600,
+    "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+    "blockNumber": 25662808,
+    "txHash": "0x9da44c4e63b74a3ee736f710c12a937646d5f3d2de76067305f265f74aa0a25f"
+  },
+  {
+    "who": "0xA3a758D2Bb94db24d5A6Ebe3e002f59F592d61f6",
+    "when": "Tue, 14 Feb 2023 14:45:21 GMT",
+    "whenTimestamp": 1676385921,
+    "weightUsed": 200,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25662849,
+    "txHash": "0xa0208a2a0dba220b201a91e897e715aa4363f79187f0d9f7086d90da7b297401"
+  },
+  {
+    "who": "0xA3a758D2Bb94db24d5A6Ebe3e002f59F592d61f6",
+    "when": "Tue, 14 Feb 2023 14:46:24 GMT",
+    "whenTimestamp": 1676385984,
+    "weightUsed": 400,
+    "gauge": "0x9C4e2444d40508dF540466cCBD83855e39E5972B",
+    "blockNumber": 25662870,
+    "txHash": "0xea32b9dd1c0a4688777419e779b67e3e58710e22ce6cfcaa1dea09f3179f9a8b"
+  },
+  {
+    "who": "0xf29fD03Df2Cb7F81d8Ae4d10A76f8b1C898786BD",
+    "when": "Tue, 14 Feb 2023 19:01:16 GMT",
+    "whenTimestamp": 1676401276,
+    "weightUsed": 10000,
+    "gauge": "0xFf71E6499f492Ce41c84Eefbf727774165dC5aBa",
+    "blockNumber": 25667914,
+    "txHash": "0xeb38e4023e5f4eb730818e172cf9d6f44fbd6de473460c33216387ad48d8d4ba"
+  },
+  {
+    "who": "0x0ABb6AA27f464D9B9d21a2b0d9Ef251AC79C242F",
+    "when": "Tue, 14 Feb 2023 21:50:32 GMT",
+    "whenTimestamp": 1676411432,
+    "weightUsed": 10000,
+    "gauge": "0xEAaECFEc3DC43c1702A477D8CbC7c92749adCD87",
+    "blockNumber": 25671277,
+    "txHash": "0xbbd59778412c641d5000d2e6a4a1948ddf3e5b65ffab1a758bba24bc0f141700"
+  },
+  {
+    "who": "0x3Db931AF572B1389DFB712a9fbD2026C283B4910",
+    "when": "Wed, 15 Feb 2023 10:08:48 GMT",
+    "whenTimestamp": 1676455728,
+    "weightUsed": 5000,
+    "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+    "blockNumber": 25685841,
+    "txHash": "0x4c35ee223d81f6e1ce809c5c60286fd54366b4f6207b5d0f03f5965568918f63"
+  },
+  {
+    "who": "0x3Db931AF572B1389DFB712a9fbD2026C283B4910",
+    "when": "Wed, 15 Feb 2023 10:09:12 GMT",
+    "whenTimestamp": 1676455752,
+    "weightUsed": 5000,
+    "gauge": "0xb49e0053C1d6ccF4250FCD21F3906f624727b722",
+    "blockNumber": 25685849,
+    "txHash": "0x3d6775a47d5dc4dace332c424470e7ed15564cbc49efbcf74792887ebc1da76f"
+  },
+  {
+    "who": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+    "when": "Wed, 15 Feb 2023 15:54:25 GMT",
+    "whenTimestamp": 1676476465,
+    "weightUsed": 0,
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "blockNumber": 25692643,
+    "txHash": "0x79b8477e68a7004494b37a0b93db85166b4a2366b4b8be9d42461529ff9d14ad"
+  },
+  {
+    "who": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "when": "Wed, 15 Feb 2023 16:07:06 GMT",
+    "whenTimestamp": 1676477226,
+    "weightUsed": 2000,
+    "gauge": "0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0",
+    "blockNumber": 25692886,
+    "txHash": "0xe8c6f910f9eee8bab7a28dd585b9998b7030437d52bdeb7ffc311e92c44730ca"
+  },
+  {
+    "who": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "when": "Wed, 15 Feb 2023 16:11:18 GMT",
+    "whenTimestamp": 1676477478,
+    "weightUsed": 0,
+    "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+    "blockNumber": 25692970,
+    "txHash": "0xa252376f1a1c21972574f3cb21fd17b434b96247f5541a717237c96a3d50379a"
+  },
+  {
+    "who": "0x2e86D29cFea7c4f422f7fCCF97986bbBa03e1a7F",
+    "when": "Wed, 15 Feb 2023 16:17:48 GMT",
+    "whenTimestamp": 1676477868,
+    "weightUsed": 2500,
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "blockNumber": 25693100,
+    "txHash": "0x71f94ebb2dcd313b6824c6a9091a4d4b25a76e0a716bae648c01973f1f6cdf4e"
+  },
+  {
+    "who": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "when": "Wed, 15 Feb 2023 16:34:18 GMT",
+    "whenTimestamp": 1676478858,
+    "weightUsed": 0,
+    "gauge": "0xacF489Bf54F6CC6bB8b910179Ee8509d19A738BA",
+    "blockNumber": 25693424,
+    "txHash": "0x9550e56686be559bdd3721ee1e02875fe7e602c1b91088d8cbc954488cc99079"
+  },
+  {
+    "who": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "when": "Wed, 15 Feb 2023 16:37:15 GMT",
+    "whenTimestamp": 1676479035,
+    "weightUsed": 2500,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25693483,
+    "txHash": "0xefbfeb47fd3c0e8b3c2086c878b263000703a3dcbbeeac913bbb430f47ae7c70"
+  },
+  {
+    "who": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "when": "Wed, 15 Feb 2023 16:39:33 GMT",
+    "whenTimestamp": 1676479173,
+    "weightUsed": 0,
+    "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+    "blockNumber": 25693529,
+    "txHash": "0x7d8d746e1cf1a8ead04c05728e80c072b1e79b1cc3b7a3af9e628c7f12623a85"
+  },
+  {
+    "who": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "when": "Wed, 15 Feb 2023 16:39:45 GMT",
+    "whenTimestamp": 1676479185,
+    "weightUsed": 3000,
+    "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+    "blockNumber": 25693533,
+    "txHash": "0x8577f085b391a2a93e89388d46d647256434de811d039d9c377874d78dab6d9b"
+  },
+  {
+    "who": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "when": "Wed, 15 Feb 2023 18:07:36 GMT",
+    "whenTimestamp": 1676484456,
+    "weightUsed": 0,
+    "gauge": "0xEAaECFEc3DC43c1702A477D8CbC7c92749adCD87",
+    "blockNumber": 25695265,
+    "txHash": "0x6410fc31a84a7e23121f473329d7e064863dacbe4df19b9e065dc3e9fdf8c55e"
+  },
+  {
+    "who": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "when": "Wed, 15 Feb 2023 18:08:54 GMT",
+    "whenTimestamp": 1676484534,
+    "weightUsed": 1000,
+    "gauge": "0x355827abb16998a07700FAF52AeE09f2b01Fad4C",
+    "blockNumber": 25695291,
+    "txHash": "0x347753683ebccad8041dcdd6205ba1368e48a2d00ced9822814c66de5f7d2fc2"
+  },
+  {
+    "who": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "when": "Wed, 15 Feb 2023 18:09:03 GMT",
+    "whenTimestamp": 1676484543,
+    "weightUsed": 1000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25695294,
+    "txHash": "0x8ddedc3a14ca7b93501c8459b0ab761bcf50ec55448fe5ce76ec3317a2c72cef"
+  },
+  {
+    "who": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "when": "Wed, 15 Feb 2023 18:09:09 GMT",
+    "whenTimestamp": 1676484549,
+    "weightUsed": 1000,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25695296,
+    "txHash": "0xf36b8fddf99d248f52b44e7774db55d4502edaf976ab45774b435cc4c759fc65"
+  },
+  {
+    "who": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "when": "Wed, 15 Feb 2023 18:09:24 GMT",
+    "whenTimestamp": 1676484564,
+    "weightUsed": 1000,
+    "gauge": "0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0",
+    "blockNumber": 25695301,
+    "txHash": "0x4bc4959505a340903127faf212503b16aa30177d164b3ced12e2dc03f7e1f254"
+  },
+  {
+    "who": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "when": "Wed, 15 Feb 2023 18:09:30 GMT",
+    "whenTimestamp": 1676484570,
+    "weightUsed": 1000,
+    "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+    "blockNumber": 25695303,
+    "txHash": "0x40a5093a3cb1c61b39dc10600a80166c21bf076cce06541f7b317f1b4deee8b8"
+  },
+  {
+    "who": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "when": "Wed, 15 Feb 2023 18:18:39 GMT",
+    "whenTimestamp": 1676485119,
+    "weightUsed": 2500,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25695486,
+    "txHash": "0xb24cfd46b92d027e982471b1113508b8e423a4fd1c7b9fd2ed4014ad06c8059d"
+  },
+  {
+    "who": "0xe547446348DF88a45ddF14c8EA7474C714850281",
+    "when": "Wed, 15 Feb 2023 18:30:06 GMT",
+    "whenTimestamp": 1676485806,
+    "weightUsed": 500,
+    "gauge": "0xb5c57d37cc7cCEC7Cf22836A087DEC280daB99f5",
+    "blockNumber": 25695715,
+    "txHash": "0x498e8e7f75047b43f6e00ab574ad6823fe3fc62cd50275e4d1444343bcb4d546"
+  },
+  {
+    "who": "0xBa9f68316932aE306806df192455e011aF78ea1a",
+    "when": "Wed, 15 Feb 2023 18:35:27 GMT",
+    "whenTimestamp": 1676486127,
+    "weightUsed": 0,
+    "gauge": "0xacF489Bf54F6CC6bB8b910179Ee8509d19A738BA",
+    "blockNumber": 25695822,
+    "txHash": "0x2fb6363ce365c7c41b22ea24c72a81d187be06d9170b01804d6ea5df03b8dd93"
+  },
+  {
+    "who": "0xBa9f68316932aE306806df192455e011aF78ea1a",
+    "when": "Wed, 15 Feb 2023 19:24:42 GMT",
+    "whenTimestamp": 1676489082,
+    "weightUsed": 3300,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25696806,
+    "txHash": "0x8943812d51b58f2ed186a63e29e1b820a195e965cf2991a2be95ca654e4cd79d"
+  },
+  {
+    "who": "0x4B0E0a664d5763Ba8d2aD434a4A565DC0D409900",
+    "when": "Wed, 15 Feb 2023 19:55:57 GMT",
+    "whenTimestamp": 1676490957,
+    "weightUsed": 0,
+    "gauge": "0x7916972323a4e881eF4b12c6c6AED6e0C5C6377E",
+    "blockNumber": 25697426,
+    "txHash": "0xcf50780bac6f4aa359a88c4e2f860e994b9bd533b638be2cad3236b6b969e381"
+  },
+  {
+    "who": "0x4B0E0a664d5763Ba8d2aD434a4A565DC0D409900",
+    "when": "Wed, 15 Feb 2023 19:56:45 GMT",
+    "whenTimestamp": 1676491005,
+    "weightUsed": 10000,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25697442,
+    "txHash": "0x25e92005060cf17b3ff92d77dcd253f1dbce76d3cd2f48627c1e83191fa8a828"
+  },
+  {
+    "who": "0xd5C49c80cBeA2d5af7C4BEe4Ac2ce3f85A34A899",
+    "when": "Wed, 15 Feb 2023 20:01:24 GMT",
+    "whenTimestamp": 1676491284,
+    "weightUsed": 10000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25697535,
+    "txHash": "0x8bf75c86ebd1e2426847224d8757f0afc157031911bff4391d09a98e41b9aabe"
+  },
+  {
+    "who": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+    "when": "Wed, 15 Feb 2023 20:09:03 GMT",
+    "whenTimestamp": 1676491743,
+    "weightUsed": 5000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25697688,
+    "txHash": "0x527b37550440039f8f4ab9903851c063019b32c8bffcc666bf346039a2d5822a"
+  },
+  {
+    "who": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+    "when": "Wed, 15 Feb 2023 20:09:24 GMT",
+    "whenTimestamp": 1676491764,
+    "weightUsed": 5000,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25697695,
+    "txHash": "0xc2a4d7aeea09566825e131a727b37bf567b2b37e097a5e05ca4c104ee6d4d893"
+  },
+  {
+    "who": "0xC3530D160B48F19c14FEc76F4C206441bA265c95",
+    "when": "Wed, 15 Feb 2023 20:09:27 GMT",
+    "whenTimestamp": 1676491767,
+    "weightUsed": 0,
+    "gauge": "0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0",
+    "blockNumber": 25697696,
+    "txHash": "0x650a52fda620047fbc81776588de738f5a88cc111ebe82f6a71b24eba9ce10fb"
+  },
+  {
+    "who": "0xC3530D160B48F19c14FEc76F4C206441bA265c95",
+    "when": "Wed, 15 Feb 2023 20:09:57 GMT",
+    "whenTimestamp": 1676491797,
+    "weightUsed": 10000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25697706,
+    "txHash": "0x6753d7b61564973e32b117cccca62d74325c409a2d0b96631a29e4c0202d1fdb"
+  },
+  {
+    "who": "0xeDc8e3b2aE699a23D4A6D73E2171acAc809156eE",
+    "when": "Wed, 15 Feb 2023 20:13:09 GMT",
+    "whenTimestamp": 1676491989,
+    "weightUsed": 5000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25697770,
+    "txHash": "0x534ea80c36cd12656cb95c6f6060838ccaff3f61e0e8cdd4a65c1f2235d2e32b"
+  },
+  {
+    "who": "0xeDc8e3b2aE699a23D4A6D73E2171acAc809156eE",
+    "when": "Wed, 15 Feb 2023 20:13:39 GMT",
+    "whenTimestamp": 1676492019,
+    "weightUsed": 5000,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25697780,
+    "txHash": "0xd83d7e5e1302677b443512e11d881b1b16d0ecff6ffca62278d2ba742b4e55da"
+  },
+  {
+    "who": "0xA12Be400f22C8cb89e29cD95a4031420374B5E8c",
+    "when": "Wed, 15 Feb 2023 20:20:57 GMT",
+    "whenTimestamp": 1676492457,
+    "weightUsed": 0,
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "blockNumber": 25697926,
+    "txHash": "0x716fe33e6e206530669c0b7f71cd1520ee94cf368cc60a92c3cbb8016f68c84e"
+  },
+  {
+    "who": "0xA12Be400f22C8cb89e29cD95a4031420374B5E8c",
+    "when": "Wed, 15 Feb 2023 20:23:00 GMT",
+    "whenTimestamp": 1676492580,
+    "weightUsed": 10000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25697967,
+    "txHash": "0x0e61bd959fb75888f58f1b06474778539d61abce1d43dca771573c705f6248a9"
+  },
+  {
+    "who": "0xe547446348DF88a45ddF14c8EA7474C714850281",
+    "when": "Wed, 15 Feb 2023 20:24:57 GMT",
+    "whenTimestamp": 1676492697,
+    "weightUsed": 2500,
+    "gauge": "0x9E7dF5b7B29d46B10C28b4AB5fb0E7b6A4ffAE55",
+    "blockNumber": 25698006,
+    "txHash": "0xb2de79e5e4d8d88ecd1fd76a87e0ff4d6475508b0f8c24aa2c64e71eea4ca231"
+  },
+  {
+    "who": "0xe547446348DF88a45ddF14c8EA7474C714850281",
+    "when": "Wed, 15 Feb 2023 20:25:57 GMT",
+    "whenTimestamp": 1676492757,
+    "weightUsed": 500,
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "blockNumber": 25698026,
+    "txHash": "0xdbb4da1ef316f752e8264077d39a41d1250721ea100a1ed1b3612d81c698cb8e"
+  },
+  {
+    "who": "0xe547446348DF88a45ddF14c8EA7474C714850281",
+    "when": "Wed, 15 Feb 2023 20:26:30 GMT",
+    "whenTimestamp": 1676492790,
+    "weightUsed": 500,
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "blockNumber": 25698037,
+    "txHash": "0xbfa2fa897ac1e4fdb2ffd23cdc418894141150b92ffede1ddf80bfce8d4e51ef"
+  },
+  {
+    "who": "0xe547446348DF88a45ddF14c8EA7474C714850281",
+    "when": "Wed, 15 Feb 2023 20:26:39 GMT",
+    "whenTimestamp": 1676492799,
+    "weightUsed": 500,
+    "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+    "blockNumber": 25698040,
+    "txHash": "0x9aab1cb0a99b2f57e00b4353ffa699f44836e982fb498fb673c6a089431e127f"
+  },
+  {
+    "who": "0xe547446348DF88a45ddF14c8EA7474C714850281",
+    "when": "Wed, 15 Feb 2023 20:28:24 GMT",
+    "whenTimestamp": 1676492904,
+    "weightUsed": 500,
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "blockNumber": 25698075,
+    "txHash": "0x451d847e6b6eb9bdc9b574351e81b99140957efe49645511b1b4f34887cb8eaa"
+  },
+  {
+    "who": "0xe547446348DF88a45ddF14c8EA7474C714850281",
+    "when": "Wed, 15 Feb 2023 20:29:12 GMT",
+    "whenTimestamp": 1676492952,
+    "weightUsed": 500,
+    "gauge": "0x9C4e2444d40508dF540466cCBD83855e39E5972B",
+    "blockNumber": 25698091,
+    "txHash": "0xb7b23c06348d8742df4fe93631d7657a93e8c8276736aab4667d874b03e780d9"
+  },
+  {
+    "who": "0x5d2F1CAAF44C0ef31E2381b9aA3a7e930084fF68",
+    "when": "Wed, 15 Feb 2023 20:30:33 GMT",
+    "whenTimestamp": 1676493033,
+    "weightUsed": 10000,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25698118,
+    "txHash": "0x45d80049776af76b8efc3be73ddbb54db19f2798613b70ca0e8c6e36d0226447"
+  },
+  {
+    "who": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "when": "Wed, 15 Feb 2023 20:34:27 GMT",
+    "whenTimestamp": 1676493267,
+    "weightUsed": 0,
+    "gauge": "0xEAaECFEc3DC43c1702A477D8CbC7c92749adCD87",
+    "blockNumber": 25698196,
+    "txHash": "0xe73d960863c02611d697b93a3c2a6742df7a06ef2237899f05c68acc10f72fac"
+  },
+  {
+    "who": "0x111fbf7b389e024d09F35fb091D7D4479b321B0A",
+    "when": "Wed, 15 Feb 2023 20:40:48 GMT",
+    "whenTimestamp": 1676493648,
+    "weightUsed": 0,
+    "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+    "blockNumber": 25698323,
+    "txHash": "0xf6d9f70b5104191c05a647d7fa6d72586eaf3acc23eaf4c69f885a82709dfe99"
+  },
+  {
+    "who": "0x111fbf7b389e024d09F35fb091D7D4479b321B0A",
+    "when": "Wed, 15 Feb 2023 20:41:57 GMT",
+    "whenTimestamp": 1676493717,
+    "weightUsed": 1000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25698346,
+    "txHash": "0x6b5a9f0ebe7582040af809047b0d96783f27193e6bc799ef162f5d441ff54509"
+  },
+  {
+    "who": "0xdA7a763BDE6ee9cafc3876eF33D67F8EED7891F7",
+    "when": "Wed, 15 Feb 2023 20:50:23 GMT",
+    "whenTimestamp": 1676494223,
+    "weightUsed": 0,
+    "gauge": "0xacF489Bf54F6CC6bB8b910179Ee8509d19A738BA",
+    "blockNumber": 25698509,
+    "txHash": "0x92e279c15813963580a8e12868aa488d3cddd9eef9cfd3bdbbbac440cf590ef8"
+  },
+  {
+    "who": "0x1a61Bf28f66451bd43E7be5fb788A2B1F5f4231f",
+    "when": "Wed, 15 Feb 2023 20:59:31 GMT",
+    "whenTimestamp": 1676494771,
+    "weightUsed": 0,
+    "gauge": "0x9C4e2444d40508dF540466cCBD83855e39E5972B",
+    "blockNumber": 25698687,
+    "txHash": "0xcc7ba878535fe89d520a12ac1e764f618c924d87b85677831c8d31a8cb5fa2b9"
+  },
+  {
+    "who": "0x1a61Bf28f66451bd43E7be5fb788A2B1F5f4231f",
+    "when": "Wed, 15 Feb 2023 21:00:16 GMT",
+    "whenTimestamp": 1676494816,
+    "weightUsed": 0,
+    "gauge": "0x7916972323a4e881eF4b12c6c6AED6e0C5C6377E",
+    "blockNumber": 25698702,
+    "txHash": "0x30df3dd92de91202d7fd846af5f4e9f59d62ec19c77bec16fc4214732d69656f"
+  },
+  {
+    "who": "0x1a61Bf28f66451bd43E7be5fb788A2B1F5f4231f",
+    "when": "Wed, 15 Feb 2023 21:00:37 GMT",
+    "whenTimestamp": 1676494837,
+    "weightUsed": 5000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25698709,
+    "txHash": "0x4de5611f5bcb2f30319370e0b3caede2507d6a9a4fda5c5097127cea385820b1"
+  },
+  {
+    "who": "0x1a61Bf28f66451bd43E7be5fb788A2B1F5f4231f",
+    "when": "Wed, 15 Feb 2023 21:00:58 GMT",
+    "whenTimestamp": 1676494858,
+    "weightUsed": 5000,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25698716,
+    "txHash": "0xd2fc7f7bd7a119d9fcf73e6a35bf718634259c114d028762fbc4b340705a5643"
+  },
+  {
+    "who": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "when": "Wed, 15 Feb 2023 23:24:06 GMT",
+    "whenTimestamp": 1676503446,
+    "weightUsed": 500,
+    "gauge": "0x9C4e2444d40508dF540466cCBD83855e39E5972B",
+    "blockNumber": 25701574,
+    "txHash": "0xda64d818328f03994be2a1be3623f93be181bc632420469debb9b1160590fec9"
+  },
+  {
+    "who": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "when": "Wed, 15 Feb 2023 23:24:18 GMT",
+    "whenTimestamp": 1676503458,
+    "weightUsed": 1000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25701578,
+    "txHash": "0x9f4a15286e2f4be05657f3cd274268303bb175678ce64677297572747bfa8d9b"
+  },
+  {
+    "who": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "when": "Wed, 15 Feb 2023 23:26:42 GMT",
+    "whenTimestamp": 1676503602,
+    "weightUsed": 100,
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "blockNumber": 25701626,
+    "txHash": "0xc2eb8bafbb1bab9ec604fd400c309f55d6ecf2e2572f049ae2490163115547ef"
+  },
+  {
+    "who": "0xdA7a763BDE6ee9cafc3876eF33D67F8EED7891F7",
+    "when": "Wed, 15 Feb 2023 23:33:30 GMT",
+    "whenTimestamp": 1676504010,
+    "weightUsed": 500,
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "blockNumber": 25701762,
+    "txHash": "0x36597030920f1a22de299346c74392b7482055465e947c2a3b38ec52c6779663"
+  },
+  {
+    "who": "0xdA7a763BDE6ee9cafc3876eF33D67F8EED7891F7",
+    "when": "Wed, 15 Feb 2023 23:34:36 GMT",
+    "whenTimestamp": 1676504076,
+    "weightUsed": 250,
+    "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+    "blockNumber": 25701784,
+    "txHash": "0xcf07c3618010e2e4ba76d7e26ad8c913fdaf979985ca509bd9f6b79baeaec0bf"
+  },
+  {
+    "who": "0xdA7a763BDE6ee9cafc3876eF33D67F8EED7891F7",
+    "when": "Wed, 15 Feb 2023 23:35:24 GMT",
+    "whenTimestamp": 1676504124,
+    "weightUsed": 4250,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25701800,
+    "txHash": "0x12201928a5d0377734a5f8010c3f745231fd1b81afa619d621ed9997bd011760"
+  },
+  {
+    "who": "0xdA7a763BDE6ee9cafc3876eF33D67F8EED7891F7",
+    "when": "Wed, 15 Feb 2023 23:35:58 GMT",
+    "whenTimestamp": 1676504158,
+    "weightUsed": 4000,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25701811,
+    "txHash": "0x9926790b9dc5b60e34ee39ab204702da3763c43422ad6e92db26a2b0eb4ee287"
+  },
+  {
+    "who": "0xdA7a763BDE6ee9cafc3876eF33D67F8EED7891F7",
+    "when": "Wed, 15 Feb 2023 23:36:23 GMT",
+    "whenTimestamp": 1676504183,
+    "weightUsed": 700,
+    "gauge": "0x355827abb16998a07700FAF52AeE09f2b01Fad4C",
+    "blockNumber": 25701819,
+    "txHash": "0xf598cee849991d056740b0a90b979ec955f0168cda625687f8879443231679db"
+  },
+  {
+    "who": "0x0a10753cAc8b635Ee4e049814984cfAFFa367C7b",
+    "when": "Wed, 15 Feb 2023 23:37:44 GMT",
+    "whenTimestamp": 1676504264,
+    "weightUsed": 1600,
+    "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+    "blockNumber": 25701846,
+    "txHash": "0x4c7e86b43f525b553fd27932a6fe4a80baeb1d072cf1942cc88e26794ff944ca"
+  },
+  {
+    "who": "0x0a10753cAc8b635Ee4e049814984cfAFFa367C7b",
+    "when": "Wed, 15 Feb 2023 23:38:32 GMT",
+    "whenTimestamp": 1676504312,
+    "weightUsed": 1600,
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "blockNumber": 25701862,
+    "txHash": "0x0aa753038d4099be90bac48401641d5a5f72cd4bbec637daea61979445f3474c"
+  },
+  {
+    "who": "0x0a10753cAc8b635Ee4e049814984cfAFFa367C7b",
+    "when": "Wed, 15 Feb 2023 23:38:44 GMT",
+    "whenTimestamp": 1676504324,
+    "weightUsed": 1600,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25701866,
+    "txHash": "0x838eff528a7f986eba01b8bc3a840e5dc762bd7acf4d80d3efc7178e1e6f5582"
+  },
+  {
+    "who": "0x0a10753cAc8b635Ee4e049814984cfAFFa367C7b",
+    "when": "Wed, 15 Feb 2023 23:39:44 GMT",
+    "whenTimestamp": 1676504384,
+    "weightUsed": 800,
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "blockNumber": 25701886,
+    "txHash": "0xc511280ced3862ebcbce47eecda61c5935105c5d50ae82cb3aa4348d8a23d283"
+  },
+  {
+    "who": "0xcC5503137FC029a830FD8BF1c12Bbd9Ac4e3F0d7",
+    "when": "Wed, 15 Feb 2023 23:40:08 GMT",
+    "whenTimestamp": 1676504408,
+    "weightUsed": 1,
+    "gauge": "0x7916972323a4e881eF4b12c6c6AED6e0C5C6377E",
+    "blockNumber": 25701894,
+    "txHash": "0xb1b748766d6a918266bc5846f6dc96b2b9ccf80583b358ea42acca1a667ab835"
+  },
+  {
+    "who": "0xcC5503137FC029a830FD8BF1c12Bbd9Ac4e3F0d7",
+    "when": "Wed, 15 Feb 2023 23:40:29 GMT",
+    "whenTimestamp": 1676504429,
+    "weightUsed": 9999,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25701901,
+    "txHash": "0x5fdb7913a8a441c949580f93f6c9baaf1daa65b4ea4192be3b250f5c71de7f0a"
+  },
+  {
+    "who": "0x5D166006367856A7D8028f822c7c236f9EFA7A8D",
+    "when": "Wed, 15 Feb 2023 23:46:11 GMT",
+    "whenTimestamp": 1676504771,
+    "weightUsed": 0,
+    "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+    "blockNumber": 25702015,
+    "txHash": "0x75c94489d34d4dc6f9609ff159d6a4041c6154ecb36163e6e79486711da4eee7"
+  },
+  {
+    "who": "0x5D166006367856A7D8028f822c7c236f9EFA7A8D",
+    "when": "Wed, 15 Feb 2023 23:46:41 GMT",
+    "whenTimestamp": 1676504801,
+    "weightUsed": 10000,
+    "gauge": "0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0",
+    "blockNumber": 25702025,
+    "txHash": "0x492e7786f1340e505bb5d4a590da7ef405ad4a7b82e512dcc8fba44da86e216c"
+  },
+  {
+    "who": "0xEbE3e42e2aDD2a7D4d5FB2B35793ABf389393855",
+    "when": "Thu, 16 Feb 2023 00:03:44 GMT",
+    "whenTimestamp": 1676505824,
+    "weightUsed": 10000,
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "blockNumber": 25702366,
+    "txHash": "0xac6c2a8970b94ebf8686f81dcf111c2062972fd960e05b2270414024f5e766d4"
+  }
+]

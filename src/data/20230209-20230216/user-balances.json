@@ -1,0 +1,297 @@
+{
+  "epochTimestamp": 1676505600,
+  "epochTimestampDateUTC": "Thu, 16 Feb 2023 00:00:00 GMT",
+  "votingEscrowTotalSupply": 23979.076224858178,
+  "data": [
+    {
+      "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+      "balance": 2342.5469562069156,
+      "weightPercent": 0.09769129278543634
+    },
+    {
+      "user": "0xB0C4B5f561147B63CFA81F502113c18a8b8C8643",
+      "balance": 8.45676712328112,
+      "weightPercent": 0.0003526727653717668
+    },
+    {
+      "user": "0x111fbf7b389e024d09F35fb091D7D4479b321B0A",
+      "balance": 141.37277280563808,
+      "weightPercent": 0.005895672188534202
+    },
+    {
+      "user": "0x9FCeeE71BB655746180795C7A7c276118e8488c3",
+      "balance": 0.1219726027296,
+      "weightPercent": 0.000005086626423212907
+    },
+    {
+      "user": "0x170Ca91deeEF8141e57881f8566Ff6Aaa291320d",
+      "balance": 2.9934109588824,
+      "weightPercent": 0.00012483429014580833
+    },
+    {
+      "user": "0x861143467Af3520607aABbD023675039C3cd0367",
+      "balance": 0.0101643835608,
+      "weightPercent": 4.2388553526774216e-7
+    },
+    {
+      "user": "0x3c58860b8019E6455A8dfdebE6eA845Ef9b3e3a0",
+      "balance": 130.53096286474045,
+      "weightPercent": 0.005443535924433322
+    },
+    {
+      "user": "0xD6dc4a8465b36E4AF645dd83a39c5ccc18B22313",
+      "balance": 35.70576234063854,
+      "weightPercent": 0.0014890382767799772
+    },
+    {
+      "user": "0x91C05e14F60c759398056EC06c1e44EB0d431817",
+      "balance": 0.7607282444387136,
+      "weightPercent": 0.00003172466851121212
+    },
+    {
+      "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+      "balance": 17.95075281782254,
+      "weightPercent": 0.0007486006820902338
+    },
+    {
+      "user": "0xb234182Bd57526686CD6DB545c34dAa04942DAa8",
+      "balance": 212.49759629012544,
+      "weightPercent": 0.008861792435099623
+    },
+    {
+      "user": "0xd8b87A01980eB792e3BC030bDEc42Db2b9B5CBfc",
+      "balance": 32.87957634115056,
+      "weightPercent": 0.0013711777731898436
+    },
+    {
+      "user": "0xCe53076A174312c06dAfA8dDCcD826Ff2e76500c",
+      "balance": 2.5885465648056,
+      "weightPercent": 0.00010795022045603885
+    },
+    {
+      "user": "0xd7B470De6FdAD29aDa4d52FEe70D7CaeAc3C21fB",
+      "balance": 2.067577573580064,
+      "weightPercent": 0.00008622423792275561
+    },
+    {
+      "user": "0x019C16CA8633Ea36b94a87C5eDCcEb6E2BF20a1c",
+      "balance": 0.5834240116429537,
+      "weightPercent": 0.000024330545771322944
+    },
+    {
+      "user": "0x05aB06939adB5A0c4C5B5e4E35716296e69e456B",
+      "balance": 52.66167123285936,
+      "weightPercent": 0.002196150958403771
+    },
+    {
+      "user": "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E",
+      "balance": 8.572392807972538,
+      "weightPercent": 0.0003574947061174054
+    },
+    {
+      "user": "0xe547446348DF88a45ddF14c8EA7474C714850281",
+      "balance": 426.7923950084032,
+      "weightPercent": 0.017798533646845166
+    },
+    {
+      "user": "0xF24A6E2E1971b006f72a2eA061A45E1961F46189",
+      "balance": 469.32309574534986,
+      "weightPercent": 0.01957219249584022
+    },
+    {
+      "user": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+      "balance": 28.05775684542432,
+      "weightPercent": 0.001170093317287091
+    },
+    {
+      "user": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+      "balance": 0.96849315066672,
+      "weightPercent": 0.00004038909345735015
+    },
+    {
+      "user": "0x798053C2314e944cF3595C8175116d406a5CE717",
+      "balance": 2.29206849312672,
+      "weightPercent": 0.00009558618820981191
+    },
+    {
+      "user": "0x19b893a8c7C49407420e856aa38C84B4f046C8d0",
+      "balance": 0.4649318584678656,
+      "weightPercent": 0.000019389064620674954
+    },
+    {
+      "user": "0x193Ec8449E83EaaF3b8c8235821b6846d5Aa8b23",
+      "balance": 0.2351603734701984,
+      "weightPercent": 0.000009806898783966364
+    },
+    {
+      "user": "0x60BBb1c69977e3648811c74B6aA3D2fD43322083",
+      "balance": 0.1219726027296,
+      "weightPercent": 0.000005086626423212907
+    },
+    {
+      "user": "0x8089186e8B3f7d79B8AEaB6D6d120C4214D464e8",
+      "balance": 8.821917808218144,
+      "weightPercent": 0.00036790065328174754
+    },
+    {
+      "user": "0x154A1799C339F1D2EaB56b46A5985D79F9C42874",
+      "balance": 15.21634701402144,
+      "weightPercent": 0.0006345676902368426
+    },
+    {
+      "user": "0x453227d4be3D8aB37F38E71a266ACF7A71d76173",
+      "balance": 73.93955737008133,
+      "weightPercent": 0.003083503162370828
+    },
+    {
+      "user": "0x6d1B0BA383CD362F180cCFe01733b19260cA2459",
+      "balance": 10.286602618719773,
+      "weightPercent": 0.0004289824396177552
+    },
+    {
+      "user": "0xB7BbEa1200426defa0b7b76E3D23CF3DFDfBF21A",
+      "balance": 35.14837707755882,
+      "weightPercent": 0.0014657936255743605
+    },
+    {
+      "user": "0xf7fa6A0642E2593F7BDd7b2E0A2673600d53BBE9",
+      "balance": 72.39978161164628,
+      "weightPercent": 0.0030192898564037353
+    },
+    {
+      "user": "0x3C135760b7d7759689a41f3eFD24a18eE453F199",
+      "balance": 15.147555876490062,
+      "weightPercent": 0.0006316988917524345
+    },
+    {
+      "user": "0x0075e788EB9cD476C2f2c13c0c7ef6e52DA8fcbF",
+      "balance": 0.28968493149792,
+      "weightPercent": 0.000012080737755761204
+    },
+    {
+      "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+      "balance": 102.63740676674023,
+      "weightPercent": 0.00428029027491643
+    },
+    {
+      "user": "0x37e014215902BA306dA13464A613F2E38578A6d0",
+      "balance": 40.77528767122608,
+      "weightPercent": 0.0017004528151487305
+    },
+    {
+      "user": "0x8809D43470541aEB1a201BC2eD05a390Adb2F080",
+      "balance": 1.0926712328616,
+      "weightPercent": 0.00004556769504443504
+    },
+    {
+      "user": "0xc748A0E296E261251cd0d08d5a8d18bbCD999E33",
+      "balance": 46.16456747015514,
+      "weightPercent": 0.0019252020819008084
+    },
+    {
+      "user": "0xA3a758D2Bb94db24d5A6Ebe3e002f59F592d61f6",
+      "balance": 0.879810661740528,
+      "weightPercent": 0.00003669076546111741
+    },
+    {
+      "user": "0xf29fD03Df2Cb7F81d8Ae4d10A76f8b1C898786BD",
+      "balance": 15.03312328766304,
+      "weightPercent": 0.0006269267067126958
+    },
+    {
+      "user": "0x0ABb6AA27f464D9B9d21a2b0d9Ef251AC79C242F",
+      "balance": 0.8293804363617696,
+      "weightPercent": 0.00003458767254353123
+    },
+    {
+      "user": "0x3Db931AF572B1389DFB712a9fbD2026C283B4910",
+      "balance": 392.21150847145265,
+      "weightPercent": 0.016356406093111384
+    },
+    {
+      "user": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+      "balance": 253.49484625687273,
+      "weightPercent": 0.010571501749266073
+    },
+    {
+      "user": "0x2e86D29cFea7c4f422f7fCCF97986bbBa03e1a7F",
+      "balance": 3.6490136986296,
+      "weightPercent": 0.00015217490717373046
+    },
+    {
+      "user": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+      "balance": 16.30075160984256,
+      "weightPercent": 0.000679790641515381
+    },
+    {
+      "user": "0xBa9f68316932aE306806df192455e011aF78ea1a",
+      "balance": 447.4720255452552,
+      "weightPercent": 0.018660936782934876
+    },
+    {
+      "user": "0x4B0E0a664d5763Ba8d2aD434a4A565DC0D409900",
+      "balance": 10.75655462655312,
+      "weightPercent": 0.00044858085964972317
+    },
+    {
+      "user": "0xd5C49c80cBeA2d5af7C4BEe4Ac2ce3f85A34A899",
+      "balance": 558.4736694828275,
+      "weightPercent": 0.023290041044361814
+    },
+    {
+      "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+      "balance": 2.21306651825616,
+      "weightPercent": 0.00009229156692708454
+    },
+    {
+      "user": "0xC3530D160B48F19c14FEc76F4C206441bA265c95",
+      "balance": 201.47841095890033,
+      "weightPercent": 0.008402259080774575
+    },
+    {
+      "user": "0xeDc8e3b2aE699a23D4A6D73E2171acAc809156eE",
+      "balance": 0.0439879999071744,
+      "weightPercent": 0.0000018344326317947872
+    },
+    {
+      "user": "0xA12Be400f22C8cb89e29cD95a4031420374B5E8c",
+      "balance": 36.728964274808334,
+      "weightPercent": 0.001531708891968609
+    },
+    {
+      "user": "0x5d2F1CAAF44C0ef31E2381b9aA3a7e930084fF68",
+      "balance": 159.97361016655873,
+      "weightPercent": 0.006671383362163064
+    },
+    {
+      "user": "0xdA7a763BDE6ee9cafc3876eF33D67F8EED7891F7",
+      "balance": 3667.200707010315,
+      "weightPercent": 0.1529333604273158
+    },
+    {
+      "user": "0x1a61Bf28f66451bd43E7be5fb788A2B1F5f4231f",
+      "balance": 278.70432792107596,
+      "weightPercent": 0.011622813377279063
+    },
+    {
+      "user": "0x0a10753cAc8b635Ee4e049814984cfAFFa367C7b",
+      "balance": 131.21414288547265,
+      "weightPercent": 0.005472026597482018
+    },
+    {
+      "user": "0xcC5503137FC029a830FD8BF1c12Bbd9Ac4e3F0d7",
+      "balance": 1048.6050554599087,
+      "weightPercent": 0.0437300021746818
+    },
+    {
+      "user": "0x5D166006367856A7D8028f822c7c236f9EFA7A8D",
+      "balance": 4787.639125848372,
+      "weightPercent": 0.1996590311050103
+    },
+    {
+      "user": "0xEbE3e42e2aDD2a7D4d5FB2B35793ABf389393855",
+      "balance": 0.89446575341088,
+      "weightPercent": 0.000037301927106083514
+    }
+  ]
+}
