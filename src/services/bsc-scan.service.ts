@@ -12,11 +12,16 @@ class BscScanService {
   }
 
   async getBlockNumberByTimestamp(timestamp: number): Promise<number> {
-    const { data } = await axios.get(
-      `${BASE_URL}?module=block&action=getblocknobytime&timestamp=${timestamp}&closest=before&apikey=${this.apiKey}`,
-    );
+    try {
+      const { data } = await axios.get(
+        `${BASE_URL}?module=block&action=getblocknobytime&timestamp=${timestamp}&closest=before&apikey=${this.apiKey}`,
+      );
 
-    return parseInt(data.result);
+      return parseInt(data.result);
+    } catch (error) {
+      console.error(error);
+      return null;
+    }
   }
 }
 

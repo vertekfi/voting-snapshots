@@ -1,64 +1,34 @@
 import { Contract } from '@ethersproject/contracts';
-import { Block, JsonRpcProvider } from '@ethersproject/providers';
-import { Injectable } from '@nestjs/common';
+import { JsonRpcProvider } from '@ethersproject/providers';
 import * as ControllerAbi from '../abis/GaugeController.json';
 import * as fs from 'fs-extra';
-import { formatEther, parseEther } from 'ethers';
+import { formatEther } from 'ethers';
 import { join } from 'path';
 import * as moment from 'moment';
-import { Multicaller } from './multicaller';
 import { getMulticall } from '../utils/web3.utils';
 import { csvService } from './csv.service';
 import { bscScanService } from './bsc-scan.service';
 import { gqlService } from './gql.service';
 import { Gauge } from 'src/types/gauge.types';
+import {
+  UserBaseVoteInfo,
+  UserBalanceInfo,
+  UserBalanceData,
+  UserGaugeVotes,
+  UserInfo,
+} from 'src/types/user.types';
 
-const dataPath = join(process.cwd(), 'src/data/'); // Can't do this on app service can we? database it
-const txDataPath = join(dataPath, 'tx-data');
-
-const bscBlockTime = 3;
-const blocksPerWeek = 201600; // (86400 * 7) / bscBlockTime;
-
-interface UserBaseVoteInfo {
-  who: string;
-  when: string;
-  whenTimestamp: number;
-  txHash: string;
-  gauge: string;
-  weightUsed: number;
-  blockNumber: number;
-}
-
-interface UserBalanceInfo {
-  user: string;
-  balance: number;
-  weightPercent: number;
-}
-
-interface UserBalanceData {
-  epochTimestampDateUTC: string;
-  epochTimestamp: number;
-  votingEscrowTotalSupply: number;
-  data: UserBalanceInfo[];
-}
-
-interface UserGaugeVotes {
-  user: string;
-  votes: UserBaseVoteInfo[];
-}
-
-interface UserInfo {
-  user: string;
-  balance: UserBalanceInfo;
-  votes: UserBaseVoteInfo[];
-}
+const voterAddressesFile = 'voter-addresses.json';
+const rawVotesFile = 'raw-votes-data.json';
+const userBalanceFile = 'user-data.json';
+const userVotesFile = 'user-votes.json';
+const userDataFile = 'user-data.json';
 
 const veABI = [
   'function balanceOf(address, uint256) public view returns (uint256)',
   'function totalSupply(uint256 timestamp) public view returns (uint256)',
 ];
 
-@Injectable()
 export class VoteDataService {
   readonly provider: JsonRpcProvider;
   readonly gaugeController: Contract;
@@ -86,145 +56,137 @@ export class VoteDataService {
     );
   }
 
-  async doVotingSnapshot() {
-    const nextEpochTime = (await this.gaugeController.time_total()).toNumber();
-    // // const nextEpochTime = 1677110400;
-    const startOfCurrentEpoch = moment
-      .unix(nextEpochTime)
-      .subtract(1, 'week')
-      .utc();
-
-    const currentEpochRange = this.getEpochRangeLabel(
-      startOfCurrentEpoch.unix(),
-      nextEpochTime,
+  // Automation can pass in after a new epoch starts
+  async doVotingSnapshot(startDate: Date) {
+    const epochStart = moment(startDate).utc().startOf('day');
+    const epochEnd = moment(epochStart).utc().add(1, 'week');
+    console.log(
+      `Running for epoch: ${epochStart.format()} - ${epochEnd.format()}`,
     );
+
+    const epochDirectoryName = this.getEpochRangeLabel(
+      epochStart.unix(),
+      epochEnd.unix(),
+    );
+
+    console.log('epoch dir name: ' + epochDirectoryName);
+
+    const currentEpochDataDir = join(
+      process.cwd(),
+      'src/data',
+      epochDirectoryName,
+    );
+    fs.ensureDirSync(currentEpochDataDir);
 
     // Check how high this can go to save calls
     // Default BSC RPC is capped at 2000. Quicknode accepts this 5000+ at least
     const blockReadRange = 5000;
-    // const startingBlockNumber = await bscScanService.getBlockNumberByTimestamp(
-    //   startOfCurrentEpoch.unix(),
-    // );
-    // const endBlockNumber = await bscScanService.getBlockNumberByTimestamp(
-    //   nextEpochTime,
-    // );
 
-    // await this.getVotingEventData(
-    //   startingBlockNumber,
-    //   endBlockNumber,
-    //   blockReadRange,
-    // );
+    const startingBlockNumber = await bscScanService.getBlockNumberByTimestamp(
+      epochStart.unix(),
+    );
+    const endBlockNumber = await bscScanService.getBlockNumberByTimestamp(
+      epochEnd.unix(),
+    );
 
-    // this.filterUniqueUsers();
-    // this.saveUserEpochBalances()
-    // this.joinUsersToVotes();
-    // this.joinUserBalanceInfo(currentEpochRange);
+    console.log(
+      `Initial blocks = start: ${startingBlockNumber} - end: ${endBlockNumber}`,
+    );
 
-    // const gauges = await gqlService.getGauges();
+    await this.getVotingEventData(
+      startingBlockNumber,
+      endBlockNumber,
+      blockReadRange,
+      currentEpochDataDir,
+    );
 
-    // for (const gauge of gauges) {
-    //   this.saveVotesForGauge(gauge, currentEpochRange);
-    // }
+    this.filterUniqueUsers(currentEpochDataDir);
+    await this.saveUserEpochBalances(epochEnd.unix(), currentEpochDataDir);
+    this.joinUsersToVotes(currentEpochDataDir);
+    this.joinUserBalanceInfo(currentEpochDataDir);
+
+    const gauges = await gqlService.getGauges();
+
+    for (const gauge of gauges) {
+      this.saveVotesForGaugeJSON(currentEpochDataDir, gauge);
+      this.saveVotesForGaugeCSV(currentEpochDataDir, gauge, epochDirectoryName);
+    }
   }
 
   private getEpochRangeLabel(startTimestamp: number, endTimestamp: number) {
     return `${moment.unix(startTimestamp).utc().format('yyyyMMDD')}-${moment
       .unix(endTimestamp)
       .utc()
+      .subtract(1, 'minute')
       .format('yyyyMMDD')}`;
   }
 
-  saveVotesForGauge(gauge: Gauge, epochDir: string) {
-    const { userData, userBalances } = this.getAllEpochData(epochDir);
+  // Need to scrape events
+  async getVotingEventData(
+    startBlockInPast: number,
+    upToBlock: number,
+    blockReadRange: number,
+    currentEpochDataDir: string,
+  ) {
+    const filePath = join(currentEpochDataDir, rawVotesFile);
+    fs.createFileSync(filePath);
+    fs.writeJSONSync(filePath, []);
 
-    const votesFor = [];
-    const csvData = [];
+    let iterations = 1;
 
-    userData.forEach((user) => {
-      const voteInfo = user.votes.find(
-        (vote) => vote.gauge.toLowerCase() === gauge.address.toLowerCase(),
+    let endBlock = startBlockInPast + blockReadRange;
+    while (startBlockInPast <= upToBlock) {
+      console.log(
+        `Running iteration (${iterations}) - startblock: ${startBlockInPast} endblock: ${endBlock}, up to block: ${upToBlock}`,
       );
-      if (voteInfo) {
-        const votingPowerUsed = voteInfo.weightUsed / 10000;
 
-        votesFor.push({
-          ...user.balance,
-          ...voteInfo,
-        });
+      const filter = this.gaugeController.filters.VoteForGauge();
+      const data = await this.gaugeController.queryFilter(
+        filter,
+        startBlockInPast,
+        endBlock,
+      );
 
-        csvData.push({
-          gauge: gauge.symbol,
-          gaugeAddress: gauge.address,
-          user: user.user,
-          userVotePowerPercentage: user.balance.weightPercent,
-          votingPowerUsed,
-          votingPowerUsedDisplay: `${votingPowerUsed * 100}%`,
-          snapshotTime: userBalances.epochTimestampDateUTC,
+      const events = [];
+      if (data.length) {
+        data.forEach((vote) => {
+          events.push({
+            who: vote.args.user,
+            when: new Date(vote.args.time.toNumber() * 1000).toUTCString(),
+            whenTimestamp: vote.args.time.toNumber(),
+            // will need the users actual ve % for snapshots
+            // multicall balance on voting escrow and total weight at a specific time
+            weightUsed: vote.args.weight.toNumber(),
+            gauge: vote.args.gauge_addr,
+            blockNumber: vote.blockNumber,
+            txHash: vote.transactionHash,
+          });
         });
+        const records: any[] = fs.readJSONSync(filePath);
+        fs.writeJSONSync(filePath, records.concat(events));
       }
-    });
 
-    const filePath = join(dataPath, epochDir, 'gauges');
-    const fileName = gauge.pool.name.split(' ').join('-');
-    fs.writeJSONSync(join(filePath, `${fileName}-votes-for.json`), {
-      gauge,
-      votesFor,
-    });
+      console.log(`${data.length} records found`);
 
-    csvService.write(
-      join(filePath, `${fileName}-votes-for.csv`),
-      [
-        {
-          id: 'gauge',
-          title: 'Gauge',
-        },
-        {
-          id: 'gaugeAddress',
-          title: 'Gauge Address',
-        },
-        {
-          id: 'user',
-          title: 'User',
-        },
-        {
-          id: 'userVotePowerPercentage',
-          title: 'User VE weight %',
-        },
-        {
-          id: 'votingPowerUsedDisplay',
-          title: 'Vote % used',
-        },
-        // {
-        //   id: 'votingPowerUsed',
-        //   title: 'Vote % used',
-        // },
-        {
-          id: 'snapshotTime',
-          title: 'Snapshot timestamp',
-        },
-      ],
-      csvData,
-    );
+      startBlockInPast = endBlock + 1;
+      endBlock = startBlockInPast + blockReadRange;
+
+      // Try not miss any late votes
+      if (upToBlock - endBlock < blockReadRange) {
+        console.log('Shortening last block range..');
+        endBlock = upToBlock;
+      }
+
+      iterations++;
+    }
   }
 
-  private joinUserBalanceInfo(epochDir: string) {
-    const { userBalances, userVotes } = this.getAllEpochData(epochDir);
-
-    const data = userVotes.map((user): UserInfo => {
-      return {
-        user: user.user,
-        votes: user.votes,
-        balance: userBalances.data.find((bal) => bal.user === user.user),
-      };
-    });
-
-    fs.writeJSONSync(join(dataPath, epochDir, 'user-data.json'), data);
-  }
-
-  private filterUniqueUsers() {
+  private filterUniqueUsers(currentEpochDataDir: string) {
     // could just use reduce
     const addresses = [];
-    const data = this.getLastDataFile<UserBaseVoteInfo[]>();
+    const data: UserBaseVoteInfo[] = fs.readJSONSync(
+      join(currentEpochDataDir, rawVotesFile),
+    );
 
     data.forEach((vote) => {
       if (!addresses.includes(vote.who)) {
@@ -232,35 +194,17 @@ export class VoteDataService {
       }
     });
 
-    const fileName = this.getDateStampedJsonFileName('user-addresses');
-    fs.writeJSONSync(this.getDataFilePath(fileName), addresses);
-  }
-
-  private joinUsersToVotes(epochDir: string) {
-    const { userAddresses, voteEventsData } = this.getAllEpochData(epochDir);
-    const userData = userAddresses.map((user) => {
-      const userVotes = voteEventsData.filter((vote) => vote.who === user);
-
-      return {
-        user,
-        votes: userVotes,
-      };
-    });
-
-    fs.writeJSONSync(join(dataPath, epochDir, 'user-votes.json'), userData);
+    fs.writeJSONSync(join(currentEpochDataDir, voterAddressesFile), addresses);
   }
 
   private async saveUserEpochBalances(timestamp: number, epochDir: string) {
-    const { userAddresses } = this.getAllEpochData(epochDir);
+    const userAddresses = this.getUserAddress(epochDir);
     const userBalances = await this.getUsersVeBalancesForEpoch(
       timestamp,
       userAddresses,
     );
 
-    fs.writeJSONSync(
-      join(dataPath, epochDir, 'user-balances.json'),
-      userBalances,
-    );
+    fs.writeJSONSync(join(epochDir, userBalanceFile), userBalances);
   }
 
   async getUsersVeBalancesForEpoch(epochTimestamp: number, users: string[]) {
@@ -308,118 +252,168 @@ export class VoteDataService {
     };
   }
 
-  // Need to scrape events
-  async getVotingEventData(
-    startBlockInPast: number,
-    upToBlock: number,
-    blockReadRange: number,
-  ) {
-    const fileName = this.getDateStampedJsonFileName('');
-    const filePath = join(dataPath, fileName);
-    fs.createFileSync(filePath);
-    fs.writeJSONSync(filePath, []);
+  private joinUsersToVotes(epochDir: string) {
+    const userAddresses = this.getUserAddress(epochDir);
+    const voteEventsData = this.getRawVotesEventData(epochDir);
 
-    let iterations = 1;
+    const userData = userAddresses.map((user) => {
+      const userVotes = voteEventsData.filter((vote) => vote.who === user);
 
-    //  const currentBlockNumber = await this.provider.getBlockNumber();
+      return {
+        user,
+        votes: userVotes,
+      };
+    });
 
-    let endBlock = startBlockInPast + blockReadRange;
-    //  let iteration = 0;
-    while (startBlockInPast <= upToBlock) {
-      console.log(
-        `Running iteration (${iterations}) - startblock: ${startBlockInPast} endblock: ${endBlock}`,
+    fs.writeJSONSync(join(epochDir, userVotesFile), userData);
+  }
+
+  private joinUserBalanceInfo(epochDir: string) {
+    const userVotes = this.getUsersGaugeVotes(epochDir);
+    const userBalances = this.getUserBalances(epochDir);
+
+    const data = userVotes.map((user): UserInfo => {
+      return {
+        user: user.user,
+        votes: user.votes,
+        balance: userBalances.data.find((bal) => bal.user === user.user),
+      };
+    });
+
+    fs.writeJSONSync(join(epochDir, userDataFile), data);
+  }
+
+  private saveVotesForGaugeJSON(epochDir: string, gauge: Gauge) {
+    const gaugesDir = join(epochDir, 'gauges');
+    fs.ensureDirSync(gaugesDir);
+
+    const userData = this.getUsersFullData(epochDir);
+    const votesFor = [];
+
+    userData.forEach((user) => {
+      const voteInfo = user.votes.find(
+        (vote) => vote.gauge.toLowerCase() === gauge.address.toLowerCase(),
       );
-
-      const filter = this.gaugeController.filters.VoteForGauge();
-      const data = await this.gaugeController.queryFilter(
-        filter,
-        startBlockInPast,
-        endBlock,
-      );
-
-      const events = [];
-      if (data.length) {
-        data.forEach((vote) => {
-          events.push({
-            who: vote.args.user,
-            when: new Date(vote.args.time.toNumber() * 1000).toUTCString(),
-            whenTimestamp: vote.args.time.toNumber(),
-            // will need the users actual ve % for snapshots
-            // multicall balance on voting escrow and total weight at a specific time
-            weightUsed: vote.args.weight.toNumber(),
-            gauge: vote.args.gauge_addr,
-            blockNumber: vote.blockNumber,
-            txHash: vote.transactionHash,
-          });
+      if (voteInfo) {
+        votesFor.push({
+          ...user.balance,
+          ...voteInfo,
         });
-        const records: any[] = fs.readJSONSync(filePath);
-        fs.writeJSONSync(filePath, records.concat(events));
       }
+    });
 
-      console.log(`${data.length} records found`);
-      startBlockInPast = endBlock + 1;
-      endBlock = startBlockInPast + blockReadRange;
-      iterations++;
-    }
+    const jsonFileName = `${this.getGaugeVotesFileName(gauge)}.json`;
+    fs.writeJSONSync(join(gaugesDir, jsonFileName), {
+      gauge,
+      votesFor,
+    });
   }
 
-  private getAllEpochData(epochDir: string) {
-    const userBalances: UserBalanceData = this.getEpochFileData(
-      epochDir,
-      'balances',
-    );
-    const voteEventsData: UserBaseVoteInfo[] = this.getEpochFileData(
-      epochDir,
-      'votes',
-    );
-    const userAddresses: string[] = this.getEpochFileData(
-      epochDir,
-      'addresses',
-    );
-    const userVotes: UserGaugeVotes[] = this.getEpochFileData(
-      epochDir,
-      'userVotes',
-    );
-    const userData: UserInfo[] = this.getEpochFileData(epochDir, 'userData');
-
-    return {
-      userBalances,
-      voteEventsData,
-      userAddresses,
-      userVotes,
-      userData,
-    };
-  }
-
-  private getDateStampedJsonFileName(preLabel: string) {
-    return `${preLabel ? preLabel + '-' : ''}${new Date()
-      .toDateString()
-      .split(' ')
-      .join('-')}-${Date.now()}.json`;
-  }
-
-  private getDataFilePath(fileName: string) {
-    return join(dataPath, fileName);
-  }
-
-  private getLastDataFile<T>() {
-    const files = fs.readdirSync(dataPath);
-    const filePath = join(dataPath, files[files.length - 1]);
-    return fs.readJsonSync(filePath) as T;
-  }
-
-  private getEpochFileData(
+  private saveVotesForGaugeCSV(
     epochDir: string,
-    type: 'balances' | 'votes' | 'addresses' | 'userVotes' | 'userData',
+    gauge: Gauge,
+    epochLabel: string,
   ) {
-    const map = {
-      balances: 'user-balances',
-      addresses: 'voter-addresses',
-      votes: 'votes',
-      userVotes: 'user-votes',
-      userData: 'user-data',
-    };
+    const gaugesDir = join(epochDir, 'gauges');
+    fs.ensureDirSync(gaugesDir);
 
-    return fs.readJSONSync(join(dataPath, epochDir, `${map[type]}.json`));
+    const userData = this.getUsersFullData(epochDir);
+    const userBalances = this.getUserBalances(epochDir);
+    const csvData = [];
+
+    userData.forEach((user) => {
+      const voteInfo = user.votes.find(
+        (vote) => vote.gauge.toLowerCase() === gauge.address.toLowerCase(),
+      );
+      if (voteInfo) {
+        const votingPowerUsed = voteInfo.weightUsed / 10000;
+        csvData.push({
+          gauge: gauge.symbol,
+          gaugeAddress: gauge.address,
+          user: user.user,
+          userVotePowerPercentage: user.balance.weightPercent,
+          votingPowerUsed,
+          votingPowerUsedDisplay: `${votingPowerUsed * 100}%`,
+          snapshotTime: userBalances.epochTimestampDateUTC,
+        });
+      }
+    });
+
+    const csvFileName = `${this.getGaugeVotesFileName(
+      gauge,
+    )}-${epochLabel}.csv`;
+    csvService.write(
+      join(gaugesDir, `${csvFileName}`),
+      [
+        {
+          id: 'gauge',
+          title: 'Gauge',
+        },
+        {
+          id: 'gaugeAddress',
+          title: 'Gauge Address',
+        },
+        {
+          id: 'user',
+          title: 'User',
+        },
+        {
+          id: 'userVotePowerPercentage',
+          title: 'User VE weight %',
+        },
+        {
+          id: 'votingPowerUsedDisplay',
+          title: 'Vote % used',
+        },
+        // {
+        //   id: 'votingPowerUsed',
+        //   title: 'Vote % used',
+        // },
+        {
+          id: 'snapshotTime',
+          title: 'Snapshot timestamp',
+        },
+      ],
+      csvData,
+    );
+  }
+
+  private getGaugeVotesFileName(gauge: Gauge) {
+    const fileName = gauge.pool.name.split(' ').join('-');
+    return `${fileName}-votes-for`;
+  }
+
+  getUserAddress(epochDir: string) {
+    const userAddresses: string[] = fs.readJSONSync(
+      join(epochDir, voterAddressesFile),
+    );
+    return userAddresses;
+  }
+
+  getUsersGaugeVotes(epochDir: string) {
+    const userVotes: UserGaugeVotes[] = fs.readJSONSync(
+      join(epochDir, userVotesFile),
+    );
+
+    return userVotes;
+  }
+
+  getUsersFullData(epochDir: string) {
+    const userData: UserInfo[] = fs.readJSONSync(join(epochDir, userDataFile));
+    return userData;
+  }
+
+  getUserBalances(epochDir: string) {
+    const balances: UserBalanceData = fs.readJSONSync(
+      join(epochDir, userBalanceFile),
+    );
+    return balances;
+  }
+
+  getRawVotesEventData(epochDir: string) {
+    const voteEventsData: UserBaseVoteInfo[] = fs.readJSONSync(
+      join(epochDir, rawVotesFile),
+    );
+    return voteEventsData;
   }
 }

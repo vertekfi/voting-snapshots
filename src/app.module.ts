@@ -5,10 +5,10 @@ import { VoteDataService } from './services/vote-data.service';
 @Module({
   imports: [],
   controllers: [AppController],
-  providers: [VoteDataService],
+  providers: [],
 })
 export class AppModule {
-  constructor(appService: VoteDataService) {
-    appService.doVotingSnapshot();
+  constructor() {
+    // appService.doVotingSnapshot(new Date('2023-02-02'));
   }
 }
