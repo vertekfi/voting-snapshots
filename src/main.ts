@@ -3,9 +3,12 @@ import { AppModule } from './app.module';
 import { config } from 'dotenv';
 import { jobScheduler } from './services/job-scheduler.service';
 import { voteService } from './services/rewards/vote-data.service';
-import { bscScanService } from './services/bsc-scan.service';
-import { generateRewardTree } from './services/rewards/reward-generator.service';
 import {
+  addGaugeRewardForUsers,
+  generateRewardTree,
+} from './services/rewards/reward-generator.service';
+import {
+  getUserMerkleDistribution,
   getUsersFullData,
   saveEpochDistribution,
 } from './services/rewards/reward.utils';
@@ -33,8 +36,6 @@ async function bootstrap() {
   // jobScheduler.init();
   // voteService.doVotingSnapshot(new Date('2023-01-26'));
 
-  // console.log(formatEther('79095441430032000000'));
-
   const epoch = getEpochsFile()[3];
 
   const gauge = {
@@ -46,9 +47,8 @@ async function bootstrap() {
 
   const { root, tree, userTreeData } = generateRewardTree(
     getUsersFullData(getEpochDir(epoch.start)),
-    epoch.end,
     gauge.address,
-    '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56',
+    '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', // BUSD
     100,
   );
 
@@ -58,6 +58,11 @@ async function bootstrap() {
     { distributionTxHash: '', root, tree },
     userTreeData,
   );
+
+  let userData = getUserMerkleDistribution(epoch.start, gauge);
+  const WBNB = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c';
+  const bribeAmount = 10;
+  userData = addGaugeRewardForUsers(userData, WBNB, bribeAmount, gauge.address);
 }
 
 bootstrap();

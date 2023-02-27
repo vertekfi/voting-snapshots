@@ -5,6 +5,7 @@ import {
   UserBalanceData,
   UserBaseVoteInfo,
   UserInfo,
+  UserMerkleSnapshot,
 } from 'src/types/user.types';
 import {
   getEpochDir,
@@ -57,22 +58,33 @@ export function getDistributionDir(epochTimestamp: number) {
   return join(getEpochDir(epochTimestamp), 'distribution');
 }
 
+export function getUserMerkleDistribution(
+  epochTimestamp: number,
+  gauge: Gauge,
+): UserMerkleSnapshot[] {
+  const distDir = getDistributionDir(epochTimestamp);
+  const epochLabel = getEpochRangeLabel(epochTimestamp);
+  const filePath = `${getGaugeFileName(gauge)}-user-merkle-${epochLabel}.json`;
+
+  return fs.readJSONSync(join(distDir, filePath));
+}
+
 export function saveEpochDistribution(
   epochTimestamp: number,
   gauge: Gauge,
   data,
   userTreeData,
 ) {
-  const label = getEpochRangeLabel(epochTimestamp);
+  const epochLabel = getEpochRangeLabel(epochTimestamp);
   const dir = getDistributionDir(epochTimestamp);
   fs.ensureDirSync(dir);
   fs.writeJSONSync(
-    join(dir, `${getGaugeFileName(gauge)}-merkle-tree-${label}.json`),
+    join(dir, `${getGaugeFileName(gauge)}-merkle-tree-${epochLabel}.json`),
     data,
   );
 
   fs.writeJSONSync(
-    join(dir, `${getGaugeFileName(gauge)}-user-merkle-${label}.json`),
+    join(dir, `${getGaugeFileName(gauge)}-user-merkle-${epochLabel}.json`),
     userTreeData,
   );
 }
