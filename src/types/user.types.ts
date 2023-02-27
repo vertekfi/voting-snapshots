@@ -11,7 +11,7 @@ export interface UserBaseVoteInfo {
 export interface UserBalanceInfo {
   user: string;
   balance: number;
-  weightPercent: number;
+  percentOfTotalVE: number;
 }
 
 export interface UserBalanceData {

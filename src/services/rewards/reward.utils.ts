@@ -1,0 +1,78 @@
+import { join } from 'path';
+import * as fs from 'fs-extra';
+import {
+  UserGaugeVotes,
+  UserBalanceData,
+  UserBaseVoteInfo,
+  UserInfo,
+} from 'src/types/user.types';
+import {
+  getEpochDir,
+  getEpochRangeLabel,
+  getGaugeFileName,
+} from 'src/utils/epoch.utils';
+import { Gauge } from 'src/types/gauge.types';
+
+export const voterAddressesFile = 'voter-addresses.json';
+export const rawVotesFile = 'raw-votes-data.json';
+export const userBalanceFile = 'user-data.json';
+export const userVotesFile = 'user-votes.json';
+export const userDataFile = 'user-data.json';
+
+export function getUserAddresses(epochDir: string) {
+  const userAddresses: string[] = fs.readJSONSync(
+    join(epochDir, voterAddressesFile),
+  );
+  return userAddresses;
+}
+
+export function getUsersGaugeVotes(epochDir: string) {
+  const userVotes: UserGaugeVotes[] = fs.readJSONSync(
+    join(epochDir, userVotesFile),
+  );
+
+  return userVotes;
+}
+
+export function getUsersFullData(epochDir: string) {
+  const userData: UserInfo[] = fs.readJSONSync(join(epochDir, userDataFile));
+  return userData;
+}
+
+export function getUserBalances(epochDir: string) {
+  const balances: UserBalanceData = fs.readJSONSync(
+    join(epochDir, userBalanceFile),
+  );
+  return balances;
+}
+
+export function getRawVotesEventData(epochDir: string) {
+  const voteEventsData: UserBaseVoteInfo[] = fs.readJSONSync(
+    join(epochDir, rawVotesFile),
+  );
+  return voteEventsData;
+}
+
+export function getDistributionDir(epochTimestamp: number) {
+  return join(getEpochDir(epochTimestamp), 'distribution');
+}
+
+export function saveEpochDistribution(
+  epochTimestamp: number,
+  gauge: Gauge,
+  data,
+  userTreeData,
+) {
+  const label = getEpochRangeLabel(epochTimestamp);
+  const dir = getDistributionDir(epochTimestamp);
+  fs.ensureDirSync(dir);
+  fs.writeJSONSync(
+    join(dir, `${getGaugeFileName(gauge)}-merkle-tree-${label}.json`),
+    data,
+  );
+
+  fs.writeJSONSync(
+    join(dir, `${getGaugeFileName(gauge)}-user-merkle-${label}.json`),
+    userTreeData,
+  );
+}

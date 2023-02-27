@@ -1,5 +1,5 @@
 import * as schedule from 'node-schedule';
-import { VoteDataService } from './vote-data.service';
+import { VoteDataService } from './rewards/vote-data.service';
 
 class JobScheduler {
   constructor() {}

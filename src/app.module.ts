@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
-import { VoteDataService } from './services/vote-data.service';
+import { VoteDataService } from './services/rewards/vote-data.service';
 
 @Module({
   imports: [],
@@ -8,7 +8,5 @@ import { VoteDataService } from './services/vote-data.service';
   providers: [],
 })
 export class AppModule {
-  constructor() {
-    // appService.doVotingSnapshot(new Date('2023-02-02'));
-  }
+  constructor() {}
 }

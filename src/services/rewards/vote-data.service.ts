@@ -1,14 +1,14 @@
 import { Contract } from '@ethersproject/contracts';
 import { JsonRpcProvider } from '@ethersproject/providers';
-import * as ControllerAbi from '../abis/GaugeController.json';
+import * as ControllerAbi from '../../abis/GaugeController.json';
 import * as fs from 'fs-extra';
 import { formatEther } from 'ethers';
 import { join } from 'path';
 import * as moment from 'moment';
-import { getMulticall } from '../utils/web3.utils';
-import { csvService } from './csv.service';
-import { bscScanService } from './bsc-scan.service';
-import { gqlService } from './gql.service';
+import { getMulticall } from '../../utils/web3.utils';
+import { csvService } from '../csv.service';
+import { bscScanService } from '../bsc-scan.service';
+import { gqlService } from '../gql.service';
 import { Gauge } from 'src/types/gauge.types';
 import {
   UserBaseVoteInfo,
@@ -17,12 +17,24 @@ import {
   UserGaugeVotes,
   UserInfo,
 } from 'src/types/user.types';
-
-const voterAddressesFile = 'voter-addresses.json';
-const rawVotesFile = 'raw-votes-data.json';
-const userBalanceFile = 'user-data.json';
-const userVotesFile = 'user-votes.json';
-const userDataFile = 'user-data.json';
+import { getEventData } from '../../utils/event-scraping';
+import {
+  getEpochDir,
+  getEpochRangeLabel,
+  getGaugeFileName,
+} from 'src/utils/epoch.utils';
+import {
+  getUserAddresses,
+  getRawVotesEventData,
+  getUsersGaugeVotes,
+  getUserBalances,
+  getUsersFullData,
+  userBalanceFile,
+  rawVotesFile,
+  userDataFile,
+  userVotesFile,
+  voterAddressesFile,
+} from './reward.utils';
 
 const veABI = [
   'function balanceOf(address, uint256) public view returns (uint256)',
@@ -64,18 +76,8 @@ export class VoteDataService {
       `Running for epoch: ${epochStart.format()} - ${epochEnd.format()}`,
     );
 
-    const epochDirectoryName = this.getEpochRangeLabel(
-      epochStart.unix(),
-      epochEnd.unix(),
-    );
-
-    console.log('epoch dir name: ' + epochDirectoryName);
-
-    const currentEpochDataDir = join(
-      process.cwd(),
-      'src/data',
-      epochDirectoryName,
-    );
+    const epochDirectoryName = getEpochRangeLabel(epochStart.unix());
+    const currentEpochDataDir = getEpochDir(epochStart.unix());
     fs.ensureDirSync(currentEpochDataDir);
 
     // Check how high this can go to save calls
@@ -100,25 +102,17 @@ export class VoteDataService {
       currentEpochDataDir,
     );
 
-    this.filterUniqueUsers(currentEpochDataDir);
-    await this.saveUserEpochBalances(epochEnd.unix(), currentEpochDataDir);
-    this.joinUsersToVotes(currentEpochDataDir);
-    this.joinUserBalanceInfo(currentEpochDataDir);
+    // this.filterUniqueUsers(currentEpochDataDir);
+    // await this.saveUserEpochBalances(epochEnd.unix(), currentEpochDataDir);
+    // this.joinUsersToVotes(currentEpochDataDir);
+    // this.joinUserBalanceInfo(currentEpochDataDir);
 
-    const gauges = await gqlService.getGauges();
+    // const gauges = await gqlService.getGauges();
 
-    for (const gauge of gauges) {
-      this.saveVotesForGaugeJSON(currentEpochDataDir, gauge);
-      this.saveVotesForGaugeCSV(currentEpochDataDir, gauge, epochDirectoryName);
-    }
-  }
-
-  private getEpochRangeLabel(startTimestamp: number, endTimestamp: number) {
-    return `${moment.unix(startTimestamp).utc().format('yyyyMMDD')}-${moment
-      .unix(endTimestamp)
-      .utc()
-      .subtract(1, 'minute')
-      .format('yyyyMMDD')}`;
+    // for (const gauge of gauges) {
+    //   this.saveVotesForGaugeJSON(currentEpochDataDir, gauge);
+    //   this.saveVotesForGaugeCSV(currentEpochDataDir, gauge, epochDirectoryName);
+    // }
   }
 
   // Need to scrape events
@@ -132,53 +126,31 @@ export class VoteDataService {
     fs.createFileSync(filePath);
     fs.writeJSONSync(filePath, []);
 
-    let iterations = 1;
+    const events = [];
 
-    let endBlock = startBlockInPast + blockReadRange;
-    while (startBlockInPast <= upToBlock) {
-      console.log(
-        `Running iteration (${iterations}) - startblock: ${startBlockInPast} endblock: ${endBlock}, up to block: ${upToBlock}`,
-      );
-
-      const filter = this.gaugeController.filters.VoteForGauge();
-      const data = await this.gaugeController.queryFilter(
-        filter,
-        startBlockInPast,
-        endBlock,
-      );
-
-      const events = [];
-      if (data.length) {
-        data.forEach((vote) => {
-          events.push({
-            who: vote.args.user,
-            when: new Date(vote.args.time.toNumber() * 1000).toUTCString(),
-            whenTimestamp: vote.args.time.toNumber(),
-            // will need the users actual ve % for snapshots
-            // multicall balance on voting escrow and total weight at a specific time
-            weightUsed: vote.args.weight.toNumber(),
-            gauge: vote.args.gauge_addr,
-            blockNumber: vote.blockNumber,
-            txHash: vote.transactionHash,
-          });
+    await getEventData(
+      this.gaugeController,
+      'VoteForGauge',
+      startBlockInPast,
+      upToBlock,
+      blockReadRange,
+      (evt) => {
+        events.push({
+          who: evt.args.user,
+          when: new Date(evt.args.time.toNumber() * 1000).toUTCString(),
+          whenTimestamp: evt.args.time.toNumber(),
+          // will need the users actual ve % for snapshots
+          // multicall balance on voting escrow and total weight at a specific time
+          weightUsed: evt.args.weight.toNumber(),
+          gauge: evt.args.gauge_addr,
+          blockNumber: evt.blockNumber,
+          txHash: evt.transactionHash,
         });
+
         const records: any[] = fs.readJSONSync(filePath);
         fs.writeJSONSync(filePath, records.concat(events));
-      }
-
-      console.log(`${data.length} records found`);
-
-      startBlockInPast = endBlock + 1;
-      endBlock = startBlockInPast + blockReadRange;
-
-      // Try not miss any late votes
-      if (upToBlock - endBlock < blockReadRange) {
-        console.log('Shortening last block range..');
-        endBlock = upToBlock;
-      }
-
-      iterations++;
-    }
+      },
+    );
   }
 
   private filterUniqueUsers(currentEpochDataDir: string) {
@@ -198,7 +170,7 @@ export class VoteDataService {
   }
 
   private async saveUserEpochBalances(timestamp: number, epochDir: string) {
-    const userAddresses = this.getUserAddress(epochDir);
+    const userAddresses = getUserAddresses(epochDir);
     const userBalances = await this.getUsersVeBalancesForEpoch(
       timestamp,
       userAddresses,
@@ -240,7 +212,7 @@ export class VoteDataService {
       return {
         user,
         balance: balanceNum,
-        weightPercent,
+        percentOfTotalVE: weightPercent,
       };
     });
 
@@ -253,8 +225,8 @@ export class VoteDataService {
   }
 
   private joinUsersToVotes(epochDir: string) {
-    const userAddresses = this.getUserAddress(epochDir);
-    const voteEventsData = this.getRawVotesEventData(epochDir);
+    const userAddresses = getUserAddresses(epochDir);
+    const voteEventsData = getRawVotesEventData(epochDir);
 
     const userData = userAddresses.map((user) => {
       const userVotes = voteEventsData.filter((vote) => vote.who === user);
@@ -269,8 +241,8 @@ export class VoteDataService {
   }
 
   private joinUserBalanceInfo(epochDir: string) {
-    const userVotes = this.getUsersGaugeVotes(epochDir);
-    const userBalances = this.getUserBalances(epochDir);
+    const userVotes = getUsersGaugeVotes(epochDir);
+    const userBalances = getUserBalances(epochDir);
 
     const data = userVotes.map((user): UserInfo => {
       return {
@@ -287,7 +259,7 @@ export class VoteDataService {
     const gaugesDir = join(epochDir, 'gauges');
     fs.ensureDirSync(gaugesDir);
 
-    const userData = this.getUsersFullData(epochDir);
+    const userData = getUsersFullData(epochDir);
     const votesFor = [];
 
     userData.forEach((user) => {
@@ -317,8 +289,8 @@ export class VoteDataService {
     const gaugesDir = join(epochDir, 'gauges');
     fs.ensureDirSync(gaugesDir);
 
-    const userData = this.getUsersFullData(epochDir);
-    const userBalances = this.getUserBalances(epochDir);
+    const userData = getUsersFullData(epochDir);
+    const userBalances = getUserBalances(epochDir);
     const csvData = [];
 
     userData.forEach((user) => {
@@ -331,7 +303,7 @@ export class VoteDataService {
           gauge: gauge.symbol,
           gaugeAddress: gauge.address,
           user: user.user,
-          userVotePowerPercentage: user.balance.weightPercent,
+          userVotePowerPercentage: user.balance.percentOfTotalVE,
           votingPowerUsed,
           votingPowerUsedDisplay: `${votingPowerUsed * 100}%`,
           snapshotTime: userBalances.epochTimestampDateUTC,
@@ -379,41 +351,8 @@ export class VoteDataService {
   }
 
   private getGaugeVotesFileName(gauge: Gauge) {
-    const fileName = gauge.pool.name.split(' ').join('-');
-    return `${fileName}-votes-for`;
-  }
-
-  getUserAddress(epochDir: string) {
-    const userAddresses: string[] = fs.readJSONSync(
-      join(epochDir, voterAddressesFile),
-    );
-    return userAddresses;
-  }
-
-  getUsersGaugeVotes(epochDir: string) {
-    const userVotes: UserGaugeVotes[] = fs.readJSONSync(
-      join(epochDir, userVotesFile),
-    );
-
-    return userVotes;
-  }
-
-  getUsersFullData(epochDir: string) {
-    const userData: UserInfo[] = fs.readJSONSync(join(epochDir, userDataFile));
-    return userData;
-  }
-
-  getUserBalances(epochDir: string) {
-    const balances: UserBalanceData = fs.readJSONSync(
-      join(epochDir, userBalanceFile),
-    );
-    return balances;
-  }
-
-  getRawVotesEventData(epochDir: string) {
-    const voteEventsData: UserBaseVoteInfo[] = fs.readJSONSync(
-      join(epochDir, rawVotesFile),
-    );
-    return voteEventsData;
+    return `${getGaugeFileName(gauge)}-votes-for`;
   }
 }
+
+export const voteService = new VoteDataService();

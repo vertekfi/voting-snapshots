@@ -1,0 +1,95 @@
+[
+  {
+    "user": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+    "votes": [
+      {
+        "who": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+        "when": "Fri, 27 Jan 2023 17:11:41 GMT",
+        "whenTimestamp": 1674839501,
+        "weightUsed": 100,
+        "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+        "blockNumber": 25154646,
+        "txHash": "0x63d8134839ddd0ec652263ef7e2a35389111e018d125ccdfcc33ab58b33b12a2"
+      },
+      {
+        "who": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+        "when": "Mon, 30 Jan 2023 21:48:47 GMT",
+        "whenTimestamp": 1675115327,
+        "weightUsed": 100,
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "blockNumber": 25244986,
+        "txHash": "0xe124e1f7d2302fabf119915e6956c3940c30c04dcc3663f904205a2415b562f4"
+      }
+    ],
+    "balance": {
+      "user": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+      "balance": 0.9397260273746016,
+      "percentOfTotalVE": 0.7655053897831595
+    }
+  },
+  {
+    "user": "0x1555D126e096A296A5870A566db224FD9Cf72f03",
+    "votes": [
+      {
+        "who": "0x1555D126e096A296A5870A566db224FD9Cf72f03",
+        "when": "Fri, 27 Jan 2023 18:27:33 GMT",
+        "whenTimestamp": 1674844053,
+        "weightUsed": 1000,
+        "gauge": "0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0",
+        "blockNumber": 25156137,
+        "txHash": "0x94abfe20f6061d381c23b750e25a9980167eb301dffaff31aedbcb140211fe13"
+      }
+    ],
+    "balance": {
+      "user": "0x1555D126e096A296A5870A566db224FD9Cf72f03",
+      "balance": 0.0575342465739552,
+      "percentOfTotalVE": 0.046867676925499556
+    }
+  },
+  {
+    "user": "0x8089186e8B3f7d79B8AEaB6D6d120C4214D464e8",
+    "votes": [
+      {
+        "who": "0x8089186e8B3f7d79B8AEaB6D6d120C4214D464e8",
+        "when": "Fri, 27 Jan 2023 20:01:12 GMT",
+        "whenTimestamp": 1674849672,
+        "weightUsed": 100,
+        "gauge": "0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0",
+        "blockNumber": 25157980,
+        "txHash": "0xe5fe448dd72184cca69ba788b8dd321c47d7511fdf8db5831b4a675f8feeda26"
+      },
+      {
+        "who": "0x8089186e8B3f7d79B8AEaB6D6d120C4214D464e8",
+        "when": "Fri, 27 Jan 2023 20:58:30 GMT",
+        "whenTimestamp": 1674853110,
+        "weightUsed": 100,
+        "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+        "blockNumber": 25159126,
+        "txHash": "0x83dadcac1c2e7aa1ca3bf3063bac45998194046dabdb70312e0c3515290ff029"
+      },
+      {
+        "who": "0x8089186e8B3f7d79B8AEaB6D6d120C4214D464e8",
+        "when": "Mon, 30 Jan 2023 23:59:51 GMT",
+        "whenTimestamp": 1675123191,
+        "weightUsed": 1000,
+        "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+        "blockNumber": 25247552,
+        "txHash": "0x541cba7874801e1063c460344bf50702b4b2f9bc115520b7a5992cd43ac6ea96"
+      },
+      {
+        "who": "0x8089186e8B3f7d79B8AEaB6D6d120C4214D464e8",
+        "when": "Tue, 31 Jan 2023 02:39:35 GMT",
+        "whenTimestamp": 1675132775,
+        "weightUsed": 1000,
+        "gauge": "0x9E7dF5b7B29d46B10C28b4AB5fb0E7b6A4ffAE55",
+        "blockNumber": 25250694,
+        "txHash": "0xa64b0604fb461b3fa003d26fbdd39eb229ec30241762a88a412e0619e7c078e4"
+      }
+    ],
+    "balance": {
+      "user": "0x8089186e8B3f7d79B8AEaB6D6d120C4214D464e8",
+      "balance": 0.2301369862958208,
+      "percentOfTotalVE": 0.18747070770199822
+    }
+  }
+]
