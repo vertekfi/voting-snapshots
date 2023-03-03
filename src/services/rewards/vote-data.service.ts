@@ -35,6 +35,7 @@ import {
   userVotesFile,
   voterAddressesFile,
 } from './reward.utils';
+import { config } from 'dotenv';
 
 const veABI = [
   'function balanceOf(address, uint256) public view returns (uint256)',
@@ -48,6 +49,7 @@ export class VoteDataService {
   readonly feeDistributor: Contract;
 
   constructor() {
+    config();
     this.provider = new JsonRpcProvider(process.env.BSC_RPC);
     this.gaugeController = new Contract(
       '0x99bFf5953843A211792BF3715b1b3b4CBeE34CE6',
@@ -69,13 +71,29 @@ export class VoteDataService {
   }
 
   // Automation can pass in after a new epoch starts
-  async doVotingSnapshot(startDate: Date) {
+  async doVotingSnapshot(startDate: Date, upToCurrentBlock?: boolean) {
+    // await this.provider.ready;
+
     const epochStart = moment(startDate).utc().startOf('day');
-    const epochEnd = moment(epochStart).utc().add(1, 'week');
+
+    let epochEnd;
+
+    if (upToCurrentBlock) {
+      // get current block time
+      const block = await this.provider.getBlock(
+        await this.provider.getBlockNumber(),
+      );
+
+      epochEnd = moment.unix(block.timestamp).utc();
+    } else {
+      epochEnd = moment(epochStart).utc().add(1, 'week');
+    }
+
     console.log(
       `Running for epoch: ${epochStart.format()} - ${epochEnd.format()}`,
     );
 
+    // Still overwrite the full weeks data regardless
     const epochDirectoryName = getEpochRangeLabel(epochStart.unix());
     const currentEpochDataDir = getEpochDir(epochStart.unix());
     fs.ensureDirSync(currentEpochDataDir);
@@ -87,6 +105,7 @@ export class VoteDataService {
     const startingBlockNumber = await bscScanService.getBlockNumberByTimestamp(
       epochStart.unix(),
     );
+
     const endBlockNumber = await bscScanService.getBlockNumberByTimestamp(
       epochEnd.unix(),
     );
@@ -102,17 +121,17 @@ export class VoteDataService {
       currentEpochDataDir,
     );
 
-    // this.filterUniqueUsers(currentEpochDataDir);
-    // await this.saveUserEpochBalances(epochEnd.unix(), currentEpochDataDir);
-    // this.joinUsersToVotes(currentEpochDataDir);
-    // this.joinUserBalanceInfo(currentEpochDataDir);
+    this.filterUniqueUsers(currentEpochDataDir);
+    await this.saveUserEpochBalances(epochEnd.unix(), currentEpochDataDir);
+    this.joinUsersToVotes(currentEpochDataDir);
+    this.joinUserBalanceInfo(currentEpochDataDir);
 
-    // const gauges = await gqlService.getGauges();
+    const gauges = await gqlService.getGauges();
 
-    // for (const gauge of gauges) {
-    //   this.saveVotesForGaugeJSON(currentEpochDataDir, gauge);
-    //   this.saveVotesForGaugeCSV(currentEpochDataDir, gauge, epochDirectoryName);
-    // }
+    for (const gauge of gauges) {
+      this.saveVotesForGaugeJSON(currentEpochDataDir, gauge);
+      this.saveVotesForGaugeCSV(currentEpochDataDir, gauge, epochDirectoryName);
+    }
   }
 
   // Need to scrape events
@@ -126,8 +145,6 @@ export class VoteDataService {
     fs.createFileSync(filePath);
     fs.writeJSONSync(filePath, []);
 
-    const events = [];
-
     await getEventData(
       this.gaugeController,
       'VoteForGauge',
@@ -135,20 +152,26 @@ export class VoteDataService {
       upToBlock,
       blockReadRange,
       (evt) => {
-        events.push({
-          who: evt.args.user,
-          when: new Date(evt.args.time.toNumber() * 1000).toUTCString(),
-          whenTimestamp: evt.args.time.toNumber(),
-          // will need the users actual ve % for snapshots
-          // multicall balance on voting escrow and total weight at a specific time
-          weightUsed: evt.args.weight.toNumber(),
-          gauge: evt.args.gauge_addr,
-          blockNumber: evt.blockNumber,
-          txHash: evt.transactionHash,
-        });
+        const weightUsed = evt.args.weight.toNumber();
 
-        const records: any[] = fs.readJSONSync(filePath);
-        fs.writeJSONSync(filePath, records.concat(events));
+        // Skip people removing their vote for the gauge
+        if (weightUsed > 0) {
+          const voteData = {
+            who: evt.args.user,
+            when: new Date(evt.args.time.toNumber() * 1000).toUTCString(),
+            whenTimestamp: evt.args.time.toNumber(),
+            // will need the users actual ve % for snapshots
+            // multicall balance on voting escrow and total weight at a specific time
+            weightUsed: evt.args.weight.toNumber(),
+            gauge: evt.args.gauge_addr,
+            blockNumber: evt.blockNumber,
+            txHash: evt.transactionHash,
+          };
+
+          const records: any[] = fs.readJSONSync(filePath);
+          records.push(voteData);
+          fs.writeJSONSync(filePath, records);
+        }
       },
     );
   }
@@ -229,6 +252,7 @@ export class VoteDataService {
     const voteEventsData = getRawVotesEventData(epochDir);
 
     const userData = userAddresses.map((user) => {
+      // TODO: Need to filter out duplicates somehow
       const userVotes = voteEventsData.filter((vote) => vote.who === user);
 
       return {

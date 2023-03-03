@@ -28,7 +28,7 @@ export async function getEventData(
     startBlockInPast = endBlock + 1;
     endBlock = startBlockInPast + blockReadRange;
 
-    // Try not miss any late items
+    // Try not to miss any late items
     if (upToBlock - endBlock < blockReadRange) {
       console.log('Shortening last block range..');
       endBlock = upToBlock;

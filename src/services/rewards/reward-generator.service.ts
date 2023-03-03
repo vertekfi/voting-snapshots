@@ -114,9 +114,9 @@ function mapUserInfo(
     // Need to factor in what % of their voting power they used also.
     // Eg. 4000/10000(40%). That data is already available here.
     // Just need to adjust the equation further to offset/account for % used also.
-    // Otherwise, for example, a person who owns a large veVRTK % could simply,
+    // Otherwise, for example, a person who owns a large veVRTK % could simply
     // vote for all bribed gauges and hog rewards.
-    // Those who dedicated more of their voting % to rewarded accordingly to.. "total vote power used"
+    // Those who dedicated more of their voting % should be rewarded accordingly, to.. "total vote power used"
 
     // "total vote power used" <-- This might be it. Tally up all user power used as well.
     // Then factor that into the equation somehow. (% weight is cut by lack of % used for example)

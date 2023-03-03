@@ -34,35 +34,38 @@ async function bootstrap() {
   });
 
   // jobScheduler.init();
-  // voteService.doVotingSnapshot(new Date('2023-01-26'));
+  await voteService.doVotingSnapshot(new Date('2023-03-2'), true);
 
-  const epoch = getEpochsFile()[3];
+  // Should only be 24 vote records
+  // TODO: This guy 0x1b30F8eE9d7718B182BaD677C06980e5A0668526
 
-  const gauge = {
-    symbol: '50VRTK-25ETH-25BTC-gauge',
-    address: '0x9DAb43a1D850eC820C88a19561C1fD87dEC09193',
-    isKilled: false,
-    pool: { name: 'The Three Amigos' },
-  };
+  // const epoch = getEpochsFile()[3];
 
-  const { root, tree, userTreeData } = generateRewardTree(
-    getUsersFullData(getEpochDir(epoch.start)),
-    gauge.address,
-    '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', // BUSD
-    100,
-  );
+  // const gauge = {
+  //   symbol: '50VRTK-25ETH-25BTC-gauge',
+  //   address: '0x9DAb43a1D850eC820C88a19561C1fD87dEC09193',
+  //   isKilled: false,
+  //   pool: { name: 'The Three Amigos' },
+  // };
 
-  saveEpochDistribution(
-    epoch.start,
-    gauge,
-    { distributionTxHash: '', root, tree },
-    userTreeData,
-  );
+  // const { root, tree, userTreeData } = generateRewardTree(
+  //   getUsersFullData(getEpochDir(epoch.start)),
+  //   gauge.address,
+  //   '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56', // BUSD
+  //   100,
+  // );
 
-  let userData = getUserMerkleDistribution(epoch.start, gauge);
-  const WBNB = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c';
-  const bribeAmount = 10;
-  userData = addGaugeRewardForUsers(userData, WBNB, bribeAmount, gauge.address);
+  // saveEpochDistribution(
+  //   epoch.start,
+  //   gauge,
+  //   { distributionTxHash: '', root, tree },
+  //   userTreeData,
+  // );
+
+  // let userData = getUserMerkleDistribution(epoch.start, gauge);
+  // const WBNB = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c';
+  // const bribeAmount = 10;
+  // userData = addGaugeRewardForUsers(userData, WBNB, bribeAmount, gauge.address);
 }
 
 bootstrap();
