@@ -5,10 +5,10 @@ import * as fs from 'fs-extra';
 import { formatEther } from 'ethers';
 import { join } from 'path';
 import * as moment from 'moment';
-import { getMulticall } from '../../utils/web3.utils';
+import { getMulticall } from '../../utils/contract.utils';
 import { csvService } from '../csv.service';
 import { bscScanService } from '../bsc-scan.service';
-import { gqlService } from '../gql.service';
+import { gqlService } from '../backend/gql.service';
 import { Gauge } from 'src/types/gauge.types';
 import {
   UserBaseVoteInfo,
@@ -72,7 +72,8 @@ export class VoteDataService {
 
   // Automation can pass in after a new epoch starts
   async doVotingSnapshot(startDate: Date, upToCurrentBlock?: boolean) {
-    // await this.provider.ready;
+    // TODO: Need to get bribe data from backend to calc user rewards
+    // That will be used to submit root hash to claim contract then
 
     const epochStart = moment(startDate).utc().startOf('day');
 

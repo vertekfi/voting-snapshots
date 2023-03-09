@@ -32,7 +32,9 @@ export function getStartOfNextWeekUTC() {
 export function getEpochRangeLabel(startTimestamp: number) {
   const start = moment.unix(startTimestamp).utc();
   const end = moment(start).utc().add(1, 'week').subtract(1, 'minute');
-  return `${start.format('yyyyMMDD')}-${end.format('yyyyMMDD')}`;
+  const format = 'yyyyMMDD';
+
+  return `${start.format(format)}-${end.format(format)}`;
 }
 
 export function getEpochDir(epochStart: number) {

@@ -1,1 +1,154 @@
-{"gauge":{"symbol":"50VRTK-25ETH-25BTC-gauge","address":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","isKilled":false,"pool":{"name":"The Three Amigos"}},"votesFor":[{"user":"0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7","balance":399.93251482375933,"percentOfTotalVE":0.005513608389961845,"who":"0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7","when":"Thu, 02 Mar 2023 07:30:19 GMT","whenTimestamp":1677742219,"weightUsed":2500,"gauge":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","blockNumber":26109766,"txHash":"0xe4150863034ca80cfcb5cb3c9a89996f0fa3f318bd4760307dab10b02d7fc41f"},{"user":"0x1b30F8eE9d7718B182BaD677C06980e5A0668526","balance":55.01998328519078,"percentOfTotalVE":0.0007585245765537998,"who":"0x1b30F8eE9d7718B182BaD677C06980e5A0668526","when":"Fri, 03 Mar 2023 12:17:22 GMT","whenTimestamp":1677845842,"weightUsed":2500,"gauge":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","blockNumber":26143875,"txHash":"0xe4f541a643a0d031ad8c0672767575bad8e7c3e53b7ea41f307a769edf77ddd6"}]}
+{
+  "gauge": {
+    "symbol": "50VRTK-25ETH-25BTC-gauge",
+    "address": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "isKilled": false,
+    "pool": { "name": "The Three Amigos" }
+  },
+  "votesFor": [
+    {
+      "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+      "balance": 394.07001303987255,
+      "percentOfTotalVE": 0.004852422906132257,
+      "who": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+      "when": "Thu, 02 Mar 2023 07:30:19 GMT",
+      "whenTimestamp": 1677742219,
+      "weightUsed": 2500,
+      "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+      "blockNumber": 26109766,
+      "txHash": "0xe4150863034ca80cfcb5cb3c9a89996f0fa3f318bd4760307dab10b02d7fc41f"
+    },
+    {
+      "user": "0x1b30F8eE9d7718B182BaD677C06980e5A0668526",
+      "balance": 54.21346033893572,
+      "percentOfTotalVE": 0.0006675631945197689,
+      "who": "0x1b30F8eE9d7718B182BaD677C06980e5A0668526",
+      "when": "Fri, 03 Mar 2023 12:17:22 GMT",
+      "whenTimestamp": 1677845842,
+      "weightUsed": 2500,
+      "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+      "blockNumber": 26143875,
+      "txHash": "0xe4f541a643a0d031ad8c0672767575bad8e7c3e53b7ea41f307a769edf77ddd6"
+    },
+    {
+      "user": "0xcB4f9A94363D688E11f5F3d87814aA492092ff97",
+      "balance": 4.764898351183219,
+      "percentOfTotalVE": 0.00005867308127891942,
+      "who": "0xcB4f9A94363D688E11f5F3d87814aA492092ff97",
+      "when": "Mon, 06 Mar 2023 17:02:15 GMT",
+      "whenTimestamp": 1678122135,
+      "weightUsed": 3800,
+      "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+      "blockNumber": 26235150,
+      "txHash": "0x4529d138b4e64c8547986c78cb15668798aa6a46c9663cdcff5fd12161e61280"
+    },
+    {
+      "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+      "balance": 9.433185288719471,
+      "percentOfTotalVE": 0.00011615652766794194,
+      "who": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+      "when": "Sun, 05 Mar 2023 06:24:34 GMT",
+      "whenTimestamp": 1677997474,
+      "weightUsed": 1000,
+      "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+      "blockNumber": 26193999,
+      "txHash": "0x523d0e75d7ad3a2c093a7255ee98add01fb0bd2e9655f5a6036258c376d5087f"
+    },
+    {
+      "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+      "balance": 53.334778038406505,
+      "percentOfTotalVE": 0.0006567434468068936,
+      "who": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+      "when": "Sun, 05 Mar 2023 06:37:39 GMT",
+      "whenTimestamp": 1677998259,
+      "weightUsed": 2500,
+      "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+      "blockNumber": 26194260,
+      "txHash": "0xacd586c0f2781919f41da271d1e38cda8f1118b83088965b9eeb87ed79ecaa63"
+    },
+    {
+      "user": "0x9B4A54F384141265360bd93E4058f7FFCa6B4Aea",
+      "balance": 66.95211580567776,
+      "percentOfTotalVE": 0.0008244219798490949,
+      "who": "0x9B4A54F384141265360bd93E4058f7FFCa6B4Aea",
+      "when": "Sun, 05 Mar 2023 07:42:50 GMT",
+      "whenTimestamp": 1678002170,
+      "weightUsed": 10000,
+      "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+      "blockNumber": 26195556,
+      "txHash": "0xe1abe21752b8b445e54eb29b106461c0d9bc8a7af5f85a68edf138d579ac329c"
+    },
+    {
+      "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+      "balance": 305.1662295288076,
+      "percentOfTotalVE": 0.0037576967374926117,
+      "who": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+      "when": "Sun, 05 Mar 2023 12:47:44 GMT",
+      "whenTimestamp": 1678020464,
+      "weightUsed": 5000,
+      "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+      "blockNumber": 26201620,
+      "txHash": "0xdb6ad354e588e0d8e4f71af154367b548de5251701927c8af0b91fe96c3044d0"
+    },
+    {
+      "user": "0x9884705F4E825a2174C115280c4d147379d5C33D",
+      "balance": 138.9339551867674,
+      "percentOfTotalVE": 0.0017107779944667081,
+      "who": "0x9884705F4E825a2174C115280c4d147379d5C33D",
+      "when": "Mon, 06 Mar 2023 01:12:24 GMT",
+      "whenTimestamp": 1678065144,
+      "weightUsed": 10000,
+      "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+      "blockNumber": 26216292,
+      "txHash": "0x1529c668e4c6b7ac0c5cb3c71c8e6d845163be2db5e01044cd3bc8bd27a41db5"
+    },
+    {
+      "user": "0x5d2F1CAAF44C0ef31E2381b9aA3a7e930084fF68",
+      "balance": 257.66718072690674,
+      "percentOfTotalVE": 0.003172812161658325,
+      "who": "0x5d2F1CAAF44C0ef31E2381b9aA3a7e930084fF68",
+      "when": "Tue, 07 Mar 2023 01:40:54 GMT",
+      "whenTimestamp": 1678153254,
+      "weightUsed": 10000,
+      "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+      "blockNumber": 26245438,
+      "txHash": "0xaf2860b5cac4fd9cd96c2802d0e0ff146637cdc49eefd9c2291c309c7d884a44"
+    },
+    {
+      "user": "0x568d716fCC14966b53090428056f0525D6845bb9",
+      "balance": 7.266794454210412,
+      "percentOfTotalVE": 0.00008948044432956548,
+      "who": "0x568d716fCC14966b53090428056f0525D6845bb9",
+      "when": "Tue, 07 Mar 2023 19:14:43 GMT",
+      "whenTimestamp": 1678216483,
+      "weightUsed": 780,
+      "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+      "blockNumber": 26266269,
+      "txHash": "0x0d35c6c89648c34e76b176b017c43bfb7af91a3b72e8a633d7d8a8440f92ea47"
+    },
+    {
+      "user": "0x2EC9912157a1D0A813Fdc7ac2B76203741Cb4a8e",
+      "balance": 3.4109638355890946,
+      "percentOfTotalVE": 0.000042001265003959,
+      "who": "0x2EC9912157a1D0A813Fdc7ac2B76203741Cb4a8e",
+      "when": "Tue, 07 Mar 2023 23:06:02 GMT",
+      "whenTimestamp": 1678230362,
+      "weightUsed": 10000,
+      "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+      "blockNumber": 26270845,
+      "txHash": "0xf68afc45ab3f15f1af8387a6dcc65ef6f17ab6c4a9eb14fa38a32db14b3bfb17"
+    },
+    {
+      "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+      "balance": 5844.544802151604,
+      "percentOfTotalVE": 0.0719674223752903,
+      "who": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+      "when": "Wed, 08 Mar 2023 23:06:30 GMT",
+      "whenTimestamp": 1678316790,
+      "weightUsed": 2000,
+      "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+      "blockNumber": 26299306,
+      "txHash": "0x2ef0e08acce4466d1747c10f358b7dc47d2e68c36bd4d34e9e23af462d8c22df"
+    }
+  ]
+}

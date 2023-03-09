@@ -1,0 +1,48 @@
+query GetLiquidityGauges {
+  getLiquidityGauges {
+    id
+    address
+    symbol
+
+    pool {
+      id
+      name
+      address
+    }
+
+    currentEpochBribes {
+      ...GaugeBribeFragment
+    }
+
+    nextEpochBribes {
+      ...GaugeBribeFragment
+    }
+  }
+}
+
+query GetBribes($epoch: Int!) {
+  getAllGaugeBribes(epoch: $epoch) {
+    gauge
+    currentEpochBribes {
+      ...GaugeBribeFragment
+    }
+
+    nextEpochBribes {
+      ...GaugeBribeFragment
+    }
+  }
+}
+
+fragment GaugeBribeFragment on GaugeBribe {
+  briber
+  gauge
+  amount
+  epochStartTime
+  valueUSD
+  epochWeekLabel
+  token {
+    address
+    symbol
+    logoURI
+  }
+}

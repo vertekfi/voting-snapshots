@@ -19,6 +19,27 @@ export const rawVotesFile = 'raw-votes-data.json';
 export const userBalanceFile = 'user-data.json';
 export const userVotesFile = 'user-votes.json';
 export const userDataFile = 'user-data.json';
+export const userRewardDataFile = 'user-reward-data.json';
+export const bribersDataFile = 'bribers-data.json';
+
+export function setBribersData(epochDir: string, data: any[]) {
+  const path = join(epochDir, bribersDataFile);
+  fs.writeJSONSync(path, []);
+  fs.writeJSONSync(path, data);
+}
+
+export function setUserRewardData(epochDir: string, data: any[]) {
+  const path = join(epochDir, userRewardDataFile);
+  fs.ensureFileSync(path);
+  fs.writeJSONSync(path, data);
+}
+
+export function getUserRewardData(epochDir: string) {
+  const path = join(epochDir, userRewardDataFile);
+  fs.ensureFileSync(path);
+  const rewardData: any[] = fs.readJSONSync(path);
+  return rewardData || [];
+}
 
 export function getUserAddresses(epochDir: string) {
   const userAddresses: string[] = fs.readJSONSync(

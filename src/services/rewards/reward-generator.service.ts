@@ -1,11 +1,191 @@
+import { BigNumber } from '@ethersproject/bignumber';
 import { StandardMerkleTree } from '@openzeppelin/merkle-tree';
 import { parseUnits } from 'ethers';
 import {
-  UserClaim,
   UserGaugeSnapshotRelativeInfo,
   UserInfo,
   UserMerkleSnapshot,
 } from 'src/types/user.types';
+import { getMerkleOrchard, getMulticall } from 'src/utils/contract.utils';
+
+export function getTokenTotalForGaugeBribes(
+  tokens: { address: string }[],
+  gauge,
+) {
+  const bribes: any[] = gauge.currentEpochBribes;
+  // console.log(`Gauge ${gauge.gauge} has ${bribes.length} total bribes`);
+
+  // Need to see if token is a duplicate in the bribe list
+  return tokens
+    .map((tk) => {
+      const totalBribeAmountForToken = bribes
+        .filter((b) => b.token.address.toLowerCase() === tk.address)
+        .reduce((prev, cur) => prev + parseFloat(cur.amount), 0);
+
+      return {
+        token: tk.address,
+        totalAmount: totalBribeAmountForToken,
+      };
+    })
+    .filter((ta) => ta.totalAmount > 0);
+}
+
+export async function getDistributionInfo(gauges: any[]): Promise<
+  {
+    briber: string;
+    token: string;
+    distributionId: BigNumber;
+    tokenAmount: BigNumber;
+  }[]
+> {
+  // We know we only have gauges with current bribes at this point
+  console.log(`Setting up distribution for (${gauges.length}) gauges`);
+
+  const ids = await getNextDistributionIds(gauges);
+  return getBribersDistributionParams(gauges, ids);
+}
+
+export function getBribersDistributionParams(
+  gauges: any[],
+  ids: Record<string, { [token: string]: BigNumber }>,
+) {
+  // Get total amount of token(s) for a bribers bribes
+  // To be used in distribution. Regardless of gauge.
+  // Someone, has a right to those tokens regardless of gauge.
+  let distributions = [];
+  for (const nextIdInfo of Object.entries(ids)) {
+    const [briber, briberDistTokenIds] = nextIdInfo;
+
+    Object.entries(briberDistTokenIds).forEach((tkId) => {
+      // Get the user/bribers total amount for token across all bribes
+      const tokenAmount = getListOfAllBribes(gauges)
+        .filter((b) => b.briber === briber && b.token.address === tkId[0])
+        .reduce((prev, cur) => prev + parseFloat(cur.amount), 0);
+
+      distributions.push({
+        briber,
+        token: tkId[0],
+        distributionId: tkId[1],
+        tokenAmount: parseUnits(String(tokenAmount)),
+        merkleRoot: '',
+        votingUsers: [],
+      });
+    });
+  }
+
+  return distributions;
+}
+
+export function associateBribesToBribers(gauges: any[]) {
+  const bribes = getListOfAllBribes(gauges);
+  const bribers = getUniqueBribers(gauges);
+
+  return bribers.map((briber) => {
+    return {
+      briber,
+      bribes: bribes.filter((b) => b.briber === briber),
+      gaugeList: [],
+    };
+  });
+}
+
+export function getUniqueBribers(gauges: any[]) {
+  const bribers: string[] = [];
+
+  gauges.forEach((g) =>
+    g.currentEpochBribes.forEach((b) => {
+      if (!bribers.includes(b.briber)) {
+        bribers.push(b.briber);
+      }
+    }),
+  );
+  console.log(`(${bribers.length}) distinct bribers`);
+
+  return bribers;
+}
+
+export function getListOfAllBribes(gauges: any[]) {
+  const bribeInstances = gauges
+    .map((g) => g.currentEpochBribes.map((b) => b))
+    .flat();
+  console.log(`(${bribeInstances.length}) distinct bribe instances`);
+
+  return bribeInstances;
+}
+
+export function getBriberTokenSets(bribers: string[], bribeInstances: any[]) {
+  const bribersDistData = [];
+
+  // Get setup for next dist id for each briber/token distinct combination
+  bribers.forEach((briber) => {
+    const bribersBribes = bribeInstances.filter((b) => b.briber === briber);
+    // console.log(`Briber ${briber} has ${bribersBribes.length} total bribes`);
+
+    const tokens = [];
+    bribersBribes.forEach((b) => {
+      if (!tokens.find((tk) => tk.address === b.token.address)) {
+        tokens.push(b.token);
+      }
+    });
+
+    bribersDistData.push({
+      briber,
+      tokens,
+    });
+  });
+
+  return bribersDistData;
+}
+
+export async function getNextDistributionIds(gauges: any[]) {
+  // Get next dist id per unique briber/token instances
+  const orchard = getMerkleOrchard();
+  const multi = getMulticall([
+    'function getNextDistributionId(address, address) public view returns (uint)',
+  ]);
+
+  const bribeInstances = getListOfAllBribes(gauges);
+  const bribers = getUniqueBribers(gauges);
+  const bribersDistData = getBriberTokenSets(bribers, bribeInstances);
+
+  bribersDistData.forEach((briber) => {
+    briber.tokens.forEach((tk) => {
+      multi.call(
+        `${briber.briber}.${tk.address}`,
+        orchard.address,
+        'getNextDistributionId',
+        [briber.briber, tk.address],
+      );
+    });
+  });
+
+  return multi.execute<Record<string, { [token: string]: BigNumber }>>(
+    'getDistributionInfo:getNextDistributionId',
+  );
+}
+
+export async function getNextDistributionId(
+  briber: string,
+  token: string,
+): Promise<BigNumber> {
+  const orchard = getMerkleOrchard();
+  return orchard.getNextDistributionId(briber, token);
+}
+
+export function getUniqueBribeTokens(gauges: any[]) {
+  const bribeTokens = [];
+  gauges.forEach((g) => {
+    g.currentEpochBribes.forEach((bribe) => {
+      if (!bribeTokens.find((t) => t.address === bribe.token.address)) {
+        bribeTokens.push(bribe.token);
+      }
+    });
+  });
+  // console.log(bribeTokens);
+  console.log(`(${bribeTokens.length}) distinct bribe tokens`);
+
+  return bribeTokens;
+}
 
 export function generateRewardTree(
   userData: UserInfo[],
@@ -17,16 +197,17 @@ export function generateRewardTree(
     (user) => user.votes.filter((vote) => vote.gauge === gauge).length > 0,
   );
 
-  const weightBase = getVotersTotalWeight(usersWhoVoted);
-  const userInfo: UserGaugeSnapshotRelativeInfo[] = mapUserInfo(
-    usersWhoVoted,
-    weightBase,
-    token,
-    totalRewardAmountForToken,
-  );
+  const userInfo: UserGaugeSnapshotRelativeInfo[] =
+    getUserClaimsToAmountForToken(
+      usersWhoVoted,
+      getVotersTotalWeight(usersWhoVoted),
+      token,
+      totalRewardAmountForToken,
+    );
+
+  // checkDistributionAmounts(userInfo, totalRewardAmountForToken);
 
   const tree = getMerkleTree(userInfo);
-  checkDistributionAmounts(userInfo, totalRewardAmountForToken);
 
   const userTreeData: UserMerkleSnapshot[] = [];
   for (const user of userInfo) {
@@ -53,55 +234,34 @@ export function generateRewardTree(
   };
 }
 
-export function addGaugeRewardForUsers(
-  userData: UserMerkleSnapshot[],
-  token: string,
-  totalRewardAmountForToken: number,
-  gauge: string,
-) {
-  for (const user of userData) {
-    const userRelativeAmount = Number(
-      (totalRewardAmountForToken * user.userGaugeRelativeWeight).toFixed(18),
-    );
+// function checkDistributionAmounts(
+//   userInfo: UserGaugeSnapshotRelativeInfo[],
+//   totalRewardAmountForToken: number,
+// ) {
+//   let totalOwed = 0;
+//   userInfo.forEach((user) => {
+//     totalOwed += user.userRelativeAmount;
+//     const fixedTotal = totalOwed.toFixed(8);
+//     totalOwed = parseFloat(fixedTotal);
+//     console.log(String(totalOwed).length);
+//   });
 
-    const newClaim: UserClaim = {
-      token,
-      gauge,
-      userRelativeAmount,
-      values: {
-        proof: [],
-        value: [],
-      },
-    };
-    user.claims.push(newClaim);
-  }
+//   if (totalOwed > totalRewardAmountForToken) {
+//     throw new Error(
+//       `Amount owed (${totalOwed}) over amount for token (${totalRewardAmountForToken})`,
+//     );
+//   }
 
-  return userData;
-}
+//   if (totalOwed < totalRewardAmountForToken) {
+//     console.log(
+//       `
+//       Amount owed (${totalOwed}) less than amount for token (${totalRewardAmountForToken})
+//       `,
+//     );
+//   }
+// }
 
-function checkDistributionAmounts(
-  userInfo: UserGaugeSnapshotRelativeInfo[],
-  totalRewardAmountForToken: number,
-) {
-  let totalOwed = 0;
-  userInfo.forEach((user) => (totalOwed += user.userRelativeAmount));
-
-  if (totalOwed > totalRewardAmountForToken) {
-    throw new Error(
-      `Amount owed (${totalOwed}) over amount for token (${totalRewardAmountForToken})`,
-    );
-  }
-
-  if (totalOwed < totalRewardAmountForToken) {
-    console.log(
-      `
-      Amount owed (${totalOwed}) less than amount for token (${totalRewardAmountForToken})
-      `,
-    );
-  }
-}
-
-function mapUserInfo(
+function getUserClaimsToAmountForToken(
   users: UserInfo[],
   weightBase: number,
   token: string,
@@ -139,10 +299,10 @@ function mapUserInfo(
 
     // Scale down % a bit for tighter precision here
     const userGaugeRelativeWeight = Number(
-      (userInfo.balance.percentOfTotalVE / weightBase).toFixed(14),
+      (userInfo.balance.percentOfTotalVE / weightBase).toFixed(16),
     );
     const userRelativeAmount = Number(
-      (totalRewardAmountForToken * userGaugeRelativeWeight).toFixed(18),
+      (totalRewardAmountForToken * userGaugeRelativeWeight).toFixed(12),
     );
 
     return {
@@ -181,7 +341,7 @@ function getMerkleTree(users: UserGaugeSnapshotRelativeInfo[]) {
   // The leaves are double-hashed to prevent second preimage attacks.
   const tree = StandardMerkleTree.of(leaves, ['address', 'uint256']);
 
-  console.log('Merkle Root:', tree.root);
+  // console.log('Merkle Root:', tree.root);
 
   return tree;
 }

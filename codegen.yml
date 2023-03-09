@@ -1,0 +1,17 @@
+overwrite: true
+hooks:
+  afterAllFileWrite:
+    - prettier --write
+generates:
+  src/services/backend/generated/vertek-subgraph-types.ts:
+    schema: ${BACKEND_URL}
+    documents: 'src/services/backend/vertek-backend-queries.graphql'
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-graphql-request
+    config:
+      scalars:
+        BigInt: string
+        Bytes: string
+        BigDecimal: string

@@ -1,9 +1,14 @@
 import { config } from 'dotenv';
 import { gql, GraphQLClient } from 'graphql-request';
 import { Gauge } from 'src/types/gauge.types';
+import { getSdk } from './generated/vertek-subgraph-types';
 
-class GqlService {
+class VertekBackendService {
   private readonly gqlClient: GraphQLClient;
+
+  get sdk() {
+    return getSdk(this.gqlClient);
+  }
 
   constructor() {
     config();
@@ -28,6 +33,14 @@ class GqlService {
 
     return getLiquidityGauges.filter((g) => !g.isKilled);
   }
+
+  async getGaugesWithBribes(epoch: number) {
+    const { getAllGaugeBribes } = await this.sdk.GetBribes({
+      epoch,
+    });
+
+    return getAllGaugeBribes.filter((g) => g.currentEpochBribes.length);
+  }
 }
 
-export const gqlService = new GqlService();
+export const gqlService = new VertekBackendService();
