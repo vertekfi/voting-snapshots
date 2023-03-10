@@ -1,12 +1,18 @@
 import { BigNumber } from '@ethersproject/bignumber';
 import { StandardMerkleTree } from '@openzeppelin/merkle-tree';
 import { parseUnits } from 'ethers';
+import { DistributionStruct } from 'src/types/bribe.types';
 import {
   UserGaugeSnapshotRelativeInfo,
   UserInfo,
   UserMerkleSnapshot,
 } from 'src/types/user.types';
-import { getMerkleOrchard, getMulticall } from 'src/utils/contract.utils';
+import {
+  getMerkleOrchard,
+  getMulticall,
+  getVertekAdminActions,
+} from 'src/utils/contract.utils';
+import { doTransaction } from 'src/utils/web3.utils';
 
 export function getTokenTotalForGaugeBribes(
   tokens: { address: string }[],
@@ -45,6 +51,59 @@ export async function getDistributionInfo(gauges: any[]): Promise<
   return getBribersDistributionParams(gauges, ids);
 }
 
+export async function doCreateBribeDistribution(
+  token: string,
+  amount: string,
+  briber: string,
+  merkleRoot: string,
+) {
+  console.log(`doCreateBribeDistribution: 
+  token: ${token}
+  amount: ${amount}
+  briber: ${briber}`);
+  // function createDistribution(
+  //   IERC20Upgradeable token,
+  //   uint256 amount,
+  //   address briber,
+  //   uint256 distributionId,
+  //   bytes32 merkleRoot
+  // )
+
+  const orchard = getMerkleOrchard();
+
+  const distributionId = await orchard.getNextDistributionId(briber, token);
+
+  // const txReceipt = await doTransaction(
+  //   orchard.createDistribution(
+  //     token,
+  //     parseUnits(amount),
+  //     briber,
+  //     distributionId,
+  //     merkleRoot,
+  //   ),
+  // );
+
+  return {
+    distributionId: distributionId.toNumber(),
+    token,
+    amount,
+    briber,
+    merkleRoot,
+    //  txReceipt
+  };
+}
+
+export async function doDistributions(structs: DistributionStruct[]) {
+  const formatted = structs.map((s) => {
+    return {
+      ...s,
+      amount: parseUnits(s.amount),
+    };
+  });
+  const adminHelper = getVertekAdminActions();
+  await doTransaction(adminHelper.createBribeDistributions(formatted));
+}
+
 export function getBribersDistributionParams(
   gauges: any[],
   ids: Record<string, { [token: string]: BigNumber }>,
@@ -57,7 +116,9 @@ export function getBribersDistributionParams(
     const [briber, briberDistTokenIds] = nextIdInfo;
 
     Object.entries(briberDistTokenIds).forEach((tkId) => {
-      // Get the user/bribers total amount for token across all bribes
+      // Get the user reward/bribers total amount for each unique token across all bribes
+      // This is the way distributions are created contract side
+      // Not with users(besides root) or gauges considered
       const tokenAmount = getListOfAllBribes(gauges)
         .filter((b) => b.briber === briber && b.token.address === tkId[0])
         .reduce((prev, cur) => prev + parseFloat(cur.amount), 0);
@@ -65,10 +126,10 @@ export function getBribersDistributionParams(
       distributions.push({
         briber,
         token: tkId[0],
-        distributionId: tkId[1],
+        // distributionId: tkId[1],
         tokenAmount: parseUnits(String(tokenAmount)),
-        merkleRoot: '',
-        votingUsers: [],
+        // merkleRoot: '',
+        // votingUsers: [],
       });
     });
   }
@@ -162,14 +223,6 @@ export async function getNextDistributionIds(gauges: any[]) {
   return multi.execute<Record<string, { [token: string]: BigNumber }>>(
     'getDistributionInfo:getNextDistributionId',
   );
-}
-
-export async function getNextDistributionId(
-  briber: string,
-  token: string,
-): Promise<BigNumber> {
-  const orchard = getMerkleOrchard();
-  return orchard.getNextDistributionId(briber, token);
 }
 
 export function getUniqueBribeTokens(gauges: any[]) {
@@ -317,6 +370,8 @@ function getUserClaimsToAmountForToken(
 function getUserProofs(user: string, tree: StandardMerkleTree<any>) {
   for (const [i, value] of tree.entries()) {
     const proof = tree.getProof(i);
+    console.log(user);
+    console.log(proof);
     // Doing string wrap/unwrap to avoid BigInt file write error for now
     value[value.length - 1] = String(value[value.length - 1]);
 

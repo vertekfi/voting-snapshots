@@ -28,6 +28,10 @@ export function setBribersData(epochDir: string, data: any[]) {
   fs.writeJSONSync(path, data);
 }
 
+export function getBribersData(epochDir: string): any[] {
+  return fs.readJSONSync(join(epochDir, bribersDataFile));
+}
+
 export function setUserRewardData(epochDir: string, data: any[]) {
   const path = join(epochDir, userRewardDataFile);
   fs.ensureFileSync(path);

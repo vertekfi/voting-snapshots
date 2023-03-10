@@ -364,7 +364,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x8d69f4b49a8964af8f532a859d7e9120a3cd6d049069a463b36f7df53c4eaf5d"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -728,7 +729,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x324af7e93022ac182677fd8d6cdf2a1353a49d99b499b60d5ba8774ef475c070"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -1092,7 +1094,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xca07a879f71c72c6a538b8269788b7efb01830b88c06f609646d52fddcf2c20f"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -1456,7 +1459,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x6e691f2a9bd82401cb1d7e13b4f143cc1a63f05a37999c3e3f21dae6c2acb952"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -1657,7 +1661,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x5170ac2a304bb4b8a95ac91260f290601a8e0da95b68f60cce9e0ddb69510461"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -1858,7 +1863,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xbe4f86ee724845770e13016bb2443abf13073d6442211666044564045f66ff47"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -2059,7 +2065,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x8fe2a8cedc68ec938a44f0767b9cac1a1e5eb135bfbaf8dec66679cc0920dc40"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -2260,7 +2267,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x9a5138b5f239edef2080866a655f9c74ab613f57f7a3df8ece83b68e7e905101"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -2525,7 +2533,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x0c6de74f0865080edbbcb3dafd609b12675c33be7c8d64ce1eeecee87a7a889b"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -2790,7 +2799,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x21e9e45019413b28b2861f2fdfb2ed1e5b85559cc7ec00fe2ca198e58462dc3d"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -3055,7 +3065,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xf4315116dadcbb3aafc07a37f4efe3d0d35e10b7bead61fc308fc6920c33883e"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -3320,7 +3331,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xc37824bb16070cd867557d18e9642da889dd65a5e8f826eefd6352acdb1fcc48"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -3717,7 +3729,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x0d5a057d42b3de7c8baec444ea181379cda70a559f45418b08155b674f8bb50d"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -4114,7 +4127,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xec0c01e2107ab5de4842dc0bdeac812f27a99b6fbe0d3806c681bc79adda648d"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -4511,7 +4525,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x71db1b29513b2ad4d8490b875d404d80ec91184b3124d11382ae01d188571614"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -4908,7 +4923,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xfb9df726c4b72bfac1cc1ff7cbe77616ed101fcfc92838538d0802b5db3d18bc"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -4952,7 +4968,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xe474430f272f65df383be7a99405497c164ff324456fed72132a338ad1e46c83"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -4996,7 +5013,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x50ee7219440718ef9c6b68429c135120c5e8a22e89cde23f7eeb9bb586f2093b"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -5040,7 +5058,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x93ab36da3f6e3032443025e2b09eabdd08cd18195d81a9c579963df6d588ce99"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -5084,7 +5103,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xa27a09a84b520c5c140900ee504fc8d2361387812ba8eaa96f6a91fa5912fe9b"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -5128,7 +5148,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x7ad5fbeebea5086e4d18f12e0491301e8e0b245240772ad883ad20f47a953d41"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -5172,7 +5193,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x50ee7219440718ef9c6b68429c135120c5e8a22e89cde23f7eeb9bb586f2093b"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -5216,7 +5238,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x93ab36da3f6e3032443025e2b09eabdd08cd18195d81a9c579963df6d588ce99"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -5260,7 +5283,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xa27a09a84b520c5c140900ee504fc8d2361387812ba8eaa96f6a91fa5912fe9b"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -5723,7 +5747,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x02421668ae238afb9f7b587034f731249747ab937043b7c4b463b76c1c39ba90"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -6186,7 +6211,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x9a1e6fc708ebd26633d873c7c6f663dbc90b2404c5af8cfcfcac46eeafb96e3e"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -6649,7 +6675,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xfaf0aa335055f619642c1bfb6aeccff6c05061392dd48832f88d74a9fb4a85dd"
       },
       {
         "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
@@ -7112,18 +7139,11 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x745468051f98fa41f9f8505b0f2d04bb69cebf020d76859bd9dc2e7c82bb648c"
       }
     ],
-    "gaugeList": [
-      "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
-      "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
-      "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
-      "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
-      "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
-      "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
-      "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f"
-    ]
+    "gaugeList": []
   },
   {
     "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
@@ -7490,7 +7510,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xb923d3ac885e5f190454683e338e3352035e73d03df22b4b85f247fc933f6585"
       },
       {
         "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
@@ -7854,7 +7875,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xeaf79d48270e33ead232e161a5e76acc20e1d4dc15b633a0d53299288e82b5df"
       },
       {
         "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
@@ -8055,7 +8077,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xd08354b681da59b3061ef24b91f46e90157607c1b8219523c132a22c1d4d9dd5"
       },
       {
         "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
@@ -8256,7 +8279,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x3eb4f2d5c1d9fb6c3f77c6beadf2b56d2071ed58dd8d910e695cdc4732d2cb2e"
       },
       {
         "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
@@ -8521,7 +8545,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x5d7b5ca88d1bc5381d685e04f0c8d95bca5fcbf6dba46ed6d1d3fce2daa7a8c3"
       },
       {
         "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
@@ -8786,7 +8811,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x3c3460ee6289c513d4a3c4d5d8e01081bf599e88c1064d32638cb5c7eeed0cd9"
       },
       {
         "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
@@ -9183,7 +9209,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x85276c1c250c7cdaa44ccde5d45a0e11f21014a42b465c2e018c41ce5ed775b4"
       },
       {
         "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
@@ -9580,7 +9607,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xe28e39a398732d46853ebc0578dd62b662d2a2fda2cc0fe4058c881c2ae07eff"
       },
       {
         "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
@@ -9624,7 +9652,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x7ad5fbeebea5086e4d18f12e0491301e8e0b245240772ad883ad20f47a953d41"
       },
       {
         "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
@@ -9668,7 +9697,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xa8e022519ff192b2ec6f990323e5ee5b79af1c6d6f401cf022370aa8e546d1c7"
       },
       {
         "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
@@ -9712,7 +9742,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x7ad5fbeebea5086e4d18f12e0491301e8e0b245240772ad883ad20f47a953d41"
       },
       {
         "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
@@ -9756,7 +9787,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xa8e022519ff192b2ec6f990323e5ee5b79af1c6d6f401cf022370aa8e546d1c7"
       },
       {
         "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
@@ -10219,7 +10251,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x0b496324afe0fdcd2f337aeeb703ab1c8b1c3ac753d9b148a904b0ee165b2deb"
       },
       {
         "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
@@ -10682,18 +10715,11 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x43036ace3ae42de4b8ccfab51b8c070dd83406dd7f9879be67760244edd8ce99"
       }
     ],
-    "gaugeList": [
-      "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
-      "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
-      "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
-      "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
-      "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
-      "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
-      "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f"
-    ]
+    "gaugeList": []
   },
   {
     "briber": "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E",
@@ -11027,7 +11053,8 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x1df625856a28d58305bf6f7816a177c22e6fcd78eb3aeddd9cc5b7f012cab176"
       },
       {
         "briber": "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E",
@@ -11164,13 +11191,11 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x2f573a3c5888f721c86796d0ad4fccc8e8a82832ca8375b3e5ec0125828266c0"
       }
     ],
-    "gaugeList": [
-      "0x148708d34F797473Cad01AC113CFD4208a57C081",
-      "0xb49e0053C1d6ccF4250FCD21F3906f624727b722"
-    ]
+    "gaugeList": []
   },
   {
     "briber": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
@@ -11217,10 +11242,11 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0xc8bdad546d6df48940dba6d724424370d1672eb1e39f17cefb1a8978b2958da2"
       }
     ],
-    "gaugeList": ["0x9C4e2444d40508dF540466cCBD83855e39E5972B"]
+    "gaugeList": []
   },
   {
     "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
@@ -11686,9 +11712,10 @@
               }
             ]
           }
-        ]
+        ],
+        "merkleRoot": "0x26ea740ecc22c0e06289ab56889aafdcc431486789ac25d95df583c06da43e17"
       }
     ],
-    "gaugeList": ["0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f"]
+    "gaugeList": []
   }
 ]

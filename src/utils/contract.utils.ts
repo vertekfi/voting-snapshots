@@ -3,7 +3,8 @@ import { JsonRpcProvider } from '@ethersproject/providers';
 import { Fragment, JsonFragment } from 'ethers';
 import { Multicaller } from 'src/services/multicaller';
 import * as orchardAbi from '../abis/MerkleOrchard.json';
-import { getRpcProvider } from './web3.utils';
+import * as adminAbi from '../abis/VertekAdminActions.json';
+import { getRpcProvider, getSigner } from './web3.utils';
 
 export function getMerkleOrchard() {
   return new Contract(
@@ -20,5 +21,13 @@ export function getMulticall(
     '0x4Ba82B21658CAE1975Fa26097d87bd48FF270124',
     getRpcProvider(),
     abi,
+  );
+}
+
+export function getVertekAdminActions() {
+  return new Contract(
+    '0x85b3062122Dda49002471500C0F559C776FfD8DD',
+    adminAbi,
+    getSigner(),
   );
 }
