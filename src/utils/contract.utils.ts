@@ -1,7 +1,7 @@
 import { Contract } from '@ethersproject/contracts';
 import { JsonRpcProvider } from '@ethersproject/providers';
 import { Fragment, JsonFragment } from 'ethers';
-import { Multicaller } from 'src/services/multicaller';
+import { Multicaller } from 'src/services/standalone/multicaller';
 import * as orchardAbi from '../abis/MerkleOrchard.json';
 import * as adminAbi from '../abis/VertekAdminActions.json';
 import { getRpcProvider, getSigner } from './web3.utils';

@@ -6,8 +6,8 @@ import { formatEther } from 'ethers';
 import { join } from 'path';
 import * as moment from 'moment';
 import { getMulticall } from '../../utils/contract.utils';
-import { csvService } from '../csv.service';
-import { bscScanService } from '../bsc-scan.service';
+import { csvService } from '../standalone/csv.service';
+import { bscScanService } from '../standalone/bsc-scan.service';
 import { gqlService } from '../backend/gql.service';
 import { Gauge } from 'src/types/gauge.types';
 import {
@@ -233,6 +233,7 @@ export class VoteDataService {
 
       const balanceNum = parseFloat(formatEther(balance.balance._hex));
       const weightPercent = balanceNum / totalSupplyNum;
+
       return {
         user,
         balance: balanceNum,
