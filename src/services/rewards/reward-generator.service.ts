@@ -1,18 +1,15 @@
 import { BigNumber } from '@ethersproject/bignumber';
 import { StandardMerkleTree } from '@openzeppelin/merkle-tree';
-import { parseUnits } from 'ethers';
+import { parseUnits } from 'ethers/lib/utils';
 import { DistributionStruct } from 'src/types/bribe.types';
-import {
-  UserGaugeSnapshotRelativeInfo,
-  UserInfo,
-  UserMerkleSnapshot,
-} from 'src/types/user.types';
+import { UserGaugeSnapshotRelativeInfo, UserInfo } from 'src/types/user.types';
 import {
   getMerkleOrchard,
   getMulticall,
   getVertekAdminActions,
 } from 'src/utils/contract.utils';
 import { doTransaction } from 'src/utils/web3.utils';
+import { setUsersFullData } from './reward.utils';
 
 export function getTokenTotalForGaugeBribes(
   tokens: { address: string }[],
@@ -49,48 +46,6 @@ export async function getDistributionInfo(gauges: any[]): Promise<
 
   const ids = await getNextDistributionIds(gauges);
   return getBribersDistributionParams(gauges, ids);
-}
-
-export async function doCreateBribeDistribution(
-  token: string,
-  amount: string,
-  briber: string,
-  merkleRoot: string,
-) {
-  console.log(`doCreateBribeDistribution: 
-  token: ${token}
-  amount: ${amount}
-  briber: ${briber}`);
-  // function createDistribution(
-  //   IERC20Upgradeable token,
-  //   uint256 amount,
-  //   address briber,
-  //   uint256 distributionId,
-  //   bytes32 merkleRoot
-  // )
-
-  const orchard = getMerkleOrchard();
-
-  const distributionId = await orchard.getNextDistributionId(briber, token);
-
-  // const txReceipt = await doTransaction(
-  //   orchard.createDistribution(
-  //     token,
-  //     parseUnits(amount),
-  //     briber,
-  //     distributionId,
-  //     merkleRoot,
-  //   ),
-  // );
-
-  return {
-    distributionId: distributionId.toNumber(),
-    token,
-    amount,
-    briber,
-    merkleRoot,
-    //  txReceipt
-  };
 }
 
 export async function doDistributions(structs: DistributionStruct[]) {
@@ -240,42 +195,71 @@ export function getUniqueBribeTokens(gauges: any[]) {
 }
 
 export function generateRewardTree(
-  userData: UserInfo[],
+  usersWhoVoted: UserInfo[],
   gauge: string,
-  token: string,
+  token,
   totalRewardAmountForToken: number,
+  epochDir: string,
 ) {
-  const usersWhoVoted = userData.filter((user) => {
-    return user.votes.filter((vote) => vote.gauge === gauge).length > 0;
-  });
+  // const usersWhoVoted = userData.filter((user) => {
+  //   return user.votes.filter((vote) => vote.gauge === gauge).length > 0;
+  // });
+
+  // TODO: 0x25270EEae3ad2c6780Bda16Dd24933d416454B01has no proof array
 
   const userInfo: UserGaugeSnapshotRelativeInfo[] =
     getUserClaimsToAmountForToken(
       usersWhoVoted,
       getVotersTotalWeightForGauge(usersWhoVoted),
+      gauge,
       token,
       totalRewardAmountForToken,
     );
 
+  checkAmounts(userInfo, token, totalRewardAmountForToken);
+
   const tree = getMerkleTree(userInfo);
 
-  const userTreeData: UserMerkleSnapshot[] = [];
+  const userTreeData = [];
   for (const user of userInfo) {
     const { values } = getUserProofs(user.user, tree);
 
+    user.claims = user.claims || [];
+
+    if (!values.proof.length) {
+      console.log('User has no proof but was included: ' + user.user);
+    }
+
+    user.claims.push({
+      gauge,
+      token: token.address,
+      userRelativeAmount: user.userRelativeAmount,
+      proof: values.proof,
+      amountOwed: values.value[1],
+    });
+
     userTreeData.push({
       user: user.user,
-      userGaugeRelativeWeight: user.userGaugeRelativeWeight,
+      // userGaugeRelativeWeight: user.userGaugeRelativeWeight,
+      // userRelativeAmount: user.userRelativeAmount,
+
+      // Write claims into user-data.json
       claims: [
         {
           gauge,
-          token,
+          token: token.address,
           userRelativeAmount: user.userRelativeAmount,
-          values,
+          // values,
+          // briber: //TODO: Would make this easier if going this route
+          proof: values.proof,
+          amountOwed: values.value[1],
         },
       ],
     });
   }
+
+  // overwrite user-data.json
+  setUsersFullData(epochDir, userInfo);
 
   return {
     root: tree.root,
@@ -284,45 +268,75 @@ export function generateRewardTree(
   };
 }
 
+function checkAmounts(
+  userInfo: UserGaugeSnapshotRelativeInfo[],
+  token,
+  totalRewardAmountForToken: number,
+) {
+  let totalAmount = 0;
+
+  userInfo.forEach((u) => {
+    totalAmount += u.userRelativeAmount;
+  });
+}
+
 function getUserClaimsToAmountForToken(
   users: UserInfo[],
   totalVoteUsersWeightForGauge: number,
+  gauge: string,
   token: string,
   totalRewardAmountForToken: number,
 ) {
-  return users.map((userInfo) => {
+  // let total = 0;
+
+  const deez = users.map((userInfo) => {
     const user = userInfo.user;
 
-    console.log(userInfo.votes);
+    // const weightUsed = userInfo.votes.find((v) => v.gauge === gauge);
+    // console.log(weightUsed);
 
     // User vote %'s should be factored into how much they get
     // scale down percentOfTotalVE?
-    //  fuck it for these epoch assuming wont be gamed yet and get them their shit asap..?
+    // fuck it for these epoch assuming wont be gamed yet and get them their shit asap..?
 
     // Scale down % a bit for tighter precision here
     const userGaugeRelativeWeight = Number(
       (
         userInfo.balance.percentOfTotalVE / totalVoteUsersWeightForGauge
-      ).toFixed(16),
+      ).toPrecision(5),
     );
+
     const userRelativeAmount = Number(
-      (totalRewardAmountForToken * userGaugeRelativeWeight).toFixed(12),
+      (
+        totalRewardAmountForToken *
+        (userInfo.balance.percentOfTotalVE / totalVoteUsersWeightForGauge)
+      ).toFixed(8),
     );
+
+    if (user === '0x25270EEae3ad2c6780Bda16Dd24933d416454B01') {
+      console.log('CHECKING CLAIM FOR HIIIMMM');
+      console.log('userRelativeAmount: ' + userRelativeAmount);
+    }
+
+    //  total += userRelativeAmount;
 
     return {
       user,
       token,
       userGaugeRelativeWeight,
       userRelativeAmount,
+      ...userInfo,
     };
   });
+
+  //console.log(total);
+
+  return deez;
 }
 
 function getUserProofs(user: string, tree: StandardMerkleTree<any>) {
   for (const [i, value] of tree.entries()) {
     const proof = tree.getProof(i);
-    console.log(user);
-    console.log(proof);
     // Doing string wrap/unwrap to avoid BigInt file write error for now
     value[value.length - 1] = String(value[value.length - 1]);
 

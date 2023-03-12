@@ -1,6 +1,4 @@
 import { Contract } from '@ethersproject/contracts';
-import { JsonRpcProvider } from '@ethersproject/providers';
-import { Fragment, JsonFragment } from 'ethers';
 import { Multicaller } from 'src/services/standalone/multicaller';
 import * as orchardAbi from '../abis/MerkleOrchard.json';
 import * as adminAbi from '../abis/VertekAdminActions.json';
@@ -10,13 +8,11 @@ export function getMerkleOrchard() {
   return new Contract(
     '0x27eDCe99d5aF44318358497fD5Af5C8e312F1721',
     orchardAbi,
-    new JsonRpcProvider(process.env.BSC_RPC),
+    getSigner(),
   );
 }
 
-export function getMulticall(
-  abi: string | Array<Fragment | JsonFragment | string>,
-) {
+export function getMulticall(abi: string | Array<string>) {
   return new Multicaller(
     '0x4Ba82B21658CAE1975Fa26097d87bd48FF270124',
     getRpcProvider(),

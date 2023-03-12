@@ -30,12 +30,12 @@ export interface UserInfo {
   user: string;
   balance: UserBalanceInfo;
   votes: UserBaseVoteInfo[];
+  claims: any[];
 }
 
 export interface UserMerkleSnapshot {
   user: string;
   userGaugeRelativeWeight: number;
-  claims: UserClaim[];
 }
 
 export interface UserGaugeSnapshotRelativeInfo {
@@ -43,14 +43,13 @@ export interface UserGaugeSnapshotRelativeInfo {
   token: string;
   userGaugeRelativeWeight: number;
   userRelativeAmount: number;
+  claims?: UserClaim[];
 }
 
 export interface UserClaim {
   gauge: string;
   token: string;
   userRelativeAmount: number;
-  values: {
-    proof: string[];
-    value: string[];
-  };
+  proof: string[];
+  amountOwed: string;
 }

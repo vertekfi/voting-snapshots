@@ -2,7 +2,6 @@ import { Contract } from '@ethersproject/contracts';
 import { JsonRpcProvider } from '@ethersproject/providers';
 import * as ControllerAbi from '../../abis/GaugeController.json';
 import * as fs from 'fs-extra';
-import { formatEther } from 'ethers';
 import { join } from 'path';
 import * as moment from 'moment';
 import { getMulticall } from '../../utils/contract.utils';
@@ -36,6 +35,7 @@ import {
   voterAddressesFile,
 } from './reward.utils';
 import { config } from 'dotenv';
+import { formatEther } from 'ethers/lib/utils';
 
 const veABI = [
   'function balanceOf(address, uint256) public view returns (uint256)',
@@ -275,6 +275,7 @@ export class VoteDataService {
         user: user.user,
         votes: user.votes,
         balance: userBalances.data.find((bal) => bal.user === user.user),
+        claims: [],
       };
     });
 

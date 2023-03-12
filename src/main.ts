@@ -4,8 +4,10 @@ import { config } from 'dotenv';
 import { jobScheduler } from './services/job-scheduler.service';
 import { voteService } from './services/rewards/vote-data.service';
 import * as moment from 'moment';
-import { formatEther, parseUnits } from 'ethers';
-import { runBribeRewardsForEpoch } from './services/rewards/reward-epoch-runner';
+import {
+  createDistributions,
+  runBribeRewardsForEpoch,
+} from './services/rewards/reward-epoch-runner';
 
 async function bootstrap() {
   // App service will load env vars itself
@@ -22,7 +24,8 @@ async function bootstrap() {
   // jobScheduler.init();
   // await voteService.doVotingSnapshot(new Date('2023-03-2'));
 
-  await runBribeRewardsForEpoch();
+  // await runBribeRewardsForEpoch();
+  // await createDistributions();
 }
 
 bootstrap();

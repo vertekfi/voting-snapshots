@@ -2,6 +2,13 @@ import { ContractTransaction } from '@ethersproject/contracts';
 import { JsonRpcProvider, Provider } from '@ethersproject/providers';
 import { Wallet } from 'ethers';
 
+export async function sleep(ms = 3000) {
+  console.log(`Sleeping for ${ms / 1000} seconds..`);
+  return new Promise((res) => {
+    setTimeout(res, ms);
+  });
+}
+
 export function getRpcProvider() {
   return new JsonRpcProvider(process.env.BSC_RPC);
 }
@@ -11,7 +18,7 @@ export function getSigner() {
   const provider = getRpcProvider();
   wallet = wallet.connect(provider as any);
 
-  return provider.getSigner();
+  return wallet;
 }
 
 export async function doTransaction(txResponse: ContractTransaction) {

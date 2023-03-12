@@ -21,6 +21,16 @@ export const userVotesFile = 'user-votes.json';
 export const userDataFile = 'user-data.json';
 export const userRewardDataFile = 'user-reward-data.json';
 export const bribersDataFile = 'bribers-data.json';
+export const userClaimsFile = 'user-claims.json';
+export const claimDistributionsFile = 'claim-distributions.json';
+
+export function getUserClaims(epochDir: string) {
+  return fs.readJSONSync(join(epochDir, userClaimsFile));
+}
+
+export function setUserClaims(epochDir: string, data: any[]) {
+  fs.writeJSONSync(join(epochDir, userClaimsFile), data);
+}
 
 export function setBribersData(epochDir: string, data: any[]) {
   const path = join(epochDir, bribersDataFile);
@@ -30,12 +40,6 @@ export function setBribersData(epochDir: string, data: any[]) {
 
 export function getBribersData(epochDir: string): any[] {
   return fs.readJSONSync(join(epochDir, bribersDataFile));
-}
-
-export function setUserRewardData(epochDir: string, data: any[]) {
-  const path = join(epochDir, userRewardDataFile);
-  fs.ensureFileSync(path);
-  fs.writeJSONSync(path, data);
 }
 
 export function getUserRewardData(epochDir: string) {
@@ -60,9 +64,19 @@ export function getUsersGaugeVotes(epochDir: string) {
   return userVotes;
 }
 
+export function getVotesForUser(epochDir: string, user: string) {
+  const votes = getUsersGaugeVotes(epochDir);
+
+  return votes.find((v) => v.user === user).votes;
+}
+
 export function getUsersFullData(epochDir: string) {
   const userData: UserInfo[] = fs.readJSONSync(join(epochDir, userDataFile));
   return userData;
+}
+
+export function setUsersFullData(epochDir: string, data: any[]) {
+  fs.writeJSONSync(join(epochDir, userDataFile), data);
 }
 
 export function getUserBalances(epochDir: string) {
