@@ -12,8 +12,6 @@ import { Gauge } from 'src/types/gauge.types';
 import {
   UserBaseVoteInfo,
   UserBalanceInfo,
-  UserBalanceData,
-  UserGaugeVotes,
   UserInfo,
 } from 'src/types/user.types';
 import { getEventData } from '../../utils/event-scraping';
@@ -31,11 +29,15 @@ import {
   userBalanceFile,
   rawVotesFile,
   userDataFile,
-  userVotesFile,
   voterAddressesFile,
+  getRawVotesData,
+  setRawVotesData,
+  setUsersGaugeVotes,
+  setUserBalances,
 } from './reward.utils';
 import { config } from 'dotenv';
 import { formatEther } from 'ethers/lib/utils';
+import { sleep } from 'src/utils/web3.utils';
 
 const veABI = [
   'function balanceOf(address, uint256) public view returns (uint256)',
@@ -87,7 +89,7 @@ export class VoteDataService {
 
       epochEnd = moment.unix(block.timestamp).utc();
     } else {
-      epochEnd = moment(epochStart).utc().add(1, 'week');
+      epochEnd = moment(epochStart).utc().add(1, 'week').subtract(1, 'second');
     }
 
     console.log(
@@ -111,6 +113,12 @@ export class VoteDataService {
       epochEnd.unix(),
     );
 
+    if (isNaN(endBlockNumber)) {
+      console.log('End block corrupted');
+
+      return;
+    }
+
     console.log(
       `Initial blocks = start: ${startingBlockNumber} - end: ${endBlockNumber}`,
     );
@@ -122,10 +130,13 @@ export class VoteDataService {
       currentEpochDataDir,
     );
 
-    this.filterUniqueUsers(currentEpochDataDir);
+    this.setUniqueUsers(currentEpochDataDir);
+
+    // Use the end of the epoch timestamp to account for all voters
     await this.saveUserEpochBalances(epochEnd.unix(), currentEpochDataDir);
-    this.joinUsersToVotes(currentEpochDataDir);
-    this.joinUserBalanceInfo(currentEpochDataDir);
+
+    const usersWithVotes = this.joinUsersToVotes(currentEpochDataDir);
+    setUsersGaugeVotes(currentEpochDataDir, usersWithVotes);
 
     const gauges = await gqlService.getGauges();
 
@@ -169,26 +180,27 @@ export class VoteDataService {
             txHash: evt.transactionHash,
           };
 
-          const records: any[] = fs.readJSONSync(filePath);
+          const records = getRawVotesData(currentEpochDataDir);
           records.push(voteData);
-          fs.writeJSONSync(filePath, records);
+
+          setRawVotesData(currentEpochDataDir, records);
         }
       },
     );
   }
 
-  private filterUniqueUsers(currentEpochDataDir: string) {
-    // could just use reduce
-    const addresses = [];
-    const data: UserBaseVoteInfo[] = fs.readJSONSync(
-      join(currentEpochDataDir, rawVotesFile),
-    );
+  private setUniqueUsers(currentEpochDataDir: string) {
+    const data: UserBaseVoteInfo[] = getRawVotesData(currentEpochDataDir);
 
-    data.forEach((vote) => {
-      if (!addresses.includes(vote.who)) {
-        addresses.push(vote.who);
+    const addresses = data.reduce((prev, current) => {
+      if (!prev.includes(current.who)) {
+        prev.push(current.who);
       }
-    });
+
+      return prev;
+    }, []);
+
+    console.log(`setUniqueUsers: There are ${addresses.length} unique voters`);
 
     fs.writeJSONSync(join(currentEpochDataDir, voterAddressesFile), addresses);
   }
@@ -200,7 +212,7 @@ export class VoteDataService {
       userAddresses,
     );
 
-    fs.writeJSONSync(join(epochDir, userBalanceFile), userBalances);
+    setUserBalances(epochDir, userBalances);
   }
 
   async getUsersVeBalancesForEpoch(epochTimestamp: number, users: string[]) {
@@ -232,7 +244,7 @@ export class VoteDataService {
       const [user, balance] = info;
 
       const balanceNum = parseFloat(formatEther(balance.balance._hex));
-      const weightPercent = balanceNum / totalSupplyNum;
+      const weightPercent = Number((balanceNum / totalSupplyNum).toFixed(12));
 
       return {
         user,
@@ -253,33 +265,39 @@ export class VoteDataService {
     const userAddresses = getUserAddresses(epochDir);
     const voteEventsData = getRawVotesEventData(epochDir);
 
-    const userData = userAddresses.map((user) => {
-      // TODO: Need to filter out duplicates somehow
-      const userVotes = voteEventsData.filter((vote) => vote.who === user);
+    return userAddresses.map((user) => {
+      const userVotes = voteEventsData
+        .filter((vote) => vote.who === user)
+        .map((v) => {
+          return {
+            gauge: v.gauge,
+            weightUsed: v.weightUsed,
+          };
+        });
+
+      console.log(
+        `joinUsersToVotes: user ${user} has (${userVotes.length}) vote records`,
+      );
 
       return {
         user,
         votes: userVotes,
       };
     });
-
-    fs.writeJSONSync(join(epochDir, userVotesFile), userData);
   }
 
   private joinUserBalanceInfo(epochDir: string) {
     const userVotes = getUsersGaugeVotes(epochDir);
     const userBalances = getUserBalances(epochDir);
 
-    const data = userVotes.map((user): UserInfo => {
+    const data = userVotes.map((user) => {
       return {
         user: user.user,
-        votes: user.votes,
         balance: userBalances.data.find((bal) => bal.user === user.user),
-        claims: [],
       };
     });
 
-    fs.writeJSONSync(join(epochDir, userDataFile), data);
+    setUserBalances(epochDir, data);
   }
 
   private saveVotesForGaugeJSON(epochDir: string, gauge: Gauge) {
@@ -333,7 +351,7 @@ export class VoteDataService {
           userVotePowerPercentage: user.balance.percentOfTotalVE,
           votingPowerUsed,
           votingPowerUsedDisplay: `${votingPowerUsed * 100}%`,
-          snapshotTime: userBalances.epochTimestampDateUTC,
+          // snapshotTime: userBalances.epochTimestampDateUTC,
         });
       }
     });

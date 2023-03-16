@@ -17,6 +17,8 @@ class BscScanService {
         `${BASE_URL}?module=block&action=getblocknobytime&timestamp=${timestamp}&closest=before&apikey=${this.apiKey}`,
       );
 
+      console.log(data);
+
       return parseInt(data.result);
     } catch (error) {
       console.error(error);

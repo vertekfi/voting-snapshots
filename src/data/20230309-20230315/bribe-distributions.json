@@ -1,0 +1,366 @@
+[
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "amount": "500.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 248.2813106479141,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+    "merkleRoot": "0x73139c5850f830f5cbe5701f8a58ccc2a57b3feeddeb062cbfcf2ba0ee1f1766",
+    "distribution": {
+      "distributionId": 7,
+      "txHash": "0x450e468ff41a4793e66f7940c060bfa5ec954b8bc546d621d87362ed99bdd3ca"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "amount": "3900.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 57.49675244503211,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+    "merkleRoot": "0xad2809295e27ae51aa6e1de98a20948c10da55b5dc6dd33d8ade410fbe90e64c",
+    "distribution": {
+      "distributionId": 7,
+      "txHash": "0xb5bb3239ab99d4c2e53fc080706fb255c1ff06e49ddf4f7628b0ef599e946311"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "amount": "50.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 49.8688,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+    "merkleRoot": "0xfa3739633abe4fc428d3fa6a693e394dc1a233589d159aa9f47e87f71758eb80",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x74729e08fda7023d7482baa718803fb658f7faca8a6d85ead075ec95cdbfa25b"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "amount": "350.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 173.79691745353986,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+    "merkleRoot": "0xb31e83cf4f228d8d26738e94a7c7eda4a6d0452ddf3e2e992db69c68476ef8de",
+    "distribution": {
+      "distributionId": 8,
+      "txHash": "0xefa61764bbe65a9d917171c2a990de6e369a02c8f37422ec4d58bdb94bfce882"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "amount": "1700.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 25.062686963219125,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+    "merkleRoot": "0xb4a675cf8df5212fdb7594f376e590770e08c9eb1137868ba0d1ecc7f065c479",
+    "distribution": {
+      "distributionId": 9,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "amount": "10.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 9.99689,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x90c97f71e18723b0cf0dfa30ee176ab653e89f40",
+    "merkleRoot": "0x90c50e51f80aa5c3d1dc55ad3270eba7d060173fb546612e0a00a69c0ff8c921",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+    "amount": "100.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 49.65626212958282,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+    "merkleRoot": "0xd785cb4e8b6ed0edaa5d944d40bed08220e549a10f9275f53438c7c7864062dd",
+    "distribution": {
+      "distributionId": 11,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+    "amount": "200.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 99.31252425916564,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+    "merkleRoot": "0x5eca1ee438c2f6b5c3b66cb1994eafd85d06ac2a21c631523a9901aa80b3c979",
+    "distribution": {
+      "distributionId": 12,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+    "amount": "1600.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 23.588411259500354,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+    "merkleRoot": "0x30808df15a49e7e6a8df4527d299151beadd23737c84a3743aca50290819ce73",
+    "distribution": {
+      "distributionId": 10,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "amount": "350.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 173.79691745353986,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+    "merkleRoot": "0xbf210a3f852c113c6ab7c26074d2bbfed6f89f4e74725c4e4d7ff0769683854a",
+    "distribution": {
+      "distributionId": 13,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "amount": "2000.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 29.48551407437544,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+    "merkleRoot": "0x63d6a9f7884f0185005adc22e881b0ecec5527a0f4cde3b9fa328b9adffc4d87",
+    "distribution": {
+      "distributionId": 11,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "amount": "500.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 248.2813106479141,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+    "merkleRoot": "0x7be593faa8e669843fa4366a206f6e0824029109a3b3cebcef9ef80132f056f8",
+    "distribution": {
+      "distributionId": 14,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "amount": "3900.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 57.49675244503211,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+    "merkleRoot": "0xfac359983a01b63142647d181572f95df41802417092218dbc10f393bf61135c",
+    "distribution": {
+      "distributionId": 12,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "amount": "50.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 49.8688,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+    "merkleRoot": "0xb60ea5a443b5b05cdc1c03b4ec1340b9a14a77ed91c3475f3f0e6b611e771e4e",
+    "distribution": {
+      "distributionId": 1,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "amount": "350.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 173.79691745353986,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+    "merkleRoot": "0x195e507b6c5aabf506a148cf477590dc5e12db5f0996f08ef34dce516ccb0341",
+    "distribution": {
+      "distributionId": 15,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "amount": "1700.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 25.062686963219125,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+    "merkleRoot": "0x7eb684a444931d468a489bfd3391a0a2e7b7cd8eb2c74c52130f14cbb04dcf23",
+    "distribution": {
+      "distributionId": 13,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "amount": "10.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 9.97376,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+    "merkleRoot": "0x01db820ad53f271b2c033af340b895a0608b5ec23a2be85f986efdfcaaa8e415",
+    "distribution": {
+      "distributionId": 2,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "amount": "20.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 20,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+    "merkleRoot": "0x52f525fcf51cb2b0b8263514196f56788195fd1500147a984f9734ffeb83cdb6",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "amount": "20.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 20.08,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+    "merkleRoot": "0x52f525fcf51cb2b0b8263514196f56788195fd1500147a984f9734ffeb83cdb6",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "amount": "0.03",
+    "epochStartTime": 1678320000,
+    "valueUSD": 50.9946,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+    "merkleRoot": "0x3cfefd75c7e15494db9bb8eb97f64279ddde942b54381cb3fc87e7fdd0a6ae5a",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+    "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+    "amount": "20.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 19.98414,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+    "merkleRoot": "0xea9838d0c5b741eca2702e1c51285a0eb35e0db2f903bbd1268e1f13022b6a22",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "amount": "0.0022",
+    "epochStartTime": 1678320000,
+    "valueUSD": 54.274,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+    "merkleRoot": "0x18d7bb53f8163b555ef130ed39f50969c867d1047938ed96c7d691d8b9b4d4eb",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "amount": "10.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 9.99207,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+    "merkleRoot": "0x01db820ad53f271b2c033af340b895a0608b5ec23a2be85f986efdfcaaa8e415",
+    "distribution": {
+      "distributionId": 1,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "amount": "10.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 10.049999999999999,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x55d398326f99059ff775485246999027b3197955",
+    "merkleRoot": "0x01db820ad53f271b2c033af340b895a0608b5ec23a2be85f986efdfcaaa8e415",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E",
+    "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+    "amount": "0.15",
+    "epochStartTime": 1678320000,
+    "valueUSD": 254.97299999999998,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+    "merkleRoot": "0xff23c95bec08f8653daa75837b8f421adbeb14de5d02ee4c37fda962aabf1743",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  },
+  {
+    "briber": "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E",
+    "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+    "amount": "0.45",
+    "epochStartTime": 1678320000,
+    "valueUSD": 305.676,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0xc91324601b20ea0e238b63c9fafca18d32600722",
+    "merkleRoot": "0x2bccaee44d64f5a1ed9e49ed3b37b0f9874ee474e2632ef95a758ff65b096125",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x66f098bd3c2cc9ca18d0615b6d24abf614d80d81d3f28730abbe0816e5600185"
+    }
+  }
+]

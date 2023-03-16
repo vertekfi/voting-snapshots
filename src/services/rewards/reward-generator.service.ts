@@ -99,7 +99,14 @@ export function associateBribesToBribers(gauges: any[]) {
   return bribers.map((briber) => {
     return {
       briber,
-      bribes: bribes.filter((b) => b.briber === briber),
+      bribes: bribes
+        .filter((b) => b.briber === briber)
+        .map((b) => {
+          return {
+            ...b,
+            token: b.token.address,
+          };
+        }),
     };
   });
 }
@@ -123,7 +130,8 @@ export function getListOfAllBribes(gauges: any[]) {
   const bribeInstances = gauges
     .map((g) => g.currentEpochBribes.map((b) => b))
     .flat();
-  console.log(`(${bribeInstances.length}) distinct bribe instances`);
+
+  console.log(`(${bribeInstances.length}) unique bribe instances`);
 
   return bribeInstances;
 }
@@ -194,185 +202,82 @@ export function getUniqueBribeTokens(gauges: any[]) {
   return bribeTokens;
 }
 
-export function generateRewardTree(
-  usersWhoVoted: UserInfo[],
-  gauge: string,
-  token,
-  totalRewardAmountForToken: number,
-  epochDir: string,
-) {
-  // const usersWhoVoted = userData.filter((user) => {
-  //   return user.votes.filter((vote) => vote.gauge === gauge).length > 0;
-  // });
-
-  // TODO: 0x25270EEae3ad2c6780Bda16Dd24933d416454B01has no proof array
-
-  const userInfo: UserGaugeSnapshotRelativeInfo[] =
-    getUserClaimsToAmountForToken(
-      usersWhoVoted,
-      getVotersTotalWeightForGauge(usersWhoVoted),
-      gauge,
-      token,
-      totalRewardAmountForToken,
-    );
-
-  checkAmounts(userInfo, token, totalRewardAmountForToken);
-
-  const tree = getMerkleTree(userInfo);
-
-  const userTreeData = [];
-  for (const user of userInfo) {
-    const { values } = getUserProofs(user.user, tree);
-
-    user.claims = user.claims || [];
-
-    if (!values.proof.length) {
-      console.log('User has no proof but was included: ' + user.user);
-    }
-
-    user.claims.push({
-      gauge,
-      token: token.address,
-      userRelativeAmount: user.userRelativeAmount,
-      proof: values.proof,
-      amountOwed: values.value[1],
-    });
-
-    userTreeData.push({
-      user: user.user,
-      // userGaugeRelativeWeight: user.userGaugeRelativeWeight,
-      // userRelativeAmount: user.userRelativeAmount,
-
-      // Write claims into user-data.json
-      claims: [
-        {
-          gauge,
-          token: token.address,
-          userRelativeAmount: user.userRelativeAmount,
-          // values,
-          // briber: //TODO: Would make this easier if going this route
-          proof: values.proof,
-          amountOwed: values.value[1],
-        },
-      ],
-    });
-  }
-
-  // overwrite user-data.json
-  setUsersFullData(epochDir, userInfo);
-
-  return {
-    root: tree.root,
-    tree,
-    userTreeData,
-  };
-}
-
-function checkAmounts(
-  userInfo: UserGaugeSnapshotRelativeInfo[],
-  token,
-  totalRewardAmountForToken: number,
-) {
-  let totalAmount = 0;
-
-  userInfo.forEach((u) => {
-    totalAmount += u.userRelativeAmount;
-  });
-}
-
-function getUserClaimsToAmountForToken(
-  users: UserInfo[],
+export function getUserClaimsToAmountForToken(
+  users: any[],
   totalVoteUsersWeightForGauge: number,
-  gauge: string,
-  token: string,
   totalRewardAmountForToken: number,
 ) {
-  // let total = 0;
-
-  const deez = users.map((userInfo) => {
+  return users.map((userInfo) => {
     const user = userInfo.user;
 
-    // const weightUsed = userInfo.votes.find((v) => v.gauge === gauge);
-    // console.log(weightUsed);
+    // TODO: Use % of 10000 used in calc for relative weight
+    // Eg. user uses 5000 of 10000, reduce relative weight by 50%.. BOOOOMMM
 
-    // User vote %'s should be factored into how much they get
-    // scale down percentOfTotalVE?
-    // fuck it for these epoch assuming wont be gamed yet and get them their shit asap..?
+    const precision = 12;
 
     // Scale down % a bit for tighter precision here
     const userGaugeRelativeWeight = Number(
-      (
-        userInfo.balance.percentOfTotalVE / totalVoteUsersWeightForGauge
-      ).toPrecision(5),
+      (userInfo.percentOfTotalVE / totalVoteUsersWeightForGauge).toFixed(
+        precision,
+      ),
     );
 
-    const userRelativeAmount = Number(
-      (
-        totalRewardAmountForToken *
-        (userInfo.balance.percentOfTotalVE / totalVoteUsersWeightForGauge)
-      ).toFixed(8),
-    );
-
-    if (user === '0x25270EEae3ad2c6780Bda16Dd24933d416454B01') {
-      console.log('CHECKING CLAIM FOR HIIIMMM');
-      console.log('userRelativeAmount: ' + userRelativeAmount);
+    let userRelativeAmount = (
+      totalRewardAmountForToken * userGaugeRelativeWeight
+    ).toFixed(precision);
+    if (userRelativeAmount.includes('e')) {
+      userRelativeAmount = eToNumber(userRelativeAmount);
+      // Error check
+      parseUnits(userRelativeAmount);
     }
-
-    //  total += userRelativeAmount;
 
     return {
       user,
-      token,
       userGaugeRelativeWeight,
       userRelativeAmount,
       ...userInfo,
     };
   });
-
-  //console.log(total);
-
-  return deez;
 }
 
-function getUserProofs(user: string, tree: StandardMerkleTree<any>) {
-  for (const [i, value] of tree.entries()) {
-    const proof = tree.getProof(i);
-    // Doing string wrap/unwrap to avoid BigInt file write error for now
-    value[value.length - 1] = String(value[value.length - 1]);
-
-    if (value[0] === user) {
-      return {
-        values: {
-          proof,
-          value,
-        },
-      };
-    }
-  }
-}
-
-function getMerkleTree(users: UserGaugeSnapshotRelativeInfo[]) {
-  const leaves = [];
-
-  users.forEach((user) =>
-    leaves.push([user.user, parseUnits(String(user.userRelativeAmount))]),
-  );
-
-  // The leaves are double-hashed to prevent second preimage attacks.
-  const tree = StandardMerkleTree.of(leaves, ['address', 'uint256']);
-
-  // console.log('Merkle Root:', tree.root);
-
-  return tree;
-}
-export function getVotersTotalWeightForGauge(usersWhoVoted: UserInfo[]) {
+export function getVotersTotalWeightForGauge(usersWhoVoted: any[]) {
   // Need to sum up weight of all voters for the gauge
   // Then convert their ve weight into a relative weight for this gauges vote
   let totalWeight = 0;
 
   usersWhoVoted.forEach((userInfo) => {
-    totalWeight += userInfo.balance.percentOfTotalVE;
+    totalWeight += userInfo.percentOfTotalVE;
   });
 
-  return Number(totalWeight.toFixed(18));
+  return Number(totalWeight.toFixed(12));
+}
+
+function eToNumber(num) {
+  function r() {
+    return w.replace(new RegExp(`^(.{${pos}})(.)`), `$1${dot}$2`);
+  }
+
+  let sign = '';
+  (num += '').charAt(0) == '-' && ((num = num.substring(1)), (sign = '-'));
+  let arr = num.split(/[e]/gi);
+  if (arr.length < 2) return sign + num;
+  let dot = (0.1).toLocaleString().substr(1, 1),
+    n = arr[0],
+    exp = +arr[1],
+    w = (n = n.replace(/^0+/, '')).replace(dot, ''),
+    pos = n.split(dot)[1] ? n.indexOf(dot) + exp : w.length + exp,
+    L = pos - w.length,
+    s = '' + BigInt(w);
+  w =
+    exp >= 0
+      ? L >= 0
+        ? s + '0'.repeat(L)
+        : r()
+      : pos <= 0
+      ? '0' + dot + '0'.repeat(Math.abs(pos)) + s
+      : r();
+  L = w.split(dot);
+  if ((L[0] == 0 && L[1] == 0) || (+w == 0 && +s == 0)) w = 0; //** added 9/10/2021
+
+  return sign + w;
 }
