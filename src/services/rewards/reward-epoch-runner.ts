@@ -13,6 +13,7 @@ import {
   getVotersTotalWeightForGauge,
 } from './reward-generator.service';
 import {
+  getBribeDistributionInfo,
   getBribersData,
   getDistributionData,
   getGaugeBribeClaims,
@@ -41,7 +42,7 @@ export async function runBribeRewardsForEpoch(epoch: number, epochDir: string) {
       // After setUserBribeClaims
       let usersForTree = groupUsersByTokenForDistributionPrep(epochDir, bribe);
 
-      // users has ROOT attached now for easier claiming setup
+      // users have ROOT attached now for easier claiming setup
       const { tree, users } = getBribeMerkleTree(usersForTree);
       assignMerkleRootToClaims(users, tree.root);
       // Attach proof as well for ease later
@@ -55,19 +56,9 @@ export async function runBribeRewardsForEpoch(epoch: number, epochDir: string) {
 
       // Set minimal user info now instead of using voters data to bloat file
       bribe.users = usersForTree;
-
-      if (!bribe.users.length) {
-        console.log('WTF..');
-        console.log(bribe);
-      }
-
-      // console.log(bribersBribes[i]);
+      bribe.merkleRoot = tree.root;
 
       setBribersData(epochDir, bribersBribes);
-
-      // TODO: Attach dist info again as well. Get this all consolidated instead extra jumanji shit
-
-      // Can use the new proof to update the on chain on for the distribution
     }
   }
 }
@@ -224,17 +215,6 @@ export async function doBulkBribeDistribution(epochDir: string) {
     return prev;
   }, []);
 
-  // TODO: Need to map the users apart of this distribution to the dist id for,
-  // each, underlying distribution they are apart of....
-  // tricky
-  // Could predict and then afterwards verify
-  // Associate users to bribe, again, and reference that as needed
-  // (really just need ids and such. Aka.. the database)
-
-  // Easy enought to "attach" voters here
-  // Did that already
-  // Need that at merkle time, but have to update the roots anyway
-
   const admin = getVertekAdminActions();
   const orchard = getMerkleOrchard();
 
@@ -264,14 +244,6 @@ export function updateDistributions(epochDir: string) {
     const token = `0x${eventData.topics[2].slice(26)}`.toLowerCase();
     const root = evt.merkleRoot.toLowerCase();
 
-    // const matchingBribe = bribes.find(
-    //   (bribe) =>
-    //     bribe.briber.toLowerCase() === briber &&
-    //     bribe.token.toLowerCase() === token &&
-    //     bribe.merkleRoot.toLowerCase() === root &&
-    //     parseUnits(bribe.amount).eq(evt.amount),
-    // );
-
     const matchingBribe = matchBribeRecord(
       bribes,
       briber,
@@ -291,6 +263,18 @@ export function updateDistributions(epochDir: string) {
   });
 }
 
+export function joinDistributionsToUsers(epochDir: string) {
+  const bribesFlat = getBribeDistributionInfo(epochDir);
+
+  bribesFlat.forEach((bribe) => {
+    bribe.users.forEach(
+      (user) => (user.distributionId = bribe.distribution.distributionId),
+    );
+  });
+
+  setBribeDistributionInfo(epochDir, bribesFlat);
+}
+
 export function matchBribeRecord(
   bribes: any[],
   briber: string,
@@ -302,8 +286,8 @@ export function matchBribeRecord(
     (bribe) =>
       bribe.briber.toLowerCase() === briber.toLowerCase() &&
       bribe.token.toLowerCase() === token.toLowerCase() &&
-      //  bribe.merkleRoot.toLowerCase() === root.toLowerCase() &&
-      parseUnits(bribe.amount).eq(parseUnits(amount)),
+      bribe.merkleRoot.toLowerCase() === root.toLowerCase() &&
+      parseUnits(bribe.amount).eq(amount),
   );
 
   if (!matchingBribe.length) {

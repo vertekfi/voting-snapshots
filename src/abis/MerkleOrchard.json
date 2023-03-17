@@ -584,27 +584,27 @@
   {
     "inputs": [
       {
-        "internalType": "contract IERC20Upgradeable",
-        "name": "token",
-        "type": "address"
+        "internalType": "contract IERC20Upgradeable[]",
+        "name": "tokens",
+        "type": "address[]"
       },
       {
-        "internalType": "address",
-        "name": "briber",
-        "type": "address"
+        "internalType": "address[]",
+        "name": "bribers",
+        "type": "address[]"
       },
       {
-        "internalType": "uint256",
-        "name": "distributionId",
-        "type": "uint256"
+        "internalType": "uint256[]",
+        "name": "distributionIds",
+        "type": "uint256[]"
       },
       {
-        "internalType": "bytes32",
-        "name": "root",
-        "type": "bytes32"
+        "internalType": "bytes32[]",
+        "name": "roots",
+        "type": "bytes32[]"
       }
     ],
-    "name": "setDistributionRoot",
+    "name": "setDistributionRoots",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

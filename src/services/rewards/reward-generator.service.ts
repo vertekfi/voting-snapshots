@@ -1,15 +1,12 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { StandardMerkleTree } from '@openzeppelin/merkle-tree';
 import { parseUnits } from 'ethers/lib/utils';
 import { DistributionStruct } from 'src/types/bribe.types';
-import { UserGaugeSnapshotRelativeInfo, UserInfo } from 'src/types/user.types';
 import {
   getMerkleOrchard,
   getMulticall,
   getVertekAdminActions,
 } from 'src/utils/contract.utils';
 import { doTransaction } from 'src/utils/web3.utils';
-import { setUsersFullData } from './reward.utils';
 
 export function getTokenTotalForGaugeBribes(
   tokens: { address: string }[],
@@ -208,36 +205,71 @@ export function getUserClaimsToAmountForToken(
   totalRewardAmountForToken: number,
 ) {
   return users.map((userInfo) => {
-    const user = userInfo.user;
-
-    // TODO: Use % of 10000 used in calc for relative weight
-    // Eg. user uses 5000 of 10000, reduce relative weight by 50%.. BOOOOMMM
-
-    const precision = 12;
-
-    // Scale down % a bit for tighter precision here
-    const userGaugeRelativeWeight = Number(
-      (userInfo.percentOfTotalVE / totalVoteUsersWeightForGauge).toFixed(
-        precision,
-      ),
+    return getUserClaimAmount(
+      userInfo,
+      totalVoteUsersWeightForGauge,
+      totalRewardAmountForToken,
     );
-
-    let userRelativeAmount = (
-      totalRewardAmountForToken * userGaugeRelativeWeight
-    ).toFixed(precision);
-    if (userRelativeAmount.includes('e')) {
-      userRelativeAmount = eToNumber(userRelativeAmount);
-      // Error check
-      parseUnits(userRelativeAmount);
-    }
-
-    return {
-      user,
-      userGaugeRelativeWeight,
-      userRelativeAmount,
-      ...userInfo,
-    };
   });
+}
+
+export function getUserClaimAmount(
+  userInfo,
+  totalVoteUsersWeightForGauge: number,
+  totalRewardAmountForToken: number,
+) {
+  const user = userInfo.user;
+
+  // TODO: Use % of 10000 used in calc for relative weight
+  // Eg. user uses 5000 of 10000, reduce relative weight by 50%.. BOOOOMMM
+
+  const precision = 12;
+
+  // Scale down % a bit for tighter precision here
+  const userGaugeRelativeWeight = Number(
+    (userInfo.percentOfTotalVE / totalVoteUsersWeightForGauge).toFixed(
+      precision,
+    ),
+  );
+
+  let userRelativeAmount = (
+    totalRewardAmountForToken * userGaugeRelativeWeight
+  ).toFixed(precision);
+  if (userRelativeAmount.includes('e')) {
+    userRelativeAmount = eToNumber(userRelativeAmount);
+    // Error check
+    parseUnits(userRelativeAmount);
+  }
+
+  return {
+    user,
+    userGaugeRelativeWeight,
+    userRelativeAmount,
+    ...userInfo,
+  };
+}
+
+export function postProcessUserAmounts(bribe) {
+  let totalWeightUsed = 0;
+  const usersWithMaxUsed = [];
+  const usersWithoutMaxUsed = [];
+
+  bribe.users.forEach((user) => {
+    totalWeightUsed += user.weightUsed;
+    if (user.weightUsed === 10000) {
+      usersWithMaxUsed.push(user);
+    } else {
+      usersWithoutMaxUsed.push(user);
+    }
+  });
+
+  console.log(`Total weight used for gauge ${bribe.gauge}: ${totalWeightUsed}`);
+  console.log(`Users with max weight used ${usersWithMaxUsed.length}`);
+  console.log(
+    `Users with less than max weight used ${usersWithoutMaxUsed.length}`,
+  );
+
+  // Verify the total amount afterwards for bribe amount against total user amounts
 }
 
 export function getVotersTotalWeightForGauge(usersWhoVoted: any[]) {
