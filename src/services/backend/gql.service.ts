@@ -15,12 +15,12 @@ class VertekBackendService {
     this.gqlClient = new GraphQLClient(process.env.BACKEND_URL);
   }
 
-  async getGauges(): Promise<Gauge[]> {
+  async getGauges(epoch: number): Promise<Gauge[]> {
     const { getLiquidityGauges } = await this.gqlClient.request<{
       getLiquidityGauges: Gauge[];
     }>(gql`
       query {
-        getLiquidityGauges {
+        getLiquidityGauges(epoch: ${epoch}) {
           symbol
           address
           isKilled

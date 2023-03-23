@@ -99,51 +99,50 @@ export class VoteDataService {
     // Still overwrite the full weeks data regardless
     const epochDirectoryName = getEpochRangeLabel(epochStart.unix());
     const currentEpochDataDir = getEpochDir(epochStart.unix());
-    fs.ensureDirSync(currentEpochDataDir);
+    // fs.ensureDirSync(currentEpochDataDir);
 
-    // Check how high this can go to save calls
-    // Default BSC RPC is capped at 2000. Quicknode accepts this 5000+ at least
-    const blockReadRange = 5000;
+    // // Check how high this can go to save calls
+    // // Default BSC RPC is capped at 2000. Quicknode accepts this 5000+ at least
+    // const blockReadRange = 5000;
 
-    const startingBlockNumber = await bscScanService.getBlockNumberByTimestamp(
-      epochStart.unix(),
-    );
+    // const startingBlockNumber = await bscScanService.getBlockNumberByTimestamp(
+    //   epochStart.unix(),
+    // );
 
-    const endBlockNumber = await bscScanService.getBlockNumberByTimestamp(
-      epochEnd.unix(),
-    );
+    // const endBlockNumber = await bscScanService.getBlockNumberByTimestamp(
+    //   epochEnd.unix(),
+    // );
 
-    if (isNaN(endBlockNumber)) {
-      console.log('End block corrupted');
+    // if (isNaN(endBlockNumber)) {
+    //   console.log('End block corrupted');
 
-      return;
-    }
+    //   return;
+    // }
 
-    console.log(
-      `Initial blocks = start: ${startingBlockNumber} - end: ${endBlockNumber}`,
-    );
+    // console.log(
+    //   `Initial blocks = start: ${startingBlockNumber} - end: ${endBlockNumber}`,
+    // );
 
-    await this.getVotingEventData(
-      startingBlockNumber,
-      endBlockNumber,
-      blockReadRange,
-      currentEpochDataDir,
-    );
+    // await this.getVotingEventData(
+    //   startingBlockNumber,
+    //   endBlockNumber,
+    //   blockReadRange,
+    //   currentEpochDataDir,
+    // );
 
-    this.setUniqueUsers(currentEpochDataDir);
+    // this.setUniqueUsers(currentEpochDataDir);
 
-    // Use the end of the epoch timestamp to account for all voters
-    await this.saveUserEpochBalances(epochEnd.unix(), currentEpochDataDir);
+    // // Use the end of the epoch timestamp to account for all voters
+    // await this.saveUserEpochBalances(epochEnd.unix(), currentEpochDataDir);
 
-    const usersWithVotes = this.joinUsersToVotes(currentEpochDataDir);
-    setUsersGaugeVotes(currentEpochDataDir, usersWithVotes);
+    // const usersWithVotes = this.joinUsersToVotes(currentEpochDataDir);
+    // setUsersGaugeVotes(currentEpochDataDir, usersWithVotes);
 
-    const gauges = await gqlService.getGauges();
-
-    for (const gauge of gauges) {
-      this.saveVotesForGaugeJSON(currentEpochDataDir, gauge);
-      this.saveVotesForGaugeCSV(currentEpochDataDir, gauge, epochDirectoryName);
-    }
+    // const gauges = await gqlService.getGauges(epochStart.unix());
+    // // for (const gauge of gauges) {
+    //   this.saveVotesForGaugeJSON(currentEpochDataDir, gauge);
+    //   this.saveVotesForGaugeCSV(currentEpochDataDir, gauge, epochDirectoryName);
+    // }
   }
 
   // Need to scrape events

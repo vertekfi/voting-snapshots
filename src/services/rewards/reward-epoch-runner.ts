@@ -26,8 +26,8 @@ import {
 } from './reward.utils';
 
 export async function runBribeRewardsForEpoch(epoch: number, epochDir: string) {
-  // const bribersBribes = await setBribersEpochBaseData(epoch, epochDir);
-  const bribersBribes = getBribersData(epochDir);
+  const bribersBribes = await setBribersEpochBaseData(epoch, epochDir);
+  // const bribersBribes = getBribersData(epochDir);
   const userVotes = getUsersGaugeVotes(epochDir);
 
   for (let briber of bribersBribes) {
@@ -294,9 +294,10 @@ export function matchBribeRecord(
     throw new Error('No matching bribe for event data');
   }
 
-  if (matchingBribe.length > 1) {
-    throw new Error('More than one matching bribe record');
-  }
+  // They can use the same token more than once in an epoch
+  // if (matchingBribe.length > 1) {
+  //   throw new Error('More than one matching bribe record');
+  // }
 
   return matchingBribe[0];
 }

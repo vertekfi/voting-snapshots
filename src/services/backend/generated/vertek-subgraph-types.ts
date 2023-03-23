@@ -91,6 +91,23 @@ export type GaugeVote = {
   weight?: Maybe<Scalars['BigDecimal']>;
 };
 
+export type GaugeVoteInfo = {
+  __typename?: 'GaugeVoteInfo';
+  blockNumber: Scalars['Int'];
+  epochStartTime: Scalars['Int'];
+  gauge: LiquidityGauge;
+  txHash: Scalars['String'];
+  user: Scalars['String'];
+  weightUsed: Scalars['Int'];
+};
+
+export type GaugeVoteSyncInfo = {
+  __typename?: 'GaugeVoteSyncInfo';
+  blockNumber: Scalars['Int'];
+  dateTimeLocale: Scalars['String'];
+  dateTimeUTC: Scalars['String'];
+};
+
 export type GqlAllFeesData = {
   __typename?: 'GqlAllFeesData';
   feeCollector: GqlFeesCollectorAmountsResult;
@@ -111,6 +128,16 @@ export type GqlBalancePoolAprSubItem = {
   apr: Scalars['BigDecimal'];
   id: Scalars['ID'];
   title: Scalars['String'];
+};
+
+export type GqlBaseTokenReward = {
+  __typename?: 'GqlBaseTokenReward';
+  amount: Scalars['String'];
+  isRewardBPT: Scalars['Boolean'];
+  pool: GqlPoolWeighted;
+  token: GqlPoolToken;
+  tokenList: Array<GqlToken>;
+  valueUSD: Scalars['Float'];
 };
 
 export type GqlContentNewsItem = {
@@ -782,6 +809,7 @@ export type GqlPoolTokenDisplay = {
   name: Scalars['String'];
   nestedTokens?: Maybe<Array<GqlPoolTokenDisplay>>;
   symbol: Scalars['String'];
+  token?: Maybe<GqlToken>;
   weight?: Maybe<Scalars['BigDecimal']>;
 };
 
@@ -795,6 +823,7 @@ export type GqlPoolTokenExpanded = {
   isPhantomBpt: Scalars['Boolean'];
   name: Scalars['String'];
   symbol: Scalars['String'];
+  token: GqlToken;
   weight?: Maybe<Scalars['String']>;
 };
 
@@ -924,12 +953,6 @@ export type GqlProtocolPendingGaugeFee = {
   poolId: Scalars['String'];
   poolName: Scalars['String'];
   valueUSD: Scalars['Float'];
-};
-
-export type GqlProtocolRewardTokenInfo = {
-  __typename?: 'GqlProtocolRewardTokenInfo';
-  logoURI?: Maybe<Scalars['String']>;
-  valueUSD: Scalars['String'];
 };
 
 export type GqlSorGetBatchSwapForTokensInResponse = {
@@ -1091,6 +1114,11 @@ export enum GqlTokenType {
   WhiteListed = 'WHITE_LISTED',
 }
 
+export type GqlUser = {
+  __typename?: 'GqlUser';
+  pendingRewards: GqlUserPendingRewards;
+};
+
 export type GqlUserFbeetsBalance = {
   __typename?: 'GqlUserFbeetsBalance';
   id: Scalars['String'];
@@ -1104,6 +1132,19 @@ export type GqlUserGaugeBoost = {
   boost: Scalars['String'];
   gaugeAddress: Scalars['String'];
   poolId: Scalars['String'];
+};
+
+export type GqlUserGaugeRewardInfo = {
+  __typename?: 'GqlUserGaugeRewardInfo';
+  pool: GqlPoolWeighted;
+  rewards: Array<GqlBaseTokenReward>;
+};
+
+export type GqlUserPendingRewards = {
+  __typename?: 'GqlUserPendingRewards';
+  gaugeRewards: Array<Maybe<GqlUserGaugeRewardInfo>>;
+  protocolRewards: Array<Maybe<GqlBaseTokenReward>>;
+  stakingRewards: Array<Maybe<GqlBaseTokenReward>>;
 };
 
 export type GqlUserPoolBalance = {
@@ -1139,16 +1180,6 @@ export type GqlUserPortfolioSnapshot = {
   totalFees: Scalars['AmountHumanReadable'];
   totalValueUSD: Scalars['AmountHumanReadable'];
   walletBalance: Scalars['AmountHumanReadable'];
-};
-
-export type GqlUserProtocolReward = {
-  __typename?: 'GqlUserProtocolReward';
-  amount: Scalars['String'];
-  isBPT: Scalars['Boolean'];
-  poolId: Scalars['String'];
-  token: Scalars['String'];
-  tokenInfo: GqlProtocolRewardTokenInfo;
-  tokenList: Array<GqlToken>;
 };
 
 export enum GqlUserSnapshotDataRange {
@@ -1231,7 +1262,9 @@ export type Mutation = {
   poolUpdateLiquidityValuesForAllPools: Scalars['String'];
   poolUpdateVolumeAndFeeValuesForAllPools: Scalars['String'];
   protocolCacheMetrics: Scalars['String'];
+  syncGaugeBribes: Scalars['String'];
   syncGaugeData: Scalars['Boolean'];
+  syncGaugeVotes: Scalars['String'];
   tokenDeletePrice: Scalars['Boolean'];
   tokenDeleteTokenType: Scalars['String'];
   tokenInitChartData: Scalars['String'];
@@ -1261,6 +1294,14 @@ export type MutationPoolSyncLatestSnapshotsForAllPoolsArgs = {
 
 export type MutationPoolSyncPoolArgs = {
   poolId: Scalars['String'];
+};
+
+export type MutationSyncGaugeBribesArgs = {
+  blocksToScan?: InputMaybe<Scalars['Int']>;
+};
+
+export type MutationSyncGaugeVotesArgs = {
+  blocksToScan?: InputMaybe<Scalars['Int']>;
 };
 
 export type MutationTokenDeletePriceArgs = {
@@ -1298,12 +1339,17 @@ export type Query = {
   contentGetNewsItems: Array<Maybe<GqlContentNewsItem>>;
   get24HourGaugeFees?: Maybe<Array<Maybe<Scalars['String']>>>;
   getAllGaugeBribes: Array<Maybe<EpochBribeInfo>>;
+  getLastBribeSyncInfo: GaugeVoteSyncInfo;
+  getLastVoteSyncInfo: GaugeVoteSyncInfo;
   getLiquidityGauges: Array<Maybe<LiquidityGauge>>;
   getProtocolPoolData: Array<Maybe<GqlProtocolGaugeInfo>>;
   getProtocolTokenList?: Maybe<Array<Maybe<Scalars['String']>>>;
   getRewardPools: Array<Maybe<RewardPool>>;
+  getRewardPoolsData: Array<Maybe<RewardPool>>;
   getSingleGaugeBribes: Array<Maybe<EpochBribeInfo>>;
+  getUserBribeClaims: Array<Maybe<UserBribeClaim>>;
   getUserGaugeStakes: Array<Maybe<LiquidityGauge>>;
+  getUserGaugeVotes: Array<Maybe<GaugeVoteInfo>>;
   latestSyncedBlocks: GqlLatestSyncedBlocks;
   poolGetAllPoolsSnapshots: Array<GqlPoolSnapshot>;
   poolGetBatchSwaps: Array<GqlPoolBatchSwap>;
@@ -1335,9 +1381,9 @@ export type Query = {
   userGetPoolBalances: Array<GqlUserPoolBalance>;
   userGetPoolJoinExits: Array<GqlPoolJoinExit>;
   userGetPortfolioSnapshots: Array<GqlUserPortfolioSnapshot>;
-  userGetProtocolRewardInfo: Array<Maybe<GqlUserProtocolReward>>;
   userGetStaking: Array<GqlPoolStaking>;
   userGetSwaps: Array<GqlPoolSwap>;
+  userGetUserPendingGaugeRewards: GqlUserPendingRewards;
   userGetVeLockInfo: GqlUserVoteEscrowInfo;
 };
 
@@ -1350,7 +1396,11 @@ export type QueryGet24HourGaugeFeesArgs = {
 };
 
 export type QueryGetAllGaugeBribesArgs = {
-  epoch?: InputMaybe<Scalars['Int']>;
+  epoch: Scalars['Int'];
+};
+
+export type QueryGetLiquidityGaugesArgs = {
+  epoch: Scalars['Int'];
 };
 
 export type QueryGetRewardPoolsArgs = {
@@ -1362,9 +1412,17 @@ export type QueryGetSingleGaugeBribesArgs = {
   gauge: Scalars['String'];
 };
 
+export type QueryGetUserBribeClaimsArgs = {
+  user: Scalars['String'];
+};
+
 export type QueryGetUserGaugeStakesArgs = {
   poolIds: Array<Scalars['String']>;
   user: Scalars['String'];
+};
+
+export type QueryGetUserGaugeVotesArgs = {
+  epoch: Scalars['Int'];
 };
 
 export type QueryPoolGetAllPoolsSnapshotsArgs = {
@@ -1492,18 +1550,21 @@ export type QueryUserGetSwapsArgs = {
   skip: Scalars['Int'];
 };
 
+export type QueryUserGetUserPendingGaugeRewardsArgs = {
+  user?: InputMaybe<Scalars['String']>;
+};
+
 export type RewardPool = {
   __typename?: 'RewardPool';
-  address: Scalars['String'];
   amountStaked: Scalars['String'];
   amountStakedValue: Scalars['String'];
   aprs: RewardPoolAprs;
-  blocksRemaining: Scalars['String'];
-  daysRemaining: Scalars['String'];
-  endBlock: Scalars['Int'];
+  daysRemaining: Scalars['Int'];
   isPartnerPool: Scalars['Boolean'];
-  rewardToken: RewardPoolRewardToken;
-  startBlock: Scalars['Int'];
+  poolDisplayTokens: Array<Maybe<GqlPoolToken>>;
+  poolId: Scalars['Int'];
+  rewardIsBPT: Scalars['Boolean'];
+  rewardToken: GqlToken;
   userInfo?: Maybe<RewardPoolUserInfo>;
 };
 
@@ -1511,16 +1572,6 @@ export type RewardPoolAprs = {
   __typename?: 'RewardPoolAprs';
   apr: Scalars['String'];
   daily: Scalars['String'];
-};
-
-export type RewardPoolRewardToken = {
-  __typename?: 'RewardPoolRewardToken';
-  address: Scalars['String'];
-  logoURI: Scalars['String'];
-  name: Scalars['String'];
-  price?: Maybe<Scalars['Int']>;
-  rewardPerBlock: Scalars['String'];
-  symbol: Scalars['String'];
 };
 
 export type RewardPoolUserInfo = {
@@ -1532,7 +1583,7 @@ export type RewardPoolUserInfo = {
   pendingRewardValue: Scalars['String'];
   pendingRewards: Scalars['String'];
   percentageOwned: Scalars['String'];
-  poolAddress: Scalars['String'];
+  poolId: Scalars['Int'];
 };
 
 export type RewardToken = {
@@ -1565,6 +1616,20 @@ export type User = {
   votingLocks?: Maybe<Array<VotingEscrowLock>>;
 };
 
+export type UserBribeClaim = {
+  __typename?: 'UserBribeClaim';
+  amountOwed: Scalars['String'];
+  briber: Scalars['String'];
+  distributionId: Scalars['String'];
+  epochStartTime: Scalars['Int'];
+  gauge: Scalars['String'];
+  gaugeRecord: LiquidityGauge;
+  pool: GqlPoolMinimal;
+  proof: Array<Scalars['String']>;
+  token: Scalars['String'];
+  valueUSD: Scalars['Float'];
+};
+
 export type VotingEscrow = {
   __typename?: 'VotingEscrow';
   /**  VotingEscrow contract address  */
@@ -1590,7 +1655,9 @@ export type VotingEscrowLock = {
   votingEscrowID: VotingEscrow;
 };
 
-export type GetLiquidityGaugesQueryVariables = Exact<{ [key: string]: never }>;
+export type GetLiquidityGaugesQueryVariables = Exact<{
+  epoch: Scalars['Int'];
+}>;
 
 export type GetLiquidityGaugesQuery = {
   __typename?: 'Query';
@@ -1712,8 +1779,8 @@ export const GaugeBribeFragmentFragmentDoc = gql`
   }
 `;
 export const GetLiquidityGaugesDocument = gql`
-  query GetLiquidityGauges {
-    getLiquidityGauges {
+  query GetLiquidityGauges($epoch: Int!) {
+    getLiquidityGauges(epoch: $epoch) {
       id
       address
       symbol
@@ -1765,7 +1832,7 @@ export function getSdk(
 ) {
   return {
     GetLiquidityGauges(
-      variables?: GetLiquidityGaugesQueryVariables,
+      variables: GetLiquidityGaugesQueryVariables,
       requestHeaders?: Dom.RequestInit['headers'],
     ): Promise<GetLiquidityGaugesQuery> {
       return withWrapper(
