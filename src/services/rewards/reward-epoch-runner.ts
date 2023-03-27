@@ -26,8 +26,8 @@ import {
 } from './reward.utils';
 
 export async function runBribeRewardsForEpoch(epoch: number, epochDir: string) {
-  const bribersBribes = await setBribersEpochBaseData(epoch, epochDir);
-  // const bribersBribes = getBribersData(epochDir);
+  // const bribersBribes = await setBribersEpochBaseData(epoch, epochDir);
+  const bribersBribes = getBribersData(epochDir);
   const userVotes = getUsersGaugeVotes(epochDir);
 
   for (let briber of bribersBribes) {
@@ -302,10 +302,10 @@ export function matchBribeRecord(
   return matchingBribe[0];
 }
 
-export async function setBribersEpochBaseData(epoch: number, epochDir: string) {
-  const gauges = await gqlService.getGaugesWithBribes(epoch);
-  const bribersBribes = associateBribesToBribers(gauges);
-  setBribersData(epochDir, bribersBribes);
+// export async function setBribersEpochBaseData(epoch: number, epochDir: string) {
+//   const gauges = await gqlService.getGaugesWithBribes(epoch);
+//   const bribersBribes = associateBribesToBribers(gauges);
+//   setBribersData(epochDir, bribersBribes);
 
-  return bribersBribes;
-}
+//   return bribersBribes;
+// }

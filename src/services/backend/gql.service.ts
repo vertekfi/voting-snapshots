@@ -12,7 +12,11 @@ class VertekBackendService {
 
   constructor() {
     config();
-    this.gqlClient = new GraphQLClient(process.env.BACKEND_URL);
+    this.gqlClient = new GraphQLClient(process.env.BACKEND_URL, {
+      headers: {
+        AdminApiKey: process.env.ADMIN_API_KEY,
+      },
+    });
   }
 
   async getGauges(epoch: number): Promise<Gauge[]> {
@@ -32,14 +36,6 @@ class VertekBackendService {
     `);
 
     return getLiquidityGauges.filter((g) => !g.isKilled);
-  }
-
-  async getGaugesWithBribes(epoch: number) {
-    const { getAllGaugeBribes } = await this.sdk.GetBribes({
-      epoch,
-    });
-
-    return getAllGaugeBribes.filter((g) => g.currentEpochBribes.length);
   }
 }
 

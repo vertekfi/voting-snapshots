@@ -1,0 +1,358 @@
+[
+  {
+    "distributionId": 1,
+    "amountOwed": "0.84778995",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "token": "0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca",
+    "proof": [
+      "0x95b05d5451abd1269b976256ab00ee53e829278896c8c790d2f50116b2e45a3c",
+      "0x18fcbb73a9f2a540de2a925ed46a64ae230ca2c7327ca8dd9a198933bdf22df2"
+    ],
+    "epochStartTime": 1677715200,
+    "claimed": true
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "0.16955799",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "token": "0xd50c729cebb64604b99e1243a54e840527360581",
+    "proof": [
+      "0x9f5b7b1b781d3bf4b58419a69090f6c1912dcd552d7143af9d3115b1651b234d",
+      "0x31d4defff62091f0f146fbb0f2116e58476e46d73b8256a412343c9901770aac",
+      "0x02e6b20cef0df1755c95a18363c4a9f92a81650015b58c5e7a7a65e0e6b73567"
+    ],
+    "epochStartTime": 1677715200,
+    "claimed": true
+  },
+  {
+    "distributionId": 2,
+    "amountOwed": "0.87711211",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "token": "0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca",
+    "proof": [
+      "0x8fd666037f6f2a47e354e74eb4f9e9151b1e0955cba9213c872d273f16511de5",
+      "0x2351f6ec58632263b7cee27c8bbf4d603ccbf656c81af6d8a7bff8f5633acdcb",
+      "0x2dedf71c2f51ad4d7c7f80d8f937eabf66ceb0fb4115dc67012f9348fcbe5ae1"
+    ],
+    "epochStartTime": 1677715200,
+    "claimed": true
+  },
+  {
+    "distributionId": 2,
+    "amountOwed": "0.11694828",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "token": "0xd50c729cebb64604b99e1243a54e840527360581",
+    "proof": [
+      "0x9241f1a2e0d4468954308188bff4445c9a92eb95cca6804e34b7017434741cb5",
+      "0xdce777cf1b6bd06e43d82743c25a832571ef612d00fdb3112eeadf0d6af192aa",
+      "0x4393e4381b185478f8d765c07fa0fa3bd5d06a55694d344dcc3c1cbffee20b21"
+    ],
+    "epochStartTime": 1677715200,
+    "claimed": true
+  },
+  {
+    "distributionId": 3,
+    "amountOwed": "1.12051645",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "token": "0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca",
+    "proof": [
+      "0xbdf8fa18cfadf4b51eb2ab2352d82b189030eaa9790fe72f271d2670d39fca81",
+      "0x3cfb81bb33addbeb3aefe68ef3e6b7051179a8440d6c9ec62f98bdca82ea1d92",
+      "0xdc547e9d90c4c21241af88c23d3e289098aa15bf8cc0610201257ee91a56dd1c"
+    ],
+    "epochStartTime": 1677715200,
+    "claimed": true
+  },
+  {
+    "distributionId": 3,
+    "amountOwed": "0.14940219",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "token": "0xd50c729cebb64604b99e1243a54e840527360581",
+    "proof": [
+      "0x814de9c76ca1ad31c645247b3066b8e55cec3cedc6f7874d62da1897c65cdd34",
+      "0xf6016e3442fafe6b6d2edd90e2fdc7db25eb19988202ebfe0ce0f97abfdaaddf",
+      "0x373c6adea17f141739fbd5a152646f9852aacd3d30f0bf9eedf06a8cffb4e5aa",
+      "0xe8fefe24a35a7b6990f25cd6e8d60bcc19c532b3b338fa6866b9704d44852e98"
+    ],
+    "epochStartTime": 1677715200,
+    "claimed": true
+  },
+  {
+    "distributionId": 6,
+    "amountOwed": "0.40834938",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "token": "0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca",
+    "proof": [
+      "0x21208f4817b74e6c9c0fc22d355e9eafe5861db9bcefa384c8bbc41360466d59",
+      "0x36660135b9bfdbf018c758d6bd4a45dd4e1f670018e4ae739aedd3105c3efc01",
+      "0xeb7246fc2bc4ed285a083bffc9fb7f844afb199e20f5004f3aa40a78ddf07851",
+      "0x34499f202fac224d1f0d981ee11a922c1d8bcf14d50abb520bbe5021c0a0a844"
+    ],
+    "epochStartTime": 1677715200,
+    "claimed": true
+  },
+  {
+    "distributionId": 6,
+    "amountOwed": "0.08166988",
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "token": "0xd50c729cebb64604b99e1243a54e840527360581",
+    "proof": [
+      "0x2f49ab02c1c8b860b91c333ceae10cc9c62208843060c6fd2eecd025036bc0e3",
+      "0x59dce84f205e2f0cdbcf49f03619021002a83028f8929c571e3eab04e99891f1",
+      "0x37f626d52baf0dcd267d8201db8ad57eb7c348eb74037a8117ce298f6e140044",
+      "0x5f1bf58ed52738be698bf0f7ca1b357a2b4a56fef1ed586bfc98688038579919"
+    ],
+    "epochStartTime": 1677715200,
+    "claimed": true
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "0.04083494",
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "token": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+    "proof": [
+      "0xd1bc7b165a3ef1656728e860692976b3602ffee5054f40dafcadf30ab24dad5e",
+      "0x8a7dda09319191a275278a7ea4cd1c5a750c2904b7f917cc1b666e5a5d9c018a",
+      "0x068be188fdc29c99ba277f0212c681ad87cb1bc8890c5ccb9c45bea2f19e6bfb",
+      "0x39b85a2eb9c00815b4d14cb3ed8e9bd59804457d174b56defc7184a8ceff9d0b"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "4.23894975",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "token": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+    "proof": [
+      "0xc6ef0e7516fd52b9d18a5f42c394259d4b652b5252894b38e67b4eb324fc0a53",
+      "0x19c2f56569e580fc95238dc46651885ab97b5fc5ac7276efcb012ac200dbcaa4"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "8.4778995",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+    "proof": [
+      "0x306d62e75125b4d0a41b2e3a28805700b2c2055c841f20e72ee6232ef26fbb2e",
+      "0x63a4371db36f2976120d552645d525c3bcc231b795243c10df1faae2d6d222d2",
+      "0x307f417c36c1c54b961dd30a6089276108393dd6269e98ac7b305bf5ccd2ac84"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "0.21194749",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "token": "0xfa4b16b0f63f5a6d0651592620d585d308f749a4",
+    "proof": [
+      "0x8b79147dc7e281819b45ba0bdfebbb3b4e38bafb995df5c16d20aeb335aaf468",
+      "0xb9680fb997e86b3a8590b527cee562dbb5b26950c892ef8b8334b104c039530c",
+      "0x56f10555ccec50943f5ba3261987d6b27a547d968bacaecf57edcacf2521f8c7"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "2.54336985",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "token": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+    "proof": [
+      "0xab36859e238fbcca99179d47b7abb9077562b649561b40316844347c69cefdcd",
+      "0xa584372eced84b0059ab96d1134ae3b9a412909c7a1d9d421a7255c9fa960827",
+      "0xf7d28990d9c6616d2eeba449890b9366fd8a5cc4f6d663731461c43aa1844788"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "2.92370704",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "token": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+    "proof": [
+      "0x7f78f70bbb85d925f4ccc31b52a28cff3c8be0d6afcb08630d01e36d7822eb2a",
+      "0xddbd4994e1227d08c423d322a571ecb142f1af247affabeae888d892acacd4c4",
+      "0xee2aa5fac7ac47e457f4f5034bb3fd41d84a9e89e3b4501e57b8e83144642d81"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "5.84741409",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+    "proof": [
+      "0x9c2ee0825b813673250dfaabc825785a5f1b55a375cee2ff737eaa0653844a99",
+      "0xe0f16e47a71407886b6f2d017a16e3ac1a5b592f1a66fa4d6c34405e0f47c2df",
+      "0xef930d5b33770b8d8266ba148b24ab3f999919dfcd920ae7e96c37cbd6b3ec96"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "0.14618535",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "token": "0xfa4b16b0f63f5a6d0651592620d585d308f749a4",
+    "proof": [
+      "0x4251f03f6c61292fff1792821d4e81eaaa1d543b69fbb309b80494d86762117a",
+      "0x6387e89cc0430020a9af0fbb8a49f8503702a09f2be7e52e42c86f4b450ec299",
+      "0x1bd0f6ae9da1473aa81a5ddffc2ecd9f3344ed9caa2e86b27574f4fc9c562e43"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "1.75422423",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "token": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+    "proof": [
+      "0x94ff8a251629c0eaae89831d59ceeb81ea26d8014ff9f99d7b79c8238cd2238b",
+      "0x495157f2b9500fde43fbb7e82c8ab5c9b7008887d26dbb0eef93bf5d68edab0f",
+      "0x0304a7ad3cea26d5999190f923914c7fab551e6c1fac2bd5bafb553517103744"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "5.60258225",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "token": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+    "proof": [
+      "0xd155c6e7adfeea203f4225754ec7128bab7789e398945a132cee76242042a115",
+      "0x28209c3f0df224b8f56c0a6788b5aaa0b5f7cf0c3e8b6bcbce0c9da9904156ce",
+      "0x23f63028d74f4189e5456e290fe23eebad0e347adb2af17c4fa1ff74e9b53569"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "7.47010966",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+    "proof": [
+      "0x656be3911d45e3bc2821224edc82155850732e88bb392a78194df796c8bf17e2",
+      "0xb7719917ec45ddceed025f665326ce3c91c19064d6a157d2a5b395b44bfaa933",
+      "0xa243cf65c2f64a0ae8a00742a6ca87f5203a439ee01a36f93e37d1951f2fc2ac",
+      "0x810d4ddf3fd1c08408acdeb6554994f22e0b42f65d99889dd99fd4b962786eb3"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "0.37350548",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "token": "0xfa4b16b0f63f5a6d0651592620d585d308f749a4",
+    "proof": [
+      "0x0e5a1d7c26a2442ca3077ecc3e255c64e0af3bf97147845fbb1bbc1b42710f8a",
+      "0x85553efa002679d3a149c0e497e1cca93aa6b1dd12ccaff3fc7bc7ff7b8d43d6",
+      "0xc8fc3eb1ea21d82b7b9d50e8bf1b374b28526c47394d339a48deb0d7ef2a6c49",
+      "0xd7943f5bf0cc47dc82747b9cbcc6c19e1b400b4a3f532ee6f5aaa58044ab383d"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "2.61453838",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "token": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+    "proof": [
+      "0x01e49a503b2f16fd0bdc0d04bbe50b8d369847782b02c219bcff01f99803704f",
+      "0xde2b976319b2922bc1a1bea50e5dd22a4adc9aa7eabbf44951603723a806be73",
+      "0x0cec0333c7c721250aa6bd88c7b367298042eaa0e689466c147d9db9a8a0520e",
+      "0x85ca9972feefa272a8c9508076079f5ce7782c91dacd650c7849a4e820682278"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "3.06262033",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "token": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+    "proof": [
+      "0xc611d6d78a4b378c60d4a3cb0a20fa9018d997a0beaddf88e1f064496c961b4f",
+      "0x3754b7de1d4c59996ce6c8c5bfaa3d4a4b21a996952ff270dc3738f11a64dde1",
+      "0x78adaae8a8f30374cc83f61bfb13d9eee5ee5e272e3c797f91f4e04b28684423",
+      "0x87d956b7452248567729c3f106d8a84b64dd0af446985b734b732282adbe014e"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "4.08349377",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+    "proof": [
+      "0xd27a73580988063edb9f091c952911672618bd649d6684221ba073dbaf8d6561",
+      "0x63eaf4a564eeb974d146ee41b167d9fc23514a6d0f8bbe06b0b2560aed8dba0c",
+      "0x8a244850438cec71d01a39a06a21e728ed164bee6a9d0d595a9beed01fa691f5",
+      "0x8415ab9af741eef116e9b1f931e5d416645e7486780f6c9418215a9a7082a400"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "0.20417469",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "token": "0xfa4b16b0f63f5a6d0651592620d585d308f749a4",
+    "proof": [
+      "0x952d7116f2a5deeba4d87b021c24e155490c94376cb0dc3effebd4f5eade3c76",
+      "0xeb25bd2019293ab7b8fd01c6dc9c2b9b94314b6330839964ab0e80937f9af7f1",
+      "0xbf75b67b07ea47f4d085318bdda2daacfe3421560135ef7447874ceb091fc436",
+      "0x0f112921ea8f761e20fcf80ffb82cef54740a9030adb51bc3d30f87229a9b650"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "1.42922282",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "token": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+    "proof": [
+      "0xf5b619206f640d7689f045997fa255b7eadb073b3db85c3ebbf770e7cb3c7eec",
+      "0x1029c5a9a54cf5127e7571f992709c01b696b99de2f501751abceffeac25c457",
+      "0x3d82e9bcb54344822495d24a6743830be423c342b326d9d24ca4e903200571fe"
+    ],
+    "epochStartTime": 1677715200
+  },
+  {
+    "distributionId": "6",
+    "amountOwed": "0.04083494",
+    "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "token": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+    "proof": [
+      "0xd1bc7b165a3ef1656728e860692976b3602ffee5054f40dafcadf30ab24dad5e",
+      "0x8a7dda09319191a275278a7ea4cd1c5a750c2904b7f917cc1b666e5a5d9c018a",
+      "0x068be188fdc29c99ba277f0212c681ad87cb1bc8890c5ccb9c45bea2f19e6bfb",
+      "0x39b85a2eb9c00815b4d14cb3ed8e9bd59804457d174b56defc7184a8ceff9d0b"
+    ],
+    "epochStartTime": 1677715200,
+    "claimed": false
+  }
+]

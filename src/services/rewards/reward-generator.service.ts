@@ -223,6 +223,8 @@ export function getUserClaimAmount(
   // TODO: Use % of 10000 used in calc for relative weight
   // Eg. user uses 5000 of 10000, reduce relative weight by 50%.. BOOOOMMM
 
+  // (weightUsed / 10000) * userInfo.percentOfTotalVE
+
   const precision = 12;
 
   // Scale down % a bit for tighter precision here
@@ -249,35 +251,18 @@ export function getUserClaimAmount(
   };
 }
 
-export function postProcessUserAmounts(bribe) {
-  let totalWeightUsed = 0;
-  const usersWithMaxUsed = [];
-  const usersWithoutMaxUsed = [];
-
-  bribe.users.forEach((user) => {
-    totalWeightUsed += user.weightUsed;
-    if (user.weightUsed === 10000) {
-      usersWithMaxUsed.push(user);
-    } else {
-      usersWithoutMaxUsed.push(user);
-    }
-  });
-
-  console.log(`Total weight used for gauge ${bribe.gauge}: ${totalWeightUsed}`);
-  console.log(`Users with max weight used ${usersWithMaxUsed.length}`);
-  console.log(
-    `Users with less than max weight used ${usersWithoutMaxUsed.length}`,
-  );
-
-  // Verify the total amount afterwards for bribe amount against total user amounts
-}
-
 export function getVotersTotalWeightForGauge(usersWhoVoted: any[]) {
   // Need to sum up weight of all voters for the gauge
   // Then convert their ve weight into a relative weight for this gauges vote
   let totalWeight = 0;
 
+  // TODO: Use % of 10000 used in calc for relative weight
+  // Eg. user uses 5000 of 10000, reduce relative weight by 50%.. BOOOOMMM
+
+  // (weightUsed / 10000) * userInfo.percentOfTotalVE
+
   usersWhoVoted.forEach((userInfo) => {
+    // totalWeight += (userInfo.weightUsed / 10000) * userInfo.percentOfTotalVE;
     totalWeight += userInfo.percentOfTotalVE;
   });
 

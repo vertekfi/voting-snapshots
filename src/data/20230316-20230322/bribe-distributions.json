@@ -157,6 +157,26 @@
     "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
     "users": [
       {
+        "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+        "userGaugeRelativeWeight": 0.010293954361,
+        "userRelativeAmount": "10.293954361000",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 5000,
+        "balance": 293.1989363036346,
+        "percentOfTotalVE": 0.002416915986,
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x8463f981c76c87f7c7a56da77bfc8e5734a5dc9315b1fa139a1bf3c3df5236b9",
+          "0x2ef583a8d0b293251abc98a101e320bc4316326b3703cc8992eddc5bc93c5512",
+          "0x343bee05dfb6930c9d3403a58eb5cccffb44e7ecd09dccad522b037fb33acbb0",
+          "0x79080638cb8ad3e84eb91306d6558277e1f2c030a496bed346cbb88007ac8350"
+        ],
+        "claimAmount": "10293954361000000000",
+        "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+        "merkleRoot": "0xf9934b605f87eb1e63de4b587a2442e72d0dc034216e7375d7a3fcc203850c26",
+        "distributionId": 20
+      },
+      {
         "user": "0x013a8A78d124B5dC34037Af09249A2cc4a5213a0",
         "userGaugeRelativeWeight": 0.014101253677,
         "userRelativeAmount": "14.101253677000",
@@ -318,26 +338,7 @@
         "merkleRoot": "0xf9934b605f87eb1e63de4b587a2442e72d0dc034216e7375d7a3fcc203850c26",
         "distributionId": 20
       },
-      {
-        "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
-        "userGaugeRelativeWeight": 0.010293954361,
-        "userRelativeAmount": "10.293954361000",
-        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
-        "weightUsed": 5000,
-        "balance": 293.1989363036346,
-        "percentOfTotalVE": 0.002416915986,
-        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
-        "merkleProof": [
-          "0x8463f981c76c87f7c7a56da77bfc8e5734a5dc9315b1fa139a1bf3c3df5236b9",
-          "0x2ef583a8d0b293251abc98a101e320bc4316326b3703cc8992eddc5bc93c5512",
-          "0x343bee05dfb6930c9d3403a58eb5cccffb44e7ecd09dccad522b037fb33acbb0",
-          "0x79080638cb8ad3e84eb91306d6558277e1f2c030a496bed346cbb88007ac8350"
-        ],
-        "claimAmount": "10293954361000000000",
-        "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
-        "merkleRoot": "0xf9934b605f87eb1e63de4b587a2442e72d0dc034216e7375d7a3fcc203850c26",
-        "distributionId": 20
-      },
+
       {
         "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
         "userGaugeRelativeWeight": 0.022337660134,

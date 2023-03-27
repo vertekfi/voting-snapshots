@@ -1,3 +1,91 @@
+mutation UpdateDistributions($input: [UpdateBribeDistributionsInput!]!) {
+  updateBribeDistributions(input: $input)
+}
+
+query GetGaugeEpochs {
+  getGaugeEpochs {
+    epoch
+    date
+    blockNumber
+  }
+}
+
+query GetCurrentGaugesEpoch {
+  getCurrentGaugesEpoch {
+    epoch
+    date
+    blockNumber
+  }
+}
+
+query getUserRewards($user: String!) {
+  getUserBribeClaims(user: $user) {
+    distributionId
+    amountOwed
+    briber
+    gauge
+    token
+    proof
+    epochStartTime
+  }
+}
+
+query GetDistributions($filter: GetDistributionsInput) {
+  getDistributions(filter: $filter) {
+    epochStartTime
+    briber
+    merkleRoot
+    amount
+    token
+    txHash
+    distributionId
+    blockNumber
+  }
+}
+
+query GetBribesInfo($filter: GetBribesInput!) {
+  getBribes(filter: $filter) {
+    ...GaugeBribeFragment
+  }
+}
+
+query GetEpochBribesForGauge($epoch: Int!, $gauge: String!) {
+  getEpochBribesForGauge(epoch: $epoch, gauge: $gauge) {
+    ...GaugeBribeFragment
+  }
+}
+
+query GetLastVoteSyncInfo {
+  getLastVoteSyncInfo {
+    blockNumber
+    dateTimeUTC
+    dateTimeLocale
+  }
+}
+
+query GetLastBribeSyncInfo {
+  getLastVoteSyncInfo {
+    blockNumber
+    dateTimeUTC
+    dateTimeLocale
+  }
+}
+
+query GetGaugeVotes($filter: GetVotesInput!) {
+  getGaugeVotes(filter: $filter) {
+    count
+    votes {
+      userAddress
+      epochStartTime
+      weightUsed
+      blockNumber
+      # txHash
+      # gauge: GqlPoolStakingGauge!
+      gaugeId
+    }
+  }
+}
+
 query GetLiquidityGauges($epoch: Int!) {
   getLiquidityGauges(epoch: $epoch) {
     id
@@ -20,20 +108,8 @@ query GetLiquidityGauges($epoch: Int!) {
   }
 }
 
-query GetBribes($epoch: Int!) {
-  getAllGaugeBribes(epoch: $epoch) {
-    gauge
-    currentEpochBribes {
-      ...GaugeBribeFragment
-    }
-
-    nextEpochBribes {
-      ...GaugeBribeFragment
-    }
-  }
-}
-
 fragment GaugeBribeFragment on GaugeBribe {
+  id
   briber
   gauge
   amount

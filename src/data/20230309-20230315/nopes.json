@@ -1,0 +1,1686 @@
+[
+  {
+    "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "amount": "20.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 20,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+    "users": [
+      {
+        "user": "0x7da23BC4a403CAd82A8FFA90CcD4E15c94850443",
+        "userGaugeRelativeWeight": 0.008561982354,
+        "userRelativeAmount": "0.171239647080",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 2500,
+        "balance": 170.4191073592564,
+        "percentOfTotalVE": 0.001663089451,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0x73fc882fa71cd12acc4db70a69d52115fd1bfb08df841bbf3cbe734c5d565dad",
+          "0x5a1e532e64ead4d869487ce6cc4c0af99a3838bc674a9cc5a80f7b098025a7ab",
+          "0x70ad50481b3ab177435fb7c1b1f49e6305619f62d02bcb9df0fd91bdf15b07e0",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "171239647080000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0xA8CC3F0f9630864B4482Ff3E1dbDa71a0aAEc577",
+        "userGaugeRelativeWeight": 0.000035406578,
+        "userRelativeAmount": "0.000708131560",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 10000,
+        "balance": 0.7047383238909966,
+        "percentOfTotalVE": 0.000006877415,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0x36740ad18018a006340c49be6cde815d8af00a904a31677960a63d3f025bed20",
+          "0x5d6c612a7a0fde970dd8e864a5a020e968fa8fa6370b8bc48c79c2f487b94efa",
+          "0x08fb55d2c9b18b3e7c8217f7ae7d67f8a22f1d49426ea42257e096c747326d8b",
+          "0x39990a2c22e473c8d9d256ddac061662cbff5777be88b4872b05c58abf5cf5e8"
+        ],
+        "claimAmount": "708131560000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x5ca7aed8F72328Fd52F1EC6d4958f201eF589E2f",
+        "userGaugeRelativeWeight": 0.000272800419,
+        "userRelativeAmount": "0.005456008380",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 10000,
+        "balance": 5.429864514052522,
+        "percentOfTotalVE": 0.000052989072,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0x5fea677064ee4382b0883620cd0f7a5c9819c22468cd5ee75d6ec491a1e0c0ee",
+          "0x010b2c9241df212511329f9166fc3e42483162565fdc2da87bfb02a5f603ea63",
+          "0x08fb55d2c9b18b3e7c8217f7ae7d67f8a22f1d49426ea42257e096c747326d8b",
+          "0x39990a2c22e473c8d9d256ddac061662cbff5777be88b4872b05c58abf5cf5e8"
+        ],
+        "claimAmount": "5456008380000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0xbC4E6A07646c564a333c971DEDaCDbC485fEe5a8",
+        "userGaugeRelativeWeight": 0.034190601323,
+        "userRelativeAmount": "0.683812026460",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 5800,
+        "balance": 680.5353614475413,
+        "percentOfTotalVE": 0.006641222328,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0xcca57fd02d42ff39ebebaf65a59b0eb775c964dcc42119f1365cd53b589f0ebb",
+          "0x2fd095060602a3036cb033882506bfe4c5a2b5b63b310e3c39795dede68442d3",
+          "0xf501d23bede3d969454201a7f958994f35f9b6dfeaefccbe74188e30fb3e0e11",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "683812026460000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x048A6885aa828a287C7a2DCB6eA47d5c9b5e03be",
+        "userGaugeRelativeWeight": 0.045817661652,
+        "userRelativeAmount": "0.916353233040",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 5000,
+        "balance": 911.9622858047926,
+        "percentOfTotalVE": 0.008899676104,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0x770d3dbfc2435066264e15b8d59b8fd0f61fb71a32c9b0f938a15b647ce5dcb1",
+          "0x5a1e532e64ead4d869487ce6cc4c0af99a3838bc674a9cc5a80f7b098025a7ab",
+          "0x70ad50481b3ab177435fb7c1b1f49e6305619f62d02bcb9df0fd91bdf15b07e0",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "916353233040000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x5D166006367856A7D8028f822c7c236f9EFA7A8D",
+        "userGaugeRelativeWeight": 0.74347536719,
+        "userRelativeAmount": "14.869507343800",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 500,
+        "balance": 14798.256192853358,
+        "percentOfTotalVE": 0.144413523535,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0x094f3bf10b97d6fecd8e784560b9ac2b1acd2e034cae9392e7c05fd1a050d91d",
+          "0x75e4ade11085ba5695ca2e35024a2145c388aac6f0ab004074dde8b2aa33b379",
+          "0x39990a2c22e473c8d9d256ddac061662cbff5777be88b4872b05c58abf5cf5e8"
+        ],
+        "claimAmount": "14869507343800000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+        "userGaugeRelativeWeight": 0.000316884354,
+        "userRelativeAmount": "0.006337687080",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 5000,
+        "balance": 6.307318365926676,
+        "percentOfTotalVE": 0.000061551987,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0x395965995d010cdb765c665491dd19daa6f0e95a403c352d9455e55e438970cd",
+          "0x5d6c612a7a0fde970dd8e864a5a020e968fa8fa6370b8bc48c79c2f487b94efa",
+          "0x08fb55d2c9b18b3e7c8217f7ae7d67f8a22f1d49426ea42257e096c747326d8b",
+          "0x39990a2c22e473c8d9d256ddac061662cbff5777be88b4872b05c58abf5cf5e8"
+        ],
+        "claimAmount": "6337687080000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x0cD852539cc13267eadB82Be19E86eA1F61eb17e",
+        "userGaugeRelativeWeight": 0.039445087294,
+        "userRelativeAmount": "0.788901745880",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 5500,
+        "balance": 785.1215159454508,
+        "percentOfTotalVE": 0.007661859819,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0x126ad495388ab4607ea4a3636fd05ee78f36f03afda956758e6336331f288269",
+          "0xef4feb1430f6a09bf081a2b855ba5eb0c62ce3a5044c8fd27d8216d33dbbb374",
+          "0x75e4ade11085ba5695ca2e35024a2145c388aac6f0ab004074dde8b2aa33b379",
+          "0x39990a2c22e473c8d9d256ddac061662cbff5777be88b4872b05c58abf5cf5e8"
+        ],
+        "claimAmount": "788901745880000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51",
+        "userGaugeRelativeWeight": 0.046264648936,
+        "userRelativeAmount": "0.925292978720",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 1400,
+        "balance": 920.8591942934179,
+        "percentOfTotalVE": 0.008986499436,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0xd6b5dbf7f8a6231188f867111e8eda9599f00ab8aaaf451eefe6b554ec77a77b",
+          "0x76f2e2dfed3253221ace57479585d563d973469b213a1e9d98418198f5f5284d",
+          "0xf501d23bede3d969454201a7f958994f35f9b6dfeaefccbe74188e30fb3e0e11",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "925292978720000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0xA12Be400f22C8cb89e29cD95a4031420374B5E8c",
+        "userGaugeRelativeWeight": 0.013152457948,
+        "userRelativeAmount": "0.263049158960",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 10000,
+        "balance": 261.78868978265456,
+        "percentOfTotalVE": 0.002554748791,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0xd0064c880fda9242ea8c9864a3e1991f8a705eb578190ff84d946c97fd592034",
+          "0x2fd095060602a3036cb033882506bfe4c5a2b5b63b310e3c39795dede68442d3",
+          "0xf501d23bede3d969454201a7f958994f35f9b6dfeaefccbe74188e30fb3e0e11",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "263049158960000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x339dFF5a1C592C04D15896BD9Ee233511F091bF6",
+        "userGaugeRelativeWeight": 0.001032327819,
+        "userRelativeAmount": "0.020646556380",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 1100,
+        "balance": 20.5476230169275,
+        "percentOfTotalVE": 0.000200520561,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0x2114f57c780b2d01b35acd432a7737dab3a57dc2e8e2cc2cfd314cb9d1517e90",
+          "0xef4feb1430f6a09bf081a2b855ba5eb0c62ce3a5044c8fd27d8216d33dbbb374",
+          "0x75e4ade11085ba5695ca2e35024a2145c388aac6f0ab004074dde8b2aa33b379",
+          "0x39990a2c22e473c8d9d256ddac061662cbff5777be88b4872b05c58abf5cf5e8"
+        ],
+        "claimAmount": "20646556380000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x04DfFDe6ca95b0c002345014745bd75fbF7523Ce",
+        "userGaugeRelativeWeight": 0.006322449381,
+        "userRelativeAmount": "0.126448987620",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 10000,
+        "balance": 125.8430740435434,
+        "percentOfTotalVE": 0.001228079951,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0x6708252dfcbb1f5ad9bb2f10f0e66efee7dc2701453d008e3b8544f6e75edd2e",
+          "0x010b2c9241df212511329f9166fc3e42483162565fdc2da87bfb02a5f603ea63",
+          "0x08fb55d2c9b18b3e7c8217f7ae7d67f8a22f1d49426ea42257e096c747326d8b",
+          "0x39990a2c22e473c8d9d256ddac061662cbff5777be88b4872b05c58abf5cf5e8"
+        ],
+        "claimAmount": "126448987620000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0xD084D8b981A3Fa3232380fC569207054b31B2c0E",
+        "userGaugeRelativeWeight": 0.001579490514,
+        "userRelativeAmount": "0.031589810280",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 10000,
+        "balance": 31.438439395785938,
+        "percentOfTotalVE": 0.000306802082,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0xc1fa70e398f292b04d2cd22b24b4008f4554bc71154b99f8c8ccdf2c22c6de44",
+          "0x3db21e87313a2fc14551d2b33fc0912dc5967dcb8c841ee2ff498ec8b0e3b221",
+          "0x70ad50481b3ab177435fb7c1b1f49e6305619f62d02bcb9df0fd91bdf15b07e0",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "31589810280000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x6992Bd823bB63E189a827566C648eCE23adC6dE9",
+        "userGaugeRelativeWeight": 0.058555976415,
+        "userRelativeAmount": "1.171119528300",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 10000,
+        "balance": 1165.5078013454279,
+        "percentOfTotalVE": 0.011373981239,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0x79c9c2686ad4e12daeda949c8b5d21095ddf1d75be9857a9599b9f27b4ebbf65",
+          "0x3db21e87313a2fc14551d2b33fc0912dc5967dcb8c841ee2ff498ec8b0e3b221",
+          "0x70ad50481b3ab177435fb7c1b1f49e6305619f62d02bcb9df0fd91bdf15b07e0",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "1171119528300000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x91C05e14F60c759398056EC06c1e44EB0d431817",
+        "userGaugeRelativeWeight": 0.000976857822,
+        "userRelativeAmount": "0.019537156440",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 1000,
+        "balance": 19.4435389895973,
+        "percentOfTotalVE": 0.000189746004,
+        "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "merkleProof": [
+          "0xe9882f52f259aa634e2e266a1667ef02c671de781a2d8478a282f3af60bb59ee",
+          "0x76f2e2dfed3253221ace57479585d563d973469b213a1e9d98418198f5f5284d",
+          "0xf501d23bede3d969454201a7f958994f35f9b6dfeaefccbe74188e30fb3e0e11",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "19537156440000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      }
+    ],
+    "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+    "distribution": {
+      "distributionId": 1,
+      "txHash": "0xb6547630494526179f22e8756b6766dcc8e541db98dcf8509d70683ee0cfb0a4"
+    }
+  },
+  {
+    "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "amount": "20.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 20.08,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+    "users": [
+      {
+        "user": "0x7da23BC4a403CAd82A8FFA90CcD4E15c94850443",
+        "userGaugeRelativeWeight": 0.008561982354,
+        "userRelativeAmount": "0.171239647080",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 2500,
+        "balance": 170.4191073592564,
+        "percentOfTotalVE": 0.001663089451,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0x73fc882fa71cd12acc4db70a69d52115fd1bfb08df841bbf3cbe734c5d565dad",
+          "0x5a1e532e64ead4d869487ce6cc4c0af99a3838bc674a9cc5a80f7b098025a7ab",
+          "0x70ad50481b3ab177435fb7c1b1f49e6305619f62d02bcb9df0fd91bdf15b07e0",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "171239647080000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0xA8CC3F0f9630864B4482Ff3E1dbDa71a0aAEc577",
+        "userGaugeRelativeWeight": 0.000035406578,
+        "userRelativeAmount": "0.000708131560",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 10000,
+        "balance": 0.7047383238909966,
+        "percentOfTotalVE": 0.000006877415,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0x36740ad18018a006340c49be6cde815d8af00a904a31677960a63d3f025bed20",
+          "0x5d6c612a7a0fde970dd8e864a5a020e968fa8fa6370b8bc48c79c2f487b94efa",
+          "0x08fb55d2c9b18b3e7c8217f7ae7d67f8a22f1d49426ea42257e096c747326d8b",
+          "0x39990a2c22e473c8d9d256ddac061662cbff5777be88b4872b05c58abf5cf5e8"
+        ],
+        "claimAmount": "708131560000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x5ca7aed8F72328Fd52F1EC6d4958f201eF589E2f",
+        "userGaugeRelativeWeight": 0.000272800419,
+        "userRelativeAmount": "0.005456008380",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 10000,
+        "balance": 5.429864514052522,
+        "percentOfTotalVE": 0.000052989072,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0x5fea677064ee4382b0883620cd0f7a5c9819c22468cd5ee75d6ec491a1e0c0ee",
+          "0x010b2c9241df212511329f9166fc3e42483162565fdc2da87bfb02a5f603ea63",
+          "0x08fb55d2c9b18b3e7c8217f7ae7d67f8a22f1d49426ea42257e096c747326d8b",
+          "0x39990a2c22e473c8d9d256ddac061662cbff5777be88b4872b05c58abf5cf5e8"
+        ],
+        "claimAmount": "5456008380000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0xbC4E6A07646c564a333c971DEDaCDbC485fEe5a8",
+        "userGaugeRelativeWeight": 0.034190601323,
+        "userRelativeAmount": "0.683812026460",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 5800,
+        "balance": 680.5353614475413,
+        "percentOfTotalVE": 0.006641222328,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0xcca57fd02d42ff39ebebaf65a59b0eb775c964dcc42119f1365cd53b589f0ebb",
+          "0x2fd095060602a3036cb033882506bfe4c5a2b5b63b310e3c39795dede68442d3",
+          "0xf501d23bede3d969454201a7f958994f35f9b6dfeaefccbe74188e30fb3e0e11",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "683812026460000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x048A6885aa828a287C7a2DCB6eA47d5c9b5e03be",
+        "userGaugeRelativeWeight": 0.045817661652,
+        "userRelativeAmount": "0.916353233040",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 5000,
+        "balance": 911.9622858047926,
+        "percentOfTotalVE": 0.008899676104,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0x770d3dbfc2435066264e15b8d59b8fd0f61fb71a32c9b0f938a15b647ce5dcb1",
+          "0x5a1e532e64ead4d869487ce6cc4c0af99a3838bc674a9cc5a80f7b098025a7ab",
+          "0x70ad50481b3ab177435fb7c1b1f49e6305619f62d02bcb9df0fd91bdf15b07e0",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "916353233040000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x5D166006367856A7D8028f822c7c236f9EFA7A8D",
+        "userGaugeRelativeWeight": 0.74347536719,
+        "userRelativeAmount": "14.869507343800",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 500,
+        "balance": 14798.256192853358,
+        "percentOfTotalVE": 0.144413523535,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0x094f3bf10b97d6fecd8e784560b9ac2b1acd2e034cae9392e7c05fd1a050d91d",
+          "0x75e4ade11085ba5695ca2e35024a2145c388aac6f0ab004074dde8b2aa33b379",
+          "0x39990a2c22e473c8d9d256ddac061662cbff5777be88b4872b05c58abf5cf5e8"
+        ],
+        "claimAmount": "14869507343800000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+        "userGaugeRelativeWeight": 0.000316884354,
+        "userRelativeAmount": "0.006337687080",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 5000,
+        "balance": 6.307318365926676,
+        "percentOfTotalVE": 0.000061551987,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0x395965995d010cdb765c665491dd19daa6f0e95a403c352d9455e55e438970cd",
+          "0x5d6c612a7a0fde970dd8e864a5a020e968fa8fa6370b8bc48c79c2f487b94efa",
+          "0x08fb55d2c9b18b3e7c8217f7ae7d67f8a22f1d49426ea42257e096c747326d8b",
+          "0x39990a2c22e473c8d9d256ddac061662cbff5777be88b4872b05c58abf5cf5e8"
+        ],
+        "claimAmount": "6337687080000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x0cD852539cc13267eadB82Be19E86eA1F61eb17e",
+        "userGaugeRelativeWeight": 0.039445087294,
+        "userRelativeAmount": "0.788901745880",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 5500,
+        "balance": 785.1215159454508,
+        "percentOfTotalVE": 0.007661859819,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0x126ad495388ab4607ea4a3636fd05ee78f36f03afda956758e6336331f288269",
+          "0xef4feb1430f6a09bf081a2b855ba5eb0c62ce3a5044c8fd27d8216d33dbbb374",
+          "0x75e4ade11085ba5695ca2e35024a2145c388aac6f0ab004074dde8b2aa33b379",
+          "0x39990a2c22e473c8d9d256ddac061662cbff5777be88b4872b05c58abf5cf5e8"
+        ],
+        "claimAmount": "788901745880000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51",
+        "userGaugeRelativeWeight": 0.046264648936,
+        "userRelativeAmount": "0.925292978720",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 1400,
+        "balance": 920.8591942934179,
+        "percentOfTotalVE": 0.008986499436,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0xd6b5dbf7f8a6231188f867111e8eda9599f00ab8aaaf451eefe6b554ec77a77b",
+          "0x76f2e2dfed3253221ace57479585d563d973469b213a1e9d98418198f5f5284d",
+          "0xf501d23bede3d969454201a7f958994f35f9b6dfeaefccbe74188e30fb3e0e11",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "925292978720000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0xA12Be400f22C8cb89e29cD95a4031420374B5E8c",
+        "userGaugeRelativeWeight": 0.013152457948,
+        "userRelativeAmount": "0.263049158960",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 10000,
+        "balance": 261.78868978265456,
+        "percentOfTotalVE": 0.002554748791,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0xd0064c880fda9242ea8c9864a3e1991f8a705eb578190ff84d946c97fd592034",
+          "0x2fd095060602a3036cb033882506bfe4c5a2b5b63b310e3c39795dede68442d3",
+          "0xf501d23bede3d969454201a7f958994f35f9b6dfeaefccbe74188e30fb3e0e11",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "263049158960000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x339dFF5a1C592C04D15896BD9Ee233511F091bF6",
+        "userGaugeRelativeWeight": 0.001032327819,
+        "userRelativeAmount": "0.020646556380",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 1100,
+        "balance": 20.5476230169275,
+        "percentOfTotalVE": 0.000200520561,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0x2114f57c780b2d01b35acd432a7737dab3a57dc2e8e2cc2cfd314cb9d1517e90",
+          "0xef4feb1430f6a09bf081a2b855ba5eb0c62ce3a5044c8fd27d8216d33dbbb374",
+          "0x75e4ade11085ba5695ca2e35024a2145c388aac6f0ab004074dde8b2aa33b379",
+          "0x39990a2c22e473c8d9d256ddac061662cbff5777be88b4872b05c58abf5cf5e8"
+        ],
+        "claimAmount": "20646556380000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x04DfFDe6ca95b0c002345014745bd75fbF7523Ce",
+        "userGaugeRelativeWeight": 0.006322449381,
+        "userRelativeAmount": "0.126448987620",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 10000,
+        "balance": 125.8430740435434,
+        "percentOfTotalVE": 0.001228079951,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0x6708252dfcbb1f5ad9bb2f10f0e66efee7dc2701453d008e3b8544f6e75edd2e",
+          "0x010b2c9241df212511329f9166fc3e42483162565fdc2da87bfb02a5f603ea63",
+          "0x08fb55d2c9b18b3e7c8217f7ae7d67f8a22f1d49426ea42257e096c747326d8b",
+          "0x39990a2c22e473c8d9d256ddac061662cbff5777be88b4872b05c58abf5cf5e8"
+        ],
+        "claimAmount": "126448987620000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0xD084D8b981A3Fa3232380fC569207054b31B2c0E",
+        "userGaugeRelativeWeight": 0.001579490514,
+        "userRelativeAmount": "0.031589810280",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 10000,
+        "balance": 31.438439395785938,
+        "percentOfTotalVE": 0.000306802082,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0xc1fa70e398f292b04d2cd22b24b4008f4554bc71154b99f8c8ccdf2c22c6de44",
+          "0x3db21e87313a2fc14551d2b33fc0912dc5967dcb8c841ee2ff498ec8b0e3b221",
+          "0x70ad50481b3ab177435fb7c1b1f49e6305619f62d02bcb9df0fd91bdf15b07e0",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "31589810280000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x6992Bd823bB63E189a827566C648eCE23adC6dE9",
+        "userGaugeRelativeWeight": 0.058555976415,
+        "userRelativeAmount": "1.171119528300",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 10000,
+        "balance": 1165.5078013454279,
+        "percentOfTotalVE": 0.011373981239,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0x79c9c2686ad4e12daeda949c8b5d21095ddf1d75be9857a9599b9f27b4ebbf65",
+          "0x3db21e87313a2fc14551d2b33fc0912dc5967dcb8c841ee2ff498ec8b0e3b221",
+          "0x70ad50481b3ab177435fb7c1b1f49e6305619f62d02bcb9df0fd91bdf15b07e0",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "1171119528300000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      },
+      {
+        "user": "0x91C05e14F60c759398056EC06c1e44EB0d431817",
+        "userGaugeRelativeWeight": 0.000976857822,
+        "userRelativeAmount": "0.019537156440",
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 1000,
+        "balance": 19.4435389895973,
+        "percentOfTotalVE": 0.000189746004,
+        "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+        "merkleProof": [
+          "0xe9882f52f259aa634e2e266a1667ef02c671de781a2d8478a282f3af60bb59ee",
+          "0x76f2e2dfed3253221ace57479585d563d973469b213a1e9d98418198f5f5284d",
+          "0xf501d23bede3d969454201a7f958994f35f9b6dfeaefccbe74188e30fb3e0e11",
+          "0x8757f97d82b8b4b3351e043730adace7e3f7b495ef4cad4c10a5d605b1071a77"
+        ],
+        "claimAmount": "19537156440000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+        "distributionId": 1
+      }
+    ],
+    "merkleRoot": "0x4e22df8b9d25cef383807f3acc6bfa6823d9eead7956a7f64d36471eed5bc900",
+    "distribution": {
+      "distributionId": 1,
+      "txHash": "0xb6547630494526179f22e8756b6766dcc8e541db98dcf8509d70683ee0cfb0a4"
+    }
+  },
+  {
+    "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "amount": "0.03",
+    "epochStartTime": 1678320000,
+    "valueUSD": 50.9946,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+    "users": [
+      {
+        "user": "0x4b6e90Ce968E216592bAD2ebd17E660c9cf9312a",
+        "userGaugeRelativeWeight": 0.000074974196,
+        "userRelativeAmount": "0.000002249226",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 10000,
+        "balance": 2.6408220034195873,
+        "percentOfTotalVE": 0.000025771307,
+        "token": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+        "merkleProof": [
+          "0x527279af37de060635ef99dbffa35bfdb04f1c821aa1c439e16f936d851f9cf1",
+          "0x2b029a38610186f1589e8599b76e6e91111925cc78e9de28a52acd72598a2df1",
+          "0xa41ad14e34bec917ac0511ed74b32afece820ae96a7e9075168e143cb416d0cf"
+        ],
+        "claimAmount": "2249226000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0xf99c741e3870b62bfecb69e51735cea00e031f8a88d4d2e8d444c5fcdb502162",
+        "distributionId": 1
+      },
+      {
+        "user": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "userGaugeRelativeWeight": 0.128392481396,
+        "userRelativeAmount": "0.003851774442",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 1500,
+        "balance": 4522.378391817969,
+        "percentOfTotalVE": 0.044133078236,
+        "token": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+        "merkleProof": [
+          "0xb93832596af9ffac364cd68118cb6c42388670b78d708e895c5da27df322a85b",
+          "0x4b34488646cd5a8bc6256c0e7cd2aca2ffe073f0296a647b338e018bc98ede3c",
+          "0xf73e2d5eedf457de22155667d073770fb9e1cdab5d7ec524f0f485ceef9d65f8"
+        ],
+        "claimAmount": "3851774442000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0xf99c741e3870b62bfecb69e51735cea00e031f8a88d4d2e8d444c5fcdb502162",
+        "distributionId": 1
+      },
+      {
+        "user": "0x5D166006367856A7D8028f822c7c236f9EFA7A8D",
+        "userGaugeRelativeWeight": 0.420129557576,
+        "userRelativeAmount": "0.012603886727",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 2500,
+        "balance": 14798.256192853358,
+        "percentOfTotalVE": 0.144413523535,
+        "token": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+        "merkleProof": [
+          "0xb2109a721eb48ff4468e4483d946923bc0feb4a8bd6eef7a21776f5d3a081a8b",
+          "0xa613113a56929f8f50261e51327c009a8513d638d36c551742bbbaee934bc255",
+          "0xa41ad14e34bec917ac0511ed74b32afece820ae96a7e9075168e143cb416d0cf"
+        ],
+        "claimAmount": "12603886727000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0xf99c741e3870b62bfecb69e51735cea00e031f8a88d4d2e8d444c5fcdb502162",
+        "distributionId": 1
+      },
+      {
+        "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+        "userGaugeRelativeWeight": 0.00017906778,
+        "userRelativeAmount": "0.000005372033",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 4000,
+        "balance": 6.307318365926676,
+        "percentOfTotalVE": 0.000061551987,
+        "token": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+        "merkleProof": [
+          "0xfb921d799964b76673228d26161e6abce36e896e41c284411885049476f56967",
+          "0xeed4a94b4fb28066a76c0a33bb8277113f73133587fbb63d6372fde92a78f23e",
+          "0xf73e2d5eedf457de22155667d073770fb9e1cdab5d7ec524f0f485ceef9d65f8"
+        ],
+        "claimAmount": "5372033000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0xf99c741e3870b62bfecb69e51735cea00e031f8a88d4d2e8d444c5fcdb502162",
+        "distributionId": 1
+      },
+      {
+        "user": "0xdA7a763BDE6ee9cafc3876eF33D67F8EED7891F7",
+        "userGaugeRelativeWeight": 0.388476033207,
+        "userRelativeAmount": "0.011654280996",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 1500,
+        "balance": 13683.321633733167,
+        "percentOfTotalVE": 0.133533077482,
+        "token": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+        "merkleProof": [
+          "0xac20658e43bc549de52c38be190968fc1059b9a63a6e1837bbdb773c5f7fb810",
+          "0xa613113a56929f8f50261e51327c009a8513d638d36c551742bbbaee934bc255",
+          "0xa41ad14e34bec917ac0511ed74b32afece820ae96a7e9075168e143cb416d0cf"
+        ],
+        "claimAmount": "11654280996000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0xf99c741e3870b62bfecb69e51735cea00e031f8a88d4d2e8d444c5fcdb502162",
+        "distributionId": 1
+      },
+      {
+        "user": "0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51",
+        "userGaugeRelativeWeight": 0.026143632118,
+        "userRelativeAmount": "0.000784308964",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 1400,
+        "balance": 920.8591942934179,
+        "percentOfTotalVE": 0.008986499436,
+        "token": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+        "merkleProof": [
+          "0xb28502bcbc8034f5944f5990baa0ba3be625beec6bbfa495c397dd3a5ff685a8",
+          "0x4b34488646cd5a8bc6256c0e7cd2aca2ffe073f0296a647b338e018bc98ede3c",
+          "0xf73e2d5eedf457de22155667d073770fb9e1cdab5d7ec524f0f485ceef9d65f8"
+        ],
+        "claimAmount": "784308964000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0xf99c741e3870b62bfecb69e51735cea00e031f8a88d4d2e8d444c5fcdb502162",
+        "distributionId": 1
+      },
+      {
+        "user": "0x333C91876481F9e913367abC67eDe7B46985f7f7",
+        "userGaugeRelativeWeight": 0.000326702871,
+        "userRelativeAmount": "0.000009801086",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 8460,
+        "balance": 11.507480720051259,
+        "percentOfTotalVE": 0.000112299437,
+        "token": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+        "merkleProof": [
+          "0xbdd3711c6f03574e0c89e1df2ce03b8b270af4174d6998a2c106be397e88ee52",
+          "0xeed4a94b4fb28066a76c0a33bb8277113f73133587fbb63d6372fde92a78f23e",
+          "0xf73e2d5eedf457de22155667d073770fb9e1cdab5d7ec524f0f485ceef9d65f8"
+        ],
+        "claimAmount": "9801086000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0xf99c741e3870b62bfecb69e51735cea00e031f8a88d4d2e8d444c5fcdb502162",
+        "distributionId": 1
+      },
+      {
+        "user": "0x32144A3F0ED8145Aa42896A811C7a7cEb1717F24",
+        "userGaugeRelativeWeight": 0.036277550856,
+        "userRelativeAmount": "0.001088326526",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 10000,
+        "balance": 1277.8070048552188,
+        "percentOfTotalVE": 0.01246988899,
+        "token": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+        "merkleProof": [
+          "0x24dc21484aa64366074b575b75873f9df1369434d538b72629e1b3b0c6eaab54",
+          "0x2b029a38610186f1589e8599b76e6e91111925cc78e9de28a52acd72598a2df1",
+          "0xa41ad14e34bec917ac0511ed74b32afece820ae96a7e9075168e143cb416d0cf"
+        ],
+        "claimAmount": "1088326526000000",
+        "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "merkleRoot": "0xf99c741e3870b62bfecb69e51735cea00e031f8a88d4d2e8d444c5fcdb502162",
+        "distributionId": 1
+      }
+    ],
+    "merkleRoot": "0xf99c741e3870b62bfecb69e51735cea00e031f8a88d4d2e8d444c5fcdb502162",
+    "distribution": {
+      "distributionId": 1,
+      "txHash": "0xb6547630494526179f22e8756b6766dcc8e541db98dcf8509d70683ee0cfb0a4"
+    }
+  },
+  {
+    "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+    "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+    "amount": "20.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 19.98414,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+    "users": [
+      {
+        "user": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "userGaugeRelativeWeight": 0.531469788491,
+        "userRelativeAmount": "10.629395769820",
+        "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+        "weightUsed": 1500,
+        "balance": 4522.378391817969,
+        "percentOfTotalVE": 0.044133078236,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0x53606cbb00b800791a1d1002e94bad7ea2d89798321e8de757a21da886f0c418",
+          "0x2a08ae45977dde87fc38682e7df3650da1beb354999e911e6ffc30b8f6dec180"
+        ],
+        "claimAmount": "10629395769820000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x6304b3c188c34c8f534aaa742902e5c88a531aab381169230254a2d7542cc2e4",
+        "distributionId": 2
+      },
+      {
+        "user": "0xB6355c2eac24bc6858ED594409E473902409D71F",
+        "userGaugeRelativeWeight": 0.360296027529,
+        "userRelativeAmount": "7.205920550580",
+        "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+        "weightUsed": 2500,
+        "balance": 3065.8280204004163,
+        "percentOfTotalVE": 0.029918864845,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0xff299dc41186b38d8d1ac39e7bca4127bbb6d6826d47b55ca6963bffe29036e3",
+          "0x2a08ae45977dde87fc38682e7df3650da1beb354999e911e6ffc30b8f6dec180"
+        ],
+        "claimAmount": "7205920550580000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x6304b3c188c34c8f534aaa742902e5c88a531aab381169230254a2d7542cc2e4",
+        "distributionId": 2
+      },
+      {
+        "user": "0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51",
+        "userGaugeRelativeWeight": 0.108219348059,
+        "userRelativeAmount": "2.164386961180",
+        "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+        "weightUsed": 1400,
+        "balance": 920.8591942934179,
+        "percentOfTotalVE": 0.008986499436,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0x227d45e9e0821a3fbb05270573dcc14a4955e95fec918bef754131eb6dec4494",
+          "0x3758a829de49be763b4f044f53ca4ab96ee66a7a79febabef18533c151bd3495"
+        ],
+        "claimAmount": "2164386961180000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x6304b3c188c34c8f534aaa742902e5c88a531aab381169230254a2d7542cc2e4",
+        "distributionId": 2
+      },
+      {
+        "user": "0x73CbDF131364A3b8dc6110a6037ABA1F868167Ee",
+        "userGaugeRelativeWeight": 0.00001483592,
+        "userRelativeAmount": "0.000296718400",
+        "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+        "weightUsed": 1500,
+        "balance": 0.12624164834889684,
+        "percentOfTotalVE": 0.00000123197,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0x10daa29409ff433a0abc7e07dd50faccf449b539c8f670e68f439ee1b1d83483",
+          "0x3758a829de49be763b4f044f53ca4ab96ee66a7a79febabef18533c151bd3495"
+        ],
+        "claimAmount": "296718400000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x6304b3c188c34c8f534aaa742902e5c88a531aab381169230254a2d7542cc2e4",
+        "distributionId": 2
+      }
+    ],
+    "merkleRoot": "0x6304b3c188c34c8f534aaa742902e5c88a531aab381169230254a2d7542cc2e4",
+    "distribution": {
+      "distributionId": 2,
+      "txHash": "0xb6547630494526179f22e8756b6766dcc8e541db98dcf8509d70683ee0cfb0a4"
+    }
+  },
+  {
+    "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "amount": "0.0022",
+    "epochStartTime": 1678320000,
+    "valueUSD": 54.274,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+    "users": [
+      {
+        "user": "0x4b6e90Ce968E216592bAD2ebd17E660c9cf9312a",
+        "userGaugeRelativeWeight": 0.000074974196,
+        "userRelativeAmount": "0.000000164943",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 10000,
+        "balance": 2.6408220034195873,
+        "percentOfTotalVE": 0.000025771307,
+        "token": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+        "merkleProof": [
+          "0xe2307ea877fd4d561446b76fdd4b04ea38b162c8437aabb64453f001ff88d7ba",
+          "0x2b7ffc6ee047dd4daba30a36925f1e99ac542b238fab9a661f9a28e17ba924b3",
+          "0x4f0df4b9da1d635a9ce07bbe4aba14e51d75cb594c9c09c6bde63fcf88c6f412"
+        ],
+        "claimAmount": "164943000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0xf1002df28a7bbd27973aaf7954959290e7ef1ba8ffeff04df3952444f318db85",
+        "distributionId": 1
+      },
+      {
+        "user": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+        "userGaugeRelativeWeight": 0.128392481396,
+        "userRelativeAmount": "0.000282463459",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 1500,
+        "balance": 4522.378391817969,
+        "percentOfTotalVE": 0.044133078236,
+        "token": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+        "merkleProof": [
+          "0x5411761a39bc1d62408f61276ebd7e406f45e94c7b715365291697939736bf60",
+          "0x192833695dc2d441e8f345cb6192b05fa217b95abd0f1e0f2a5097017b18695c",
+          "0xae781f778cc78dc3003ed648a98f14fc0d8f44fccbc41357fb2c9dd30df78330"
+        ],
+        "claimAmount": "282463459000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0xf1002df28a7bbd27973aaf7954959290e7ef1ba8ffeff04df3952444f318db85",
+        "distributionId": 1
+      },
+      {
+        "user": "0x5D166006367856A7D8028f822c7c236f9EFA7A8D",
+        "userGaugeRelativeWeight": 0.420129557576,
+        "userRelativeAmount": "0.000924285027",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 2500,
+        "balance": 14798.256192853358,
+        "percentOfTotalVE": 0.144413523535,
+        "token": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+        "merkleProof": [
+          "0x8d9e0e5d11d29ef56c6ef5170731ceb3c2cc8187da329d88d09a62e54cb88c2f",
+          "0x192833695dc2d441e8f345cb6192b05fa217b95abd0f1e0f2a5097017b18695c",
+          "0xae781f778cc78dc3003ed648a98f14fc0d8f44fccbc41357fb2c9dd30df78330"
+        ],
+        "claimAmount": "924285027000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0xf1002df28a7bbd27973aaf7954959290e7ef1ba8ffeff04df3952444f318db85",
+        "distributionId": 1
+      },
+      {
+        "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+        "userGaugeRelativeWeight": 0.00017906778,
+        "userRelativeAmount": "0.000000393949",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 4000,
+        "balance": 6.307318365926676,
+        "percentOfTotalVE": 0.000061551987,
+        "token": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+        "merkleProof": [
+          "0xe282c4cf23d2eae1a51dcf1f85fcb6ddf356705a61895553ff0f654b25e9c211",
+          "0x2b7ffc6ee047dd4daba30a36925f1e99ac542b238fab9a661f9a28e17ba924b3",
+          "0x4f0df4b9da1d635a9ce07bbe4aba14e51d75cb594c9c09c6bde63fcf88c6f412"
+        ],
+        "claimAmount": "393949000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0xf1002df28a7bbd27973aaf7954959290e7ef1ba8ffeff04df3952444f318db85",
+        "distributionId": 1
+      },
+      {
+        "user": "0xdA7a763BDE6ee9cafc3876eF33D67F8EED7891F7",
+        "userGaugeRelativeWeight": 0.388476033207,
+        "userRelativeAmount": "0.000854647273",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 1500,
+        "balance": 13683.321633733167,
+        "percentOfTotalVE": 0.133533077482,
+        "token": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+        "merkleProof": [
+          "0xf0a711ebf80f2e7ca17179b549c9a31fe4766f05eae9843e752618697bd9cf90",
+          "0x176f524fb95425f4eeae70182cdd4d61f136c2706152045dadfefa0e5b2b8194",
+          "0x4f0df4b9da1d635a9ce07bbe4aba14e51d75cb594c9c09c6bde63fcf88c6f412"
+        ],
+        "claimAmount": "854647273000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0xf1002df28a7bbd27973aaf7954959290e7ef1ba8ffeff04df3952444f318db85",
+        "distributionId": 1
+      },
+      {
+        "user": "0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51",
+        "userGaugeRelativeWeight": 0.026143632118,
+        "userRelativeAmount": "0.000057515991",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 1400,
+        "balance": 920.8591942934179,
+        "percentOfTotalVE": 0.008986499436,
+        "token": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+        "merkleProof": [
+          "0x935bf1749fd63345ed18c8c053689178ba8f67e7bc21c68ad1358f83115b75ff",
+          "0x5808ad76e046858bcaffefa625d9e9a596cb0bea95a3d94b181c59066242b660",
+          "0xae781f778cc78dc3003ed648a98f14fc0d8f44fccbc41357fb2c9dd30df78330"
+        ],
+        "claimAmount": "57515991000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0xf1002df28a7bbd27973aaf7954959290e7ef1ba8ffeff04df3952444f318db85",
+        "distributionId": 1
+      },
+      {
+        "user": "0x333C91876481F9e913367abC67eDe7B46985f7f7",
+        "userGaugeRelativeWeight": 0.000326702871,
+        "userRelativeAmount": "0.000000718746",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 8460,
+        "balance": 11.507480720051259,
+        "percentOfTotalVE": 0.000112299437,
+        "token": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+        "merkleProof": [
+          "0xf3c137eac8f003bb46b2f853addbb43d5755bbf82c62fb52be72940f8cf3af82",
+          "0x176f524fb95425f4eeae70182cdd4d61f136c2706152045dadfefa0e5b2b8194",
+          "0x4f0df4b9da1d635a9ce07bbe4aba14e51d75cb594c9c09c6bde63fcf88c6f412"
+        ],
+        "claimAmount": "718746000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0xf1002df28a7bbd27973aaf7954959290e7ef1ba8ffeff04df3952444f318db85",
+        "distributionId": 1
+      },
+      {
+        "user": "0x32144A3F0ED8145Aa42896A811C7a7cEb1717F24",
+        "userGaugeRelativeWeight": 0.036277550856,
+        "userRelativeAmount": "0.000079810612",
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 10000,
+        "balance": 1277.8070048552188,
+        "percentOfTotalVE": 0.01246988899,
+        "token": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+        "merkleProof": [
+          "0xc930cbd4b034623ab1d85037730bb3e61a4fe78327d6977d16746f5f6219f2ff",
+          "0x5808ad76e046858bcaffefa625d9e9a596cb0bea95a3d94b181c59066242b660",
+          "0xae781f778cc78dc3003ed648a98f14fc0d8f44fccbc41357fb2c9dd30df78330"
+        ],
+        "claimAmount": "79810612000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0xf1002df28a7bbd27973aaf7954959290e7ef1ba8ffeff04df3952444f318db85",
+        "distributionId": 1
+      }
+    ],
+    "merkleRoot": "0xf1002df28a7bbd27973aaf7954959290e7ef1ba8ffeff04df3952444f318db85",
+    "distribution": {
+      "distributionId": 1,
+      "txHash": "0xb6547630494526179f22e8756b6766dcc8e541db98dcf8509d70683ee0cfb0a4"
+    }
+  },
+  {
+    "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "amount": "10.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 9.99207,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+    "users": [
+      {
+        "user": "0xB6355c2eac24bc6858ED594409E473902409D71F",
+        "userGaugeRelativeWeight": 0.208763796598,
+        "userRelativeAmount": "2.087637965980",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 7500,
+        "balance": 3065.8280204004163,
+        "percentOfTotalVE": 0.029918864845,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0x36efd08856272965ab54d93a71708917cfb1af419bec0b2dab184ee97a31f1be",
+          "0x2db16ba9f3e74d8ed387a8247f9af82c97b7288ce4b01ee4051b9885770c4841",
+          "0x2f4f7a574a0ab4090b1adb29673e96f977824969dcb5bf9dac78f54aad7a14a9",
+          "0xd10e15bd1276b217447634d35cf937fa43fab8735fc98044b5bd8c0e9a438523"
+        ],
+        "claimAmount": "2087637965980000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      },
+      {
+        "user": "0x7cC57C78B9B304E9FFD0359bAe1396754E2FF5D5",
+        "userGaugeRelativeWeight": 0.005712687647,
+        "userRelativeAmount": "0.057126876470",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 10000,
+        "balance": 83.89442111879859,
+        "percentOfTotalVE": 0.000818710583,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0x01e8970799f9c72cf343929bd05b5e5ca307e6b8b6fee7da8aaac33a8ff6453b",
+          "0xff1f94163443d86a34ea15142c3268aadec0dd7be4b5b564db141b55dbc7ccf3",
+          "0x98ba4a61febb6b331c38c992630ececd4bdcdca17337b60bf7260f6291e9ae88",
+          "0xd10e15bd1276b217447634d35cf937fa43fab8735fc98044b5bd8c0e9a438523"
+        ],
+        "claimAmount": "57126876470000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      },
+      {
+        "user": "0x0C36922266e6cE0f92a357E20399F295c2b9ff10",
+        "userGaugeRelativeWeight": 0.000112795737,
+        "userRelativeAmount": "0.001127957370",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 10000,
+        "balance": 1.6564765698383175,
+        "percentOfTotalVE": 0.000016165257,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0x90624c5722c6a511b1458115d0aad9895d8393fa6876e41b3a9ffe1a9fd1ca70",
+          "0x3738fba8292882e0c59f00e25b81285e3af1208d4a69a0932926b9a1acf237f2",
+          "0xd352f9739347c9d25c6a4529eac6e2fb24f3d73e8f097e778a9a370d8425aaa2",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "1127957370000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      },
+      {
+        "user": "0xbC4E6A07646c564a333c971DEDaCDbC485fEe5a8",
+        "userGaugeRelativeWeight": 0.046340220273,
+        "userRelativeAmount": "0.463402202730",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 1000,
+        "balance": 680.5353614475413,
+        "percentOfTotalVE": 0.006641222328,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0x61208a25dc7733fb823506bf98f19c6fcc9944973dd1a5079278441ac15004a4",
+          "0x2db16ba9f3e74d8ed387a8247f9af82c97b7288ce4b01ee4051b9885770c4841",
+          "0x2f4f7a574a0ab4090b1adb29673e96f977824969dcb5bf9dac78f54aad7a14a9",
+          "0xd10e15bd1276b217447634d35cf937fa43fab8735fc98044b5bd8c0e9a438523"
+        ],
+        "claimAmount": "463402202730000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      },
+      {
+        "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+        "userGaugeRelativeWeight": 0.000429489105,
+        "userRelativeAmount": "0.004294891050",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 500,
+        "balance": 6.307318365926676,
+        "percentOfTotalVE": 0.000061551987,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0xf0e948d955f39f9323010f338cb4374df9b8b4effc40f625890e03bffcefd361",
+          "0x82ec632ec0f49b0cb6583cd380916a43f33b17d798ad4a8624d04cef485e4630",
+          "0x4af6fce8dbee78a79120b0cc04ace0d1f8d31d964dcc53eba1ef235995e93ffa",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "4294891050000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      },
+      {
+        "user": "0x0cD852539cc13267eadB82Be19E86eA1F61eb17e",
+        "userGaugeRelativeWeight": 0.053461886108,
+        "userRelativeAmount": "0.534618861080",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 4500,
+        "balance": 785.1215159454508,
+        "percentOfTotalVE": 0.007661859819,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0xdda580baee2fdc083959055eb374c62a2681fbcdbb9e1b45840fed1204616355",
+          "0x82ec632ec0f49b0cb6583cd380916a43f33b17d798ad4a8624d04cef485e4630",
+          "0x4af6fce8dbee78a79120b0cc04ace0d1f8d31d964dcc53eba1ef235995e93ffa",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "534618861080000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      },
+      {
+        "user": "0x8b8535c33783752FfbDB461865FdcA1f26F74E4A",
+        "userGaugeRelativeWeight": 0.071938890661,
+        "userRelativeAmount": "0.719388906610",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 3400,
+        "balance": 1056.4679811735552,
+        "percentOfTotalVE": 0.010309881224,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0x090ca3e335821c0736e11bc464f627d528ac30d77de19c1d0b5e243cacdcecf0",
+          "0xff1f94163443d86a34ea15142c3268aadec0dd7be4b5b564db141b55dbc7ccf3",
+          "0x98ba4a61febb6b331c38c992630ececd4bdcdca17337b60bf7260f6291e9ae88",
+          "0xd10e15bd1276b217447634d35cf937fa43fab8735fc98044b5bd8c0e9a438523"
+        ],
+        "claimAmount": "719388906610000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      },
+      {
+        "user": "0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51",
+        "userGaugeRelativeWeight": 0.062704776739,
+        "userRelativeAmount": "0.627047767390",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 1400,
+        "balance": 920.8591942934179,
+        "percentOfTotalVE": 0.008986499436,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0xda61b69482e516f1740d8063886844dc14bfbd4ba7bffc238f8f7cb8a95cee0e",
+          "0x83945fbc7f442089c8e222103594c35ae5f25327fc28b668ef382713bb7f3938",
+          "0xd352f9739347c9d25c6a4529eac6e2fb24f3d73e8f097e778a9a370d8425aaa2",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "627047767390000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      },
+      {
+        "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+        "userGaugeRelativeWeight": 0.041247729664,
+        "userRelativeAmount": "0.412477296640",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 3000,
+        "balance": 605.7489250853611,
+        "percentOfTotalVE": 0.005911394931,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0xfa7c5e8879cbfa522be6120ac8e6681d875744acafcd18acf51a7afef9c3ff72",
+          "0x4869480ed4dc22d20ce4054cf06a98692f19340ea033733eb834dd48f0404cb8",
+          "0x4af6fce8dbee78a79120b0cc04ace0d1f8d31d964dcc53eba1ef235995e93ffa",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "412477296640000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      },
+      {
+        "user": "0xaCAe03CDbc0aF96A43F97dFD40E5EaeB0Ebf2E2F",
+        "userGaugeRelativeWeight": 0.005029663587,
+        "userRelativeAmount": "0.050296635870",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 10000,
+        "balance": 73.86378193841306,
+        "percentOfTotalVE": 0.000720823378,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0xe3ccdc81ce46dd61c16a98299de844785e87946811c9d5361acc9ad426797e3f",
+          "0x98ba4a61febb6b331c38c992630ececd4bdcdca17337b60bf7260f6291e9ae88",
+          "0xd10e15bd1276b217447634d35cf937fa43fab8735fc98044b5bd8c0e9a438523"
+        ],
+        "claimAmount": "50296635870000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      },
+      {
+        "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+        "userGaugeRelativeWeight": 0.067787693986,
+        "userRelativeAmount": "0.677876939860",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 5300,
+        "balance": 995.5050398404455,
+        "percentOfTotalVE": 0.009714954832,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0xfb95fa5bbb13e37d8d6ee7a23a7bacd97acd1ec46d3e27a4deca95c5bdb1ff6f",
+          "0x4869480ed4dc22d20ce4054cf06a98692f19340ea033733eb834dd48f0404cb8",
+          "0x4af6fce8dbee78a79120b0cc04ace0d1f8d31d964dcc53eba1ef235995e93ffa",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "677876939860000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      },
+      {
+        "user": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+        "userGaugeRelativeWeight": 0.016519509981,
+        "userRelativeAmount": "0.165195099810",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 1000,
+        "balance": 242.5994229557234,
+        "percentOfTotalVE": 0.002367484183,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0x8490eebe7ef44360c3f1769b3c9868d2e6b1f3acaf0975d90903f9eaef82d423",
+          "0x3738fba8292882e0c59f00e25b81285e3af1208d4a69a0932926b9a1acf237f2",
+          "0xd352f9739347c9d25c6a4529eac6e2fb24f3d73e8f097e778a9a370d8425aaa2",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "165195099810000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      },
+      {
+        "user": "0x6A074a51Afb657C02146b0d0B4b22f4E34424849",
+        "userGaugeRelativeWeight": 0.012846284667,
+        "userRelativeAmount": "0.128462846670",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 10000,
+        "balance": 188.65579248842897,
+        "percentOfTotalVE": 0.001841057985,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0x9d2d36208d179e7fa3cd43218ee5b1a02a733ef9cf7c3f344583539579fbf0cf",
+          "0x83945fbc7f442089c8e222103594c35ae5f25327fc28b668ef382713bb7f3938",
+          "0xd352f9739347c9d25c6a4529eac6e2fb24f3d73e8f097e778a9a370d8425aaa2",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "128462846670000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      },
+      {
+        "user": "0x91C05e14F60c759398056EC06c1e44EB0d431817",
+        "userGaugeRelativeWeight": 0.001323983928,
+        "userRelativeAmount": "0.013239839280",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 5000,
+        "balance": 19.4435389895973,
+        "percentOfTotalVE": 0.000189746004,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0x2c4e8e2de15728f50842fd7c22b103293d562acb1e54cfb80dd14d9fda417423",
+          "0x7902d3dc10dfca00c14c9604ac45ce07268d950ef7ef1c05924430630f4d6e91",
+          "0x2f4f7a574a0ab4090b1adb29673e96f977824969dcb5bf9dac78f54aad7a14a9",
+          "0xd10e15bd1276b217447634d35cf937fa43fab8735fc98044b5bd8c0e9a438523"
+        ],
+        "claimAmount": "13239839280000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      },
+      {
+        "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+        "userGaugeRelativeWeight": 0.405780591318,
+        "userRelativeAmount": "4.057805913180",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 500,
+        "balance": 5959.143909323188,
+        "percentOfTotalVE": 0.058154214793,
+        "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "merkleProof": [
+          "0x0f5bbfb5778a287441f9e7b515ac6ca8eb4d9e48d2ae8e8b5a48a13696fb1ac9",
+          "0x7902d3dc10dfca00c14c9604ac45ce07268d950ef7ef1c05924430630f4d6e91",
+          "0x2f4f7a574a0ab4090b1adb29673e96f977824969dcb5bf9dac78f54aad7a14a9",
+          "0xd10e15bd1276b217447634d35cf937fa43fab8735fc98044b5bd8c0e9a438523"
+        ],
+        "claimAmount": "4057805913180000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 3
+      }
+    ],
+    "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+    "distribution": {
+      "distributionId": 3,
+      "txHash": "0xb6547630494526179f22e8756b6766dcc8e541db98dcf8509d70683ee0cfb0a4"
+    }
+  },
+  {
+    "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "amount": "10.0",
+    "epochStartTime": 1678320000,
+    "valueUSD": 10.049999999999999,
+    "epochWeekLabel": "3/09-3/15",
+    "token": "0x55d398326f99059ff775485246999027b3197955",
+    "users": [
+      {
+        "user": "0xB6355c2eac24bc6858ED594409E473902409D71F",
+        "userGaugeRelativeWeight": 0.208763796598,
+        "userRelativeAmount": "2.087637965980",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 7500,
+        "balance": 3065.8280204004163,
+        "percentOfTotalVE": 0.029918864845,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0x36efd08856272965ab54d93a71708917cfb1af419bec0b2dab184ee97a31f1be",
+          "0x2db16ba9f3e74d8ed387a8247f9af82c97b7288ce4b01ee4051b9885770c4841",
+          "0x2f4f7a574a0ab4090b1adb29673e96f977824969dcb5bf9dac78f54aad7a14a9",
+          "0xd10e15bd1276b217447634d35cf937fa43fab8735fc98044b5bd8c0e9a438523"
+        ],
+        "claimAmount": "2087637965980000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      },
+      {
+        "user": "0x7cC57C78B9B304E9FFD0359bAe1396754E2FF5D5",
+        "userGaugeRelativeWeight": 0.005712687647,
+        "userRelativeAmount": "0.057126876470",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 10000,
+        "balance": 83.89442111879859,
+        "percentOfTotalVE": 0.000818710583,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0x01e8970799f9c72cf343929bd05b5e5ca307e6b8b6fee7da8aaac33a8ff6453b",
+          "0xff1f94163443d86a34ea15142c3268aadec0dd7be4b5b564db141b55dbc7ccf3",
+          "0x98ba4a61febb6b331c38c992630ececd4bdcdca17337b60bf7260f6291e9ae88",
+          "0xd10e15bd1276b217447634d35cf937fa43fab8735fc98044b5bd8c0e9a438523"
+        ],
+        "claimAmount": "57126876470000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      },
+      {
+        "user": "0x0C36922266e6cE0f92a357E20399F295c2b9ff10",
+        "userGaugeRelativeWeight": 0.000112795737,
+        "userRelativeAmount": "0.001127957370",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 10000,
+        "balance": 1.6564765698383175,
+        "percentOfTotalVE": 0.000016165257,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0x90624c5722c6a511b1458115d0aad9895d8393fa6876e41b3a9ffe1a9fd1ca70",
+          "0x3738fba8292882e0c59f00e25b81285e3af1208d4a69a0932926b9a1acf237f2",
+          "0xd352f9739347c9d25c6a4529eac6e2fb24f3d73e8f097e778a9a370d8425aaa2",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "1127957370000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      },
+      {
+        "user": "0xbC4E6A07646c564a333c971DEDaCDbC485fEe5a8",
+        "userGaugeRelativeWeight": 0.046340220273,
+        "userRelativeAmount": "0.463402202730",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 1000,
+        "balance": 680.5353614475413,
+        "percentOfTotalVE": 0.006641222328,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0x61208a25dc7733fb823506bf98f19c6fcc9944973dd1a5079278441ac15004a4",
+          "0x2db16ba9f3e74d8ed387a8247f9af82c97b7288ce4b01ee4051b9885770c4841",
+          "0x2f4f7a574a0ab4090b1adb29673e96f977824969dcb5bf9dac78f54aad7a14a9",
+          "0xd10e15bd1276b217447634d35cf937fa43fab8735fc98044b5bd8c0e9a438523"
+        ],
+        "claimAmount": "463402202730000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      },
+      {
+        "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+        "userGaugeRelativeWeight": 0.000429489105,
+        "userRelativeAmount": "0.004294891050",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 500,
+        "balance": 6.307318365926676,
+        "percentOfTotalVE": 0.000061551987,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0xf0e948d955f39f9323010f338cb4374df9b8b4effc40f625890e03bffcefd361",
+          "0x82ec632ec0f49b0cb6583cd380916a43f33b17d798ad4a8624d04cef485e4630",
+          "0x4af6fce8dbee78a79120b0cc04ace0d1f8d31d964dcc53eba1ef235995e93ffa",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "4294891050000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      },
+      {
+        "user": "0x0cD852539cc13267eadB82Be19E86eA1F61eb17e",
+        "userGaugeRelativeWeight": 0.053461886108,
+        "userRelativeAmount": "0.534618861080",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 4500,
+        "balance": 785.1215159454508,
+        "percentOfTotalVE": 0.007661859819,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0xdda580baee2fdc083959055eb374c62a2681fbcdbb9e1b45840fed1204616355",
+          "0x82ec632ec0f49b0cb6583cd380916a43f33b17d798ad4a8624d04cef485e4630",
+          "0x4af6fce8dbee78a79120b0cc04ace0d1f8d31d964dcc53eba1ef235995e93ffa",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "534618861080000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      },
+      {
+        "user": "0x8b8535c33783752FfbDB461865FdcA1f26F74E4A",
+        "userGaugeRelativeWeight": 0.071938890661,
+        "userRelativeAmount": "0.719388906610",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 3400,
+        "balance": 1056.4679811735552,
+        "percentOfTotalVE": 0.010309881224,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0x090ca3e335821c0736e11bc464f627d528ac30d77de19c1d0b5e243cacdcecf0",
+          "0xff1f94163443d86a34ea15142c3268aadec0dd7be4b5b564db141b55dbc7ccf3",
+          "0x98ba4a61febb6b331c38c992630ececd4bdcdca17337b60bf7260f6291e9ae88",
+          "0xd10e15bd1276b217447634d35cf937fa43fab8735fc98044b5bd8c0e9a438523"
+        ],
+        "claimAmount": "719388906610000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      },
+      {
+        "user": "0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51",
+        "userGaugeRelativeWeight": 0.062704776739,
+        "userRelativeAmount": "0.627047767390",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 1400,
+        "balance": 920.8591942934179,
+        "percentOfTotalVE": 0.008986499436,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0xda61b69482e516f1740d8063886844dc14bfbd4ba7bffc238f8f7cb8a95cee0e",
+          "0x83945fbc7f442089c8e222103594c35ae5f25327fc28b668ef382713bb7f3938",
+          "0xd352f9739347c9d25c6a4529eac6e2fb24f3d73e8f097e778a9a370d8425aaa2",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "627047767390000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      },
+      {
+        "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+        "userGaugeRelativeWeight": 0.041247729664,
+        "userRelativeAmount": "0.412477296640",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 3000,
+        "balance": 605.7489250853611,
+        "percentOfTotalVE": 0.005911394931,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0xfa7c5e8879cbfa522be6120ac8e6681d875744acafcd18acf51a7afef9c3ff72",
+          "0x4869480ed4dc22d20ce4054cf06a98692f19340ea033733eb834dd48f0404cb8",
+          "0x4af6fce8dbee78a79120b0cc04ace0d1f8d31d964dcc53eba1ef235995e93ffa",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "412477296640000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      },
+      {
+        "user": "0xaCAe03CDbc0aF96A43F97dFD40E5EaeB0Ebf2E2F",
+        "userGaugeRelativeWeight": 0.005029663587,
+        "userRelativeAmount": "0.050296635870",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 10000,
+        "balance": 73.86378193841306,
+        "percentOfTotalVE": 0.000720823378,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0xe3ccdc81ce46dd61c16a98299de844785e87946811c9d5361acc9ad426797e3f",
+          "0x98ba4a61febb6b331c38c992630ececd4bdcdca17337b60bf7260f6291e9ae88",
+          "0xd10e15bd1276b217447634d35cf937fa43fab8735fc98044b5bd8c0e9a438523"
+        ],
+        "claimAmount": "50296635870000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      },
+      {
+        "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+        "userGaugeRelativeWeight": 0.067787693986,
+        "userRelativeAmount": "0.677876939860",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 5300,
+        "balance": 995.5050398404455,
+        "percentOfTotalVE": 0.009714954832,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0xfb95fa5bbb13e37d8d6ee7a23a7bacd97acd1ec46d3e27a4deca95c5bdb1ff6f",
+          "0x4869480ed4dc22d20ce4054cf06a98692f19340ea033733eb834dd48f0404cb8",
+          "0x4af6fce8dbee78a79120b0cc04ace0d1f8d31d964dcc53eba1ef235995e93ffa",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "677876939860000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      },
+      {
+        "user": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+        "userGaugeRelativeWeight": 0.016519509981,
+        "userRelativeAmount": "0.165195099810",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 1000,
+        "balance": 242.5994229557234,
+        "percentOfTotalVE": 0.002367484183,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0x8490eebe7ef44360c3f1769b3c9868d2e6b1f3acaf0975d90903f9eaef82d423",
+          "0x3738fba8292882e0c59f00e25b81285e3af1208d4a69a0932926b9a1acf237f2",
+          "0xd352f9739347c9d25c6a4529eac6e2fb24f3d73e8f097e778a9a370d8425aaa2",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "165195099810000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      },
+      {
+        "user": "0x6A074a51Afb657C02146b0d0B4b22f4E34424849",
+        "userGaugeRelativeWeight": 0.012846284667,
+        "userRelativeAmount": "0.128462846670",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 10000,
+        "balance": 188.65579248842897,
+        "percentOfTotalVE": 0.001841057985,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0x9d2d36208d179e7fa3cd43218ee5b1a02a733ef9cf7c3f344583539579fbf0cf",
+          "0x83945fbc7f442089c8e222103594c35ae5f25327fc28b668ef382713bb7f3938",
+          "0xd352f9739347c9d25c6a4529eac6e2fb24f3d73e8f097e778a9a370d8425aaa2",
+          "0xd56e60c7aed542125294ef2accfded05ae5635724e95f30078cb83762f0d4b0f"
+        ],
+        "claimAmount": "128462846670000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      },
+      {
+        "user": "0x91C05e14F60c759398056EC06c1e44EB0d431817",
+        "userGaugeRelativeWeight": 0.001323983928,
+        "userRelativeAmount": "0.013239839280",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 5000,
+        "balance": 19.4435389895973,
+        "percentOfTotalVE": 0.000189746004,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0x2c4e8e2de15728f50842fd7c22b103293d562acb1e54cfb80dd14d9fda417423",
+          "0x7902d3dc10dfca00c14c9604ac45ce07268d950ef7ef1c05924430630f4d6e91",
+          "0x2f4f7a574a0ab4090b1adb29673e96f977824969dcb5bf9dac78f54aad7a14a9",
+          "0xd10e15bd1276b217447634d35cf937fa43fab8735fc98044b5bd8c0e9a438523"
+        ],
+        "claimAmount": "13239839280000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      },
+      {
+        "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+        "userGaugeRelativeWeight": 0.405780591318,
+        "userRelativeAmount": "4.057805913180",
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 500,
+        "balance": 5959.143909323188,
+        "percentOfTotalVE": 0.058154214793,
+        "token": "0x55d398326f99059ff775485246999027b3197955",
+        "merkleProof": [
+          "0x0f5bbfb5778a287441f9e7b515ac6ca8eb4d9e48d2ae8e8b5a48a13696fb1ac9",
+          "0x7902d3dc10dfca00c14c9604ac45ce07268d950ef7ef1c05924430630f4d6e91",
+          "0x2f4f7a574a0ab4090b1adb29673e96f977824969dcb5bf9dac78f54aad7a14a9",
+          "0xd10e15bd1276b217447634d35cf937fa43fab8735fc98044b5bd8c0e9a438523"
+        ],
+        "claimAmount": "4057805913180000000",
+        "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+        "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+        "distributionId": 1
+      }
+    ],
+    "merkleRoot": "0x7c7ca93bc98143f93c923f7f32e9e83c387a859ac121fa2d8f2269f4e0b4a668",
+    "distribution": {
+      "distributionId": 1,
+      "txHash": "0xb6547630494526179f22e8756b6766dcc8e541db98dcf8509d70683ee0cfb0a4"
+    }
+  }
+]

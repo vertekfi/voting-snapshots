@@ -1,0 +1,282 @@
+[
+  {
+    "id": 33,
+    "briber": "0xe73E4C5Bb944A2195c1cFD3aC474582025d368Ed",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "amount": "0.1932",
+    "epochStartTime": 1678924800,
+    "valueUSD": 0.76314,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0x9562ca0c2b05d089063f562fc3ecc95e4424ad02",
+      "symbol": "SHDB",
+      "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/c0c05793f4c0a1ba8ae5a9781cc394fd29cb0b98/images/Shield_token.png"
+    }
+  },
+  {
+    "id": 35,
+    "briber": "0xe73E4C5Bb944A2195c1cFD3aC474582025d368Ed",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "amount": "15.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 0.5037701295186737,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+      "symbol": "AMES",
+      "logoURI": "https://assets.coingecko.com/coins/images/23973/small/ames.png?1645871205"
+    }
+  },
+  {
+    "id": 36,
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "amount": "1000.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 15.492081728740699,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+      "symbol": "wAALTO",
+      "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+    }
+  },
+  {
+    "id": 37,
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "amount": "600.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 236.00975573631527,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+      "symbol": "VRTK",
+      "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+    }
+  },
+  {
+    "id": 38,
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+    "amount": "200.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 78.66991857877176,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+      "symbol": "VRTK",
+      "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+    }
+  },
+  {
+    "id": 40,
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+    "amount": "300.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 118.00487786815764,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+      "symbol": "VRTK",
+      "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+    }
+  },
+  {
+    "id": 39,
+    "briber": "0xe73E4C5Bb944A2195c1cFD3aC474582025d368Ed",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "amount": "1000.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 15.492081728740699,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+      "symbol": "wAALTO",
+      "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+    }
+  },
+  {
+    "id": 41,
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "amount": "600.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 236.00975573631527,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+      "symbol": "VRTK",
+      "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+    }
+  },
+  {
+    "id": 42,
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "amount": "800.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 12.393665382992559,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+      "symbol": "wAALTO",
+      "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+    }
+  },
+  {
+    "id": 43,
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+    "amount": "600.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 236.00975573631527,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+      "symbol": "VRTK",
+      "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+    }
+  },
+  {
+    "id": 44,
+    "briber": "0xe73E4C5Bb944A2195c1cFD3aC474582025d368Ed",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "amount": "850.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 334.34715395978,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+      "symbol": "VRTK",
+      "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+    }
+  },
+  {
+    "id": 45,
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "amount": "0.56",
+    "epochStartTime": 1678924800,
+    "valueUSD": 0.56056,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0x90c97f71e18723b0cf0dfa30ee176ab653e89f40",
+      "symbol": "FRAX",
+      "logoURI": "https://assets.coingecko.com/coins/images/13422/small/ethCanonicalFRAX.png?1669277108"
+    }
+  },
+  {
+    "id": 46,
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+    "amount": "1000.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 15.492081728740699,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+      "symbol": "wAALTO",
+      "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+    }
+  },
+  {
+    "id": 48,
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+    "amount": "1000.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 15.492081728740699,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+      "symbol": "wAALTO",
+      "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+    }
+  },
+  {
+    "id": 50,
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+    "amount": "2000.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 30.984163457481397,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+      "symbol": "wAALTO",
+      "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+    }
+  },
+  {
+    "id": 56,
+    "briber": "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E",
+    "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+    "amount": "0.5",
+    "epochStartTime": 1678924800,
+    "valueUSD": 315.74,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0xc91324601b20ea0e238b63c9fafca18d32600722",
+      "symbol": "SWDB",
+      "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/c0c05793f4c0a1ba8ae5a9781cc394fd29cb0b98/images/Sword_token.png"
+    }
+  },
+  {
+    "id": 55,
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+    "amount": "200.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 78.66991857877176,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+      "symbol": "VRTK",
+      "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+    }
+  },
+  {
+    "id": 62,
+    "briber": "0x5D166006367856A7D8028f822c7c236f9EFA7A8D",
+    "gauge": "0x355827abb16998a07700FAF52AeE09f2b01Fad4C",
+    "amount": "1000.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 33.584675301244914,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+      "symbol": "AMES",
+      "logoURI": "https://assets.coingecko.com/coins/images/23973/small/ames.png?1645871205"
+    }
+  },
+  {
+    "id": 47,
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "amount": "850.0",
+    "epochStartTime": 1678924800,
+    "valueUSD": 334.34715395978,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+      "symbol": "VRTK",
+      "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+    }
+  },
+  {
+    "id": 49,
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+    "amount": "99.99",
+    "epochStartTime": 1678924800,
+    "valueUSD": 64.8076661494394,
+    "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+    "token": {
+      "address": "0xfa4b16b0f63f5a6d0651592620d585d308f749a4",
+      "symbol": "ASHARE",
+      "logoURI": "https://assets.coingecko.com/coins/images/23974/small/ashare.png?1645871503"
+    }
+  }
+]
