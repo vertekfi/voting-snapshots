@@ -143,7 +143,6 @@ function setUserClaimDataForBribeToken(
 
   usersClaimInfo = usersClaimInfo
     .map((info) => {
-      delete info.claimValues;
       return {
         ...info,
         token: bribe.token,
@@ -224,6 +223,8 @@ export async function doBulkBribeDistribution(epochDir: string) {
 
   setDistributionData(epochDir, tx);
   updateDistributions(epochDir);
+
+  return tx;
 }
 
 export function updateDistributions(epochDir: string) {

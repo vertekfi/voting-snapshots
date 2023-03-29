@@ -61,10 +61,10 @@ export type GaugeBribeDistribution = {
   blockNumber: Scalars['Int'];
   briber: Scalars['String'];
   distributionId: Scalars['Int'];
-  epochStartTime: Scalars['Int'];
   merkleRoot: Scalars['String'];
   token: Scalars['String'];
   txHash: Scalars['String'];
+  votingEpochStart: Scalars['Int'];
 };
 
 export type GaugeBribeInfo = {
@@ -130,6 +130,7 @@ export type GaugeVoteInfo = {
   __typename?: 'GaugeVoteInfo';
   blockNumber: Scalars['Int'];
   epochStartTime: Scalars['Int'];
+  epochWeekLabel: Scalars['String'];
   gaugeId?: Maybe<Scalars['String']>;
   txHash: Scalars['String'];
   userAddress: Scalars['String'];
@@ -159,9 +160,9 @@ export type GetBribesInput = {
 
 export type GetDistributionsInput = {
   briber?: InputMaybe<Scalars['String']>;
-  epochStartTime?: InputMaybe<Scalars['Int']>;
   merkleRoot?: InputMaybe<Scalars['String']>;
   token?: InputMaybe<Scalars['String']>;
+  votingEpochStart?: InputMaybe<Scalars['Int']>;
 };
 
 export type GetVotesInput = {
@@ -1362,8 +1363,8 @@ export type MutationPoolSyncPoolArgs = {
 };
 
 export type MutationSyncBribeDistributionsArgs = {
-  blocksToScan?: InputMaybe<Scalars['Int']>;
-  epochStartTime: Scalars['Int'];
+  distributionWeekStart: Scalars['Int'];
+  votingEpochStart: Scalars['Int'];
 };
 
 export type MutationSyncGaugeBribesArgs = {
@@ -1821,7 +1822,7 @@ export type GetDistributionsQuery = {
   __typename?: 'Query';
   getDistributions: Array<{
     __typename?: 'GaugeBribeDistribution';
-    epochStartTime: number;
+    votingEpochStart: number;
     briber: string;
     merkleRoot: string;
     amount: string;
@@ -1920,8 +1921,9 @@ export type GetGaugeVotesQuery = {
       __typename?: 'GaugeVoteInfo';
       userAddress: string;
       epochStartTime: number;
-      weightUsed: number;
+      epochWeekLabel: string;
       blockNumber: number;
+      weightUsed: number;
       gaugeId?: string | null;
     } | null>;
   };
@@ -2051,7 +2053,7 @@ export const GetUserRewardsDocument = gql`
 export const GetDistributionsDocument = gql`
   query GetDistributions($filter: GetDistributionsInput) {
     getDistributions(filter: $filter) {
-      epochStartTime
+      votingEpochStart
       briber
       merkleRoot
       amount
@@ -2103,8 +2105,9 @@ export const GetGaugeVotesDocument = gql`
       votes {
         userAddress
         epochStartTime
-        weightUsed
+        epochWeekLabel
         blockNumber
+        weightUsed
         gaugeId
       }
     }

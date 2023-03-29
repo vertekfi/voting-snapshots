@@ -1,1 +1,556 @@
-[{"user":"0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb","votes":[{"gauge":"0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0","weightUsed":500},{"gauge":"0x2dA4D175C614Fd758ecB90c5338458467dE869E4","weightUsed":500},{"gauge":"0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f","weightUsed":6000}]},{"user":"0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE","votes":[{"gauge":"0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f","weightUsed":10000}]},{"user":"0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8","votes":[{"gauge":"0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f","weightUsed":5000},{"gauge":"0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223","weightUsed":5000}]},{"user":"0x2E216eF129f7446463D4865Df65576Df96e4308E","votes":[{"gauge":"0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f","weightUsed":2000}]},{"user":"0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7","votes":[{"gauge":"0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f","weightUsed":2500},{"gauge":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","weightUsed":2500},{"gauge":"0x35756EB391B93Fe3457aC4A7fae198552AC3AC28","weightUsed":2000},{"gauge":"0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0","weightUsed":1500},{"gauge":"0x2dA4D175C614Fd758ecB90c5338458467dE869E4","weightUsed":1500}]},{"user":"0x04DfFDe6ca95b0c002345014745bd75fbF7523Ce","votes":[{"gauge":"0x35756EB391B93Fe3457aC4A7fae198552AC3AC28","weightUsed":10000}]},{"user":"0x98Be2f963343fa37b324070984Ffd72b0460eDbE","votes":[{"gauge":"0x148708d34F797473Cad01AC113CFD4208a57C081","weightUsed":10000}]},{"user":"0x51dC3dD3Ff9a10B2842b51f1d655F26A86301b54","votes":[{"gauge":"0x148708d34F797473Cad01AC113CFD4208a57C081","weightUsed":10000}]},{"user":"0x1b30F8eE9d7718B182BaD677C06980e5A0668526","votes":[{"gauge":"0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e","weightUsed":5000},{"gauge":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","weightUsed":2500},{"gauge":"0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223","weightUsed":2500}]},{"user":"0x32144A3F0ED8145Aa42896A811C7a7cEb1717F24","votes":[{"gauge":"0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223","weightUsed":10000}]},{"user":"0x59b596e080295F83d67431746f3Eabd70D8A3236","votes":[{"gauge":"0x35756EB391B93Fe3457aC4A7fae198552AC3AC28","weightUsed":2500},{"gauge":"0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223","weightUsed":2500}]},{"user":"0x013a8A78d124B5dC34037Af09249A2cc4a5213a0","votes":[{"gauge":"0x148708d34F797473Cad01AC113CFD4208a57C081","weightUsed":10000}]},{"user":"0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1","votes":[{"gauge":"0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f","weightUsed":10000}]},{"user":"0x6A074a51Afb657C02146b0d0B4b22f4E34424849","votes":[{"gauge":"0x35756EB391B93Fe3457aC4A7fae198552AC3AC28","weightUsed":10000}]},{"user":"0xbB90c09dfc7CAe4a45e03Bc881a706Fdb36890e3","votes":[{"gauge":"0xb49e0053C1d6ccF4250FCD21F3906f624727b722","weightUsed":1800},{"gauge":"0x148708d34F797473Cad01AC113CFD4208a57C081","weightUsed":2000},{"gauge":"0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223","weightUsed":1500}]},{"user":"0xb234182Bd57526686CD6DB545c34dAa04942DAa8","votes":[{"gauge":"0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0","weightUsed":10000}]},{"user":"0x4AbB06D9e06F21401Db9738015A68072380CdBC9","votes":[{"gauge":"0x355827abb16998a07700FAF52AeE09f2b01Fad4C","weightUsed":4000},{"gauge":"0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0","weightUsed":6000}]},{"user":"0xcB4f9A94363D688E11f5F3d87814aA492092ff97","votes":[{"gauge":"0xb49e0053C1d6ccF4250FCD21F3906f624727b722","weightUsed":200},{"gauge":"0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223","weightUsed":6000},{"gauge":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","weightUsed":3800}]},{"user":"0x25270EEae3ad2c6780Bda16Dd24933d416454B01","votes":[{"gauge":"0x9C4e2444d40508dF540466cCBD83855e39E5972B","weightUsed":1000},{"gauge":"0x35756EB391B93Fe3457aC4A7fae198552AC3AC28","weightUsed":1000},{"gauge":"0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223","weightUsed":1000},{"gauge":"0xC32389561da25C3AD66aBd55A2db0B6172F9C759","weightUsed":1000},{"gauge":"0x148708d34F797473Cad01AC113CFD4208a57C081","weightUsed":1000},{"gauge":"0xb49e0053C1d6ccF4250FCD21F3906f624727b722","weightUsed":1000},{"gauge":"0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f","weightUsed":1000},{"gauge":"0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e","weightUsed":1000},{"gauge":"0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f","weightUsed":1000},{"gauge":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","weightUsed":1000}]},{"user":"0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A","votes":[{"gauge":"0x35756EB391B93Fe3457aC4A7fae198552AC3AC28","weightUsed":2500},{"gauge":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","weightUsed":2500},{"gauge":"0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f","weightUsed":2500},{"gauge":"0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e","weightUsed":2500}]},{"user":"0x9B4A54F384141265360bd93E4058f7FFCa6B4Aea","votes":[{"gauge":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","weightUsed":10000}]},{"user":"0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC","votes":[{"gauge":"0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f","weightUsed":10000}]},{"user":"0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106","votes":[{"gauge":"0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f","weightUsed":5000},{"gauge":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","weightUsed":5000}]},{"user":"0x41C6741F56893Fc194384f44f8d647485ca26Fe7","votes":[{"gauge":"0xFf71E6499f492Ce41c84Eefbf727774165dC5aBa","weightUsed":10000}]},{"user":"0x1a61Bf28f66451bd43E7be5fb788A2B1F5f4231f","votes":[{"gauge":"0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223","weightUsed":10000}]},{"user":"0x23c043a293b302E146Aa9fcf9a9CA937b895dd56","votes":[{"gauge":"0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223","weightUsed":10000}]},{"user":"0x9884705F4E825a2174C115280c4d147379d5C33D","votes":[{"gauge":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","weightUsed":10000}]},{"user":"0xCed3FC4610761F79242D7D8A72FE86F3A1c626b4","votes":[{"gauge":"0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223","weightUsed":10000}]},{"user":"0x69e02D001146A86d4E2995F9eCf906265aA77d85","votes":[{"gauge":"0x35756EB391B93Fe3457aC4A7fae198552AC3AC28","weightUsed":4000},{"gauge":"0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f","weightUsed":4000},{"gauge":"0xFf71E6499f492Ce41c84Eefbf727774165dC5aBa","weightUsed":2000}]},{"user":"0x68a0187089E2d1addeE1FF35c4B0a7B5988931Ea","votes":[{"gauge":"0xb49e0053C1d6ccF4250FCD21F3906f624727b722","weightUsed":10000}]},{"user":"0x80e8B7110030Bf5ca709b6eC3Dff50899E8A3D10","votes":[{"gauge":"0xFf71E6499f492Ce41c84Eefbf727774165dC5aBa","weightUsed":5140}]},{"user":"0xa2555b4AFF00b915265B965704819D0CA661fB0b","votes":[{"gauge":"0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223","weightUsed":10000}]},{"user":"0x5d2F1CAAF44C0ef31E2381b9aA3a7e930084fF68","votes":[{"gauge":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","weightUsed":10000}]},{"user":"0x64f830A199Bf057b157e8F1B6aB56bC157a87b11","votes":[{"gauge":"0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e","weightUsed":10000}]},{"user":"0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E","votes":[{"gauge":"0x148708d34F797473Cad01AC113CFD4208a57C081","weightUsed":10000}]},{"user":"0x1508b2672Fe55b6F5D216f4b9312e42540B6ee68","votes":[{"gauge":"0x148708d34F797473Cad01AC113CFD4208a57C081","weightUsed":10000}]},{"user":"0x568d716fCC14966b53090428056f0525D6845bb9","votes":[{"gauge":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","weightUsed":780},{"gauge":"0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f","weightUsed":9220}]},{"user":"0xd7B470De6FdAD29aDa4d52FEe70D7CaeAc3C21fB","votes":[{"gauge":"0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e","weightUsed":10000}]},{"user":"0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51","votes":[{"gauge":"0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0","weightUsed":1500}]},{"user":"0x2EC9912157a1D0A813Fdc7ac2B76203741Cb4a8e","votes":[{"gauge":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","weightUsed":10000}]},{"user":"0xB6f5FB0aee8bfF9fC3D57d2158c5fE4473F2d206","votes":[{"gauge":"0x355827abb16998a07700FAF52AeE09f2b01Fad4C","weightUsed":8000},{"gauge":"0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0","weightUsed":2000}]},{"user":"0xBb1AE82CD0604a008f14E299A2C3854B6F6e7fd1","votes":[{"gauge":"0x148708d34F797473Cad01AC113CFD4208a57C081","weightUsed":10000}]},{"user":"0x12d26ABf06eB3499BccA8Be7f5381647B56D53Ee","votes":[{"gauge":"0x148708d34F797473Cad01AC113CFD4208a57C081","weightUsed":10000}]},{"user":"0x771D1A7D23D30F9030bC607a559Ce3e7496D8422","votes":[{"gauge":"0x35756EB391B93Fe3457aC4A7fae198552AC3AC28","weightUsed":2500},{"gauge":"0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e","weightUsed":500},{"gauge":"0x9DAb43a1D850eC820C88a19561C1fD87dEC09193","weightUsed":2000},{"gauge":"0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f","weightUsed":2000}]},{"user":"0xB7BbEa1200426defa0b7b76E3D23CF3DFDfBF21A","votes":[{"gauge":"0x148708d34F797473Cad01AC113CFD4208a57C081","weightUsed":10000}]},{"user":"0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22","votes":[{"gauge":"0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f","weightUsed":10000}]}]
+[
+  {
+    "user": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+    "votes": [
+      {
+        "gauge": "0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0",
+        "weightUsed": 500
+      },
+      {
+        "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+        "weightUsed": 500
+      },
+      {
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 6000
+      }
+    ]
+  },
+  {
+    "user": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+    "votes": [
+      {
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+    "votes": [
+      {
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 5000
+      },
+      {
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 5000
+      }
+    ]
+  },
+  {
+    "user": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+    "votes": [
+      {
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 2000
+      }
+    ]
+  },
+  {
+    "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+    "votes": [
+      {
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 2500
+      },
+      {
+        "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+        "weightUsed": 2500
+      },
+      {
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 2000
+      },
+      {
+        "gauge": "0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0",
+        "weightUsed": 1500
+      },
+      {
+        "gauge": "0x2dA4D175C614Fd758ecB90c5338458467dE869E4",
+        "weightUsed": 1500
+      }
+    ]
+  },
+  {
+    "user": "0x04DfFDe6ca95b0c002345014745bd75fbF7523Ce",
+    "votes": [
+      {
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x98Be2f963343fa37b324070984Ffd72b0460eDbE",
+    "votes": [
+      {
+        "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x51dC3dD3Ff9a10B2842b51f1d655F26A86301b54",
+    "votes": [
+      {
+        "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x1b30F8eE9d7718B182BaD677C06980e5A0668526",
+    "votes": [
+      {
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 5000
+      },
+      {
+        "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+        "weightUsed": 2500
+      },
+      {
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 2500
+      }
+    ]
+  },
+  {
+    "user": "0x32144A3F0ED8145Aa42896A811C7a7cEb1717F24",
+    "votes": [
+      {
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "votes": [
+      {
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 2500
+      },
+      {
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 2500
+      }
+    ]
+  },
+  {
+    "user": "0x013a8A78d124B5dC34037Af09249A2cc4a5213a0",
+    "votes": [
+      {
+        "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1",
+    "votes": [
+      {
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x6A074a51Afb657C02146b0d0B4b22f4E34424849",
+    "votes": [
+      {
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0xbB90c09dfc7CAe4a45e03Bc881a706Fdb36890e3",
+    "votes": [
+      {
+        "gauge": "0xb49e0053C1d6ccF4250FCD21F3906f624727b722",
+        "weightUsed": 1800
+      },
+      {
+        "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+        "weightUsed": 2000
+      },
+      {
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 1500
+      }
+    ]
+  },
+  {
+    "user": "0xb234182Bd57526686CD6DB545c34dAa04942DAa8",
+    "votes": [
+      {
+        "gauge": "0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x4AbB06D9e06F21401Db9738015A68072380CdBC9",
+    "votes": [
+      {
+        "gauge": "0x355827abb16998a07700FAF52AeE09f2b01Fad4C",
+        "weightUsed": 4000
+      },
+      {
+        "gauge": "0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0",
+        "weightUsed": 6000
+      }
+    ]
+  },
+  {
+    "user": "0xcB4f9A94363D688E11f5F3d87814aA492092ff97",
+    "votes": [
+      {
+        "gauge": "0xb49e0053C1d6ccF4250FCD21F3906f624727b722",
+        "weightUsed": 200
+      },
+      {
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 6000
+      },
+      {
+        "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+        "weightUsed": 3800
+      }
+    ]
+  },
+  {
+    "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+    "votes": [
+      {
+        "gauge": "0x9C4e2444d40508dF540466cCBD83855e39E5972B",
+        "weightUsed": 1000
+      },
+      {
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 1000
+      },
+      {
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 1000
+      },
+      {
+        "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+        "weightUsed": 1000
+      },
+      {
+        "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+        "weightUsed": 1000
+      },
+      {
+        "gauge": "0xb49e0053C1d6ccF4250FCD21F3906f624727b722",
+        "weightUsed": 1000
+      },
+      {
+        "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+        "weightUsed": 1000
+      },
+      {
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 1000
+      },
+      {
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 1000
+      },
+      {
+        "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+        "weightUsed": 1000
+      }
+    ]
+  },
+  {
+    "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+    "votes": [
+      {
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 2500
+      },
+      {
+        "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+        "weightUsed": 2500
+      },
+      {
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 2500
+      },
+      {
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 2500
+      }
+    ]
+  },
+  {
+    "user": "0x9B4A54F384141265360bd93E4058f7FFCa6B4Aea",
+    "votes": [
+      {
+        "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+    "votes": [
+      {
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+    "votes": [
+      {
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 5000
+      },
+      {
+        "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+        "weightUsed": 5000
+      }
+    ]
+  },
+  {
+    "user": "0x41C6741F56893Fc194384f44f8d647485ca26Fe7",
+    "votes": [
+      {
+        "gauge": "0xFf71E6499f492Ce41c84Eefbf727774165dC5aBa",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x1a61Bf28f66451bd43E7be5fb788A2B1F5f4231f",
+    "votes": [
+      {
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x23c043a293b302E146Aa9fcf9a9CA937b895dd56",
+    "votes": [
+      {
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x9884705F4E825a2174C115280c4d147379d5C33D",
+    "votes": [
+      {
+        "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0xCed3FC4610761F79242D7D8A72FE86F3A1c626b4",
+    "votes": [
+      {
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+    "votes": [
+      {
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 4000
+      },
+      {
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 4000
+      },
+      {
+        "gauge": "0xFf71E6499f492Ce41c84Eefbf727774165dC5aBa",
+        "weightUsed": 2000
+      }
+    ]
+  },
+  {
+    "user": "0x68a0187089E2d1addeE1FF35c4B0a7B5988931Ea",
+    "votes": [
+      {
+        "gauge": "0xb49e0053C1d6ccF4250FCD21F3906f624727b722",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x80e8B7110030Bf5ca709b6eC3Dff50899E8A3D10",
+    "votes": [
+      {
+        "gauge": "0xFf71E6499f492Ce41c84Eefbf727774165dC5aBa",
+        "weightUsed": 5140
+      }
+    ]
+  },
+  {
+    "user": "0xa2555b4AFF00b915265B965704819D0CA661fB0b",
+    "votes": [
+      {
+        "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x5d2F1CAAF44C0ef31E2381b9aA3a7e930084fF68",
+    "votes": [
+      {
+        "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x64f830A199Bf057b157e8F1B6aB56bC157a87b11",
+    "votes": [
+      {
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E",
+    "votes": [
+      {
+        "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x1508b2672Fe55b6F5D216f4b9312e42540B6ee68",
+    "votes": [
+      {
+        "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x568d716fCC14966b53090428056f0525D6845bb9",
+    "votes": [
+      {
+        "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+        "weightUsed": 780
+      },
+      {
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 9220
+      }
+    ]
+  },
+  {
+    "user": "0xd7B470De6FdAD29aDa4d52FEe70D7CaeAc3C21fB",
+    "votes": [
+      {
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51",
+    "votes": [
+      {
+        "gauge": "0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0",
+        "weightUsed": 1500
+      }
+    ]
+  },
+  {
+    "user": "0x2EC9912157a1D0A813Fdc7ac2B76203741Cb4a8e",
+    "votes": [
+      {
+        "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0xB6f5FB0aee8bfF9fC3D57d2158c5fE4473F2d206",
+    "votes": [
+      {
+        "gauge": "0x355827abb16998a07700FAF52AeE09f2b01Fad4C",
+        "weightUsed": 8000
+      },
+      {
+        "gauge": "0xE7A9d3F14A19E6CF1C482aB0e8c7aE40b40a61c0",
+        "weightUsed": 2000
+      }
+    ]
+  },
+  {
+    "user": "0xBb1AE82CD0604a008f14E299A2C3854B6F6e7fd1",
+    "votes": [
+      {
+        "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x12d26ABf06eB3499BccA8Be7f5381647B56D53Ee",
+    "votes": [
+      {
+        "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "votes": [
+      {
+        "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+        "weightUsed": 2500
+      },
+      {
+        "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+        "weightUsed": 500
+      },
+      {
+        "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+        "weightUsed": 2000
+      },
+      {
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 2000
+      }
+    ]
+  },
+  {
+    "user": "0xB7BbEa1200426defa0b7b76E3D23CF3DFDfBF21A",
+    "votes": [
+      {
+        "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+        "weightUsed": 10000
+      }
+    ]
+  },
+  {
+    "user": "0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22",
+    "votes": [
+      {
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "weightUsed": 10000
+      }
+    ]
+  }
+]

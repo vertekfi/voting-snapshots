@@ -219,12 +219,6 @@ export function getUserClaimAmount(
   totalRewardAmountForToken: number,
 ) {
   const user = userInfo.user;
-
-  // TODO: Use % of 10000 used in calc for relative weight
-  // Eg. user uses 5000 of 10000, reduce relative weight by 50%.. BOOOOMMM
-
-  // (weightUsed / 10000) * userInfo.percentOfTotalVE
-
   const precision = 12;
 
   // Scale down % a bit for tighter precision here
@@ -237,6 +231,7 @@ export function getUserClaimAmount(
   let userRelativeAmount = (
     totalRewardAmountForToken * userGaugeRelativeWeight
   ).toFixed(precision);
+
   if (userRelativeAmount.includes('e')) {
     userRelativeAmount = eToNumber(userRelativeAmount);
     // Error check
@@ -269,7 +264,7 @@ export function getVotersTotalWeightForGauge(usersWhoVoted: any[]) {
   return Number(totalWeight.toFixed(12));
 }
 
-function eToNumber(num) {
+export function eToNumber(num) {
   function r() {
     return w.replace(new RegExp(`^(.{${pos}})(.)`), `$1${dot}$2`);
   }
