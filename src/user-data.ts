@@ -73,7 +73,6 @@ export async function runEpochSnapshot() {
   ];
 
   // TODO: For automation this setup will need to call to sync votes and bribes first after epoch ticks over
-  // Can run it local first time and push output file to backend for user claims
 
   // Get all votes and bribes
 
@@ -84,115 +83,126 @@ export async function runEpochSnapshot() {
   let currentEpoch = 1679529600; // 3/23
   const epochDir = getEpochDir(currentEpoch);
 
-  const { getBribes: epochBribes } = await gqlService.sdk.GetBribesInfo({
-    filter: {
-      epochStartTime: currentEpoch,
-    },
-  });
-  console.log(`
-  There are (${epochBribes.length}) total bribes this epoch`);
+  // const { getBribes: epochBribes } = await gqlService.sdk.GetBribesInfo({
+  //   filter: {
+  //     epochStartTime: currentEpoch,
+  //   },
+  // });
+  // console.log(`
+  // There are (${epochBribes.length}) total bribes this epoch`);
 
-  const { getGaugeVotes } = await gqlService.sdk.GetGaugeVotes({
-    filter: {
-      epochStartTime: currentEpoch,
-    },
-  });
+  // const { getGaugeVotes } = await gqlService.sdk.GetGaugeVotes({
+  //   filter: {
+  //     epochStartTime: currentEpoch,
+  //   },
+  // });
 
-  // NEED TO MATCH USER TO THE GAUGES THEY VOTED FOR FOOOOOOLLLL
+  // // Need to match users to the gauges they voted for
 
-  const gaugesWithBribes: string[] = epochBribes.reduce((prev, current) => {
-    if (!prev.includes(current.gauge)) prev.push(current.gauge);
+  // const gaugesWithBribes: string[] = epochBribes.reduce((prev, current) => {
+  //   if (!prev.includes(current.gauge)) prev.push(current.gauge);
 
-    return prev;
-  }, []);
+  //   return prev;
+  // }, []);
 
-  const allUsersWhoVoted = getGaugeVotes.votes;
-  const usersVeBalanceInfo = await getUsersVeBalancesForEpoch(
-    currentEpoch,
-    allUsersWhoVoted.map((u) => u.userAddress),
-  );
+  // const allUsersWhoVoted = getGaugeVotes.votes;
+  // const usersVeBalanceInfo = await getUsersVeBalancesForEpoch(
+  //   currentEpoch,
+  //   allUsersWhoVoted.map((u) => u.userAddress),
+  // );
 
-  const allVotersBalances = usersVeBalanceInfo.data;
-  setUserBalances(epochDir, allVotersBalances);
+  // const allVotersBalances = usersVeBalanceInfo.data;
+  // setUserBalances(epochDir, allVotersBalances);
 
-  const bribes = [];
-  // Setting users who voted for each gauge with their VE balance info
-  for (const gauge of gaugesWithBribes) {
-    const usersWhoVotedForGauge = allUsersWhoVoted.filter(
-      (u) => u.gaugeId === gauge,
-    );
-    console.log(`
-    There are (${usersWhoVotedForGauge.length}) votes for gauge ${gauge}`);
+  // // The eventual full list of all bribes
+  // const bribes = [];
 
-    const votersMergedWithVeInfo = getGaugeVotersBaseInfo(
-      gauge,
-      allVotersBalances,
-      usersWhoVotedForGauge,
-    );
+  // // Setting users who voted for each gauge with their VE balance info
+  // for (const gauge of gaugesWithBribes) {
+  //   const usersWhoVotedForGauge = allUsersWhoVoted.filter(
+  //     (u) => u.gaugeId === gauge,
+  //   );
+  //   console.log(`
+  //   There are (${usersWhoVotedForGauge.length}) votes for gauge ${gauge}`);
 
-    const gaugeBribes: any[] = epochBribes.filter((b) => b.gauge === gauge);
+  //   const votersMergedWithVeInfo = getGaugeVotersBaseInfo(
+  //     gauge,
+  //     allVotersBalances,
+  //     usersWhoVotedForGauge,
+  //   );
 
-    for (const bribe of gaugeBribes) {
-      // Need the relative weight of just these users who voted for this gauge
-      const totalVeWeight = getTotalUserWeightScaled(votersMergedWithVeInfo);
-      let totalOwed = 0;
+  //   const gaugeBribes: any[] = epochBribes.filter((b) => b.gauge === gauge);
 
-      // Need a root for each token
-      // Iterate each user per token. Since tokens could duplicate or have diff amounts
+  //   for (const bribe of gaugeBribes) {
+  //     // Need the relative weight of just these users who voted for this gauge
+  //     const totalVeWeight = getTotalUserWeightScaled(votersMergedWithVeInfo);
+  //     let totalOwed = 0;
 
-      for (const user of votersMergedWithVeInfo) {
-        const claimAmount = getUserClaimAmount(
-          user,
-          totalVeWeight,
-          parseFloat(bribe.amount),
-        );
+  //     // Need a root for each token
+  //     // Iterate each user per token. Since tokens could duplicate or have diff amounts
 
-        user.claimAmount = claimAmount;
-        totalOwed += Number(claimAmount);
-      }
+  //     for (const user of votersMergedWithVeInfo) {
+  //       const claimAmount = getUserClaimAmount(
+  //         user,
+  //         totalVeWeight,
+  //         parseFloat(bribe.amount),
+  //       );
 
-      if (totalOwed > parseFloat(bribe.amount)) {
-        console.log(`Token ${bribe.token.address} totalOwed: ` + totalOwed);
-        throw new Error('totalOwed > tokenAmount');
-      }
+  //       user.claimAmount = claimAmount;
+  //       totalOwed += Number(claimAmount);
+  //     }
 
-      // After claim amount has been added
-      // Build the tree for this token once
-      const tree = getBribeMerkleTree(votersMergedWithVeInfo);
-      let usersWithProofs = attachUserProofs(votersMergedWithVeInfo, tree);
-      usersWithProofs = usersWithProofs.map((u) => {
-        return {
-          ...u,
-          user: u.userAddress,
-        };
-      });
+  //     if (totalOwed > parseFloat(bribe.amount)) {
+  //       console.log(`Token ${bribe.token.address} totalOwed: ` + totalOwed);
+  //       throw new Error('totalOwed > tokenAmount');
+  //     }
 
-      bribes.push({
-        briber: bribe.briber,
-        gauge,
-        token: bribe.token.address,
-        amount: bribe.amount,
-        epochStartTime: currentEpoch,
-        users: usersWithProofs,
-        merkleRoot: tree.root,
-        distribution: {},
-      });
-    }
-  }
+  //     // After claim amount has been added
+  //     // Build the tree for this token once
+  //     const tree = getBribeMerkleTree(votersMergedWithVeInfo);
+  //     let usersWithProofs = attachUserProofs(votersMergedWithVeInfo, tree);
+  //     usersWithProofs = usersWithProofs.map((u) => {
+  //       return {
+  //         ...u,
+  //         user: u.userAddress,
+  //       };
+  //     });
 
-  console.log(bribes.length); // 22. Matches with bribe count
-  console.log(bribes[0]);
+  //     bribes.push({
+  //       briber: bribe.briber,
+  //       gauge,
+  //       token: bribe.token.address,
+  //       amount: bribe.amount,
+  //       epochStartTime: currentEpoch,
+  //       users: usersWithProofs,
+  //       merkleRoot: tree.root,
+  //       distribution: {},
+  //     });
+  //   }
+  // }
+
+  // console.log(bribes.length); // 22. Matches with bribe count
+  // // console.log(bribes[0]);
+
+  // // TODO: Check any sort of validation here before creating distributions
+  // // Distribution events should align with order of bribe creation though
 
   // // Generate output for backend to interface with frontend for user claims
-  // fs.writeJsonSync(join(process.cwd(), 'new-sync-test.json'), bribes);
+  // fs.writeJsonSync(
+  //   join(getEpochDir(currentEpoch), 'bribers-data.json'),
+  //   bribes,
+  // );
 
-  // // Need distribution id's
-  // const distros: any[] = fs.readJsonSync(join(process.cwd(), 'distros.json'));
-
-  // // Use block number or parse events
   // const tx = await doBulkDistributions(bribes);
-  // distros.push(tx);
-  // fs.writeJsonSync(join(process.cwd(), 'distros.json'), distros);
+
+  // Need distribution id's
+  const distPath = join(epochDir, 'distros.json');
+  // fs.writeJSONSync(distPath, {});
+  // fs.writeJsonSync(distPath, tx);
+
+  // Get distribution data from event logs
+  const bribes = fs.readJSONSync(join(epochDir, 'bribers-data.json'));
+  parseDistributionLogs(distPath, bribes, epochDir);
 }
 
 function getGaugeVotersBaseInfo(
@@ -322,8 +332,12 @@ export async function doBulkDistributions(bribes: any[]) {
   console.log(`Bulk distribution for (${bribes.length}) total bribes`);
 
   const distributions = bribes.reduce((prev, current) => {
+    if (!current.merkleRoot) {
+      throw new Error('Missing merkle root');
+    }
+
     prev.push({
-      amount: parseUnits(current.bribeAmount),
+      amount: parseUnits(current.amount),
       token: current.token,
       briber: current.briber,
       merkleRoot: current.merkleRoot,
@@ -343,6 +357,84 @@ export async function doBulkDistributions(bribes: any[]) {
   );
 
   return tx;
+}
+
+// Set the distribution id and txHash for each distribution
+function parseDistributionLogs(
+  distPath: string,
+  bribes: any[],
+  epochDir: string,
+) {
+  const data = fs.readJsonSync(distPath);
+  const orchard = getMerkleOrchard();
+
+  // Event logs should index align with distributions
+  console.log(`${data.events.length} = ${bribes.length}`);
+  if (data.events.length !== bribes.length) {
+    throw new Error(`data.events.length !== bribes.length`);
+  }
+
+  data.events.forEach((eventData, idx) => {
+    // Use interface to get the data out in human readable form
+    const evt = orchard.interface.decodeEventLog(
+      'DistributionAdded',
+      eventData.data,
+      eventData.topics,
+    );
+
+    // const briber = `0x${eventData.topics[1].slice(26)}`.toLowerCase();
+    // const token = `0x${eventData.topics[2].slice(26)}`.toLowerCase();
+    // const merkleRoot = evt.merkleRoot.toLowerCase();
+
+    // const bribe = bribes[idx];
+    //   console.log(`
+    //   evt[idx]
+    //   briber: ${briber}
+    //   token: ${token}
+    //   merkleRoot: ${merkleRoot}
+    // `);
+
+    //   console.log(`
+    //     bribes[idx]
+    //     briber: ${bribe.briber}
+    //     token: ${bribe.token}
+    //     merkleRoot: ${bribe.merkleRoot}
+    //   `);
+
+    bribes[idx].distribution = {
+      distributionId: evt.distributionId.toNumber(),
+      txHash: data.transactionHash,
+    };
+  });
+
+  fs.writeJSONSync(join(epochDir, 'bribers-data.json'), bribes);
+}
+
+function matchBribeRecord(
+  bribes: any[],
+  briber: string,
+  token: string,
+  root: string,
+  amount: string,
+) {
+  const matchingBribe = bribes.filter(
+    (bribe) =>
+      bribe.briber.toLowerCase() === briber.toLowerCase() &&
+      bribe.token.toLowerCase() === token.toLowerCase() &&
+      bribe.merkleRoot.toLowerCase() === root.toLowerCase() &&
+      parseUnits(bribe.amount).eq(amount),
+  );
+
+  if (!matchingBribe.length) {
+    throw new Error('No matching bribe for event data');
+  }
+
+  // They can use the same token more than once in an epoch
+  // if (matchingBribe.length > 1) {
+  //   throw new Error('More than one matching bribe record');
+  // }
+
+  return matchingBribe[0];
 }
 
 export async function getClaimEvents(
