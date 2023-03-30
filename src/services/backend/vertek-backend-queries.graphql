@@ -2,6 +2,14 @@ mutation UpdateDistributions($input: [UpdateBribeDistributionsInput!]!) {
   updateBribeDistributions(input: $input)
 }
 
+mutation SyncBribes($blocksToScan: Int) {
+  syncGaugeBribes(blocksToScan: $blocksToScan)
+}
+
+mutation SyncVotes($epochStartTime: Int, $blocksToScan: Int) {
+  syncGaugeVotes(epochStartTime: $epochStartTime, blocksToScan: $blocksToScan)
+}
+
 query GetGaugeEpochs {
   getGaugeEpochs {
     epoch

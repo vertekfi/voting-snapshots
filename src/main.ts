@@ -40,7 +40,7 @@ import { gqlService } from './services/backend/gql.service';
 import { BigNumber, Contract } from 'ethers';
 import { getEventData } from './utils/event-scraping';
 import { getAddress } from 'ethers/lib/utils';
-import { pullUserData } from './user-data';
+import { runEpochSnapshot } from './user-data';
 
 export const epochs = [
   {
@@ -107,7 +107,7 @@ async function bootstrap() {
     console.log('Listening on: ' + port);
   });
 
-  await pullUserData('0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A');
+  await runEpochSnapshot();
 
   // jobScheduler.init();
 

@@ -17,13 +17,15 @@ import { bscScanService } from './services/standalone/bsc-scan.service';
 import { epochs } from './main';
 import { Contract } from '@ethersproject/contracts';
 import { eToNumber } from './services/rewards/reward-generator.service';
+import { getUsersVeBalancesForEpoch } from './utils/vote.utils';
+import { setUserBalances } from './services/rewards/reward.utils';
+import { UserBalanceInfo } from './types/user.types';
 
 const precision = 12;
 
-export async function pullUserData(user: string) {
+export async function runEpochSnapshot() {
   // check for my bribes besides busd
   const me = '0x891eFc56f5CD6580b2fEA416adC960F2A6156494';
-  const myGauge = '0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f';
 
   const distTokens = [
     {
@@ -73,89 +75,159 @@ export async function pullUserData(user: string) {
   // TODO: For automation this setup will need to call to sync votes and bribes first after epoch ticks over
   // Can run it local first time and push output file to backend for user claims
 
-  // 46 total voter balances
-  // TODO: Dont need this for live
-  const data = fs.readJSONSync(
-    join(getEpochDir(1677715200), 'user-balances.json'),
-  );
+  // Get all votes and bribes
+
+  // Make sure last epoch item is in the past now
+
+  // TODO: HAVE TO SYNC FIRST (Manual sync first time)
+
+  let currentEpoch = 1679529600; // 3/23
+  const epochDir = getEpochDir(currentEpoch);
+
+  const { getBribes: epochBribes } = await gqlService.sdk.GetBribesInfo({
+    filter: {
+      epochStartTime: currentEpoch,
+    },
+  });
+  console.log(`
+  There are (${epochBribes.length}) total bribes this epoch`);
 
   const { getGaugeVotes } = await gqlService.sdk.GetGaugeVotes({
     filter: {
-      epochStartTime: 1677715200,
-      gaugeId: '0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f',
+      epochStartTime: currentEpoch,
     },
   });
 
-  // 14 people to dist for my gauge
+  // NEED TO MATCH USER TO THE GAUGES THEY VOTED FOR FOOOOOOLLLL
 
-  const usersWhoVotedForGauge = getGaugeVotes.votes;
-  const allVotersBalances = data.data;
-  const merged = [];
+  const gaugesWithBribes: string[] = epochBribes.reduce((prev, current) => {
+    if (!prev.includes(current.gauge)) prev.push(current.gauge);
 
-  for (const voter of usersWhoVotedForGauge) {
-    const match = allVotersBalances.find((v) => v.user === voter.userAddress);
+    return prev;
+  }, []);
 
-    const gauge = voter.gaugeId;
-    delete voter.gaugeId;
-    merged.push({
-      ...voter,
-      user: voter.userAddress,
+  const allUsersWhoVoted = getGaugeVotes.votes;
+  const usersVeBalanceInfo = await getUsersVeBalancesForEpoch(
+    currentEpoch,
+    allUsersWhoVoted.map((u) => u.userAddress),
+  );
+
+  const allVotersBalances = usersVeBalanceInfo.data;
+  setUserBalances(epochDir, allVotersBalances);
+
+  const bribes = [];
+  // Setting users who voted for each gauge with their VE balance info
+  for (const gauge of gaugesWithBribes) {
+    const usersWhoVotedForGauge = allUsersWhoVoted.filter(
+      (u) => u.gaugeId === gauge,
+    );
+    console.log(`
+    There are (${usersWhoVotedForGauge.length}) votes for gauge ${gauge}`);
+
+    const votersMergedWithVeInfo = getGaugeVotersBaseInfo(
+      gauge,
+      allVotersBalances,
+      usersWhoVotedForGauge,
+    );
+
+    const gaugeBribes: any[] = epochBribes.filter((b) => b.gauge === gauge);
+
+    for (const bribe of gaugeBribes) {
+      // Need the relative weight of just these users who voted for this gauge
+      const totalVeWeight = getTotalUserWeightScaled(votersMergedWithVeInfo);
+      let totalOwed = 0;
+
+      // Need a root for each token
+      // Iterate each user per token. Since tokens could duplicate or have diff amounts
+
+      for (const user of votersMergedWithVeInfo) {
+        const claimAmount = getUserClaimAmount(
+          user,
+          totalVeWeight,
+          parseFloat(bribe.amount),
+        );
+
+        user.claimAmount = claimAmount;
+        totalOwed += Number(claimAmount);
+      }
+
+      if (totalOwed > parseFloat(bribe.amount)) {
+        console.log(`Token ${bribe.token.address} totalOwed: ` + totalOwed);
+        throw new Error('totalOwed > tokenAmount');
+      }
+
+      // After claim amount has been added
+      // Build the tree for this token once
+      const tree = getBribeMerkleTree(votersMergedWithVeInfo);
+      let usersWithProofs = attachUserProofs(votersMergedWithVeInfo, tree);
+      usersWithProofs = usersWithProofs.map((u) => {
+        return {
+          ...u,
+          user: u.userAddress,
+        };
+      });
+
+      bribes.push({
+        briber: bribe.briber,
+        gauge,
+        token: bribe.token.address,
+        amount: bribe.amount,
+        epochStartTime: currentEpoch,
+        users: usersWithProofs,
+        merkleRoot: tree.root,
+        distribution: {},
+      });
+    }
+  }
+
+  console.log(bribes.length); // 22. Matches with bribe count
+  console.log(bribes[0]);
+
+  // // Generate output for backend to interface with frontend for user claims
+  // fs.writeJsonSync(join(process.cwd(), 'new-sync-test.json'), bribes);
+
+  // // Need distribution id's
+  // const distros: any[] = fs.readJsonSync(join(process.cwd(), 'distros.json'));
+
+  // // Use block number or parse events
+  // const tx = await doBulkDistributions(bribes);
+  // distros.push(tx);
+  // fs.writeJsonSync(join(process.cwd(), 'distros.json'), distros);
+}
+
+function getGaugeVotersBaseInfo(
+  gauge: string,
+  allVotersBalances: UserBalanceInfo[],
+  allUsersWhoVoted: any[],
+) {
+  // TODO: Only need this until moving user balance sync
+  const mergedWithVeInfo = [];
+
+  const usersWhoVotedForGauge = allUsersWhoVoted.filter(
+    (u) => u.gaugeId === gauge,
+  );
+
+  for (const gaugeVoter of usersWhoVotedForGauge) {
+    const match = allVotersBalances.find(
+      (v) => v.user === gaugeVoter.userAddress,
+    );
+
+    if (!match) {
+      throw new Error(`No balance match for user ${gaugeVoter.userAddress}`);
+    }
+
+    const gauge = gaugeVoter.gaugeId;
+    delete gaugeVoter.gaugeId;
+
+    mergedWithVeInfo.push({
+      ...gaugeVoter,
+      user: gaugeVoter.userAddress,
       gauge,
       percentOfTotalVE: match.percentOfTotalVE,
     });
   }
 
-  let totalVeWeight = getTotalUserWeightScaled(merged);
-
-  // Stash to remove for live
-  const currentUserList = merged;
-
-  const bribes = [];
-  // Need a root for each token
-  for (const bribe of distTokens) {
-    let totalOwed = 0;
-
-    for (const voter of currentUserList) {
-      const claimAmount = getUserClaimAmount(
-        voter,
-        totalVeWeight,
-        bribe.amount,
-      );
-      voter.claimAmount = claimAmount;
-      voter.token = bribe.token;
-      totalOwed += Number(claimAmount);
-    }
-
-    if (totalOwed > bribe.amount) {
-      console.log(`Token ${bribe.token} totalOwed: ` + totalOwed);
-      throw new Error('totalOwed > tokenAmount');
-    }
-
-    const tree = getBribeMerkleTree(currentUserList);
-    const usersWithProofs = attachUserProofs(currentUserList, tree);
-
-    bribes.push({
-      briber: bribe.briber,
-      bribeAmount: String(bribe.amount),
-      gauge: bribe.gauge,
-      token: bribe.token,
-      epochStartTime: bribe.epochStartTime,
-      users: usersWithProofs,
-      merkleRoot: tree.root,
-      distribution: {},
-    });
-  }
-
-  // Generate output for backend to interface with frontend for user claims
-  fs.writeJsonSync(join(process.cwd(), 'new-sync-test.json'), bribes);
-
-  // Need distribution id's
-  const distros: any[] = fs.readJsonSync(join(process.cwd(), 'distros.json'));
-
-  // Use block number or parse events
-  // const tx = await doBulkDistributions(bribes);
-  // distros.push(tx);
-  // fs.writeJsonSync(join(process.cwd(), 'distros.json'), distros);
+  return mergedWithVeInfo;
 }
 
 export function getUserClaimAmount(
@@ -163,17 +235,7 @@ export function getUserClaimAmount(
   totalVoteUsersWeightForGauge: number,
   totalRewardAmountForToken: number,
 ) {
-  let precision: number;
-
-  if (totalRewardAmountForToken >= 1000) {
-    precision = 4;
-  } else if (totalRewardAmountForToken < 100) {
-    precision = 8;
-  } else if (totalRewardAmountForToken > 100) {
-    precision = 11;
-  } else {
-    precision = 18;
-  }
+  let precision = 18;
 
   const userWeightBasis = getUserRelativeWeightScaled(user);
   const userGaugeRelativeWeight = Number(
@@ -182,7 +244,11 @@ export function getUserClaimAmount(
 
   let userRelativeAmount = (
     totalRewardAmountForToken * userGaugeRelativeWeight
-  ).toFixed(12);
+  ).toFixed(20);
+
+  if (userRelativeAmount.length > 12) {
+    userRelativeAmount = userRelativeAmount.slice(0, 13);
+  }
 
   if (userRelativeAmount.includes('e')) {
     userRelativeAmount = eToNumber(userRelativeAmount);
@@ -241,6 +307,11 @@ export function attachUserProofs(users: any[], tree: StandardMerkleTree<any>) {
     }
     // Should attch to user claim
     user.merkleProof = tree.getProof(i);
+    if (!user.merkleProof || !user.merkleProof.length) {
+      console.log('No proof for user: ' + user.userAddress);
+    } else {
+      // console.log('Proof length: ' + user.merkleProof.length);
+    }
     user.claimAmount = value[1];
   }
 

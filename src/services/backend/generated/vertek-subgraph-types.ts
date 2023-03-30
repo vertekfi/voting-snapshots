@@ -1770,6 +1770,25 @@ export type UpdateDistributionsMutation = {
   updateBribeDistributions: string;
 };
 
+export type SyncBribesMutationVariables = Exact<{
+  blocksToScan?: InputMaybe<Scalars['Int']>;
+}>;
+
+export type SyncBribesMutation = {
+  __typename?: 'Mutation';
+  syncGaugeBribes: number;
+};
+
+export type SyncVotesMutationVariables = Exact<{
+  epochStartTime?: InputMaybe<Scalars['Int']>;
+  blocksToScan?: InputMaybe<Scalars['Int']>;
+}>;
+
+export type SyncVotesMutation = {
+  __typename?: 'Mutation';
+  syncGaugeVotes: number;
+};
+
 export type GetGaugeEpochsQueryVariables = Exact<{ [key: string]: never }>;
 
 export type GetGaugeEpochsQuery = {
@@ -2019,6 +2038,16 @@ export const UpdateDistributionsDocument = gql`
     updateBribeDistributions(input: $input)
   }
 `;
+export const SyncBribesDocument = gql`
+  mutation SyncBribes($blocksToScan: Int) {
+    syncGaugeBribes(blocksToScan: $blocksToScan)
+  }
+`;
+export const SyncVotesDocument = gql`
+  mutation SyncVotes($epochStartTime: Int, $blocksToScan: Int) {
+    syncGaugeVotes(epochStartTime: $epochStartTime, blocksToScan: $blocksToScan)
+  }
+`;
 export const GetGaugeEpochsDocument = gql`
   query GetGaugeEpochs {
     getGaugeEpochs {
@@ -2164,6 +2193,34 @@ export function getSdk(
             { ...requestHeaders, ...wrappedRequestHeaders },
           ),
         'UpdateDistributions',
+        'mutation',
+      );
+    },
+    SyncBribes(
+      variables?: SyncBribesMutationVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<SyncBribesMutation> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<SyncBribesMutation>(SyncBribesDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'SyncBribes',
+        'mutation',
+      );
+    },
+    SyncVotes(
+      variables?: SyncVotesMutationVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<SyncVotesMutation> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<SyncVotesMutation>(SyncVotesDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'SyncVotes',
         'mutation',
       );
     },
