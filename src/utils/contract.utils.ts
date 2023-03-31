@@ -27,3 +27,14 @@ export function getVertekAdminActions() {
     getSigner(),
   );
 }
+
+export function getGaugeController() {
+  return new Contract(
+    '0x99bFf5953843A211792BF3715b1b3b4CBeE34CE6',
+    [
+      'function checkpoint() external',
+      'function time_total() external view returns (uint256)',
+    ],
+    getSigner(),
+  );
+}

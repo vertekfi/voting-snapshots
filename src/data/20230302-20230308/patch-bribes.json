@@ -1,0 +1,1676 @@
+[
+  {
+    "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+    "bribeAmount": "50",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "token": "0xfa4b16b0f63f5a6d0651592620d585d308f749a4",
+    "epochStartTime": 1677715200,
+    "users": [
+      {
+        "userAddress": "0x568d716fCC14966b53090428056f0525D6845bb9",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26266383,
+        "weightUsed": 9220,
+        "user": "0x568d716fCC14966b53090428056f0525D6845bb9",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000089480515,
+        "claimAmount": "1200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x52ecd2b8acef0f200ea9f4b7ceec3f5d46c7be7e21b29be30cb7859f9924549d",
+          "0x914c25d01d36c2c65b113d7a0159f7254c1e5c8b4a2cbd40b02e63803a8d6a46",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26194266,
+        "weightUsed": 2500,
+        "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000656743448,
+        "claimAmount": "2400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x9f57ff87e67b73cdce753c78c4cb78465eeb032d599a9974759d7cac997b5c8c",
+          "0x7524c977ecf3d56ca3eca03d7398e89d1978ed9d76d6cb6d1f195231d184dff2",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26218974,
+        "weightUsed": 4000,
+        "user": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.029309839213,
+        "claimAmount": "169600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x28067314f382b496d1d63c9d5f811ad0e388f2ea16dfaac8106889468c403212",
+          "0x5d7048bd9fd9ffe457663b7d8426aa483d74e9b7590997d1732c5d5826add1da",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26201611,
+        "weightUsed": 5000,
+        "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.003757696734,
+        "claimAmount": "27200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x6998eb90916e3c12e17e8465a6709de53765cc146eb8cf673ed4b7ff07fff3cf",
+          "0x914c25d01d36c2c65b113d7a0159f7254c1e5c8b4a2cbd40b02e63803a8d6a46",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26300354,
+        "weightUsed": 10000,
+        "user": "0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.014667536127,
+        "claimAmount": "212200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x028f42e00b295a1c4ac255ee345a7e9eba1cd64c95df6541853ff34550a142ab",
+          "0xe16146086bb0c47185c8974ff018f87555281bad612a791d51f77a209e4aa685",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26199781,
+        "weightUsed": 10000,
+        "user": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000692396639,
+        "claimAmount": "10000000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xc946330774bcb8a4d23af1a28858de41504555ec170bb945ba4315896da89d11",
+          "0xf49bfa054b5e7389ea4447c87d372ea02a9c290a4cf6f7df8cf02f68f27fc555",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26114757,
+        "weightUsed": 6000,
+        "user": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.002009469417,
+        "claimAmount": "17400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xa41b92ebca93bcd159b6b4e5870fe99ec76682fa1f8845b15925173c8dbf346e",
+          "0xa88b9b65305013b7a2495f790fc8b1eedee026bfc6f7fb1ffa324c0f6f32e71f",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26299311,
+        "weightUsed": 2000,
+        "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.07196742231,
+        "claimAmount": "208300000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xa1069ea6237c6034dbeae367bef9dd4fbc3806dd3b31fa5db7b12804a0ccbf10",
+          "0xa88b9b65305013b7a2495f790fc8b1eedee026bfc6f7fb1ffa324c0f6f32e71f",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26103878,
+        "weightUsed": 5000,
+        "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.010562531288,
+        "claimAmount": "76400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x3b28e6063c0ab008ec2e9fce00776eebc079b1b4ee942d12aac93a754dd1172c",
+          "0x5d7048bd9fd9ffe457663b7d8426aa483d74e9b7590997d1732c5d5826add1da",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26106348,
+        "weightUsed": 2000,
+        "user": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.005440022091,
+        "claimAmount": "15700000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xff9f0024854eae88ea3e0be91e49f49ee0a74daa58b200d224fefa64204909dc",
+          "0x991eee1a97e6d2c03f166598eaac52e4fc95526b9fae8fe56f75c692c9e63d5a",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26109756,
+        "weightUsed": 2500,
+        "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.004852422902,
+        "claimAmount": "17600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xfde40f311396afec1392b6123cfb375dbfc8c49145fcd1fc378e73f0f75129cb",
+          "0x991eee1a97e6d2c03f166598eaac52e4fc95526b9fae8fe56f75c692c9e63d5a",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26193992,
+        "weightUsed": 1000,
+        "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000116156528,
+        "claimAmount": "200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x199387ac0cf5ddee47fba68371f96c8344c702e065417cf3b403f1a8ff9e7a04",
+          "0xe16146086bb0c47185c8974ff018f87555281bad612a791d51f77a209e4aa685",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26174539,
+        "weightUsed": 10000,
+        "user": "0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000107248781,
+        "claimAmount": "1600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x7e89e1564c9a13ba8628f6beea3bdcf14965d81d461af78c92b05bb17930b386",
+          "0x7524c977ecf3d56ca3eca03d7398e89d1978ed9d76d6cb6d1f195231d184dff2",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26103720,
+        "weightUsed": 10000,
+        "user": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.016599844833,
+        "claimAmount": "240200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xed78b68fd7fe0eac28f9d3dbf1b18758bd0e09acb98751901baca5a6ca823ed8",
+          "0xf49bfa054b5e7389ea4447c87d372ea02a9c290a4cf6f7df8cf02f68f27fc555",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      }
+    ],
+    "merkleRoot": "0xfcf5f892e155e9d8ed057dc63e0f8815327c103b4e99dc3701750c143757890d",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x3852c84a67cbf30c1094195e0f691e43441689c4c3c10f659589d109040d051d"
+    },
+    "distributionId": 0
+  },
+  {
+    "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+    "bribeAmount": "350",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "token": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+    "epochStartTime": 1677715200,
+    "users": [
+      {
+        "userAddress": "0x568d716fCC14966b53090428056f0525D6845bb9",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26266383,
+        "weightUsed": 9220,
+        "user": "0x568d716fCC14966b53090428056f0525D6845bb9",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000089480515,
+        "claimAmount": "1200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x52ecd2b8acef0f200ea9f4b7ceec3f5d46c7be7e21b29be30cb7859f9924549d",
+          "0x914c25d01d36c2c65b113d7a0159f7254c1e5c8b4a2cbd40b02e63803a8d6a46",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26194266,
+        "weightUsed": 2500,
+        "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000656743448,
+        "claimAmount": "2400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x9f57ff87e67b73cdce753c78c4cb78465eeb032d599a9974759d7cac997b5c8c",
+          "0x7524c977ecf3d56ca3eca03d7398e89d1978ed9d76d6cb6d1f195231d184dff2",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26218974,
+        "weightUsed": 4000,
+        "user": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.029309839213,
+        "claimAmount": "169600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x28067314f382b496d1d63c9d5f811ad0e388f2ea16dfaac8106889468c403212",
+          "0x5d7048bd9fd9ffe457663b7d8426aa483d74e9b7590997d1732c5d5826add1da",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26201611,
+        "weightUsed": 5000,
+        "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.003757696734,
+        "claimAmount": "27200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x6998eb90916e3c12e17e8465a6709de53765cc146eb8cf673ed4b7ff07fff3cf",
+          "0x914c25d01d36c2c65b113d7a0159f7254c1e5c8b4a2cbd40b02e63803a8d6a46",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26300354,
+        "weightUsed": 10000,
+        "user": "0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.014667536127,
+        "claimAmount": "212200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x028f42e00b295a1c4ac255ee345a7e9eba1cd64c95df6541853ff34550a142ab",
+          "0xe16146086bb0c47185c8974ff018f87555281bad612a791d51f77a209e4aa685",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26199781,
+        "weightUsed": 10000,
+        "user": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000692396639,
+        "claimAmount": "10000000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xc946330774bcb8a4d23af1a28858de41504555ec170bb945ba4315896da89d11",
+          "0xf49bfa054b5e7389ea4447c87d372ea02a9c290a4cf6f7df8cf02f68f27fc555",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26114757,
+        "weightUsed": 6000,
+        "user": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.002009469417,
+        "claimAmount": "17400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xa41b92ebca93bcd159b6b4e5870fe99ec76682fa1f8845b15925173c8dbf346e",
+          "0xa88b9b65305013b7a2495f790fc8b1eedee026bfc6f7fb1ffa324c0f6f32e71f",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26299311,
+        "weightUsed": 2000,
+        "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.07196742231,
+        "claimAmount": "208300000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xa1069ea6237c6034dbeae367bef9dd4fbc3806dd3b31fa5db7b12804a0ccbf10",
+          "0xa88b9b65305013b7a2495f790fc8b1eedee026bfc6f7fb1ffa324c0f6f32e71f",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26103878,
+        "weightUsed": 5000,
+        "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.010562531288,
+        "claimAmount": "76400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x3b28e6063c0ab008ec2e9fce00776eebc079b1b4ee942d12aac93a754dd1172c",
+          "0x5d7048bd9fd9ffe457663b7d8426aa483d74e9b7590997d1732c5d5826add1da",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26106348,
+        "weightUsed": 2000,
+        "user": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.005440022091,
+        "claimAmount": "15700000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xff9f0024854eae88ea3e0be91e49f49ee0a74daa58b200d224fefa64204909dc",
+          "0x991eee1a97e6d2c03f166598eaac52e4fc95526b9fae8fe56f75c692c9e63d5a",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26109756,
+        "weightUsed": 2500,
+        "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.004852422902,
+        "claimAmount": "17600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xfde40f311396afec1392b6123cfb375dbfc8c49145fcd1fc378e73f0f75129cb",
+          "0x991eee1a97e6d2c03f166598eaac52e4fc95526b9fae8fe56f75c692c9e63d5a",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26193992,
+        "weightUsed": 1000,
+        "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000116156528,
+        "claimAmount": "200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x199387ac0cf5ddee47fba68371f96c8344c702e065417cf3b403f1a8ff9e7a04",
+          "0xe16146086bb0c47185c8974ff018f87555281bad612a791d51f77a209e4aa685",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26174539,
+        "weightUsed": 10000,
+        "user": "0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000107248781,
+        "claimAmount": "1600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x7e89e1564c9a13ba8628f6beea3bdcf14965d81d461af78c92b05bb17930b386",
+          "0x7524c977ecf3d56ca3eca03d7398e89d1978ed9d76d6cb6d1f195231d184dff2",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26103720,
+        "weightUsed": 10000,
+        "user": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.016599844833,
+        "claimAmount": "240200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xed78b68fd7fe0eac28f9d3dbf1b18758bd0e09acb98751901baca5a6ca823ed8",
+          "0xf49bfa054b5e7389ea4447c87d372ea02a9c290a4cf6f7df8cf02f68f27fc555",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      }
+    ],
+    "merkleRoot": "0xd09243c17f134f1af8c7cd88925d4adea5c9b03c061ed1d840dd9a26d1a6a013",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x3852c84a67cbf30c1094195e0f691e43441689c4c3c10f659589d109040d051d"
+    },
+    "distributionId": 0
+  },
+  {
+    "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+    "bribeAmount": "100",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "token": "0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca",
+    "epochStartTime": 1677715200,
+    "users": [
+      {
+        "userAddress": "0x568d716fCC14966b53090428056f0525D6845bb9",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26266383,
+        "weightUsed": 9220,
+        "user": "0x568d716fCC14966b53090428056f0525D6845bb9",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000089480515,
+        "claimAmount": "1200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x52ecd2b8acef0f200ea9f4b7ceec3f5d46c7be7e21b29be30cb7859f9924549d",
+          "0x914c25d01d36c2c65b113d7a0159f7254c1e5c8b4a2cbd40b02e63803a8d6a46",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26194266,
+        "weightUsed": 2500,
+        "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000656743448,
+        "claimAmount": "2400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x9f57ff87e67b73cdce753c78c4cb78465eeb032d599a9974759d7cac997b5c8c",
+          "0x7524c977ecf3d56ca3eca03d7398e89d1978ed9d76d6cb6d1f195231d184dff2",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26218974,
+        "weightUsed": 4000,
+        "user": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.029309839213,
+        "claimAmount": "169600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x28067314f382b496d1d63c9d5f811ad0e388f2ea16dfaac8106889468c403212",
+          "0x5d7048bd9fd9ffe457663b7d8426aa483d74e9b7590997d1732c5d5826add1da",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26201611,
+        "weightUsed": 5000,
+        "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.003757696734,
+        "claimAmount": "27200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x6998eb90916e3c12e17e8465a6709de53765cc146eb8cf673ed4b7ff07fff3cf",
+          "0x914c25d01d36c2c65b113d7a0159f7254c1e5c8b4a2cbd40b02e63803a8d6a46",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26300354,
+        "weightUsed": 10000,
+        "user": "0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.014667536127,
+        "claimAmount": "212200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x028f42e00b295a1c4ac255ee345a7e9eba1cd64c95df6541853ff34550a142ab",
+          "0xe16146086bb0c47185c8974ff018f87555281bad612a791d51f77a209e4aa685",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26199781,
+        "weightUsed": 10000,
+        "user": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000692396639,
+        "claimAmount": "10000000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xc946330774bcb8a4d23af1a28858de41504555ec170bb945ba4315896da89d11",
+          "0xf49bfa054b5e7389ea4447c87d372ea02a9c290a4cf6f7df8cf02f68f27fc555",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26114757,
+        "weightUsed": 6000,
+        "user": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.002009469417,
+        "claimAmount": "17400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xa41b92ebca93bcd159b6b4e5870fe99ec76682fa1f8845b15925173c8dbf346e",
+          "0xa88b9b65305013b7a2495f790fc8b1eedee026bfc6f7fb1ffa324c0f6f32e71f",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26299311,
+        "weightUsed": 2000,
+        "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.07196742231,
+        "claimAmount": "208300000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xa1069ea6237c6034dbeae367bef9dd4fbc3806dd3b31fa5db7b12804a0ccbf10",
+          "0xa88b9b65305013b7a2495f790fc8b1eedee026bfc6f7fb1ffa324c0f6f32e71f",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26103878,
+        "weightUsed": 5000,
+        "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.010562531288,
+        "claimAmount": "76400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x3b28e6063c0ab008ec2e9fce00776eebc079b1b4ee942d12aac93a754dd1172c",
+          "0x5d7048bd9fd9ffe457663b7d8426aa483d74e9b7590997d1732c5d5826add1da",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26106348,
+        "weightUsed": 2000,
+        "user": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.005440022091,
+        "claimAmount": "15700000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xff9f0024854eae88ea3e0be91e49f49ee0a74daa58b200d224fefa64204909dc",
+          "0x991eee1a97e6d2c03f166598eaac52e4fc95526b9fae8fe56f75c692c9e63d5a",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26109756,
+        "weightUsed": 2500,
+        "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.004852422902,
+        "claimAmount": "17600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xfde40f311396afec1392b6123cfb375dbfc8c49145fcd1fc378e73f0f75129cb",
+          "0x991eee1a97e6d2c03f166598eaac52e4fc95526b9fae8fe56f75c692c9e63d5a",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26193992,
+        "weightUsed": 1000,
+        "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000116156528,
+        "claimAmount": "200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x199387ac0cf5ddee47fba68371f96c8344c702e065417cf3b403f1a8ff9e7a04",
+          "0xe16146086bb0c47185c8974ff018f87555281bad612a791d51f77a209e4aa685",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26174539,
+        "weightUsed": 10000,
+        "user": "0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000107248781,
+        "claimAmount": "1600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x7e89e1564c9a13ba8628f6beea3bdcf14965d81d461af78c92b05bb17930b386",
+          "0x7524c977ecf3d56ca3eca03d7398e89d1978ed9d76d6cb6d1f195231d184dff2",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26103720,
+        "weightUsed": 10000,
+        "user": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.016599844833,
+        "claimAmount": "240200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xed78b68fd7fe0eac28f9d3dbf1b18758bd0e09acb98751901baca5a6ca823ed8",
+          "0xf49bfa054b5e7389ea4447c87d372ea02a9c290a4cf6f7df8cf02f68f27fc555",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      }
+    ],
+    "merkleRoot": "0xc692f2d9e42f19d269adbcf13a649593ec94e787f21056ab41f44956b1ddaf83",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x3852c84a67cbf30c1094195e0f691e43441689c4c3c10f659589d109040d051d"
+    },
+    "distributionId": 0
+  },
+  {
+    "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+    "bribeAmount": "20",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "token": "0xd50c729cebb64604b99e1243a54e840527360581",
+    "epochStartTime": 1677715200,
+    "users": [
+      {
+        "userAddress": "0x568d716fCC14966b53090428056f0525D6845bb9",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26266383,
+        "weightUsed": 9220,
+        "user": "0x568d716fCC14966b53090428056f0525D6845bb9",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000089480515,
+        "claimAmount": "1200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x52ecd2b8acef0f200ea9f4b7ceec3f5d46c7be7e21b29be30cb7859f9924549d",
+          "0x914c25d01d36c2c65b113d7a0159f7254c1e5c8b4a2cbd40b02e63803a8d6a46",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26194266,
+        "weightUsed": 2500,
+        "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000656743448,
+        "claimAmount": "2400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x9f57ff87e67b73cdce753c78c4cb78465eeb032d599a9974759d7cac997b5c8c",
+          "0x7524c977ecf3d56ca3eca03d7398e89d1978ed9d76d6cb6d1f195231d184dff2",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26218974,
+        "weightUsed": 4000,
+        "user": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.029309839213,
+        "claimAmount": "169600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x28067314f382b496d1d63c9d5f811ad0e388f2ea16dfaac8106889468c403212",
+          "0x5d7048bd9fd9ffe457663b7d8426aa483d74e9b7590997d1732c5d5826add1da",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26201611,
+        "weightUsed": 5000,
+        "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.003757696734,
+        "claimAmount": "27200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x6998eb90916e3c12e17e8465a6709de53765cc146eb8cf673ed4b7ff07fff3cf",
+          "0x914c25d01d36c2c65b113d7a0159f7254c1e5c8b4a2cbd40b02e63803a8d6a46",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26300354,
+        "weightUsed": 10000,
+        "user": "0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.014667536127,
+        "claimAmount": "212200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x028f42e00b295a1c4ac255ee345a7e9eba1cd64c95df6541853ff34550a142ab",
+          "0xe16146086bb0c47185c8974ff018f87555281bad612a791d51f77a209e4aa685",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26199781,
+        "weightUsed": 10000,
+        "user": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000692396639,
+        "claimAmount": "10000000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xc946330774bcb8a4d23af1a28858de41504555ec170bb945ba4315896da89d11",
+          "0xf49bfa054b5e7389ea4447c87d372ea02a9c290a4cf6f7df8cf02f68f27fc555",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26114757,
+        "weightUsed": 6000,
+        "user": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.002009469417,
+        "claimAmount": "17400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xa41b92ebca93bcd159b6b4e5870fe99ec76682fa1f8845b15925173c8dbf346e",
+          "0xa88b9b65305013b7a2495f790fc8b1eedee026bfc6f7fb1ffa324c0f6f32e71f",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26299311,
+        "weightUsed": 2000,
+        "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.07196742231,
+        "claimAmount": "208300000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xa1069ea6237c6034dbeae367bef9dd4fbc3806dd3b31fa5db7b12804a0ccbf10",
+          "0xa88b9b65305013b7a2495f790fc8b1eedee026bfc6f7fb1ffa324c0f6f32e71f",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26103878,
+        "weightUsed": 5000,
+        "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.010562531288,
+        "claimAmount": "76400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x3b28e6063c0ab008ec2e9fce00776eebc079b1b4ee942d12aac93a754dd1172c",
+          "0x5d7048bd9fd9ffe457663b7d8426aa483d74e9b7590997d1732c5d5826add1da",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26106348,
+        "weightUsed": 2000,
+        "user": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.005440022091,
+        "claimAmount": "15700000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xff9f0024854eae88ea3e0be91e49f49ee0a74daa58b200d224fefa64204909dc",
+          "0x991eee1a97e6d2c03f166598eaac52e4fc95526b9fae8fe56f75c692c9e63d5a",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26109756,
+        "weightUsed": 2500,
+        "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.004852422902,
+        "claimAmount": "17600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xfde40f311396afec1392b6123cfb375dbfc8c49145fcd1fc378e73f0f75129cb",
+          "0x991eee1a97e6d2c03f166598eaac52e4fc95526b9fae8fe56f75c692c9e63d5a",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26193992,
+        "weightUsed": 1000,
+        "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000116156528,
+        "claimAmount": "200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x199387ac0cf5ddee47fba68371f96c8344c702e065417cf3b403f1a8ff9e7a04",
+          "0xe16146086bb0c47185c8974ff018f87555281bad612a791d51f77a209e4aa685",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26174539,
+        "weightUsed": 10000,
+        "user": "0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000107248781,
+        "claimAmount": "1600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x7e89e1564c9a13ba8628f6beea3bdcf14965d81d461af78c92b05bb17930b386",
+          "0x7524c977ecf3d56ca3eca03d7398e89d1978ed9d76d6cb6d1f195231d184dff2",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26103720,
+        "weightUsed": 10000,
+        "user": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.016599844833,
+        "claimAmount": "240200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xed78b68fd7fe0eac28f9d3dbf1b18758bd0e09acb98751901baca5a6ca823ed8",
+          "0xf49bfa054b5e7389ea4447c87d372ea02a9c290a4cf6f7df8cf02f68f27fc555",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      }
+    ],
+    "merkleRoot": "0xec56502520249b7e802199ff291e82c9e0699247f33393782ed26c49972e9a43",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x3852c84a67cbf30c1094195e0f691e43441689c4c3c10f659589d109040d051d"
+    },
+    "distributionId": 0
+  },
+  {
+    "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+    "bribeAmount": "750",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "token": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+    "epochStartTime": 1677715200,
+    "users": [
+      {
+        "userAddress": "0x568d716fCC14966b53090428056f0525D6845bb9",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26266383,
+        "weightUsed": 9220,
+        "user": "0x568d716fCC14966b53090428056f0525D6845bb9",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000089480515,
+        "claimAmount": "1200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x52ecd2b8acef0f200ea9f4b7ceec3f5d46c7be7e21b29be30cb7859f9924549d",
+          "0x914c25d01d36c2c65b113d7a0159f7254c1e5c8b4a2cbd40b02e63803a8d6a46",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26194266,
+        "weightUsed": 2500,
+        "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000656743448,
+        "claimAmount": "2400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x9f57ff87e67b73cdce753c78c4cb78465eeb032d599a9974759d7cac997b5c8c",
+          "0x7524c977ecf3d56ca3eca03d7398e89d1978ed9d76d6cb6d1f195231d184dff2",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26218974,
+        "weightUsed": 4000,
+        "user": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.029309839213,
+        "claimAmount": "169600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x28067314f382b496d1d63c9d5f811ad0e388f2ea16dfaac8106889468c403212",
+          "0x5d7048bd9fd9ffe457663b7d8426aa483d74e9b7590997d1732c5d5826add1da",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26201611,
+        "weightUsed": 5000,
+        "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.003757696734,
+        "claimAmount": "27200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x6998eb90916e3c12e17e8465a6709de53765cc146eb8cf673ed4b7ff07fff3cf",
+          "0x914c25d01d36c2c65b113d7a0159f7254c1e5c8b4a2cbd40b02e63803a8d6a46",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26300354,
+        "weightUsed": 10000,
+        "user": "0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.014667536127,
+        "claimAmount": "212200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x028f42e00b295a1c4ac255ee345a7e9eba1cd64c95df6541853ff34550a142ab",
+          "0xe16146086bb0c47185c8974ff018f87555281bad612a791d51f77a209e4aa685",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26199781,
+        "weightUsed": 10000,
+        "user": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000692396639,
+        "claimAmount": "10000000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xc946330774bcb8a4d23af1a28858de41504555ec170bb945ba4315896da89d11",
+          "0xf49bfa054b5e7389ea4447c87d372ea02a9c290a4cf6f7df8cf02f68f27fc555",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26114757,
+        "weightUsed": 6000,
+        "user": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.002009469417,
+        "claimAmount": "17400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xa41b92ebca93bcd159b6b4e5870fe99ec76682fa1f8845b15925173c8dbf346e",
+          "0xa88b9b65305013b7a2495f790fc8b1eedee026bfc6f7fb1ffa324c0f6f32e71f",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26299311,
+        "weightUsed": 2000,
+        "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.07196742231,
+        "claimAmount": "208300000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xa1069ea6237c6034dbeae367bef9dd4fbc3806dd3b31fa5db7b12804a0ccbf10",
+          "0xa88b9b65305013b7a2495f790fc8b1eedee026bfc6f7fb1ffa324c0f6f32e71f",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26103878,
+        "weightUsed": 5000,
+        "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.010562531288,
+        "claimAmount": "76400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x3b28e6063c0ab008ec2e9fce00776eebc079b1b4ee942d12aac93a754dd1172c",
+          "0x5d7048bd9fd9ffe457663b7d8426aa483d74e9b7590997d1732c5d5826add1da",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26106348,
+        "weightUsed": 2000,
+        "user": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.005440022091,
+        "claimAmount": "15700000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xff9f0024854eae88ea3e0be91e49f49ee0a74daa58b200d224fefa64204909dc",
+          "0x991eee1a97e6d2c03f166598eaac52e4fc95526b9fae8fe56f75c692c9e63d5a",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26109756,
+        "weightUsed": 2500,
+        "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.004852422902,
+        "claimAmount": "17600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xfde40f311396afec1392b6123cfb375dbfc8c49145fcd1fc378e73f0f75129cb",
+          "0x991eee1a97e6d2c03f166598eaac52e4fc95526b9fae8fe56f75c692c9e63d5a",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26193992,
+        "weightUsed": 1000,
+        "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000116156528,
+        "claimAmount": "200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x199387ac0cf5ddee47fba68371f96c8344c702e065417cf3b403f1a8ff9e7a04",
+          "0xe16146086bb0c47185c8974ff018f87555281bad612a791d51f77a209e4aa685",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26174539,
+        "weightUsed": 10000,
+        "user": "0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000107248781,
+        "claimAmount": "1600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x7e89e1564c9a13ba8628f6beea3bdcf14965d81d461af78c92b05bb17930b386",
+          "0x7524c977ecf3d56ca3eca03d7398e89d1978ed9d76d6cb6d1f195231d184dff2",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26103720,
+        "weightUsed": 10000,
+        "user": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.016599844833,
+        "claimAmount": "240200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xed78b68fd7fe0eac28f9d3dbf1b18758bd0e09acb98751901baca5a6ca823ed8",
+          "0xf49bfa054b5e7389ea4447c87d372ea02a9c290a4cf6f7df8cf02f68f27fc555",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      }
+    ],
+    "merkleRoot": "0x83f80f79b4ac02b0f9f226bd6536a9fa12b1eccd931a3475dc7a37b36c9e453e",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x3852c84a67cbf30c1094195e0f691e43441689c4c3c10f659589d109040d051d"
+    },
+    "distributionId": 0
+  },
+  {
+    "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+    "bribeAmount": "1000",
+    "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+    "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+    "epochStartTime": 1677715200,
+    "users": [
+      {
+        "userAddress": "0x568d716fCC14966b53090428056f0525D6845bb9",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26266383,
+        "weightUsed": 9220,
+        "user": "0x568d716fCC14966b53090428056f0525D6845bb9",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000089480515,
+        "claimAmount": "1200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x52ecd2b8acef0f200ea9f4b7ceec3f5d46c7be7e21b29be30cb7859f9924549d",
+          "0x914c25d01d36c2c65b113d7a0159f7254c1e5c8b4a2cbd40b02e63803a8d6a46",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26194266,
+        "weightUsed": 2500,
+        "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000656743448,
+        "claimAmount": "2400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x9f57ff87e67b73cdce753c78c4cb78465eeb032d599a9974759d7cac997b5c8c",
+          "0x7524c977ecf3d56ca3eca03d7398e89d1978ed9d76d6cb6d1f195231d184dff2",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26218974,
+        "weightUsed": 4000,
+        "user": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.029309839213,
+        "claimAmount": "169600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x28067314f382b496d1d63c9d5f811ad0e388f2ea16dfaac8106889468c403212",
+          "0x5d7048bd9fd9ffe457663b7d8426aa483d74e9b7590997d1732c5d5826add1da",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26201611,
+        "weightUsed": 5000,
+        "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.003757696734,
+        "claimAmount": "27200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x6998eb90916e3c12e17e8465a6709de53765cc146eb8cf673ed4b7ff07fff3cf",
+          "0x914c25d01d36c2c65b113d7a0159f7254c1e5c8b4a2cbd40b02e63803a8d6a46",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26300354,
+        "weightUsed": 10000,
+        "user": "0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.014667536127,
+        "claimAmount": "212200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x028f42e00b295a1c4ac255ee345a7e9eba1cd64c95df6541853ff34550a142ab",
+          "0xe16146086bb0c47185c8974ff018f87555281bad612a791d51f77a209e4aa685",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26199781,
+        "weightUsed": 10000,
+        "user": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000692396639,
+        "claimAmount": "10000000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xc946330774bcb8a4d23af1a28858de41504555ec170bb945ba4315896da89d11",
+          "0xf49bfa054b5e7389ea4447c87d372ea02a9c290a4cf6f7df8cf02f68f27fc555",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26114757,
+        "weightUsed": 6000,
+        "user": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.002009469417,
+        "claimAmount": "17400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xa41b92ebca93bcd159b6b4e5870fe99ec76682fa1f8845b15925173c8dbf346e",
+          "0xa88b9b65305013b7a2495f790fc8b1eedee026bfc6f7fb1ffa324c0f6f32e71f",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26299311,
+        "weightUsed": 2000,
+        "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.07196742231,
+        "claimAmount": "208300000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xa1069ea6237c6034dbeae367bef9dd4fbc3806dd3b31fa5db7b12804a0ccbf10",
+          "0xa88b9b65305013b7a2495f790fc8b1eedee026bfc6f7fb1ffa324c0f6f32e71f",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26103878,
+        "weightUsed": 5000,
+        "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.010562531288,
+        "claimAmount": "76400000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x3b28e6063c0ab008ec2e9fce00776eebc079b1b4ee942d12aac93a754dd1172c",
+          "0x5d7048bd9fd9ffe457663b7d8426aa483d74e9b7590997d1732c5d5826add1da",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26106348,
+        "weightUsed": 2000,
+        "user": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.005440022091,
+        "claimAmount": "15700000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xff9f0024854eae88ea3e0be91e49f49ee0a74daa58b200d224fefa64204909dc",
+          "0x991eee1a97e6d2c03f166598eaac52e4fc95526b9fae8fe56f75c692c9e63d5a",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26109756,
+        "weightUsed": 2500,
+        "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.004852422902,
+        "claimAmount": "17600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xfde40f311396afec1392b6123cfb375dbfc8c49145fcd1fc378e73f0f75129cb",
+          "0x991eee1a97e6d2c03f166598eaac52e4fc95526b9fae8fe56f75c692c9e63d5a",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26193992,
+        "weightUsed": 1000,
+        "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000116156528,
+        "claimAmount": "200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x199387ac0cf5ddee47fba68371f96c8344c702e065417cf3b403f1a8ff9e7a04",
+          "0xe16146086bb0c47185c8974ff018f87555281bad612a791d51f77a209e4aa685",
+          "0xf3c1edb256ac6002749f8698d45509f24e6ac1c36f253071aa32723624b104aa",
+          "0xfec0a31723c7ec25fc64d7a6804dd8f987bb6b06c9852b6ba4c0544d6a8a9a8f"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26174539,
+        "weightUsed": 10000,
+        "user": "0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.000107248781,
+        "claimAmount": "1600000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0x7e89e1564c9a13ba8628f6beea3bdcf14965d81d461af78c92b05bb17930b386",
+          "0x7524c977ecf3d56ca3eca03d7398e89d1978ed9d76d6cb6d1f195231d184dff2",
+          "0x37dfb53920a97b00baf0070f65ee444fa33d571f111d7c6658f82c01f9069b32",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      },
+      {
+        "userAddress": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+        "epochStartTime": 1677715200,
+        "epochWeekLabel": "2023-03-02T00:00:00Z",
+        "blockNumber": 26103720,
+        "weightUsed": 10000,
+        "user": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+        "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+        "percentOfTotalVE": 0.016599844833,
+        "claimAmount": "240200000000000000000",
+        "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "merkleProof": [
+          "0xed78b68fd7fe0eac28f9d3dbf1b18758bd0e09acb98751901baca5a6ca823ed8",
+          "0xf49bfa054b5e7389ea4447c87d372ea02a9c290a4cf6f7df8cf02f68f27fc555",
+          "0x72cd05c04d40ed5c6db54285111a08607e5652d9d62509c27c58243ca6b8d8dd",
+          "0x5d620f4e006348a69e37b0367ad34ce89554630d89552828044260b8b445dbac"
+        ],
+        "distributionId": 0
+      }
+    ],
+    "merkleRoot": "0x7210910bcb4cc87448569098280c61b072a797d616fbc134210cba320c2f2970",
+    "distribution": {
+      "distributionId": 0,
+      "txHash": "0x3852c84a67cbf30c1094195e0f691e43441689c4c3c10f659589d109040d051d"
+    },
+    "distributionId": 0
+  }
+]

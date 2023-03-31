@@ -74,6 +74,16 @@ export type GaugeBribeInfo = {
   nextEpochBribes: Array<Maybe<GaugeBribe>>;
 };
 
+export type GaugeBribeRaw = {
+  __typename?: 'GaugeBribeRaw';
+  amount: Scalars['String'];
+  briber: Scalars['String'];
+  epochStartTime: Scalars['Int'];
+  gauge: Scalars['String'];
+  token: Scalars['String'];
+  txHash: Scalars['String'];
+};
+
 export type GaugeEpoch = {
   __typename?: 'GaugeEpoch';
   blockNumber: Scalars['Int'];
@@ -132,6 +142,16 @@ export type GaugeVoteInfo = {
   epochStartTime: Scalars['Int'];
   epochWeekLabel: Scalars['String'];
   gaugeId?: Maybe<Scalars['String']>;
+  txHash: Scalars['String'];
+  userAddress: Scalars['String'];
+  weightUsed: Scalars['Int'];
+};
+
+export type GaugeVoteRaw = {
+  __typename?: 'GaugeVoteRaw';
+  blockNumber: Scalars['Int'];
+  epochStartTime: Scalars['Int'];
+  gaugeId: Scalars['String'];
   txHash: Scalars['String'];
   userAddress: Scalars['String'];
   weightUsed: Scalars['Int'];
@@ -1327,9 +1347,11 @@ export type Mutation = {
   protocolCacheMetrics: Scalars['String'];
   syncBribeDistributions: Scalars['Int'];
   syncGaugeBribes: Scalars['Int'];
+  syncGaugeBribesForEpoch: Scalars['Int'];
   syncGaugeData: Scalars['Boolean'];
   syncGaugeVotes: Scalars['Int'];
   syncGaugesEpoch: Scalars['String'];
+  syncVotesForEpoch: Scalars['Int'];
   tokenDeletePrice: Scalars['Boolean'];
   tokenDeleteTokenType: Scalars['String'];
   tokenInitChartData: Scalars['String'];
@@ -1369,11 +1391,20 @@ export type MutationSyncBribeDistributionsArgs = {
 
 export type MutationSyncGaugeBribesArgs = {
   blocksToScan?: InputMaybe<Scalars['Int']>;
+  forEpoch?: InputMaybe<Scalars['Boolean']>;
+};
+
+export type MutationSyncGaugeBribesForEpochArgs = {
+  epoch: Scalars['Int'];
 };
 
 export type MutationSyncGaugeVotesArgs = {
   blocksToScan?: InputMaybe<Scalars['Int']>;
   epochStartTime?: InputMaybe<Scalars['Int']>;
+};
+
+export type MutationSyncVotesForEpochArgs = {
+  epoch: Scalars['Int'];
 };
 
 export type MutationTokenDeletePriceArgs = {
@@ -1416,6 +1447,7 @@ export type Query = {
   get24HourGaugeFees?: Maybe<Array<Maybe<Scalars['String']>>>;
   getAllGaugeBribes: Array<Maybe<EpochBribeInfo>>;
   getBribes: Array<Maybe<GaugeBribe>>;
+  getBribesForEpoch: Array<Maybe<GaugeBribeRaw>>;
   getCurrentAndNextBribes: Array<Maybe<GaugeBribeInfo>>;
   getCurrentGaugesEpoch: GaugeEpoch;
   getDistributions: Array<Maybe<GaugeBribeDistribution>>;
@@ -1483,6 +1515,10 @@ export type QueryGetAllGaugeBribesArgs = {
 
 export type QueryGetBribesArgs = {
   filter: GetBribesInput;
+};
+
+export type QueryGetBribesForEpochArgs = {
+  epoch: Scalars['Int'];
 };
 
 export type QueryGetCurrentAndNextBribesArgs = {
@@ -1770,13 +1806,29 @@ export type UpdateDistributionsMutation = {
   updateBribeDistributions: string;
 };
 
-export type SyncBribesMutationVariables = Exact<{
-  blocksToScan?: InputMaybe<Scalars['Int']>;
+export type SyncEpochsMutationVariables = Exact<{ [key: string]: never }>;
+
+export type SyncEpochsMutation = {
+  __typename?: 'Mutation';
+  syncGaugesEpoch: string;
+};
+
+export type SyncEpochBribesMutationVariables = Exact<{
+  epoch: Scalars['Int'];
 }>;
 
-export type SyncBribesMutation = {
+export type SyncEpochBribesMutation = {
   __typename?: 'Mutation';
-  syncGaugeBribes: number;
+  syncGaugeBribesForEpoch: number;
+};
+
+export type SyncEpochVotesMutationVariables = Exact<{
+  epoch: Scalars['Int'];
+}>;
+
+export type SyncEpochVotesMutation = {
+  __typename?: 'Mutation';
+  syncVotesForEpoch: number;
 };
 
 export type SyncVotesMutationVariables = Exact<{
@@ -1787,6 +1839,23 @@ export type SyncVotesMutationVariables = Exact<{
 export type SyncVotesMutation = {
   __typename?: 'Mutation';
   syncGaugeVotes: number;
+};
+
+export type GetAllBribesEpochQueryVariables = Exact<{
+  epoch: Scalars['Int'];
+}>;
+
+export type GetAllBribesEpochQuery = {
+  __typename?: 'Query';
+  getBribesForEpoch: Array<{
+    __typename?: 'GaugeBribeRaw';
+    briber: string;
+    token: string;
+    amount: string;
+    gauge: string;
+    epochStartTime: number;
+    txHash: string;
+  } | null>;
 };
 
 export type GetGaugeEpochsQueryVariables = Exact<{ [key: string]: never }>;
@@ -2038,14 +2107,36 @@ export const UpdateDistributionsDocument = gql`
     updateBribeDistributions(input: $input)
   }
 `;
-export const SyncBribesDocument = gql`
-  mutation SyncBribes($blocksToScan: Int) {
-    syncGaugeBribes(blocksToScan: $blocksToScan)
+export const SyncEpochsDocument = gql`
+  mutation SyncEpochs {
+    syncGaugesEpoch
+  }
+`;
+export const SyncEpochBribesDocument = gql`
+  mutation SyncEpochBribes($epoch: Int!) {
+    syncGaugeBribesForEpoch(epoch: $epoch)
+  }
+`;
+export const SyncEpochVotesDocument = gql`
+  mutation SyncEpochVotes($epoch: Int!) {
+    syncVotesForEpoch(epoch: $epoch)
   }
 `;
 export const SyncVotesDocument = gql`
   mutation SyncVotes($epochStartTime: Int, $blocksToScan: Int) {
     syncGaugeVotes(epochStartTime: $epochStartTime, blocksToScan: $blocksToScan)
+  }
+`;
+export const GetAllBribesEpochDocument = gql`
+  query GetAllBribesEpoch($epoch: Int!) {
+    getBribesForEpoch(epoch: $epoch) {
+      briber
+      token
+      amount
+      gauge
+      epochStartTime
+      txHash
+    }
   }
 `;
 export const GetGaugeEpochsDocument = gql`
@@ -2196,17 +2287,47 @@ export function getSdk(
         'mutation',
       );
     },
-    SyncBribes(
-      variables?: SyncBribesMutationVariables,
+    SyncEpochs(
+      variables?: SyncEpochsMutationVariables,
       requestHeaders?: Dom.RequestInit['headers'],
-    ): Promise<SyncBribesMutation> {
+    ): Promise<SyncEpochsMutation> {
       return withWrapper(
         (wrappedRequestHeaders) =>
-          client.request<SyncBribesMutation>(SyncBribesDocument, variables, {
+          client.request<SyncEpochsMutation>(SyncEpochsDocument, variables, {
             ...requestHeaders,
             ...wrappedRequestHeaders,
           }),
-        'SyncBribes',
+        'SyncEpochs',
+        'mutation',
+      );
+    },
+    SyncEpochBribes(
+      variables: SyncEpochBribesMutationVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<SyncEpochBribesMutation> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<SyncEpochBribesMutation>(
+            SyncEpochBribesDocument,
+            variables,
+            { ...requestHeaders, ...wrappedRequestHeaders },
+          ),
+        'SyncEpochBribes',
+        'mutation',
+      );
+    },
+    SyncEpochVotes(
+      variables: SyncEpochVotesMutationVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<SyncEpochVotesMutation> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<SyncEpochVotesMutation>(
+            SyncEpochVotesDocument,
+            variables,
+            { ...requestHeaders, ...wrappedRequestHeaders },
+          ),
+        'SyncEpochVotes',
         'mutation',
       );
     },
@@ -2222,6 +2343,21 @@ export function getSdk(
           }),
         'SyncVotes',
         'mutation',
+      );
+    },
+    GetAllBribesEpoch(
+      variables: GetAllBribesEpochQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<GetAllBribesEpochQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<GetAllBribesEpochQuery>(
+            GetAllBribesEpochDocument,
+            variables,
+            { ...requestHeaders, ...wrappedRequestHeaders },
+          ),
+        'GetAllBribesEpoch',
+        'query',
       );
     },
     GetGaugeEpochs(

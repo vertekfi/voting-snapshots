@@ -1,0 +1,9 @@
+export const userBalanceFile = 'user-balances.json';
+export const bribersDataFile = 'bribers-data.json';
+export const bribesFile = 'bribes.json';
+export const tokensFile = 'bribe-tokens.json';
+export const bribersUniqueFile = 'bribers.json';
+export const briberBalances = 'briber-balances.json';
+export const votesFile = 'votes.json';
+export const gaugesFile = 'gauges.json';
+export const userListFile = 'user.json';

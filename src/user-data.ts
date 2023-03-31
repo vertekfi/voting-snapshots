@@ -7,15 +7,11 @@ import { getEpochDir } from './utils/epoch.utils';
 import { formatEther, parseUnits } from 'ethers/lib/utils';
 import {
   getMerkleOrchard,
-  getMulticall,
   getVertekAdminActions,
 } from './utils/contract.utils';
 import { getEventData } from './utils/event-scraping';
-import { csvService } from './services/standalone/csv.service';
-import { doTransaction, getRpcProvider } from './utils/web3.utils';
+import { doTransaction } from './utils/web3.utils';
 import { bscScanService } from './services/standalone/bsc-scan.service';
-import { epochs } from './main';
-import { Contract } from '@ethersproject/contracts';
 import { eToNumber } from './services/rewards/reward-generator.service';
 import { getUsersVeBalancesForEpoch } from './utils/vote.utils';
 import { setUserBalances } from './services/rewards/reward.utils';
@@ -23,55 +19,7 @@ import { UserBalanceInfo } from './types/user.types';
 
 const precision = 12;
 
-export async function runEpochSnapshot() {
-  // check for my bribes besides busd
-  const me = '0x891eFc56f5CD6580b2fEA416adC960F2A6156494';
-
-  const distTokens = [
-    {
-      token: '0xfa4b16b0f63f5a6d0651592620d585d308f749a4',
-      amount: 50,
-      epochStartTime: 1677715200,
-      gauge: '0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f',
-      briber: me,
-    },
-    {
-      token: '0xb9e05b4c168b56f73940980ae6ef366354357009',
-      amount: 350,
-      epochStartTime: 1677715200,
-      gauge: '0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f',
-      briber: me,
-    },
-    {
-      token: '0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca',
-      amount: 100,
-      epochStartTime: 1677715200,
-      gauge: '0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f',
-      briber: me,
-    },
-    {
-      token: '0xd50c729cebb64604b99e1243a54e840527360581',
-      amount: 20,
-      epochStartTime: 1677715200,
-      gauge: '0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f',
-      briber: me,
-    },
-    {
-      token: '0xed236c32f695c83efde232c288701d6f9c23e60e',
-      amount: 750,
-      epochStartTime: 1677715200,
-      gauge: '0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f',
-      briber: me,
-    },
-    {
-      token: '0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da',
-      amount: 1000,
-      epochStartTime: 1677715200,
-      gauge: '0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f',
-      briber: me,
-    },
-  ];
-
+export async function runEpochSnapshot(currentEpoch: number) {
   // TODO: For automation this setup will need to call to sync votes and bribes first after epoch ticks over
 
   // Get all votes and bribes
@@ -79,7 +27,7 @@ export async function runEpochSnapshot() {
   // Make sure last epoch item is in the past now
 
   // TODO: Pull needed epoch on the fly
-  let currentEpoch = 1679529600; // 3/23
+  // let currentEpoch = 1679529600; // 3/23
   const epochDir = getEpochDir(currentEpoch);
 
   const { getBribes: epochBribes } = await gqlService.sdk.GetBribesInfo({
