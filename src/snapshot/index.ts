@@ -8,12 +8,15 @@ import {
   getGaugesAddressList,
   getGaugeVotes,
   getUserAddressList,
+  getUserBalances,
   getVotes,
+  setAllClaims,
   setBribes,
   setEpochBribers,
   setEpochTokenList,
   setGaugeData,
   setGaugesAddressList,
+  setGaugeUserClaims,
   setGaugeVotes,
   setUserAddressList,
   setUserBalances,
@@ -25,6 +28,16 @@ import {
   getVotesForEpoch,
 } from './backend.utils';
 import { getUsersVeBalancesForEpoch } from 'src/utils/vote.utils';
+import {
+  checkUserAmountForToken,
+  getTotalUseVerWeightForGauge,
+  getUserClaimAmount,
+  getUsersMergedWithBalances,
+  getUserAdjustedVePercentForGauge,
+  getUsersAdjustedTotalWeight,
+  getUserAmountForToken,
+} from './user.utils';
+import { getPrecisionNumber } from 'src/utils/utils';
 
 export async function prepForSnapshot() {
   // Remove any concerns about automation timing across services
@@ -86,16 +99,125 @@ export async function populateBaseDataForEpoch(epoch: number) {
   associateVotersToGauge(epoch);
   addVotersToBribes(epoch);
 
-  // Need user balances
-  // generateUserClaims(epoch);
+  // Now that we have balances, we can do the reward amount generation per user, per gauge
+  setUserGaugeClaimAmounts(epoch);
+
+  // Then we can generate the tree per bribe for each gauge
+  // Each bribe is directly related to one token. Even if the gauge already has another bribe with same briber and same token
 }
 
-function generateUserClaims(epoch: number) {
+export function setUserGaugeClaimAmounts(epoch: number) {
   const gauges = getGaugesAddressList(epoch);
 
+  let allUserClaims = [];
+
+  // Iterative each gauge that was given bribes
+  // Users who voted and bribes data are already available at this point per gauge
   gauges.forEach((gauge) => {
+    // Working in the context of a single gauge
+    // With its associated votes for, and bribes
+
     const gaugeData = getGaugeData(epoch, gauge);
+
+    // Each user is entitled to each of these bribes
+    // So generate reward amount for bribe/token
+    const bribes = gaugeData.bribes;
+    const gaugeVoters = gaugeData.userVotes;
+
+    const votersMergedWithVeInfo = getUsersMergedWithBalances(
+      epoch,
+      gaugeVoters,
+    );
+
+    // Need the relative weight of just these users who voted for this gauge
+    const totalVeWeightForGauge = getUsersAdjustedTotalWeight(
+      votersMergedWithVeInfo,
+    );
+    const users = totalVeWeightForGauge.users;
+
+    // console.log(`Total adjust weight for gauge ${gauge} - ${totalVeWeightForGauge.totalWeightScaled}
+    // `);
+
+    const gaugeUserClaims = [];
+
+    // Set user amounts per bribe/token
+    // so that distribution info per bribe is in place
+    for (const bribe of bribes) {
+      let bribeTotalAmountOwed = 0;
+      const bribeClaims = [];
+
+      users.forEach((user, idx) => {
+        const tokenAmount = parseFloat(bribe.amount);
+
+        let { claimAmount, claimAmountBN } = getUserAmountForToken(
+          user,
+          totalVeWeightForGauge.totalWeightScaled,
+          tokenAmount,
+        );
+
+        // console.log(`tokenAmount: ${tokenAmount}`);
+        // console.log(`claimAmount: ${claimAmount}
+        // `);
+
+        bribeTotalAmountOwed += claimAmount;
+
+        // If amount is over and this is the last user,
+        // scale down amount to match so there are not reward claim issues.
+        // In these cases the precision diff is so neglible(0.00....1) we can simply
+        // deduct the difference from total and claim amount
+        if (bribeTotalAmountOwed > tokenAmount && idx === users.length - 1) {
+          console.log(`bribeTotalAmountOwed > tokenAmount`);
+          console.log(`Adjusting last user claim amount`);
+
+          const diff = Math.abs(tokenAmount - bribeTotalAmountOwed);
+          console.log(`diff: ${diff}`);
+
+          console.log(`bribeTotalAmountOwed before: ${bribeTotalAmountOwed}`);
+          bribeTotalAmountOwed -= diff;
+          console.log(`bribeTotalAmountOwed after: ${bribeTotalAmountOwed}`);
+
+          const claimBefore = claimAmount;
+          console.log(`claimAmount before: ${claimBefore}`);
+          claimAmount = getPrecisionNumber(claimAmount - diff, 16);
+          console.log(`claimAmount after: ${claimAmount}`);
+          console.log(`claimAmount diff: ${claimBefore - claimAmount}
+        `);
+        }
+
+        bribeClaims.push({
+          ...user,
+          claimAmount,
+        });
+      });
+
+      // console.log(
+      //   `Token ${bribe.token.address}: Bribe amount ${parseFloat(
+      //     bribe.amount,
+      //   )} - bribeTotalAmountOwed: ` + bribeTotalAmountOwed,
+      // );
+
+      // console.log(`
+      // There are (${bribeClaims.length}) user claims for bribe`);
+
+      // if (bribeTotalAmountOwed > parseFloat(bribe.amount)) {
+      //   console.log(
+      //     `Token ${bribe.token.address}: Bribe amount ${parseFloat(
+      //       bribe.amount,
+      //     )} - bribeTotalAmountOwed: ` + bribeTotalAmountOwed,
+      //   );
+      //   throw new Error('totalOwed > tokenAmount');
+      // }
+
+      gaugeUserClaims.push(...bribeClaims);
+    }
+
+    // console.log(`
+    // There are (${gaugeUserClaims.length}) user claims for gauge ${gauge}`);
+
+    setGaugeUserClaims(epoch, gauge, gaugeUserClaims);
   });
+
+  setAllClaims(epoch, allUserClaims);
 }
 
 async function setVoterBalanceInfo(epoch: number) {
@@ -116,10 +238,10 @@ function addVotersToBribes(epoch: number) {
   gauges.forEach((gauge) => {
     const gaugesBribes = bribes.filter((b) => b.gauge === gauge);
 
-    console.log(`
-    Gauge ${gauge} has (${gaugesBribes.length}) total bribes for this epoch`);
+    // console.log(`
+    // Gauge ${gauge} has (${gaugesBribes.length}) total bribes for this epoch`);
 
-    // Now put the users under those bribes
+    // Now put the users alongside those bribes
     // Only take needed data to unclutter shit
     const userVotes = getGaugeVotes(epoch, gauge).map((user) => {
       return {
@@ -135,8 +257,6 @@ function addVotersToBribes(epoch: number) {
       userVotes,
     });
   });
-
-  // For each bribe under this gauge, generate a user claim for each bribe/token distribution
 }
 
 export function associateVotersToGauge(epoch: number) {
@@ -146,8 +266,8 @@ export function associateVotersToGauge(epoch: number) {
   function matchVotes(gauge: string) {
     const votesFor = allVotes.filter((vote) => vote.gaugeId === gauge);
 
-    console.log(`
-    Gauge ${gauge} has (${votesFor.length}) total votes for this epoch`);
+    // console.log(`
+    // Gauge ${gauge} has (${votesFor.length}) total votes for this epoch`);
 
     setGaugeVotes(epoch, gauge, votesFor);
   }
@@ -181,8 +301,8 @@ function extractUniqueVoters(epoch: number) {
     return prev;
   }, []);
 
-  console.log(`
-  There are (${voters.length}) unique voters for this epoch`);
+  // console.log(`
+  // There are (${voters.length}) unique voters for this epoch`);
 
   setUserAddressList(epoch, voters);
 }
@@ -195,8 +315,8 @@ export function extractUniqueTokens(epoch: number) {
     return prev;
   }, []);
 
-  console.log(`
-  There are (${tokens.length}) unique tokens used for bribing this epoch`);
+  // console.log(`
+  // There are (${tokens.length}) unique tokens used for bribing this epoch`);
 
   setEpochTokenList(epoch, tokens);
 }
@@ -220,8 +340,8 @@ export function extractUniqueGauges(epoch: number) {
     return prev;
   }, []);
 
-  console.log(`
-  There are (${gauges.length}) unique gauges voted for this epoch`);
+  // console.log(`
+  // There are (${gauges.length}) unique gauges voted for this epoch`);
 
   setGaugesAddressList(epoch, gauges);
 }

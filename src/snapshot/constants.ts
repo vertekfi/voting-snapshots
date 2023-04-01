@@ -7,3 +7,5 @@ export const briberBalances = 'briber-balances.json';
 export const votesFile = 'votes.json';
 export const gaugesFile = 'gauges.json';
 export const userListFile = 'user.json';
+export const userClaimsFile = 'user-claims.json';
+export const claimsFile = 'claims.json';

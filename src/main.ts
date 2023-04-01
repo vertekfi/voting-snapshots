@@ -13,7 +13,11 @@ import { join } from 'path';
 import { BigNumber } from 'ethers';
 import { gqlService } from './services/backend/gql.service';
 import { syncData } from './utils/syncs';
-import { doNewEpochBribeSnapshot, populateBaseDataForEpoch } from './snapshot';
+import {
+  doNewEpochBribeSnapshot,
+  populateBaseDataForEpoch,
+  setUserGaugeClaimAmounts,
+} from './snapshot';
 
 export const epochs = [
   {
@@ -87,7 +91,9 @@ async function bootstrap() {
     console.log('Listening on: ' + port);
   });
 
-  await populateBaseDataForEpoch(1678320000);
+  const epoch = 1678320000;
+  // await populateBaseDataForEpoch(epoch);
+  setUserGaugeClaimAmounts(epoch);
   // await doNewEpochBribeSnapshot();
 
   // jobScheduler.init();

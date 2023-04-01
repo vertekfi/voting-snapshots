@@ -105,7 +105,7 @@ export async function runEpochSnapshot(currentEpoch: number) {
         throw new Error('totalOwed > tokenAmount');
       }
 
-      // After claim amount has been added
+      // After claim amounts has been added
       // Build the tree for this token once
       const tree = getBribeMerkleTree(votersMergedWithVeInfo);
       let usersWithProofs = attachUserProofs(votersMergedWithVeInfo, tree);
@@ -122,8 +122,10 @@ export async function runEpochSnapshot(currentEpoch: number) {
         token: bribe.token.address,
         amount: bribe.amount,
         epochStartTime: currentEpoch,
-        users: usersWithProofs,
-        merkleRoot: tree.root,
+        //  users: usersWithProofs,
+        users: [],
+        //  merkleRoot: tree.root,
+        merkleRoot: '',
         distribution: {},
       });
     }

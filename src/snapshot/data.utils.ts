@@ -6,9 +6,11 @@ import {
   bribersDataFile,
   bribersUniqueFile,
   bribesFile,
+  claimsFile,
   gaugesFile,
   tokensFile,
   userBalanceFile,
+  userClaimsFile,
   userListFile,
   votesFile,
 } from './constants';
@@ -49,6 +51,14 @@ export function setGaugesAddressList(epoch: number, data: string[]) {
   fs.writeJSONSync(join(getEpochDir(epoch), gaugesFile), data);
 }
 
+export function getAllClaims(epoch: number): any[] {
+  return fs.readJSONSync(join(getEpochDir(epoch), claimsFile));
+}
+
+export function setAllClaims(epoch: number, claims: string[]) {
+  fs.writeJSONSync(join(getEpochDir(epoch), claimsFile), claims);
+}
+
 export function getGaugeVotes(epoch: number, gauge: string): any[] {
   return fs.readJSONSync(join(getEpochDir(epoch), `${gauge}`, `votes.json`));
 }
@@ -56,6 +66,21 @@ export function getGaugeVotes(epoch: number, gauge: string): any[] {
 export function setGaugeVotes(epoch: number, gauge: string, votes: any[]) {
   fs.ensureDirSync(join(getEpochDir(epoch), `${gauge}`));
   fs.writeJSONSync(join(getEpochDir(epoch), `${gauge}`, `votes.json`), votes);
+}
+
+export function getGaugeUserClaims(epoch: number, gauge: string): any[] {
+  return fs.readJSONSync(join(getEpochDir(epoch), `${gauge}`, userClaimsFile));
+}
+
+export function setGaugeUserClaims(
+  epoch: number,
+  gauge: string,
+  claims: any[],
+) {
+  fs.writeJSONSync(
+    join(getEpochDir(epoch), `${gauge}`, userClaimsFile),
+    claims,
+  );
 }
 
 export function getGaugeData(
