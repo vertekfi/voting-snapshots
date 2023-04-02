@@ -88,7 +88,7 @@ export function getGaugeUserClaimsDeeeezz(
   gauge: string,
   id: string,
 ): any[] {
-  return fs.readJSONSync(join(getEpochDir(epoch), `${gauge}`, id));
+  return fs.readJSONSync(join(getEpochDir(epoch), `${gauge}`, `${id}.json`));
 }
 
 export function setGaugeUserClaimsDeeeezz(
@@ -100,7 +100,7 @@ export function setGaugeUserClaimsDeeeezz(
   const path = join(getEpochDir(epoch), `${gauge}`, 'claims');
   // fs.removeSync(path);
   // fs.ensureDirSync(path);
-  fs.writeJSONSync(join(path, id), claims);
+  fs.writeJSONSync(join(path, `${id}.json`), claims);
 }
 
 export function getGaugeBribeMerkleTree(
@@ -109,7 +109,7 @@ export function getGaugeBribeMerkleTree(
   id: string,
 ): StandardMerkleTree<any> {
   return fs.readJSONSync(
-    join(getEpochDir(epoch), `${gauge}`, 'merkle-trees', id),
+    join(getEpochDir(epoch), `${gauge}`, 'merkle-trees', `${id}.json`),
   );
 }
 
@@ -132,7 +132,7 @@ export function setGaugeBribeMerkleTree(
   id: string,
 ) {
   fs.writeJSONSync(
-    join(getEpochDir(epoch), `${gauge}`, 'merkle-trees', id),
+    join(getEpochDir(epoch), `${gauge}`, 'merkle-trees', `${id}.json`),
     tree,
   );
 }
