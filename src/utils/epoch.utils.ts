@@ -57,3 +57,7 @@ export function addNewEpochToFile(epoch) {
 export function getGaugeFileName(gauge: Gauge) {
   return gauge.pool.name.split(' ').join('-');
 }
+
+export function printEpoch(epoch: number) {
+  console.log(`printEpoch: ${getEpochRangeLabel(epoch)}`);
+}

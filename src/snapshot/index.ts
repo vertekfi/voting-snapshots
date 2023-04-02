@@ -1,5 +1,6 @@
+import { StandardMerkleTree } from '@openzeppelin/merkle-tree';
 import { gqlService } from '../services/backend/gql.service';
-import { getEpochDir } from '../utils/epoch.utils';
+import { getEpochDir, printEpoch } from '../utils/epoch.utils';
 import * as fs from 'fs-extra';
 import {
   createEpochDirectoryIfNeeded,
@@ -8,15 +9,18 @@ import {
   getGaugesAddressList,
   getGaugeVotes,
   getUserAddressList,
-  getUserBalances,
   getVotes,
+  resetClaims,
+  resetMerkleTrees,
   setAllClaims,
   setBribes,
   setEpochBribers,
   setEpochTokenList,
+  setGaugeBribeMerkleTree,
   setGaugeData,
   setGaugesAddressList,
   setGaugeUserClaims,
+  setGaugeUserClaimsDeeeezz,
   setGaugeVotes,
   setUserAddressList,
   setUserBalances,
@@ -29,15 +33,12 @@ import {
 } from './backend.utils';
 import { getUsersVeBalancesForEpoch } from 'src/utils/vote.utils';
 import {
-  checkUserAmountForToken,
-  getTotalUseVerWeightForGauge,
-  getUserClaimAmount,
   getUsersMergedWithBalances,
-  getUserAdjustedVePercentForGauge,
   getUsersAdjustedTotalWeight,
   getUserAmountForToken,
 } from './user.utils';
 import { getPrecisionNumber } from 'src/utils/utils';
+import { parseUnits } from '@ethersproject/units';
 
 export async function prepForSnapshot() {
   // Remove any concerns about automation timing across services
@@ -101,26 +102,95 @@ export async function populateBaseDataForEpoch(epoch: number) {
 
   // Now that we have balances, we can do the reward amount generation per user, per gauge
   setUserGaugeClaimAmounts(epoch);
+}
 
-  // Then we can generate the tree per bribe for each gauge
-  // Each bribe is directly related to one token. Even if the gauge already has another bribe with same briber and same token
+// After user reward amounts have been set
+export function generateMerkleTreeForBribes(epoch: number, users: any[]) {
+  // Each user array passed in is under/grouped by the same gauge/briber/token (distribution) setup
+
+  const gauge = users[0].gauge;
+  const token = users[0].token;
+
+  users = users.map((user) => {
+    return {
+      user: user.user,
+      claimAmount: String(user.claimAmountNum),
+      gauge: user.gauge,
+      briber: user.briber,
+      token: user.token,
+    };
+  });
+
+  const leaves = [];
+
+  users.forEach((user) => {
+    try {
+      leaves.push([user.user, parseUnits(user.claimAmount)]);
+    } catch (error) {
+      console.log('User amount too low');
+      console.log(user.claimAmount);
+    }
+  });
+
+  // The leaves are double-hashed to prevent second preimage attacks.
+  const tree = StandardMerkleTree.of(leaves, ['address', 'uint256']);
+
+  // These need some identifier since same briber/token/amount/etc. is possible on the same gauge
+  // Root won't work cause that could be the same within the same gauge
+  // Could read the directory and increment based on how many of the combo may be in there
+  // Or. Think of how to database it now....
+  const timestamp = Date.now();
+  const id = `${gauge}-${timestamp}`;
+
+  setGaugeBribeMerkleTree(epoch, gauge, tree, id);
+
+  // Increment the count of "trees" under the gauges directory
+
+  for (const [i, value] of tree.entries()) {
+    // Doing string wrap/unwrap to avoid BigInt file write error for now
+    value[value.length - 1] = String(value[value.length - 1]);
+
+    const address = value[0];
+    const user = users.find((u) => u.user === address);
+    if (!user) {
+      throw new Error(`User ${address} not found in tree`);
+    }
+
+    user.merkleProof = tree.getProof(i);
+
+    if (!user.merkleProof || !user.merkleProof.length) {
+      console.log('No proof for user: ' + user.user);
+    }
+
+    user.claimAmount = value[1];
+  }
+
+  setGaugeUserClaimsDeeeezz(
+    epoch,
+    gauge,
+    `user-claims-${token}-${timestamp}`,
+    users,
+  );
 }
 
 export function setUserGaugeClaimAmounts(epoch: number) {
-  const gauges = getGaugesAddressList(epoch);
+  printEpoch(epoch);
 
-  let allUserClaims = [];
+  const gauges = getGaugesAddressList(epoch);
+  const allUserClaims = [];
 
   // Iterative each gauge that was given bribes
   // Users who voted and bribes data are already available at this point per gauge
   gauges.forEach((gauge) => {
+    resetMerkleTrees(epoch, gauge);
+    resetClaims(epoch, gauge);
+
     // Working in the context of a single gauge
     // With its associated votes for, and bribes
-
     const gaugeData = getGaugeData(epoch, gauge);
 
-    // Each user is entitled to each of these bribes
-    // So generate reward amount for bribe/token
+    // Each user is entitled to each of these bribes/tokens
+    // So generate reward distribution info needed for every bribe/token
     const bribes = gaugeData.bribes;
     const gaugeVoters = gaugeData.userVotes;
 
@@ -129,95 +199,82 @@ export function setUserGaugeClaimAmounts(epoch: number) {
       gaugeVoters,
     );
 
-    // Need the relative weight of just these users who voted for this gauge
-    const totalVeWeightForGauge = getUsersAdjustedTotalWeight(
-      votersMergedWithVeInfo,
-    );
-    const users = totalVeWeightForGauge.users;
-
-    // console.log(`Total adjust weight for gauge ${gauge} - ${totalVeWeightForGauge.totalWeightScaled}
-    // `);
-
     const gaugeUserClaims = [];
 
     // Set user amounts per bribe/token
     // so that distribution info per bribe is in place
     for (const bribe of bribes) {
-      let bribeTotalAmountOwed = 0;
-      const bribeClaims = [];
+      // Will set all user relative claim amounts for a bribe
+      const bribeClaims = handleUsersBribeClaim(bribe, votersMergedWithVeInfo);
 
-      users.forEach((user, idx) => {
-        const tokenAmount = parseFloat(bribe.amount);
-
-        let { claimAmount, claimAmountBN } = getUserAmountForToken(
-          user,
-          totalVeWeightForGauge.totalWeightScaled,
-          tokenAmount,
-        );
-
-        // console.log(`tokenAmount: ${tokenAmount}`);
-        // console.log(`claimAmount: ${claimAmount}
-        // `);
-
-        bribeTotalAmountOwed += claimAmount;
-
-        // If amount is over and this is the last user,
-        // scale down amount to match so there are not reward claim issues.
-        // In these cases the precision diff is so neglible(0.00....1) we can simply
-        // deduct the difference from total and claim amount
-        if (bribeTotalAmountOwed > tokenAmount && idx === users.length - 1) {
-          console.log(`bribeTotalAmountOwed > tokenAmount`);
-          console.log(`Adjusting last user claim amount`);
-
-          const diff = Math.abs(tokenAmount - bribeTotalAmountOwed);
-          console.log(`diff: ${diff}`);
-
-          console.log(`bribeTotalAmountOwed before: ${bribeTotalAmountOwed}`);
-          bribeTotalAmountOwed -= diff;
-          console.log(`bribeTotalAmountOwed after: ${bribeTotalAmountOwed}`);
-
-          const claimBefore = claimAmount;
-          console.log(`claimAmount before: ${claimBefore}`);
-          claimAmount = getPrecisionNumber(claimAmount - diff, 16);
-          console.log(`claimAmount after: ${claimAmount}`);
-          console.log(`claimAmount diff: ${claimBefore - claimAmount}
-        `);
-        }
-
-        bribeClaims.push({
-          ...user,
-          claimAmount,
-        });
-      });
-
-      // console.log(
-      //   `Token ${bribe.token.address}: Bribe amount ${parseFloat(
-      //     bribe.amount,
-      //   )} - bribeTotalAmountOwed: ` + bribeTotalAmountOwed,
-      // );
-
-      // console.log(`
-      // There are (${bribeClaims.length}) user claims for bribe`);
-
-      // if (bribeTotalAmountOwed > parseFloat(bribe.amount)) {
-      //   console.log(
-      //     `Token ${bribe.token.address}: Bribe amount ${parseFloat(
-      //       bribe.amount,
-      //     )} - bribeTotalAmountOwed: ` + bribeTotalAmountOwed,
-      //   );
-      //   throw new Error('totalOwed > tokenAmount');
-      // }
+      // Once we have all the amounts for a bribe we need need to create the tree for its distribution
+      // Easier than trying to rework and base everything on total briber/token
+      generateMerkleTreeForBribes(epoch, bribeClaims);
 
       gaugeUserClaims.push(...bribeClaims);
+      allUserClaims.push(...bribeClaims);
     }
-
-    // console.log(`
-    // There are (${gaugeUserClaims.length}) user claims for gauge ${gauge}`);
 
     setGaugeUserClaims(epoch, gauge, gaugeUserClaims);
   });
 
   setAllClaims(epoch, allUserClaims);
+}
+
+function handleUsersBribeClaim(bribe, votersMergedWithVeInfo: any[]) {
+  // Need the relative weight of just these users who voted for this gauge
+  const totalVeWeightForGauge = getUsersAdjustedTotalWeight(
+    votersMergedWithVeInfo,
+  );
+  const users = totalVeWeightForGauge.users;
+  const bribeClaims = [];
+  const tokenAmount = parseFloat(bribe.amount);
+
+  // Keep track of total amount owe to watch for overflow
+  let bribeTotalAmountOwed = 0;
+
+  users.forEach((user, idx) => {
+    let { claimAmount, claimAmountBN } = getUserAmountForToken(
+      user,
+      totalVeWeightForGauge.totalWeightScaled,
+      tokenAmount,
+    );
+
+    bribeTotalAmountOwed += claimAmount;
+
+    // To avoid issues with reward claims due to decimal precision errors.
+    // If amount is over token amount, and this is the last user, scale down amount to match max amount.
+    // In these cases the precision diff is so neglible(0.00....1) we can simply
+    // deduct the difference from total and claim amount
+    if (bribeTotalAmountOwed > tokenAmount && idx === users.length - 1) {
+      console.log(`    bribeTotalAmountOwed > tokenAmount`);
+      console.log(`Adjusting last user claim amount`);
+
+      const diff = Math.abs(tokenAmount - bribeTotalAmountOwed);
+      console.log(`diff: ${diff}`);
+
+      console.log(`bribeTotalAmountOwed before: ${bribeTotalAmountOwed}`);
+      bribeTotalAmountOwed -= diff;
+      console.log(`bribeTotalAmountOwed after: ${bribeTotalAmountOwed}`);
+
+      const claimBefore = claimAmount;
+      console.log(`claimAmount before: ${claimBefore}`);
+      claimAmount = getPrecisionNumber(claimAmount - diff, 16);
+      console.log(`claimAmount after: ${claimAmount}`);
+      console.log(`claimAmount diff: ${claimBefore - claimAmount}
+    `);
+    }
+
+    bribeClaims.push({
+      ...user,
+      briber: bribe.briber,
+      token: bribe.token.address,
+      claimAmountNum: claimAmount,
+      claimAmountBN,
+    });
+  });
+
+  return bribeClaims;
 }
 
 async function setVoterBalanceInfo(epoch: number) {

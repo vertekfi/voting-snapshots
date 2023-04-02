@@ -1,9 +1,9 @@
+import { StandardMerkleTree } from '@openzeppelin/merkle-tree';
 import * as fs from 'fs-extra';
 import { join } from 'path';
 import { getEpochDir } from 'src/utils/epoch.utils';
 import {
   briberBalances,
-  bribersDataFile,
   bribersUniqueFile,
   bribesFile,
   claimsFile,
@@ -80,6 +80,60 @@ export function setGaugeUserClaims(
   fs.writeJSONSync(
     join(getEpochDir(epoch), `${gauge}`, userClaimsFile),
     claims,
+  );
+}
+
+export function getGaugeUserClaimsDeeeezz(
+  epoch: number,
+  gauge: string,
+  id: string,
+): any[] {
+  return fs.readJSONSync(join(getEpochDir(epoch), `${gauge}`, id));
+}
+
+export function setGaugeUserClaimsDeeeezz(
+  epoch: number,
+  gauge: string,
+  id: string,
+  claims: any[],
+) {
+  const path = join(getEpochDir(epoch), `${gauge}`, 'claims');
+  // fs.removeSync(path);
+  // fs.ensureDirSync(path);
+  fs.writeJSONSync(join(path, id), claims);
+}
+
+export function getGaugeBribeMerkleTree(
+  epoch: number,
+  gauge: string,
+  id: string,
+): StandardMerkleTree<any> {
+  return fs.readJSONSync(
+    join(getEpochDir(epoch), `${gauge}`, 'merkle-trees', id),
+  );
+}
+
+export function resetMerkleTrees(epoch: number, gauge: string) {
+  const path = join(getEpochDir(epoch), `${gauge}`, 'merkle-trees');
+  fs.removeSync(path);
+  fs.ensureDirSync(path);
+}
+
+export function resetClaims(epoch: number, gauge: string) {
+  const path = join(getEpochDir(epoch), `${gauge}`, 'claims');
+  fs.removeSync(path);
+  fs.ensureDirSync(path);
+}
+
+export function setGaugeBribeMerkleTree(
+  epoch: number,
+  gauge: string,
+  tree: StandardMerkleTree<any>,
+  id: string,
+) {
+  fs.writeJSONSync(
+    join(getEpochDir(epoch), `${gauge}`, 'merkle-trees', id),
+    tree,
   );
 }
 

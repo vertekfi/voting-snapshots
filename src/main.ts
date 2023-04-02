@@ -15,6 +15,7 @@ import { gqlService } from './services/backend/gql.service';
 import { syncData } from './utils/syncs';
 import {
   doNewEpochBribeSnapshot,
+  generateMerkleTreeForBribes,
   populateBaseDataForEpoch,
   setUserGaugeClaimAmounts,
 } from './snapshot';
@@ -94,7 +95,16 @@ async function bootstrap() {
   const epoch = 1678320000;
   // await populateBaseDataForEpoch(epoch);
   setUserGaugeClaimAmounts(epoch);
+  //generateMerkleTreeForBribes(epoch);
   // await doNewEpochBribeSnapshot();
+
+  // for (const epoch of epochs.slice(6)) {
+  //   if (epoch.blockNumber > 0) {
+  //     await gqlService.sdk.SyncEpochBribes({
+  //       epoch: epoch.epoch,
+  //     });
+  //   }
+  // }
 
   // jobScheduler.init();
 

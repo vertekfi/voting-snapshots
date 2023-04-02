@@ -1,14 +1,11 @@
 import { StandardMerkleTree } from '@openzeppelin/merkle-tree';
 import { parseUnits } from 'ethers/lib/utils';
-import * as moment from 'moment';
 import {
   getMerkleOrchard,
   getVertekAdminActions,
 } from 'src/utils/contract.utils';
 import { doTransaction, sleep } from 'src/utils/web3.utils';
-import { gqlService } from '../backend/gql.service';
 import {
-  associateBribesToBribers,
   getUserClaimsToAmountForToken,
   getVotersTotalWeightForGauge,
 } from './reward-generator.service';
