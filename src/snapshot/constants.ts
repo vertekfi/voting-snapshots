@@ -9,3 +9,4 @@ export const gaugesFile = 'gauges.json';
 export const userListFile = 'user.json';
 export const userClaimsFile = 'user-claims.json';
 export const claimsFile = 'claims.json';
+export const epochClaimsFile = 'epoch-claims.json';

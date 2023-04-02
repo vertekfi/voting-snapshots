@@ -7,6 +7,7 @@ import {
   bribersUniqueFile,
   bribesFile,
   claimsFile,
+  epochClaimsFile,
   gaugesFile,
   tokensFile,
   userBalanceFile,
@@ -14,6 +15,30 @@ import {
   userListFile,
   votesFile,
 } from './constants';
+
+function mergeAllClaims(epoch: number) {
+  // Get gauge dirs by indexOf('0x')
+  // Then -> claims/* for each, merge into master file
+  // epochClaimsFile
+
+  const epochDir = join(getEpochDir(epoch));
+  const claimsDir = join(epochDir, 'claims');
+  const files = fs.readdirSync(epochDir);
+
+  const allClaims = [];
+  files.forEach((fileName) => {
+    // gauge directory
+    if (fileName.indexOf('0x') !== -1) {
+      const claims = fs.readdirSync(claimsDir);
+      claims.forEach((file) => {
+        const data: any[] = fs.readJSONSync(join(claimsDir, file));
+        allClaims.push(...data);
+      });
+    }
+  });
+
+  fs.writeJSONSync(epochDir, epochClaimsFile);
+}
 
 export function createEpochDirectoryIfNeeded(epoch: number) {
   fs.ensureDirSync(getEpochDir(epoch));
