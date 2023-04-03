@@ -30,6 +30,13 @@ mutation SyncVotes($epochStartTime: Int, $blocksToScan: Int) {
   syncGaugeVotes(epochStartTime: $epochStartTime, blocksToScan: $blocksToScan)
 }
 
+query GetCurrenTokentPrices {
+  tokenGetCurrentPrices {
+    address
+    price
+  }
+}
+
 query GetAllBribesEpoch($epoch: Int!) {
   getBribesForEpoch(epoch: $epoch) {
     briber

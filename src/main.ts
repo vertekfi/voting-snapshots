@@ -22,6 +22,12 @@ import {
   populateBaseDataForEpoch,
   setUserGaugeClaimAmounts,
 } from './snapshot';
+import {
+  getEpochBribers,
+  getEpochTokenAmounts,
+  getVotes,
+} from './snapshot/data.utils';
+import { getVotesForEpoch } from './snapshot/backend.utils';
 
 export const epochs = [
   {
@@ -45,7 +51,7 @@ export const epochs = [
     blockNumber: 25702292,
   },
   {
-    epoch: 1677110400,
+    epoch: 1677110400, // First epoch bribes were created to be voted for starting 1677715200
     date: '2023-02-23T00:00:00Z',
     blockNumber: 25901363,
   },
@@ -95,25 +101,52 @@ async function bootstrap() {
     console.log('Listening on: ' + port);
   });
 
-  const epoch = epochs[6];
+  const epoch = epochs[4];
   console.log(`
   Generating for epoch:
   epoch:  ${epoch.epoch}
   date:   ${epoch.date}`);
-  // await populateBaseDataForEpoch(epoch.epoch);
+
+  const allFml = {};
+
+  // TODO: Currently, prod backend. Will tell if something was claimed or not for a user
+  // Can leverage that to generate the one off ghetto reset and give users rewards
+  // Loop over all unique voters, and see what they can claim. Minus newest ones(and duplicate fuck ups...)
+
+  const FIRST_EPOCH_BRIBE_WAS_ADDED = 1677715200;
+
+  // const users = getVotes(epoch.epoch);
+  // console.log(users.length);
+
+  // const bribers = getEpochBribers(epoch.epoch);
+  // console.log(bribers.length);
+
+  // const {} = await gqlService.sdk.
+
+  await populateBaseDataForEpoch(FIRST_EPOCH_BRIBE_WAS_ADDED);
   // await backendPostBribeClaims(epoch.epoch);
   // doBriberTokenDistribution(epoch.epoch);
   // getTokenDistributionAmounts(epoch.epoch);
 
-  // The epoch here is to find bribes added that week
-  // But the actual epochStartTime in db will be the following epoch time
-  // for (const epoch of epochs) {
+  // const allBribers = [];
+  // // The epoch here is to find bribes added that week
+  // // But the actual epochStartTime in db will be the following epoch time
+  // for (const epoch of epochs.slice(4, 5)) {
   //   if (epoch.blockNumber > 0) {
   //     await gqlService.sdk.SyncEpochBribes({
   //       epoch: epoch.epoch,
   //     });
+  //     // const bribers = getEpochBribers(epoch.epoch);
+  //     // bribers.forEach((b) => {
+  //     //   if (!allBribers.includes(b)) allBribers.push(b);
+  //     // });
   //   }
   // }
+
+  // console.log(allBribers);
+
+  // console.log(allFml);
+  // fs.writeJSONSync(join(process.cwd(), 'src/data/one-time.json'), allFml);
 
   // jobScheduler.init();
 

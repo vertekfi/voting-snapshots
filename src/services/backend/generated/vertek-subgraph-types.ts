@@ -1881,6 +1881,19 @@ export type SyncVotesMutation = {
   syncGaugeVotes: number;
 };
 
+export type GetCurrenTokentPricesQueryVariables = Exact<{
+  [key: string]: never;
+}>;
+
+export type GetCurrenTokentPricesQuery = {
+  __typename?: 'Query';
+  tokenGetCurrentPrices: Array<{
+    __typename?: 'GqlTokenPrice';
+    address: string;
+    price: number;
+  }>;
+};
+
 export type GetAllBribesEpochQueryVariables = Exact<{
   epoch: Scalars['Int'];
 }>;
@@ -2181,6 +2194,14 @@ export const SyncVotesDocument = gql`
     syncGaugeVotes(epochStartTime: $epochStartTime, blocksToScan: $blocksToScan)
   }
 `;
+export const GetCurrenTokentPricesDocument = gql`
+  query GetCurrenTokentPrices {
+    tokenGetCurrentPrices {
+      address
+      price
+    }
+  }
+`;
 export const GetAllBribesEpochDocument = gql`
   query GetAllBribesEpoch($epoch: Int!) {
     getBribesForEpoch(epoch: $epoch) {
@@ -2413,6 +2434,21 @@ export function getSdk(
           }),
         'SyncVotes',
         'mutation',
+      );
+    },
+    GetCurrenTokentPrices(
+      variables?: GetCurrenTokentPricesQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<GetCurrenTokentPricesQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<GetCurrenTokentPricesQuery>(
+            GetCurrenTokentPricesDocument,
+            variables,
+            { ...requestHeaders, ...wrappedRequestHeaders },
+          ),
+        'GetCurrenTokentPrices',
+        'query',
       );
     },
     GetAllBribesEpoch(

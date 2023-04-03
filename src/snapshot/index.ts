@@ -111,22 +111,15 @@ export async function populateBaseDataForEpoch(epoch: number) {
 
   // Now that we have balances, we can do the reward amount generation per user, per gauge/bribe/token
   setUserGaugeClaimAmounts(epoch);
-  await doBriberTokenDistribution(epoch);
+  // await doBriberTokenDistribution(epoch);
 }
 
 export function getTokenDistributionAmounts(epoch: number) {
   const tokens = getEpochTokenList(epoch);
   const bribes = getBribes(epoch);
 
-  // Filter the amount per token
-
   const totalTokenAmounts = tokens.map((token) => {
     const bribesWithToken = bribes.filter((b) => b.token.address === token);
-
-    //  console.log(bribesWithToken);
-
-    console.log(`
-  There are (${bribesWithToken.length}) bribes using token ${token}`);
 
     return {
       token,
@@ -138,6 +131,10 @@ export function getTokenDistributionAmounts(epoch: number) {
   });
 
   setEpochTokenAmounts(epoch, totalTokenAmounts);
+}
+
+export async function doSingleBribeDistribution(epoch: number) {
+  // Just a single bribe/token combo
 }
 
 // Regardless of who voted or what gauge. Contract side, a distribution
