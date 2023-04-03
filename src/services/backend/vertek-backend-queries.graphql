@@ -64,7 +64,19 @@ query GetCurrentGaugesEpoch {
   }
 }
 
-query getUserRewards($user: String!) {
+query GetRawUserBribeClaimsInfo($user: String!) {
+  getUserPendingBribeClaims(user: $user) {
+    user
+    claimAmount
+    gauge
+    token
+    briber
+    merkleProof
+    epochStartTime
+  }
+}
+
+query GetUserRewards($user: String!) {
   getUserBribeClaims(user: $user) {
     distributionId
     amountOwed

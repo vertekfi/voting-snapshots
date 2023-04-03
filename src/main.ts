@@ -25,6 +25,7 @@ import {
 import {
   getEpochBribers,
   getEpochTokenAmounts,
+  getUserAddressList,
   getVotes,
 } from './snapshot/data.utils';
 import { getVotesForEpoch } from './snapshot/backend.utils';
@@ -51,7 +52,7 @@ export const epochs = [
     blockNumber: 25702292,
   },
   {
-    epoch: 1677110400, // First epoch bribes were created to be voted for starting 1677715200
+    epoch: 1677110400, // First epoch bribes were created to be voted for starting 1677715200 (no bribes though...)
     date: '2023-02-23T00:00:00Z',
     blockNumber: 25901363,
   },
@@ -109,44 +110,91 @@ async function bootstrap() {
 
   const allFml = {};
 
-  // TODO: Currently, prod backend. Will tell if something was claimed or not for a user
-  // Can leverage that to generate the one off ghetto reset and give users rewards
-  // Loop over all unique voters, and see what they can claim. Minus newest ones(and duplicate fuck ups...)
+  const FIRST_EPOCH_BRIBES_ENABLED = 1677110400; // 2/23 index = 4 (no bribes though...)
+  const FIRST_EPOCH_BRIBE_WAS_ADDED = 1677715200; // 2023-03-02, index = 5
 
-  const FIRST_EPOCH_BRIBE_WAS_ADDED = 1677715200;
-
-  // const users = getVotes(epoch.epoch);
-  // console.log(users.length);
-
-  // const bribers = getEpochBribers(epoch.epoch);
-  // console.log(bribers.length);
-
-  // const {} = await gqlService.sdk.
-
-  await populateBaseDataForEpoch(FIRST_EPOCH_BRIBE_WAS_ADDED);
+  // await populateBaseDataForEpoch(FIRST_EPOCH_BRIBE_WAS_ADDED);
   // await backendPostBribeClaims(epoch.epoch);
   // doBriberTokenDistribution(epoch.epoch);
   // getTokenDistributionAmounts(epoch.epoch);
 
-  // const allBribers = [];
+  // TODO: Can use this list to, somehow, generate new... OR... just simply convert these to the current structure
+  // Test tx claims for each or some and or verify the claims, etc
+  // This is from backend so should like up correctly with bribers/tokens/roots now (need a bribe id concept for sure)
+
+  const unclaimedPath = join(process.cwd(), 'src/data/unclaimed.json');
+  // fs.writeJSONSync(unclaimedPath, rewards);
+  const unclaimed: any[] = fs.readJSONSync(unclaimedPath);
+  // console.log('unclaimed: ' + unclaimed.length); // 112 unclaimed bribes (wow)
+  console.log(unclaimed[0]);
+
+  const users: string[] = fs.readJSONSync(
+    join(process.cwd(), 'src/data/all-users.json'),
+  );
+
+  // const rewards = [];
+  // for (const user of users) {
+  //   const { getUserBribeClaims } = await gqlService.sdk.GetUserRewards({
+  //     user,
+  //   });
+
+  //   const claims = getUserBribeClaims.map((claim) => {
+  //     return {
+  //       user,
+  //       ...claim,
+  //     };
+  //   });
+
+  //   if (claims.length) {
+  //     rewards.push(...claims);
+  //   }
+  // }
+
+  // console.log(rewards.length);
+  // fs.writeJSONSync(unclaimedPath, rewards);
+
+  // unclaimed.forEach((claim) => {
+  //   delete claim.user;
+  // });
+
+  // fs.writeJSONSync(unclaimedPath, unclaimed);
+  // console.log(unclaimed[0]);
+
+  // const multi = getMulticaller([
+  //   `
+  //   function verifyClaim(
+  //     IERC20Upgradeable token,
+  //     address briber,
+  //     uint256 distributionId,
+  //     address claimer,
+  //     uint256 claimedBalance,
+  //     bytes32[] memory merkleProof
+  //   ) external view returns (bool)`
+  // ])
+
+  // unclaimed.forEach(claim => multi.call(``))
+
   // // The epoch here is to find bribes added that week
   // // But the actual epochStartTime in db will be the following epoch time
   // for (const epoch of epochs.slice(4, 5)) {
   //   if (epoch.blockNumber > 0) {
-  //     await gqlService.sdk.SyncEpochBribes({
-  //       epoch: epoch.epoch,
-  //     });
-  //     // const bribers = getEpochBribers(epoch.epoch);
-  //     // bribers.forEach((b) => {
-  //     //   if (!allBribers.includes(b)) allBribers.push(b);
+  //     // await gqlService.sdk.SyncEpochBribes({
+  //     //   epoch: epoch.epoch,
   //     // });
   //   }
   // }
 
-  // console.log(allBribers);
+  // const allUsers = fs.readJSONSync(usersPath);
+  // const rewards = [];
+  // for (const user of allUsers) {
+  //   const { getUserBribeClaims } = await gqlService.sdk.GetUserRewards({
+  //     user,
+  //   });
 
-  // console.log(allFml);
-  // fs.writeJSONSync(join(process.cwd(), 'src/data/one-time.json'), allFml);
+  //   if (getUserBribeClaims.length) {
+  //     rewards.push(...getUserBribeClaims);
+  //   }
+  // }
 
   // jobScheduler.init();
 

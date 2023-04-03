@@ -1937,6 +1937,24 @@ export type GetCurrentGaugesEpochQuery = {
   };
 };
 
+export type GetRawUserBribeClaimsInfoQueryVariables = Exact<{
+  user: Scalars['String'];
+}>;
+
+export type GetRawUserBribeClaimsInfoQuery = {
+  __typename?: 'Query';
+  getUserPendingBribeClaims: Array<{
+    __typename?: 'BribeClaimInfo';
+    user: string;
+    claimAmount: string;
+    gauge: string;
+    token: string;
+    briber: string;
+    merkleProof: Array<string>;
+    epochStartTime: number;
+  } | null>;
+};
+
 export type GetUserRewardsQueryVariables = Exact<{
   user: Scalars['String'];
 }>;
@@ -2232,8 +2250,21 @@ export const GetCurrentGaugesEpochDocument = gql`
     }
   }
 `;
+export const GetRawUserBribeClaimsInfoDocument = gql`
+  query GetRawUserBribeClaimsInfo($user: String!) {
+    getUserPendingBribeClaims(user: $user) {
+      user
+      claimAmount
+      gauge
+      token
+      briber
+      merkleProof
+      epochStartTime
+    }
+  }
+`;
 export const GetUserRewardsDocument = gql`
-  query getUserRewards($user: String!) {
+  query GetUserRewards($user: String!) {
     getUserBribeClaims(user: $user) {
       distributionId
       amountOwed
@@ -2496,7 +2527,22 @@ export function getSdk(
         'query',
       );
     },
-    getUserRewards(
+    GetRawUserBribeClaimsInfo(
+      variables: GetRawUserBribeClaimsInfoQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<GetRawUserBribeClaimsInfoQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<GetRawUserBribeClaimsInfoQuery>(
+            GetRawUserBribeClaimsInfoDocument,
+            variables,
+            { ...requestHeaders, ...wrappedRequestHeaders },
+          ),
+        'GetRawUserBribeClaimsInfo',
+        'query',
+      );
+    },
+    GetUserRewards(
       variables: GetUserRewardsQueryVariables,
       requestHeaders?: Dom.RequestInit['headers'],
     ): Promise<GetUserRewardsQuery> {
@@ -2507,7 +2553,7 @@ export function getSdk(
             variables,
             { ...requestHeaders, ...wrappedRequestHeaders },
           ),
-        'getUserRewards',
+        'GetUserRewards',
         'query',
       );
     },
