@@ -204,6 +204,46 @@
   {
     "inputs": [
       {
+        "internalType": "contract IMerkleOrchard",
+        "name": "orchard",
+        "type": "address"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "merkleRoot",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "briber",
+            "type": "address"
+          }
+        ],
+        "internalType": "struct BribeDistribution[]",
+        "name": "distributions",
+        "type": "tuple[]"
+      }
+    ],
+    "name": "createOperatorBribeDistributions",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "bytes32",
         "name": "role",
         "type": "bytes32"

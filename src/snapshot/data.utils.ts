@@ -1,4 +1,5 @@
 import { StandardMerkleTree } from '@openzeppelin/merkle-tree';
+import { ContractReceipt } from 'ethers';
 import * as fs from 'fs-extra';
 import { join } from 'path';
 import { getEpochDir } from 'src/utils/epoch.utils';
@@ -7,8 +8,9 @@ import {
   bribersUniqueFile,
   bribesFile,
   claimsFile,
-  epochClaimsFile,
+  epochDistributionFile,
   gaugesFile,
+  tokenAmountsFile,
   tokensFile,
   userBalanceFile,
   userClaimsFile,
@@ -16,28 +18,12 @@ import {
   votesFile,
 } from './constants';
 
-function mergeAllClaims(epoch: number) {
-  // Get gauge dirs by indexOf('0x')
-  // Then -> claims/* for each, merge into master file
-  // epochClaimsFile
+export function getDistributionTransaction(epoch: number): any[] {
+  return fs.readJSONSync(join(getEpochDir(epoch), epochDistributionFile));
+}
 
-  const epochDir = join(getEpochDir(epoch));
-  const claimsDir = join(epochDir, 'claims');
-  const files = fs.readdirSync(epochDir);
-
-  const allClaims = [];
-  files.forEach((fileName) => {
-    // gauge directory
-    if (fileName.indexOf('0x') !== -1) {
-      const claims = fs.readdirSync(claimsDir);
-      claims.forEach((file) => {
-        const data: any[] = fs.readJSONSync(join(claimsDir, file));
-        allClaims.push(...data);
-      });
-    }
-  });
-
-  fs.writeJSONSync(epochDir, epochClaimsFile);
+export function setDistributionTransaction(epoch: number, tx: ContractReceipt) {
+  fs.writeJSONSync(join(getEpochDir(epoch), epochDistributionFile), tx);
 }
 
 export function createEpochDirectoryIfNeeded(epoch: number) {
@@ -58,6 +44,14 @@ export function getBribes(epoch: number): any[] {
 
 export function setBribes(epoch: number, data: any[]) {
   fs.writeJSONSync(join(getEpochDir(epoch), bribesFile), data);
+}
+
+export function getEpochTokenAmounts(epoch: number): any[] {
+  return fs.readJSONSync(join(getEpochDir(epoch), tokenAmountsFile));
+}
+
+export function setEpochTokenAmounts(epoch: number, data: any[]) {
+  fs.writeJSONSync(join(getEpochDir(epoch), tokenAmountsFile), data);
 }
 
 export function getVotes(epoch: number): any[] {
@@ -106,26 +100,6 @@ export function setGaugeUserClaims(
     join(getEpochDir(epoch), `${gauge}`, userClaimsFile),
     claims,
   );
-}
-
-export function getGaugeUserClaimsDeeeezz(
-  epoch: number,
-  gauge: string,
-  id: string,
-): any[] {
-  return fs.readJSONSync(join(getEpochDir(epoch), `${gauge}`, `${id}.json`));
-}
-
-export function setGaugeUserClaimsDeeeezz(
-  epoch: number,
-  gauge: string,
-  id: string,
-  claims: any[],
-) {
-  const path = join(getEpochDir(epoch), `${gauge}`, 'claims');
-  // fs.removeSync(path);
-  // fs.ensureDirSync(path);
-  fs.writeJSONSync(join(path, `${id}.json`), claims);
 }
 
 export function getGaugeBribeMerkleTree(

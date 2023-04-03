@@ -535,6 +535,39 @@
   {
     "inputs": [
       {
+        "internalType": "contract IERC20Upgradeable",
+        "name": "token",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "briber",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "distributionId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "merkleRoot",
+        "type": "bytes32"
+      }
+    ],
+    "name": "operatorCreateDistribution",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "bytes32",
         "name": "role",
         "type": "bytes32"

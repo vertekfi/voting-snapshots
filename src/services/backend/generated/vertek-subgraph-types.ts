@@ -28,6 +28,27 @@ export type Scalars = {
   JSON: any;
 };
 
+export type AddUserBribeClaimInput = {
+  briber: Scalars['String'];
+  claimAmount: Scalars['String'];
+  epochStartTime: Scalars['Int'];
+  gauge: Scalars['String'];
+  merkleProof: Array<Scalars['String']>;
+  token: Scalars['String'];
+  user: Scalars['String'];
+};
+
+export type BribeClaimInfo = {
+  __typename?: 'BribeClaimInfo';
+  briber: Scalars['String'];
+  claimAmount: Scalars['String'];
+  epochStartTime: Scalars['Int'];
+  gauge: Scalars['String'];
+  merkleProof: Array<Scalars['String']>;
+  token: Scalars['String'];
+  user: Scalars['String'];
+};
+
 export type BribeDistribution = {
   __typename?: 'BribeDistribution';
   distributionId: Scalars['Int'];
@@ -142,6 +163,7 @@ export type GaugeVoteInfo = {
   epochStartTime: Scalars['Int'];
   epochWeekLabel: Scalars['String'];
   gaugeId?: Maybe<Scalars['String']>;
+  id: Scalars['Int'];
   txHash: Scalars['String'];
   userAddress: Scalars['String'];
   weightUsed: Scalars['Int'];
@@ -1321,6 +1343,7 @@ export type LiquidityGauge = {
 
 export type Mutation = {
   __typename?: 'Mutation';
+  addUserBribeClaims: Scalars['String'];
   cacheAverageBlockTime: Scalars['String'];
   doStakes: Scalars['Boolean'];
   poolInitializeSnapshotsForPool: Scalars['String'];
@@ -1366,6 +1389,12 @@ export type Mutation = {
   userSyncBalanceAllPools: Scalars['String'];
   userSyncChangedStakedBalances: Scalars['String'];
   userSyncChangedWalletBalancesForAllPools: Scalars['String'];
+};
+
+export type MutationAddUserBribeClaimsArgs = {
+  claims: Array<AddUserBribeClaimInput>;
+  epoch: Scalars['Int'];
+  startOfStream: Scalars['Boolean'];
 };
 
 export type MutationPoolInitializeSnapshotsForPoolArgs = {
@@ -1448,7 +1477,6 @@ export type Query = {
   getAllGaugeBribes: Array<Maybe<EpochBribeInfo>>;
   getBribes: Array<Maybe<GaugeBribe>>;
   getBribesForEpoch: Array<Maybe<GaugeBribeRaw>>;
-  getCurrentAndNextBribes: Array<Maybe<GaugeBribeInfo>>;
   getCurrentGaugesEpoch: GaugeEpoch;
   getDistributions: Array<Maybe<GaugeBribeDistribution>>;
   getEpochBribesForGauge: Array<Maybe<GaugeBribe>>;
@@ -1464,6 +1492,7 @@ export type Query = {
   getSingleGaugeBribes: Array<Maybe<EpochBribeInfo>>;
   getUserBribeClaims: Array<Maybe<UserBribeClaim>>;
   getUserGaugeStakes: Array<Maybe<LiquidityGauge>>;
+  getUserPendingBribeClaims: Array<Maybe<BribeClaimInfo>>;
   latestSyncedBlocks: GqlLatestSyncedBlocks;
   poolGetAllPoolsSnapshots: Array<GqlPoolSnapshot>;
   poolGetBatchSwaps: Array<GqlPoolBatchSwap>;
@@ -1521,10 +1550,6 @@ export type QueryGetBribesForEpochArgs = {
   epoch: Scalars['Int'];
 };
 
-export type QueryGetCurrentAndNextBribesArgs = {
-  epoch: Scalars['Int'];
-};
-
 export type QueryGetDistributionsArgs = {
   filter?: InputMaybe<GetDistributionsInput>;
 };
@@ -1557,6 +1582,10 @@ export type QueryGetUserBribeClaimsArgs = {
 
 export type QueryGetUserGaugeStakesArgs = {
   poolIds: Array<Scalars['String']>;
+  user: Scalars['String'];
+};
+
+export type QueryGetUserPendingBribeClaimsArgs = {
   user: Scalars['String'];
 };
 
@@ -1762,12 +1791,12 @@ export type UserBribeClaim = {
   __typename?: 'UserBribeClaim';
   amountOwed: Scalars['String'];
   briber: Scalars['String'];
-  distributionId: Scalars['String'];
+  distributionId?: Maybe<Scalars['String']>;
   epochStartTime: Scalars['Int'];
   gauge: Scalars['String'];
   gaugeRecord: LiquidityGauge;
+  merkleProof: Array<Scalars['String']>;
   pool: GqlPoolMinimal;
-  proof: Array<Scalars['String']>;
   token: Scalars['String'];
   valueUSD: Scalars['Float'];
 };
@@ -1804,6 +1833,17 @@ export type UpdateDistributionsMutationVariables = Exact<{
 export type UpdateDistributionsMutation = {
   __typename?: 'Mutation';
   updateBribeDistributions: string;
+};
+
+export type AddBribeClaimsMutationVariables = Exact<{
+  epoch: Scalars['Int'];
+  claims: Array<AddUserBribeClaimInput> | AddUserBribeClaimInput;
+  startOfStream: Scalars['Boolean'];
+}>;
+
+export type AddBribeClaimsMutation = {
+  __typename?: 'Mutation';
+  addUserBribeClaims: string;
 };
 
 export type SyncEpochsMutationVariables = Exact<{ [key: string]: never }>;
@@ -1892,12 +1932,12 @@ export type GetUserRewardsQuery = {
   __typename?: 'Query';
   getUserBribeClaims: Array<{
     __typename?: 'UserBribeClaim';
-    distributionId: string;
+    distributionId?: string | null;
     amountOwed: string;
     briber: string;
     gauge: string;
     token: string;
-    proof: Array<string>;
+    merkleProof: Array<string>;
     epochStartTime: number;
   } | null>;
 };
@@ -2007,6 +2047,7 @@ export type GetGaugeVotesQuery = {
     count: number;
     votes: Array<{
       __typename?: 'GaugeVoteInfo';
+      id: number;
       userAddress: string;
       epochStartTime: number;
       epochWeekLabel: string;
@@ -2107,6 +2148,19 @@ export const UpdateDistributionsDocument = gql`
     updateBribeDistributions(input: $input)
   }
 `;
+export const AddBribeClaimsDocument = gql`
+  mutation AddBribeClaims(
+    $epoch: Int!
+    $claims: [AddUserBribeClaimInput!]!
+    $startOfStream: Boolean!
+  ) {
+    addUserBribeClaims(
+      epoch: $epoch
+      claims: $claims
+      startOfStream: $startOfStream
+    )
+  }
+`;
 export const SyncEpochsDocument = gql`
   mutation SyncEpochs {
     syncGaugesEpoch
@@ -2165,7 +2219,7 @@ export const GetUserRewardsDocument = gql`
       briber
       gauge
       token
-      proof
+      merkleProof
       epochStartTime
     }
   }
@@ -2223,6 +2277,7 @@ export const GetGaugeVotesDocument = gql`
     getGaugeVotes(filter: $filter) {
       count
       votes {
+        id
         userAddress
         epochStartTime
         epochWeekLabel
@@ -2284,6 +2339,21 @@ export function getSdk(
             { ...requestHeaders, ...wrappedRequestHeaders },
           ),
         'UpdateDistributions',
+        'mutation',
+      );
+    },
+    AddBribeClaims(
+      variables: AddBribeClaimsMutationVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<AddBribeClaimsMutation> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<AddBribeClaimsMutation>(
+            AddBribeClaimsDocument,
+            variables,
+            { ...requestHeaders, ...wrappedRequestHeaders },
+          ),
+        'AddBribeClaims',
         'mutation',
       );
     },

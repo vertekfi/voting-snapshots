@@ -3,7 +3,7 @@ import { parseUnits } from 'ethers/lib/utils';
 import { DistributionStruct } from 'src/types/bribe.types';
 import {
   getMerkleOrchard,
-  getMulticall,
+  getMulticaller,
   getVertekAdminActions,
 } from 'src/utils/contract.utils';
 import { doTransaction } from 'src/utils/web3.utils';
@@ -160,7 +160,7 @@ export function getBriberTokenSets(bribers: string[], bribeInstances: any[]) {
 export async function getNextDistributionIds(gauges: any[]) {
   // Get next dist id per unique briber/token instances
   const orchard = getMerkleOrchard();
-  const multi = getMulticall([
+  const multi = getMulticaller([
     'function getNextDistributionId(address, address) public view returns (uint)',
   ]);
 

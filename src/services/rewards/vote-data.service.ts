@@ -4,7 +4,7 @@ import * as ControllerAbi from '../../abis/GaugeController.json';
 import * as fs from 'fs-extra';
 import { join } from 'path';
 import * as moment from 'moment';
-import { getMulticall } from '../../utils/contract.utils';
+import { getMulticaller } from '../../utils/contract.utils';
 import { csvService } from '../standalone/csv.service';
 import { bscScanService } from '../standalone/bsc-scan.service';
 import { gqlService } from '../backend/gql.service';
@@ -221,7 +221,7 @@ export class VoteDataService {
       ).toUTCString()}`,
     );
 
-    const multicall = getMulticall(veABI);
+    const multicall = getMulticaller(veABI);
 
     users.forEach((user) =>
       multicall.call(

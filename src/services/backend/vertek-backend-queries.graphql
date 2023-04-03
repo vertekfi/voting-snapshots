@@ -2,6 +2,18 @@ mutation UpdateDistributions($input: [UpdateBribeDistributionsInput!]!) {
   updateBribeDistributions(input: $input)
 }
 
+mutation AddBribeClaims(
+  $epoch: Int!
+  $claims: [AddUserBribeClaimInput!]!
+  $startOfStream: Boolean!
+) {
+  addUserBribeClaims(
+    epoch: $epoch
+    claims: $claims
+    startOfStream: $startOfStream
+  )
+}
+
 mutation SyncEpochs {
   syncGaugesEpoch
 }
@@ -52,7 +64,7 @@ query getUserRewards($user: String!) {
     briber
     gauge
     token
-    proof
+    merkleProof
     epochStartTime
   }
 }
@@ -102,6 +114,7 @@ query GetGaugeVotes($filter: GetVotesInput!) {
   getGaugeVotes(filter: $filter) {
     count
     votes {
+      id
       userAddress
       epochStartTime
       epochWeekLabel

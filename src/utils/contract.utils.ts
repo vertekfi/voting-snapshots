@@ -2,19 +2,21 @@ import { Contract } from '@ethersproject/contracts';
 import { Multicaller } from 'src/services/standalone/multicaller';
 import * as orchardAbi from '../abis/MerkleOrchard.json';
 import * as adminAbi from '../abis/VertekAdminActions.json';
-import { getRpcProvider, getSigner } from './web3.utils';
+import * as erc20Abi from '../abis/ERC20.json';
+import { CONTRACT_MAP } from './data';
+import { getChainId, getRpcProvider, getSigner } from './web3.utils';
 
 export function getMerkleOrchard() {
   return new Contract(
-    '0x27eDCe99d5aF44318358497fD5Af5C8e312F1721',
+    getContractAddress('MerkleOrchard'),
     orchardAbi,
     getSigner(),
   );
 }
 
-export function getMulticall(abi: string | Array<string>) {
+export function getMulticaller(abi: string | Array<string>) {
   return new Multicaller(
-    '0x4Ba82B21658CAE1975Fa26097d87bd48FF270124',
+    getContractAddress('Multicall'),
     getRpcProvider(),
     abi,
   );
@@ -22,7 +24,7 @@ export function getMulticall(abi: string | Array<string>) {
 
 export function getVertekAdminActions() {
   return new Contract(
-    '0x85b3062122Dda49002471500C0F559C776FfD8DD',
+    getContractAddress('VertekAdminActions'),
     adminAbi,
     getSigner(),
   );
@@ -30,11 +32,35 @@ export function getVertekAdminActions() {
 
 export function getGaugeController() {
   return new Contract(
-    '0x99bFf5953843A211792BF3715b1b3b4CBeE34CE6',
+    getContractAddress('GaugeController'),
     [
       'function checkpoint() external',
       'function time_total() external view returns (uint256)',
     ],
     getSigner(),
   );
+}
+
+/**
+ * Gets a contract address for the current chain id.
+ * @param contractName
+ * @returns
+ */
+export function getContractAddress(
+  contractName: string,
+  chainId?: number,
+): string {
+  // TODO: maybe type this
+  const address = CONTRACT_MAP[contractName]
+    ? CONTRACT_MAP[contractName][chainId || getChainId()]
+    : null;
+  if (!address) {
+    throw new Error(`No address for contract: ${contractName}`);
+  }
+
+  return address;
+}
+
+export async function getERC20(address: string) {
+  return new Contract(address, erc20Abi, await getSigner());
 }

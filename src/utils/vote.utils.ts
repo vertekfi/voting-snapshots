@@ -1,7 +1,7 @@
 import { formatEther } from '@ethersproject/units';
 import { Contract } from 'ethers';
 import { UserBalanceInfo } from 'src/types/user.types';
-import { getMulticall } from './contract.utils';
+import { getMulticaller } from './contract.utils';
 import { getRpcProvider } from './web3.utils';
 import * as moment from 'moment';
 
@@ -35,7 +35,7 @@ export async function getUsersVeBalancesForEpoch(
     getRpcProvider(),
   );
 
-  const multicall = getMulticall(veABI);
+  const multicall = getMulticaller(veABI);
 
   users.forEach((user) =>
     multicall.call(`${user}.balance`, votingEscrow.address, 'balanceOf', [

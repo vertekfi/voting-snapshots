@@ -55,3 +55,7 @@ export async function awaitTransactionComplete(
     throw error; // Throw and try to let this be handled back in the call stack as needed
   }
 }
+
+export function getChainId() {
+  return parseInt(process.env.CHAIN_ID);
+}

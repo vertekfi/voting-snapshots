@@ -5,7 +5,7 @@ import { jobScheduler } from './services/job-scheduler.service';
 import * as moment from 'moment';
 import { getEpochDir, getStartOfThisWeekUTC } from './utils/epoch.utils';
 import { doTransaction, getRpcProvider } from './utils/web3.utils';
-import { getMerkleOrchard, getMulticall } from './utils/contract.utils';
+import { getMerkleOrchard, getMulticaller } from './utils/contract.utils';
 import { formatEther, parseUnits } from '@ethersproject/units';
 import { getBribeDistributionInfo } from './services/rewards/reward.utils';
 import * as fs from 'fs-extra';
@@ -14,8 +14,11 @@ import { BigNumber } from 'ethers';
 import { gqlService } from './services/backend/gql.service';
 import { syncData } from './utils/syncs';
 import {
+  backendPostBribeClaims,
+  doBriberTokenDistribution,
   doNewEpochBribeSnapshot,
   generateMerkleTreeForBribes,
+  getTokenDistributionAmounts,
   populateBaseDataForEpoch,
   setUserGaugeClaimAmounts,
 } from './snapshot';
@@ -24,22 +27,22 @@ export const epochs = [
   {
     epoch: 1674691200,
     date: '2023-01-26T00:00:00Z',
-    blockNumber: 25105745,
+    blockNumber: 25105746,
   },
   {
     epoch: 1675296000,
     date: '2023-02-02T00:00:00Z',
-    blockNumber: 25304046,
+    blockNumber: 25304047,
   },
   {
     epoch: 1675900800,
     date: '2023-02-09T00:00:00Z',
-    blockNumber: 25502596,
+    blockNumber: 25502597,
   },
   {
     epoch: 1676505600,
     date: '2023-02-16T00:00:00Z',
-    blockNumber: 25702291,
+    blockNumber: 25702292,
   },
   {
     epoch: 1677110400,
@@ -49,27 +52,27 @@ export const epochs = [
   {
     epoch: 1677715200,
     date: '2023-03-02T00:00:00Z',
-    blockNumber: 26100818,
+    blockNumber: 26100819,
   },
   {
     epoch: 1678320000,
     date: '2023-03-09T00:00:00Z',
-    blockNumber: 26300370,
+    blockNumber: 26300371,
   },
   {
     epoch: 1678924800,
     date: '2023-03-16T00:00:00Z',
-    blockNumber: 26499941,
+    blockNumber: 26499942,
   },
   {
     epoch: 1679529600,
     date: '2023-03-23T00:00:00Z',
-    blockNumber: 26699046,
+    blockNumber: 26699047,
   },
   {
     epoch: 1680134400,
     date: '2023-03-30T00:00:00Z',
-    blockNumber: 26898869,
+    blockNumber: 26898870,
   },
   {
     epoch: 1680739200,
@@ -92,13 +95,19 @@ async function bootstrap() {
     console.log('Listening on: ' + port);
   });
 
-  const epoch = 1678320000;
-  // await populateBaseDataForEpoch(epoch);
-  setUserGaugeClaimAmounts(epoch);
-  //generateMerkleTreeForBribes(epoch);
-  // await doNewEpochBribeSnapshot();
+  const epoch = epochs[6];
+  console.log(`
+  Generating for epoch:
+  epoch:  ${epoch.epoch}
+  date:   ${epoch.date}`);
+  // await populateBaseDataForEpoch(epoch.epoch);
+  // await backendPostBribeClaims(epoch.epoch);
+  // doBriberTokenDistribution(epoch.epoch);
+  // getTokenDistributionAmounts(epoch.epoch);
 
-  // for (const epoch of epochs.slice(6)) {
+  // The epoch here is to find bribes added that week
+  // But the actual epochStartTime in db will be the following epoch time
+  // for (const epoch of epochs) {
   //   if (epoch.blockNumber > 0) {
   //     await gqlService.sdk.SyncEpochBribes({
   //       epoch: epoch.epoch,
@@ -108,11 +117,6 @@ async function bootstrap() {
 
   // jobScheduler.init();
 
-  // const date = new Date('2023-03-16');
-  // const epochStartTime = moment(date).utc().unix();
-  // const epochDir = getEpochDir(epochStartTime);
-
-  // await runEpochSnapshot(epochStartTime);
   // await fixUserShit()
 }
 
@@ -228,7 +232,7 @@ async function fixUserShit() {
   // console.log(claims.length);
   // const userData: any[] = fs.readJSONSync(join(process.cwd(), `${user}.json`));
 
-  const multi = getMulticall([
+  const multi = getMulticaller([
     `function isClaimed(
        address token,
        address briber,
@@ -397,7 +401,7 @@ async function getBriberRemainingBalances(epochDir: string) {
   console.log(bribers);
   console.log(tokens);
 
-  const multi = getMulticall([
+  const multi = getMulticaller([
     `
   function getRemainingBalance(
     address token,
