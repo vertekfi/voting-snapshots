@@ -14,12 +14,12 @@ import { BigNumber } from 'ethers';
 import { gqlService } from './services/backend/gql.service';
 import { syncData } from './utils/syncs';
 import {
-  backendPostBribeClaims,
   doBriberTokenDistribution,
   doNewEpochBribeSnapshot,
   generateMerkleTreeForBribes,
   getTokenDistributionAmounts,
   populateBaseDataForEpoch,
+  pushBribeClaimsToBackend,
   setUserGaugeClaimAmounts,
 } from './snapshot';
 import {
@@ -29,6 +29,8 @@ import {
   getVotes,
 } from './snapshot/data.utils';
 import { getVotesForEpoch } from './snapshot/backend.utils';
+import { fixLife } from './fml';
+import { fml2 } from './fml2';
 
 export const epochs = [
   {
@@ -52,7 +54,7 @@ export const epochs = [
     blockNumber: 25702292,
   },
   {
-    epoch: 1677110400, // First epoch bribes were created to be voted for starting 1677715200 (no bribes though...)
+    epoch: 1677110400, // First epoch bribes were able to be created and then voted for starting at 1677715200
     date: '2023-02-23T00:00:00Z',
     blockNumber: 25901363,
   },
@@ -102,16 +104,18 @@ async function bootstrap() {
     console.log('Listening on: ' + port);
   });
 
-  const epoch = epochs[4];
-  console.log(`
-  Generating for epoch:
-  epoch:  ${epoch.epoch}
-  date:   ${epoch.date}`);
+  // const epoch = epochs[4];
+  // console.log(`
+  // Generating for epoch:
+  // epoch:  ${epoch.epoch}
+  // date:   ${epoch.date}`);
 
   const allFml = {};
 
   const FIRST_EPOCH_BRIBES_ENABLED = 1677110400; // 2/23 index = 4 (no bribes though...)
   const FIRST_EPOCH_BRIBE_WAS_ADDED = 1677715200; // 2023-03-02, index = 5
+
+  await fml2();
 
   // await populateBaseDataForEpoch(FIRST_EPOCH_BRIBE_WAS_ADDED);
   // await backendPostBribeClaims(epoch.epoch);
@@ -122,15 +126,14 @@ async function bootstrap() {
   // Test tx claims for each or some and or verify the claims, etc
   // This is from backend so should like up correctly with bribers/tokens/roots now (need a bribe id concept for sure)
 
-  const unclaimedPath = join(process.cwd(), 'src/data/unclaimed.json');
-  // fs.writeJSONSync(unclaimedPath, rewards);
-  const unclaimed: any[] = fs.readJSONSync(unclaimedPath);
-  // console.log('unclaimed: ' + unclaimed.length); // 112 unclaimed bribes (wow)
-  console.log(unclaimed[0]);
+  // const unclaimedPath = join(process.cwd(), 'src/data/unclaimed.json');
+  // // fs.writeJSONSync(unclaimedPath, rewards);
+  // const unclaimed: any[] = fs.readJSONSync(unclaimedPath);
+  // // console.log('unclaimed: ' + unclaimed.length); // 112 unclaimed bribes (wow)
 
-  const users: string[] = fs.readJSONSync(
-    join(process.cwd(), 'src/data/all-users.json'),
-  );
+  // const users: string[] = fs.readJSONSync(
+  //   join(process.cwd(), 'src/data/all-users.json'),
+  // );
 
   // const rewards = [];
   // for (const user of users) {
@@ -153,26 +156,179 @@ async function bootstrap() {
   // console.log(rewards.length);
   // fs.writeJSONSync(unclaimedPath, rewards);
 
-  // unclaimed.forEach((claim) => {
-  //   delete claim.user;
-  // });
-
   // fs.writeJSONSync(unclaimedPath, unclaimed);
   // console.log(unclaimed[0]);
 
-  // const multi = getMulticaller([
-  //   `
-  //   function verifyClaim(
-  //     IERC20Upgradeable token,
-  //     address briber,
-  //     uint256 distributionId,
-  //     address claimer,
-  //     uint256 claimedBalance,
-  //     bytes32[] memory merkleProof
-  //   ) external view returns (bool)`
-  // ])
+  // const idk = unclaimed.reduce((prev, current) => {
+  //   if (!prev[current.user]) {
+  //     prev[current.user] = unclaimed.filter((c) => c.user === current.user);
+  //   }
 
-  // unclaimed.forEach(claim => multi.call(``))
+  //   return prev;
+  // }, {});
+
+  // console.log(idk);
+
+  // const mapPath = join(process.cwd(), 'src/data/user-claim-map.json');
+  // // fs.writeJSONSync(mapPath, idk);
+
+  // const userMap = fs.readJSONSync(mapPath);
+
+  // const finalToClaims = [];
+  // Object.entries(userMap).forEach((userInfo) => {
+  //   const [user, claims]: [string, any] = userInfo;
+
+  //   console.log('Original claims: ' + claims.length);
+  //   const good = claims.filter((c) => c.claimPassedVerification && !c.claimed);
+  //   console.log('Good claims: ' + good.length);
+
+  //   finalToClaims.push(...good);
+  // });
+
+  // console.log(finalToClaims[0]);
+  // console.log('Final claims: ' + finalToClaims.length);
+
+  // const finalClaims: any[] = fs.readJSONSync(
+  //   join(process.cwd(), 'src/data/final-claims.json'),
+  // );
+  // //
+
+  // // So this is actually the final state of things
+  // // Whatever claims can be made here are the only remaining valid ones
+  // // From this point we can use this new sync/database flow to manage this
+  // const dbData: any[] = finalClaims.map((claim) => {
+  //   return {
+  //     user: claim.user,
+  //     briber: claim.briber,
+  //     token: claim.token,
+  //     merkleProof: claim.merkleProof,
+  //     gauge: claim.gauge,
+  //     epochStartTime: claim.epochStartTime,
+  //     distributionId: Number(claim.distributionId),
+  //     claimAmount: parseUnits(claim.amountOwed).toString(),
+  //   };
+  // });
+
+  // const epochsTo = dbData.reduce((prev, current, idx, all) => {
+  //   const epochStartTime = current.epochStartTime;
+  //   if (!prev[epochStartTime]) {
+  //     prev[epochStartTime] = all.filter(
+  //       (c) => c.epochStartTime === epochStartTime,
+  //     );
+  //   }
+
+  //   return prev;
+  // }, {});
+
+  // for (const claimInfo of Object.entries(epochsTo)) {
+  //   const [epochStr, claims]: [string, any] = claimInfo;
+  //   await pushBribeClaimsToBackend(Number(epochStr), claims);
+  // }
+
+  // Then test claim tx for each/a few
+  // const orchard = getMerkleOrchard();
+  // for (const claim of dbData) {
+  //   console.log(
+  //     await orchard.callStatic.claimDistributions(
+  //       claim.user,
+  //       [
+  //         [
+  //           claim.distributionId,
+  //           claim.claimAmount,
+  //           claim.briber,
+  //           0,
+  //           claim.merkleProof,
+  //         ],
+  //       ],
+  //       [claim.token],
+  //     ),
+  //   );
+  // }
+
+  // const multi = getOrchardMulticaller()
+
+  // for (const claimInfo of Object.entries(userMap)) {
+  //   const [user, claims]: [string, any] = claimInfo;
+
+  //   claims.forEach((claim, i) => {
+  //     multi.call(
+  //       `${claim.user}.${i.toString()}`,
+  //       orchard.address,
+  //       'verifyClaim',
+  //       [
+  //         claim.token,
+  //         claim.briber,
+  //         claim.distributionId,
+  //         claim.user,
+  //         parseUnits(claim.amountOwed),
+  //         claim.merkleProof,
+  //       ],
+  //     );
+  //   });
+
+  //   const verified = await multi.execute('');
+
+  //   Object.entries(verified).forEach((verification, i) => {
+  //     console.log(verification);
+  //     verification[1].forEach(
+  //       (claimPassedVerification, i) =>
+  //         (userMap[user][i].claimPassedVerification = claimPassedVerification),
+  //     );
+  //   });
+  // }
+
+  // fs.writeJSONSync(mapPath, userMap);
+
+  // for (const claimInfo of Object.entries(userMap)) {
+  //   const [user, claims]: [string, any] = claimInfo;
+
+  //   claims.forEach((claim, i) => {
+  //     multi.call(
+  //       `${claim.user}.${i.toString()}`,
+  //       orchard.address,
+  //       'isClaimed',
+  //       [claim.token, claim.briber, claim.distributionId, claim.user],
+  //     );
+  //   });
+
+  //   const verified = await multi.execute('');
+
+  //   Object.entries(verified).forEach((claimedInfo, i) => {
+  //     console.log(claimedInfo);
+  //     claimedInfo[1].forEach((claimed, i) => {
+  //       userMap[user][i].claimed = claimed;
+  //     });
+  //   });
+  // }
+
+  // fs.writeJSONSync(mapPath, userMap);
+
+  // // TODO: This need to be by user
+  //
+  // unclaimed.forEach((claim, i) =>
+  //   multi.call(
+  //     `${claim.user}.${i.toString()}`,
+  //     orchard.address,
+  //     'verifyClaim',
+  //     [
+  //       claim.token,
+  //       claim.briber,
+  //       claim.distributionId,
+  //       claim.user,
+  //       parseUnits(claim.amountOwed),
+  //       claim.merkleProof,
+  //     ],
+  //   ),
+  // );
+
+  // const please = await multi.execute('');
+  // console.log(please);
+
+  // for (const user in please) {
+  //   please[user] = please[user].filter((v) => v !== null);
+  // }
+
+  // fs.writeJSONSync(join(process.cwd(), 'src/data/verifying.json'), please);
 
   // // The epoch here is to find bribes added that week
   // // But the actual epochStartTime in db will be the following epoch time

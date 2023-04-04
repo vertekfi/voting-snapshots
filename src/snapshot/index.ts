@@ -13,7 +13,6 @@ import {
   getGaugeVotes,
   getUserAddressList,
   getVotes,
-  resetClaims,
   resetMerkleTrees,
   setAllClaims,
   setBribes,
@@ -49,6 +48,7 @@ import {
 } from 'src/utils/contract.utils';
 import { doTransaction } from 'src/utils/web3.utils';
 import { approveTokensIfNeeded } from 'src/utils/token.utils';
+import { AddUserBribeClaimInput } from 'src/services/backend/generated/vertek-subgraph-types';
 
 export async function prepForSnapshot() {
   // Remove any concerns about automation timing across services
@@ -112,6 +112,28 @@ export async function populateBaseDataForEpoch(epoch: number) {
   // Now that we have balances, we can do the reward amount generation per user, per gauge/bribe/token
   setUserGaugeClaimAmounts(epoch);
   // await doBriberTokenDistribution(epoch);
+  // await pushBribeClaimsToBackend(epoch)
+}
+
+export async function pushBribeClaimsToBackend(
+  epoch: number,
+  claims: AddUserBribeClaimInput[],
+) {
+  const chunks = chunk(claims, 25);
+
+  for (const data of chunks) {
+    try {
+      const result = await gqlService.sdk.AddBribeClaims({
+        epoch,
+        claims: data,
+        startOfStream: true,
+      });
+
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 export function getTokenDistributionAmounts(epoch: number) {
@@ -131,10 +153,6 @@ export function getTokenDistributionAmounts(epoch: number) {
   });
 
   setEpochTokenAmounts(epoch, totalTokenAmounts);
-}
-
-export async function doSingleBribeDistribution(epoch: number) {
-  // Just a single bribe/token combo
 }
 
 // Regardless of who voted or what gauge. Contract side, a distribution
@@ -192,24 +210,7 @@ export async function doBriberTokenDistribution(epoch: number) {
 }
 
 export function joinClaimsToDistributions(epoch: number) {
-  //
-}
-
-export async function backendPostBribeClaims(epoch: number) {
-  const claims = getAllClaims(epoch);
-  const chunks = chunk(claims, 25);
-
-  for (const data of chunks) {
-    try {
-      await gqlService.sdk.AddBribeClaims({
-        epoch,
-        claims: data,
-        startOfStream: true,
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  // TODO: For next epoch
 }
 
 export function setUserGaugeClaimAmounts(epoch: number) {
@@ -300,7 +301,9 @@ export function attachUserProofs(users: any[], tree: StandardMerkleTree<any>) {
     value[value.length - 1] = String(value[value.length - 1]);
 
     const address = value[0];
-    const user = users.find((u) => u.user === address);
+    const user = users.find((u) =>
+      u.userAddress ? u.userAddress === address : u.user === address,
+    );
     if (!user) {
       throw new Error(`User ${address} not found in tree`);
     }
@@ -311,13 +314,14 @@ export function attachUserProofs(users: any[], tree: StandardMerkleTree<any>) {
     } else {
       // console.log('Proof length: ' + user.merkleProof.length);
     }
+
     user.claimAmount = value[1];
   }
 
   return users;
 }
 
-function getUsersBribeClaims(bribe, votersMergedWithVeInfo: any[]) {
+export function getUsersBribeClaims(bribe, votersMergedWithVeInfo: any[]) {
   // Need the relative weight of just these users who voted for this gauge
   const totalVeWeightForGauge = getUsersAdjustedTotalWeight(
     votersMergedWithVeInfo,

@@ -1,0 +1,104 @@
+[
+  {
+    "token": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "amount": 2079.8568203853497,
+    "merkleRoot": "0x3760d9162086dafbfcb3a2ff19afce6ba32c2dad3ca49fd3fc219fdbe74a62ad"
+  },
+  {
+    "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "amount": 2921.4132207401994,
+    "merkleRoot": "0x5226221f7490bd9085ceb945e3099ae69698eb8d22fee18043865a4f769d52ea"
+  },
+  {
+    "token": "0xfa4b16b0f63f5a6d0651592620d585d308f749a4",
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "amount": 76.16317119587099,
+    "merkleRoot": "0x379caf52beffc13a6a341c77048b8f0ff7819afa40a4002595db743a9978e436"
+  },
+  {
+    "token": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "amount": 428.23064867,
+    "merkleRoot": "0x5f9164c0ba99921ba7d9c8d204bd47d3b2ae35bf5aac170e08485b7afdcf44d2"
+  },
+  {
+    "token": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "amount": 0.79712525132,
+    "merkleRoot": "0x41f405553445a4b4276a073d3ef2c5180eeae33c75b73da320bc22717f68b85a"
+  },
+  {
+    "token": "0x90c97f71e18723b0cf0dfa30ee176ab653e89f40",
+    "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+    "amount": 0.6446776180389999,
+    "merkleRoot": "0x13047666a21cbfa3d7eb51d1be048a599e7bcfc3abc6537610bbd847c521ab8a"
+  },
+  {
+    "token": "0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "amount": 312.14559629999997,
+    "merkleRoot": "0x0da718a22af53db08969283a2fec56e23856e2ef14af9c365f4e6751a52b039a"
+  },
+  {
+    "token": "0xd50c729cebb64604b99e1243a54e840527360581",
+    "briber": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+    "amount": 41.73719766,
+    "merkleRoot": "0xe497add37787b77fc5d1016465b619e1459846d3733e090d96f4fafaf689d2d8"
+  },
+  {
+    "token": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+    "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "amount": 0.34732450908,
+    "merkleRoot": "0x27b5f72e17dba33b69e6f986b74de475de088d4bc1adece42528bbcdf94a715b"
+  },
+  {
+    "token": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+    "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "amount": 0.34732450908,
+    "merkleRoot": "0x27b5f72e17dba33b69e6f986b74de475de088d4bc1adece42528bbcdf94a715b"
+  },
+  {
+    "token": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+    "briber": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+    "amount": 0.000017422345,
+    "merkleRoot": "0xc497c53577bc00b53c7b09ff6b4c90bd9f2bb2fe050fa18587871a756b86c47e"
+  },
+  {
+    "token": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+    "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+    "amount": 0.06925604197,
+    "merkleRoot": "0xccf745f8da5e4805b854177bb57b922a6ee5c2f6951c83b59171cc75a24d2106"
+  },
+  {
+    "token": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+    "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+    "amount": 0.000001277638,
+    "merkleRoot": "0x5228cb91021eb613b2989bdd58b18f6d8f1992fa11dadcc10048394b8bdca957"
+  },
+  {
+    "token": "0x55d398326f99059ff775485246999027b3197955",
+    "briber": "0xaBcD018b36EA7A16fdB177F85988E156182046Ca",
+    "amount": 0.06895932357000001,
+    "merkleRoot": "0x1f4a99d79b1915ee14c03d0164645c3d7631f72322846b544ab7855985fefcc3"
+  },
+  {
+    "token": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+    "briber": "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E",
+    "amount": 0.002014930284,
+    "merkleRoot": "0x1f9e2a61350ef6aa98e93dc70375bdde6f1a9a31e54dd704817bededfdeb411d"
+  },
+  {
+    "token": "0xc91324601b20ea0e238b63c9fafca18d32600722",
+    "briber": "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E",
+    "amount": 0.006993264374999999,
+    "merkleRoot": "0x65a4802852ac973b69d46b06a848c2745f8fa5c95e9d7976466214d7ec4251a5"
+  },
+  {
+    "token": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+    "briber": "0x1555D126e096A296A5870A566db224FD9Cf72f03",
+    "amount": 1564.892220577,
+    "merkleRoot": "0xf055e00e5cbab17e56e3a536549585ebcc59a0ce6f09db0f537199ed3deee2fc"
+  }
+]

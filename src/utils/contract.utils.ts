@@ -22,6 +22,32 @@ export function getMulticaller(abi: string | Array<string>) {
   );
 }
 
+export function getOrchardMulticaller() {
+  return getMulticaller([
+    `
+  function verifyClaim(
+    address token,
+    address briber,
+    uint256 distributionId,
+    address claimer,
+    uint256 claimedBalance,
+    bytes32[] memory merkleProof
+  ) external view returns (bool)`,
+    `
+  function isClaimed(
+    address token,
+    address briber,
+    uint256 distributionId,
+    address claimer
+  ) public view returns (bool)`,
+    `
+  function getRemainingBalance(
+    address token,
+    address briber
+  ) external view returns (uint256)`,
+  ]);
+}
+
 export function getVertekAdminActions() {
   return new Contract(
     getContractAddress('VertekAdminActions'),

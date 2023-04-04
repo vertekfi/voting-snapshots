@@ -1,1 +1,72 @@
-{"gauge":"0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f","bribes":[{"id":481,"briber":"0x59b596e080295F83d67431746f3Eabd70D8A3236","gauge":"0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f","amount":"200.0","epochStartTime":1678320000,"valueUSD":51.592243780270884,"epochWeekLabel":"2023-03-09T00:00:00Z 2023-03-16T00:00:00Z","token":{"address":"0xed236c32f695c83efde232c288701d6f9c23e60e","symbol":"VRTK","logoURI":"https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"},"merkleRoot":"0x4c67b9e8f030a6cc0c21e7d974be4c56d1ff77ce54887d7ed5d927bc8c0074ee"},{"id":488,"briber":"0x59b596e080295F83d67431746f3Eabd70D8A3236","gauge":"0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f","amount":"1600.0","epochStartTime":1678320000,"valueUSD":24.55527457113472,"epochWeekLabel":"2023-03-09T00:00:00Z 2023-03-16T00:00:00Z","token":{"address":"0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da","symbol":"wAALTO","logoURI":"https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"},"merkleRoot":"0x62afb6951095b9ab3ba38c6347d7f97ebbb0b859304b5740a333d75002836fb3"},{"id":500,"briber":"0x59b596e080295F83d67431746f3Eabd70D8A3236","gauge":"0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f","amount":"20.0","epochStartTime":1678320000,"valueUSD":20.04,"epochWeekLabel":"2023-03-09T00:00:00Z 2023-03-16T00:00:00Z","token":{"address":"0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d","symbol":"USDC","logoURI":"https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png?1547042389"},"merkleRoot":"0xdbfec34946a68fd5d693fe4d780a0b999466690cc0c933f2e7171886479da47c"}],"userVotes":[{"user":"0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b","gauge":"0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f","weightUsed":1500},{"user":"0xB6355c2eac24bc6858ED594409E473902409D71F","gauge":"0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f","weightUsed":2500},{"user":"0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51","gauge":"0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f","weightUsed":1400},{"user":"0x73CbDF131364A3b8dc6110a6037ABA1F868167Ee","gauge":"0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f","weightUsed":1500}]}
+{
+  "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+  "bribes": [
+    {
+      "id": 481,
+      "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+      "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+      "amount": "200.0",
+      "epochStartTime": 1678320000,
+      "valueUSD": 51.592243780270884,
+      "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+      "token": {
+        "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+        "symbol": "VRTK",
+        "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+      },
+      "merkleRoot": "0x4c67b9e8f030a6cc0c21e7d974be4c56d1ff77ce54887d7ed5d927bc8c0074ee"
+    },
+    {
+      "id": 488,
+      "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+      "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+      "amount": "1600.0",
+      "epochStartTime": 1678320000,
+      "valueUSD": 24.55527457113472,
+      "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+      "token": {
+        "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+        "symbol": "wAALTO",
+        "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+      },
+      "merkleRoot": "0x62afb6951095b9ab3ba38c6347d7f97ebbb0b859304b5740a333d75002836fb3"
+    },
+    {
+      "id": 500,
+      "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+      "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+      "amount": "20.0",
+      "epochStartTime": 1678320000,
+      "valueUSD": 20.04,
+      "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+      "token": {
+        "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "symbol": "USDC",
+        "logoURI": "https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png?1547042389"
+      },
+      "merkleRoot": "0xdbfec34946a68fd5d693fe4d780a0b999466690cc0c933f2e7171886479da47c"
+    }
+  ],
+  "userVotes": [
+    {
+      "user": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+      "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+      "weightUsed": 1500
+    },
+    {
+      "user": "0xB6355c2eac24bc6858ED594409E473902409D71F",
+      "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+      "weightUsed": 2500
+    },
+    {
+      "user": "0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51",
+      "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+      "weightUsed": 1400
+    },
+    {
+      "user": "0x73CbDF131364A3b8dc6110a6037ABA1F868167Ee",
+      "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+      "weightUsed": 1500
+    }
+  ]
+}

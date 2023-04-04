@@ -1,0 +1,146 @@
+{
+  "briberAmountsOwed": {
+    "0x59b596e080295F83d67431746f3Eabd70D8A3236": {
+      "0xed236c32f695c83efde232c288701d6f9c23e60e": {
+        "amountOwed": 2098.5103794613497,
+        "remainingBalance": 13408.58353607523,
+        "insufficientBalance": false
+      },
+      "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da": {
+        "amountOwed": 3066.9109815329994,
+        "remainingBalance": 4090.8135968751,
+        "insufficientBalance": false
+      },
+      "0xfa4b16b0f63f5a6d0651592620d585d308f749a4": {
+        "amountOwed": 76.16317119587099,
+        "remainingBalance": 89.314125966579,
+        "insufficientBalance": false
+      },
+      "0xb9e05b4c168b56f73940980ae6ef366354357009": {
+        "amountOwed": 428.23064867,
+        "remainingBalance": 462.60439224,
+        "insufficientBalance": false
+      },
+      "0xe9e7cea3dedca5984780bafc599bd69add087d56": {
+        "amountOwed": 2.66248115892,
+        "remainingBalance": 2.79712525138,
+        "insufficientBalance": false
+      },
+      "0x90c97f71e18723b0cf0dfa30ee176ab653e89f40": {
+        "amountOwed": 0.6446776180389999,
+        "remainingBalance": 0.644677618048,
+        "insufficientBalance": false
+      }
+    },
+    "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422": {
+      "0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca": {
+        "amountOwed": 312.14559629999997,
+        "remainingBalance": 329.33246809,
+        "insufficientBalance": false
+      },
+      "0xd50c729cebb64604b99e1243a54e840527360581": {
+        "amountOwed": 41.73719766,
+        "remainingBalance": 44.0287806,
+        "insufficientBalance": false
+      }
+    },
+    "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b": {
+      "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3": {
+        "amountOwed": 0.34732450908,
+        "remainingBalance": 20.3473245091,
+        "insufficientBalance": false
+      },
+      "0x14016e85a25aeb13065688cafb43044c2ef86784": {
+        "amountOwed": 0.34732450908,
+        "remainingBalance": 20.3473245091,
+        "insufficientBalance": false
+      },
+      "0x2170ed0880ac9a755fd29b2688956bd959f933f8": {
+        "amountOwed": 0.000017422345,
+        "remainingBalance": 0.000017422345,
+        "insufficientBalance": false
+      }
+    },
+    "0xaBcD018b36EA7A16fdB177F85988E156182046Ca": {
+      "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d": {
+        "amountOwed": 0.06925604197,
+        "remainingBalance": 0.069256042,
+        "insufficientBalance": false
+      },
+      "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c": {
+        "amountOwed": 0.000001277638,
+        "remainingBalance": 0.000001277638,
+        "insufficientBalance": false
+      },
+      "0x55d398326f99059ff775485246999027b3197955": {
+        "amountOwed": 0.06895932357000001,
+        "remainingBalance": 0.06895932358,
+        "insufficientBalance": false
+      }
+    },
+    "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E": {
+      "0x2170ed0880ac9a755fd29b2688956bd959f933f8": {
+        "amountOwed": 0.002014930284,
+        "remainingBalance": 0.002014930284,
+        "insufficientBalance": false
+      },
+      "0xc91324601b20ea0e238b63c9fafca18d32600722": {
+        "amountOwed": 0.006993264374999999,
+        "remainingBalance": 0.006993264376,
+        "insufficientBalance": false
+      }
+    },
+    "0x1555D126e096A296A5870A566db224FD9Cf72f03": {
+      "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da": {
+        "amountOwed": 1564.892220577,
+        "remainingBalance": 2177.7499448298,
+        "insufficientBalance": false
+      }
+    }
+  },
+  "totalTokenAmountsOwed": {
+    "0xed236c32f695c83efde232c288701d6f9c23e60e": {
+      "amountOwed": 2098.5103794613497
+    },
+    "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da": {
+      "amountOwed": 4631.80320211
+    },
+    "0xfa4b16b0f63f5a6d0651592620d585d308f749a4": {
+      "amountOwed": 76.16317119587099
+    },
+    "0xb9e05b4c168b56f73940980ae6ef366354357009": {
+      "amountOwed": 428.23064867
+    },
+    "0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca": {
+      "amountOwed": 312.14559629999997
+    },
+    "0xd50c729cebb64604b99e1243a54e840527360581": { "amountOwed": 41.73719766 },
+    "0xe9e7cea3dedca5984780bafc599bd69add087d56": {
+      "amountOwed": 2.66248115892
+    },
+    "0x90c97f71e18723b0cf0dfa30ee176ab653e89f40": {
+      "amountOwed": 0.6446776180389999
+    },
+    "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3": {
+      "amountOwed": 0.34732450908
+    },
+    "0x14016e85a25aeb13065688cafb43044c2ef86784": {
+      "amountOwed": 0.34732450908
+    },
+    "0x2170ed0880ac9a755fd29b2688956bd959f933f8": {
+      "amountOwed": 0.002032352629
+    },
+    "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d": {
+      "amountOwed": 0.06925604197
+    },
+    "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c": {
+      "amountOwed": 0.000001277638
+    },
+    "0x55d398326f99059ff775485246999027b3197955": {
+      "amountOwed": 0.06895932357000001
+    },
+    "0xc91324601b20ea0e238b63c9fafca18d32600722": {
+      "amountOwed": 0.006993264374999999
+    }
+  }
+}

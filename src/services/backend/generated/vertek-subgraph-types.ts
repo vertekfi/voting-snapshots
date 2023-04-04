@@ -31,6 +31,7 @@ export type Scalars = {
 export type AddUserBribeClaimInput = {
   briber: Scalars['String'];
   claimAmount: Scalars['String'];
+  distributionId?: InputMaybe<Scalars['Int']>;
   epochStartTime: Scalars['Int'];
   gauge: Scalars['String'];
   merkleProof: Array<Scalars['String']>;
@@ -90,9 +91,11 @@ export type GaugeBribeDistribution = {
 
 export type GaugeBribeInfo = {
   __typename?: 'GaugeBribeInfo';
+  bribes: Array<Maybe<GaugeBribeRaw>>;
   currentEpochBribes: Array<Maybe<GaugeBribe>>;
   gauge: LiquidityGauge;
   nextEpochBribes: Array<Maybe<GaugeBribe>>;
+  votes: Array<Maybe<GaugeVoteRaw>>;
 };
 
 export type GaugeBribeRaw = {
@@ -101,6 +104,7 @@ export type GaugeBribeRaw = {
   briber: Scalars['String'];
   epochStartTime: Scalars['Int'];
   gauge: Scalars['String'];
+  id: Scalars['Int'];
   token: Scalars['String'];
   txHash: Scalars['String'];
 };
@@ -174,6 +178,7 @@ export type GaugeVoteRaw = {
   blockNumber: Scalars['Int'];
   epochStartTime: Scalars['Int'];
   gaugeId: Scalars['String'];
+  id: Scalars['Int'];
   txHash: Scalars['String'];
   userAddress: Scalars['String'];
   weightUsed: Scalars['Int'];
@@ -1479,7 +1484,7 @@ export type Query = {
   getBribesForEpoch: Array<Maybe<GaugeBribeRaw>>;
   getCurrentGaugesEpoch: GaugeEpoch;
   getDistributions: Array<Maybe<GaugeBribeDistribution>>;
-  getEpochBribesForGauge: Array<Maybe<GaugeBribe>>;
+  getEpochBribesForGauge: GaugeBribeInfo;
   getGaugeEpochs: Array<Maybe<GaugeEpoch>>;
   getGaugeVotes: GaugeVoteResult;
   getLastBribeSyncInfo: GaugeVoteSyncInfo;
@@ -2023,22 +2028,25 @@ export type GetEpochBribesForGaugeQueryVariables = Exact<{
 
 export type GetEpochBribesForGaugeQuery = {
   __typename?: 'Query';
-  getEpochBribesForGauge: Array<{
-    __typename?: 'GaugeBribe';
-    id: number;
-    briber: string;
-    gauge: string;
-    amount: string;
-    epochStartTime: number;
-    valueUSD: number;
-    epochWeekLabel: string;
-    token: {
-      __typename?: 'GqlToken';
-      address: string;
-      symbol: string;
-      logoURI?: string | null;
-    };
-  } | null>;
+  getEpochBribesForGauge: {
+    __typename?: 'GaugeBribeInfo';
+    bribes: Array<{
+      __typename?: 'GaugeBribeRaw';
+      id: number;
+      token: string;
+      briber: string;
+      amount: string;
+      epochStartTime: number;
+      gauge: string;
+    } | null>;
+    votes: Array<{
+      __typename?: 'GaugeVoteRaw';
+      userAddress: string;
+      weightUsed: number;
+      epochStartTime: number;
+      gaugeId: string;
+    } | null>;
+  };
 };
 
 export type GetLastVoteSyncInfoQueryVariables = Exact<{ [key: string]: never }>;
@@ -2301,10 +2309,22 @@ export const GetBribesInfoDocument = gql`
 export const GetEpochBribesForGaugeDocument = gql`
   query GetEpochBribesForGauge($epoch: Int!, $gauge: String!) {
     getEpochBribesForGauge(epoch: $epoch, gauge: $gauge) {
-      ...GaugeBribeFragment
+      bribes {
+        id
+        token
+        briber
+        amount
+        epochStartTime
+        gauge
+      }
+      votes {
+        userAddress
+        weightUsed
+        epochStartTime
+        gaugeId
+      }
     }
   }
-  ${GaugeBribeFragmentFragmentDoc}
 `;
 export const GetLastVoteSyncInfoDocument = gql`
   query GetLastVoteSyncInfo {

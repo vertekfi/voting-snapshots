@@ -48,12 +48,6 @@ export function getUsersAdjustedTotalWeight(users: any[]) {
     );
   });
 
-  // Need a second run to get user % based on the scaled total now
-  // users.forEach((user) => {
-  //   const userTotalWeightPercentAdjusted = user.gaugeAdjustedVePercent / totalWeightScaled
-  //   console.log(`userTotalWeightPercentAdjusted: ${userTotalWeightPercentAdjusted}`)
-  // });
-
   return {
     totalWeightScaled,
     users,
@@ -100,12 +94,6 @@ export function checkUserAmountForToken(users: any[], tokenAmount: number) {
   let totalVePercent = 0;
   let totalWeightUsed = 0;
 
-  // Ok this seems to work
-  // But how to with scaling considered
-  // -> total weight should use real total weight. But then users amounts are based on scaled weight
-  // That way some % of larger % owners possibly shifts towards lawer % owner
-  // Wont get us to full token amount though?...
-
   let totalReducedWeight = 0;
 
   users.forEach((user) => {
@@ -120,18 +108,12 @@ export function checkUserAmountForToken(users: any[], tokenAmount: number) {
     totalReducedWeight += 0;
   });
 
-  totalVePercent = Number(totalVePercent.toFixed(6)); // TODO: USE THIS This keeps an even (100, 100.27, 0.00023455) under bounds
+  totalVePercent = Number(totalVePercent.toFixed(6));
 
   let totalOwed = 0;
   let unscaledTotal = 0;
 
   users.forEach((user) => {
-    // userGaugeRelativeWeight = Number(
-    //   (userWeightBasis / totalVoteUsersWeightForGauge).toFixed(4),
-    // );
-
-    // Try something using the token amount as a different factor or base..?
-
     user.userGaugeRelativeWeight = Number(
       (user.percentOfTotalVE / totalVePercent).toFixed(8),
     );
@@ -141,7 +123,6 @@ export function checkUserAmountForToken(users: any[], tokenAmount: number) {
     );
 
     // Give them proportional weight towards rewards
-    // TODO: This can be calculated once and then applied to all token amounts..
     const userWeightBasis = Number(
       ((user.weightUsed / 10000) * user.userGaugeRelativeWeight).toFixed(8),
     );
@@ -167,23 +148,6 @@ export function checkUserAmountForToken(users: any[], tokenAmount: number) {
     console.log('totalOwed: ' + totalOwed);
     console.log('unscaledTotal: ' + unscaledTotal);
   }
-
-  users.forEach((user, i) => {
-    if (users.length === 4) {
-      console.log(`
-      `);
-
-      console.log(
-        `userRelativeAmount (${i}) unscaled: ${user.userRelativeAmount}`,
-      );
-      console.log(
-        `userRelativeAmountScaled (${i}) : ${user.userRelativeAmountScaled}`,
-      );
-      console.log(
-        `userGaugeRelativeWeight (${i}) : ${user.userGaugeRelativeWeight}`,
-      );
-    }
-  });
 }
 
 export function getUserClaimAmount(
@@ -206,17 +170,11 @@ export function getUserClaimAmount(
     totalRewardAmountForToken * userGaugeRelativeWeight
   ).toFixed(10);
 
-  // if (userRelativeAmount.length > 12) {
-  //   userRelativeAmount = userRelativeAmount.slice(0, 13);
-  // }
-
   if (userRelativeAmount.includes('e')) {
     userRelativeAmount = eToNumber(userRelativeAmount);
     // Error check
     parseUnits(userRelativeAmount);
   }
-
-  // console.log(`${totalVoteUsersWeightForGauge}`);
 
   return userRelativeAmount;
 }
@@ -248,9 +206,14 @@ export function getUsersMergedWithBalances(epoch: number, users: any[]) {
   const userBalances = getUserBalances(epoch);
 
   const votersMergedWithVeInfo = users.map((user) => {
-    const balance = userBalances.find((u) => u.user === user.user);
+    const balance = userBalances.find((u) => {
+      return user.userAddress
+        ? u.user === user.userAddress
+        : u.user === user.user;
+    });
 
     if (!balance) {
+      console.log(user);
       throw new Error(`User balance missing`);
     }
 

@@ -109,7 +109,21 @@ query GetBribesInfo($filter: GetBribesInput!) {
 
 query GetEpochBribesForGauge($epoch: Int!, $gauge: String!) {
   getEpochBribesForGauge(epoch: $epoch, gauge: $gauge) {
-    ...GaugeBribeFragment
+    bribes {
+      id
+      token
+      briber
+      amount
+      epochStartTime
+      gauge
+    }
+
+    votes {
+      userAddress
+      weightUsed
+      epochStartTime
+      gaugeId
+    }
   }
 }
 

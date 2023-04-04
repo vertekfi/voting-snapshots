@@ -1,0 +1,2931 @@
+{
+  "1677715200": {
+    "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e": {
+      "bribes": [
+        {
+          "id": 555,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "amount": "500.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 123.7082658450684,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0x8104c8569af5de9749400c7e836b1eac4a777fd62838377ac63cf4882da5dd46"
+        },
+        {
+          "id": 562,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "amount": "1000.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 15.33639585098993,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0x3e3e17456d9cd572cf8b36b280b088e48d3cdfb99b9ee882a46107c26f7fb53a"
+        },
+        {
+          "id": 567,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "amount": "25.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 13.80754004866493,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xfa4b16b0f63f5a6d0651592620d585d308f749a4",
+            "symbol": "ASHARE",
+            "logoURI": "https://assets.coingecko.com/coins/images/23974/small/ashare.png?1645871503"
+          },
+          "merkleRoot": "0xd6248d2e5ae6e2b1fe9d4c36585604cfdbb731d5e5cfe703ed88373eca1da5df"
+        },
+        {
+          "id": 576,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "amount": "300.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 9.650217786768733,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+            "symbol": "AMES",
+            "logoURI": "https://assets.coingecko.com/coins/images/23973/small/ames.png?1645871205"
+          },
+          "merkleRoot": "0xbbfc681d2225ebdddc19cf642dd2362fc198d10cdc3b1b37e22baee639c9ed47"
+        },
+        {
+          "id": 582,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "amount": "100.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 12.025490591039931,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca",
+            "symbol": "LSHARE",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/89dd62ce4acba1b55d908bf08d42e7ef00ef160a/images/roaring_lion_share.png?raw=true"
+          },
+          "merkleRoot": "0x03c47c439ad7af818d470ae01464bd70b743299b28d1f7741462190a2ebdc818"
+        },
+        {
+          "id": 591,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "amount": "20.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 34.20563067974966,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xd50c729cebb64604b99e1243a54e840527360581",
+            "symbol": "PEBBLE V2",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/3e2a65b205c0185ad59fae2c9b46627f060e3cad/images/pebble.png?raw=true"
+          },
+          "merkleRoot": "0x0a8bc6d2eb0fc8952000b1345118dd78e546340cbdbf3bedd7df6192f3f0b034"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x1b30F8eE9d7718B182BaD677C06980e5A0668526",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 5000,
+          "balance": 54.21346561179796,
+          "percentOfTotalVE": 0.000667563193
+        },
+        {
+          "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 1000,
+          "balance": 9.433186206201702,
+          "percentOfTotalVE": 0.000116156527
+        },
+        {
+          "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 2500,
+          "balance": 53.334783550019644,
+          "percentOfTotalVE": 0.000656743449
+        },
+        {
+          "user": "0x64f830A199Bf057b157e8F1B6aB56bC157a87b11",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 10000,
+          "balance": 307.3551543081368,
+          "percentOfTotalVE": 0.003784649917
+        },
+        {
+          "user": "0xd7B470De6FdAD29aDa4d52FEe70D7CaeAc3C21fB",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 10000,
+          "balance": 22.155485801737367,
+          "percentOfTotalVE": 0.000272813897
+        },
+        {
+          "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 500,
+          "balance": 5844.545370598616,
+          "percentOfTotalVE": 0.07196742218
+        }
+      ]
+    },
+    "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28": {
+      "bribes": [
+        {
+          "id": 553,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "amount": "500.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 123.7082658450684,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0x7b634f34be32c63253ecccd8072b319c199322d94f28680f5f9a0b8f00c6d567"
+        },
+        {
+          "id": 560,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "amount": "1000.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 15.33639585098993,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0xb8fc256f0049c1c698c3c573fef5806b8132092845ce97a381ba0fbe4e73ac04"
+        },
+        {
+          "id": 568,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "amount": "25.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 13.80754004866493,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xfa4b16b0f63f5a6d0651592620d585d308f749a4",
+            "symbol": "ASHARE",
+            "logoURI": "https://assets.coingecko.com/coins/images/23974/small/ashare.png?1645871503"
+          },
+          "merkleRoot": "0x64417691d2d6399dfa87b706e979f6704aed325abf86a8536c3ee63f49b46e51"
+        },
+        {
+          "id": 574,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "amount": "300.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 9.650217786768733,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+            "symbol": "AMES",
+            "logoURI": "https://assets.coingecko.com/coins/images/23973/small/ames.png?1645871205"
+          },
+          "merkleRoot": "0xc79a4166f6a3929e385177d43390eb82b083838c46756285032411f5baec6daa"
+        },
+        {
+          "id": 579,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "amount": "150.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 18.038235886559896,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca",
+            "symbol": "LSHARE",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/89dd62ce4acba1b55d908bf08d42e7ef00ef160a/images/roaring_lion_share.png?raw=true"
+          },
+          "merkleRoot": "0x37e52139c5542a73f4987d0c8c28547ea33fa98898fca51ab97acc226b52b715"
+        },
+        {
+          "id": 585,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "amount": "20.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 34.20563067974966,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xd50c729cebb64604b99e1243a54e840527360581",
+            "symbol": "PEBBLE V2",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/3e2a65b205c0185ad59fae2c9b46627f060e3cad/images/pebble.png?raw=true"
+          },
+          "merkleRoot": "0x1754f4db24a5780697b53130dc723d93888d3e2fc20999977ef5da7bb9bcffdf"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 2000,
+          "balance": 394.070051367566,
+          "percentOfTotalVE": 0.004852422893
+        },
+        {
+          "user": "0x04DfFDe6ca95b0c002345014745bd75fbF7523Ce",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 10000,
+          "balance": 108.83443399392841,
+          "percentOfTotalVE": 0.001340144213
+        },
+        {
+          "user": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 2500,
+          "balance": 176.3536036331608,
+          "percentOfTotalVE": 0.002171548588
+        },
+        {
+          "user": "0x6A074a51Afb657C02146b0d0B4b22f4E34424849",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 10000,
+          "balance": 154.23642824861975,
+          "percentOfTotalVE": 0.00189920643
+        },
+        {
+          "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 1000,
+          "balance": 9.433186206201702,
+          "percentOfTotalVE": 0.000116156527
+        },
+        {
+          "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 2500,
+          "balance": 53.334783550019644,
+          "percentOfTotalVE": 0.000656743449
+        },
+        {
+          "user": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 4000,
+          "balance": 2380.2809603055057,
+          "percentOfTotalVE": 0.02930983916
+        },
+        {
+          "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 2500,
+          "balance": 5844.545370598616,
+          "percentOfTotalVE": 0.07196742218
+        }
+      ]
+    },
+    "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193": {
+      "bribes": [
+        {
+          "id": 552,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "amount": "750.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 185.56239876760262,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0xdac0e2384ec6dad68a50bb950f006589c7ea45dc3d6829a0f56c05d8bb4c7820"
+        },
+        {
+          "id": 559,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "amount": "1000.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 15.33639585098993,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0x8a3356c0b90c8d764e2bf819d6314cc713e4b579ed7896c8ee1cc04a61f4cecc"
+        },
+        {
+          "id": 566,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "amount": "50.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 27.61508009732986,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xfa4b16b0f63f5a6d0651592620d585d308f749a4",
+            "symbol": "ASHARE",
+            "logoURI": "https://assets.coingecko.com/coins/images/23974/small/ashare.png?1645871503"
+          },
+          "merkleRoot": "0x5be7e25db1d8d40029407533707eaf06e73c82adeef74a429ddd7e6072d96a3b"
+        },
+        {
+          "id": 573,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "amount": "350.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 11.258587417896855,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+            "symbol": "AMES",
+            "logoURI": "https://assets.coingecko.com/coins/images/23973/small/ames.png?1645871205"
+          },
+          "merkleRoot": "0xfe189c821c216f28d0545f5f2fff1b3b442578ac1893e19d9b85ae4ebba7898d"
+        },
+        {
+          "id": 583,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "amount": "150.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 18.038235886559896,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca",
+            "symbol": "LSHARE",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/89dd62ce4acba1b55d908bf08d42e7ef00ef160a/images/roaring_lion_share.png?raw=true"
+          },
+          "merkleRoot": "0x97a91c8708662005befb19052ef118e14355c26125c323efdafc287ad32c164b"
+        },
+        {
+          "id": 590,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "amount": "20.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 34.20563067974966,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xd50c729cebb64604b99e1243a54e840527360581",
+            "symbol": "PEBBLE V2",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/3e2a65b205c0185ad59fae2c9b46627f060e3cad/images/pebble.png?raw=true"
+          },
+          "merkleRoot": "0x8e5354061692f580127cdb02fd29be3b0489c40f7bb2a893aaa51a2bc1932007"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 2500,
+          "balance": 394.070051367566,
+          "percentOfTotalVE": 0.004852422893
+        },
+        {
+          "user": "0x1b30F8eE9d7718B182BaD677C06980e5A0668526",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 2500,
+          "balance": 54.21346561179796,
+          "percentOfTotalVE": 0.000667563193
+        },
+        {
+          "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 1000,
+          "balance": 9.433186206201702,
+          "percentOfTotalVE": 0.000116156527
+        },
+        {
+          "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 2500,
+          "balance": 53.334783550019644,
+          "percentOfTotalVE": 0.000656743449
+        },
+        {
+          "user": "0x9B4A54F384141265360bd93E4058f7FFCa6B4Aea",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 10000,
+          "balance": 66.95212244775274,
+          "percentOfTotalVE": 0.000824421979
+        },
+        {
+          "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 5000,
+          "balance": 305.1662592096189,
+          "percentOfTotalVE": 0.003757696727
+        },
+        {
+          "user": "0x9884705F4E825a2174C115280c4d147379d5C33D",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 10000,
+          "balance": 138.93396869964045,
+          "percentOfTotalVE": 0.00171077799
+        },
+        {
+          "user": "0xcB4f9A94363D688E11f5F3d87814aA492092ff97",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 3800,
+          "balance": 4.764921986591707,
+          "percentOfTotalVE": 0.000058673366
+        },
+        {
+          "user": "0x5d2F1CAAF44C0ef31E2381b9aA3a7e930084fF68",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 10000,
+          "balance": 257.667206289127,
+          "percentOfTotalVE": 0.003172812159
+        },
+        {
+          "user": "0x568d716fCC14966b53090428056f0525D6845bb9",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 780,
+          "balance": 7.266812477014119,
+          "percentOfTotalVE": 0.000089480657
+        },
+        {
+          "user": "0x2EC9912157a1D0A813Fdc7ac2B76203741Cb4a8e",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 10000,
+          "balance": 3.410964195577679,
+          "percentOfTotalVE": 0.000042001265
+        },
+        {
+          "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 2000,
+          "balance": 5844.545370598616,
+          "percentOfTotalVE": 0.07196742218
+        }
+      ]
+    },
+    "0xC32389561da25C3AD66aBd55A2db0B6172F9C759": {
+      "bribes": [
+        {
+          "id": 556,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "amount": "100.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 24.74165316901368,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0xe474430f272f65df383be7a99405497c164ff324456fed72132a338ad1e46c83"
+        },
+        {
+          "id": 563,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "amount": "1000.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 15.33639585098993,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0xbfbf4a55d1a8170b630cedff85d7ad1e41bedcec17577e0fa13f02ad7426d7f3"
+        },
+        {
+          "id": 570,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "amount": "12.5",
+          "epochStartTime": 1677715200,
+          "valueUSD": 6.903770024332465,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xfa4b16b0f63f5a6d0651592620d585d308f749a4",
+            "symbol": "ASHARE",
+            "logoURI": "https://assets.coingecko.com/coins/images/23974/small/ashare.png?1645871503"
+          },
+          "merkleRoot": "0x93ab36da3f6e3032443025e2b09eabdd08cd18195d81a9c579963df6d588ce99"
+        },
+        {
+          "id": 577,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "amount": "200.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 6.433478524512489,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+            "symbol": "AMES",
+            "logoURI": "https://assets.coingecko.com/coins/images/23973/small/ames.png?1645871205"
+          },
+          "merkleRoot": "0xa27a09a84b520c5c140900ee504fc8d2361387812ba8eaa96f6a91fa5912fe9b"
+        },
+        {
+          "id": 580,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "amount": "150.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 18.038235886559896,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca",
+            "symbol": "LSHARE",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/89dd62ce4acba1b55d908bf08d42e7ef00ef160a/images/roaring_lion_share.png?raw=true"
+          },
+          "merkleRoot": "0x7ad5fbeebea5086e4d18f12e0491301e8e0b245240772ad883ad20f47a953d41"
+        },
+        {
+          "id": 587,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "amount": "20.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 34.20563067974966,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xd50c729cebb64604b99e1243a54e840527360581",
+            "symbol": "PEBBLE V2",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/3e2a65b205c0185ad59fae2c9b46627f060e3cad/images/pebble.png?raw=true"
+          },
+          "merkleRoot": "0xa8e022519ff192b2ec6f990323e5ee5b79af1c6d6f401cf022370aa8e546d1c7"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "weightUsed": 1000,
+          "balance": 9.433186206201702,
+          "percentOfTotalVE": 0.000116156527
+        }
+      ]
+    },
+    "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f": {
+      "bribes": [
+        {
+          "id": 557,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "amount": "150.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 37.11247975352052,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0x7ad5fbeebea5086e4d18f12e0491301e8e0b245240772ad883ad20f47a953d41"
+        },
+        {
+          "id": 564,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "amount": "1000.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 15.33639585098993,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0xbfbf4a55d1a8170b630cedff85d7ad1e41bedcec17577e0fa13f02ad7426d7f3"
+        },
+        {
+          "id": 571,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "amount": "12.5",
+          "epochStartTime": 1677715200,
+          "valueUSD": 6.903770024332465,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xfa4b16b0f63f5a6d0651592620d585d308f749a4",
+            "symbol": "ASHARE",
+            "logoURI": "https://assets.coingecko.com/coins/images/23974/small/ashare.png?1645871503"
+          },
+          "merkleRoot": "0x93ab36da3f6e3032443025e2b09eabdd08cd18195d81a9c579963df6d588ce99"
+        },
+        {
+          "id": 578,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "amount": "200.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 6.433478524512489,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+            "symbol": "AMES",
+            "logoURI": "https://assets.coingecko.com/coins/images/23973/small/ames.png?1645871205"
+          },
+          "merkleRoot": "0xa27a09a84b520c5c140900ee504fc8d2361387812ba8eaa96f6a91fa5912fe9b"
+        },
+        {
+          "id": 581,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "amount": "150.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 18.038235886559896,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca",
+            "symbol": "LSHARE",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/89dd62ce4acba1b55d908bf08d42e7ef00ef160a/images/roaring_lion_share.png?raw=true"
+          },
+          "merkleRoot": "0x7ad5fbeebea5086e4d18f12e0491301e8e0b245240772ad883ad20f47a953d41"
+        },
+        {
+          "id": 588,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "amount": "20.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 34.20563067974966,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xd50c729cebb64604b99e1243a54e840527360581",
+            "symbol": "PEBBLE V2",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/3e2a65b205c0185ad59fae2c9b46627f060e3cad/images/pebble.png?raw=true"
+          },
+          "merkleRoot": "0xa8e022519ff192b2ec6f990323e5ee5b79af1c6d6f401cf022370aa8e546d1c7"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 1000,
+          "balance": 9.433186206201702,
+          "percentOfTotalVE": 0.000116156527
+        }
+      ]
+    },
+    "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f": {
+      "bribes": [
+        {
+          "id": 547,
+          "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "amount": "10.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 10.009999999999998,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+            "symbol": "BUSD",
+            "logoURI": "https://assets.coingecko.com/coins/images/9576/small/BUSD.png?1568947766"
+          },
+          "merkleRoot": "0x11335f6b929bd52fd71869c1c1b7c8731c1438db474df5e173b10e5ee14c9766"
+        },
+        {
+          "id": 551,
+          "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "amount": "750.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 185.56239876760262,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0x995db2301f7def851280f41695a425e3f74264783a4bafaeb2772e82d658fb02"
+        },
+        {
+          "id": 558,
+          "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "amount": "1000.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 15.33639585098993,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0xf02930a617bcbfb20c2663fe9cc590627df9de78ec5855bdaecd48a04f7f1ebd"
+        },
+        {
+          "id": 565,
+          "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "amount": "50.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 27.61508009732986,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xfa4b16b0f63f5a6d0651592620d585d308f749a4",
+            "symbol": "ASHARE",
+            "logoURI": "https://assets.coingecko.com/coins/images/23974/small/ashare.png?1645871503"
+          },
+          "merkleRoot": "0x5131b210ff5d2e184761d6c513fa662aac95739dcf7c0d692ae98b889aa7fe92"
+        },
+        {
+          "id": 572,
+          "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "amount": "350.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 11.258587417896855,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+            "symbol": "AMES",
+            "logoURI": "https://assets.coingecko.com/coins/images/23973/small/ames.png?1645871205"
+          },
+          "merkleRoot": "0xe6c68960947113b43cdeb7662c0381db62442c7474445448d5c3166b7db1fd70"
+        },
+        {
+          "id": 584,
+          "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "amount": "100.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 12.025490591039931,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0x50d8d7f7ccea28cc1c9ddb996689294dc62569ca",
+            "symbol": "LSHARE",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/89dd62ce4acba1b55d908bf08d42e7ef00ef160a/images/roaring_lion_share.png?raw=true"
+          },
+          "merkleRoot": "0xf888527c0cfdf15e51b50b24ee5af89493e9e8997b49ac99b0c5a0cad71bf396"
+        },
+        {
+          "id": 589,
+          "briber": "0x891eFc56f5CD6580b2fEA416adC960F2A6156494",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "amount": "20.0",
+          "epochStartTime": 1677715200,
+          "valueUSD": 34.20563067974966,
+          "epochWeekLabel": "2023-03-02T00:00:00Z 2023-03-09T00:00:00Z",
+          "token": {
+            "address": "0xd50c729cebb64604b99e1243a54e840527360581",
+            "symbol": "PEBBLE V2",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/3e2a65b205c0185ad59fae2c9b46627f060e3cad/images/pebble.png?raw=true"
+          },
+          "merkleRoot": "0x3eae9ba444ca990659e49f6bd44b054aca6e7a7d23fc48b2808216cb910fe569"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 1348.0897766926605,
+          "percentOfTotalVE": 0.016599844803
+        },
+        {
+          "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 5000,
+          "balance": 857.7935871590286,
+          "percentOfTotalVE": 0.010562531269
+        },
+        {
+          "user": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 2000,
+          "balance": 441.78956124755064,
+          "percentOfTotalVE": 0.005440022081
+        },
+        {
+          "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 2500,
+          "balance": 394.070051367566,
+          "percentOfTotalVE": 0.004852422893
+        },
+        {
+          "user": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 6000,
+          "balance": 163.19099393854694,
+          "percentOfTotalVE": 0.002009469413
+        },
+        {
+          "user": "0xE2B79BF57d239d114FcCF0e51E9a084b0BF3Acf1",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 8.70977933408245,
+          "percentOfTotalVE": 0.000107248781
+        },
+        {
+          "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 1000,
+          "balance": 9.433186206201702,
+          "percentOfTotalVE": 0.000116156527
+        },
+        {
+          "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 2500,
+          "balance": 53.334783550019644,
+          "percentOfTotalVE": 0.000656743449
+        },
+        {
+          "user": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 56.230214507601616,
+          "percentOfTotalVE": 0.000692396642
+        },
+        {
+          "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 5000,
+          "balance": 305.1662592096189,
+          "percentOfTotalVE": 0.003757696727
+        },
+        {
+          "user": "0x69e02D001146A86d4E2995F9eCf906265aA77d85",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 4000,
+          "balance": 2380.2809603055057,
+          "percentOfTotalVE": 0.02930983916
+        },
+        {
+          "user": "0x568d716fCC14966b53090428056f0525D6845bb9",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 9220,
+          "balance": 7.266812477014119,
+          "percentOfTotalVE": 0.000089480657
+        },
+        {
+          "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 2000,
+          "balance": 5844.545370598616,
+          "percentOfTotalVE": 0.07196742218
+        },
+        {
+          "user": "0x6CDce269a08Ae6deFb78Bb7A42c818118882Ab22",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 1191.1650868098493,
+          "percentOfTotalVE": 0.014667536182
+        }
+      ]
+    }
+  },
+  "1678320000": {
+    "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f": {
+      "bribes": [
+        {
+          "id": 475,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "amount": "500.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 128.9806094506772,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0x1930fb5d81cffcd283cdcae56ba38c66519759fa979fd18cc4d5253c1bd61fa0"
+        },
+        {
+          "id": 484,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "amount": "3900.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 59.85348176714088,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0xec7dcc5e51281096b0848242fafd774828933a028d27a3d6835c00dce1d34e7f"
+        },
+        {
+          "id": 490,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "amount": "50.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 50.05,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+            "symbol": "BUSD",
+            "logoURI": "https://assets.coingecko.com/coins/images/9576/small/BUSD.png?1568947766"
+          },
+          "merkleRoot": "0xa87233be761e7f7b4e29405f71410b0322c34f1e074372b6793552b1cfd4aa54"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x154A1799C339F1D2EaB56b46A5985D79F9C42874",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 4000,
+          "balance": 70.868834844574,
+          "percentOfTotalVE": 0.000691596181
+        },
+        {
+          "user": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 3000,
+          "balance": 4522.378690917059,
+          "percentOfTotalVE": 0.044133078201
+        },
+        {
+          "user": "0x1497CDa922C44Ca3A767a1744D50c5E38C47fEE8",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 2.3344393852565664,
+          "percentOfTotalVE": 0.000022781373
+        },
+        {
+          "user": "0x355ebeCaa9637140cBD0559AC5F522fF5ac77f9d",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 0.3226175690225152,
+          "percentOfTotalVE": 0.000003148367
+        },
+        {
+          "user": "0x58658836e5389a9F62DeE633d6733c7747872210",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 17.77721893028902,
+          "percentOfTotalVE": 0.000173484674
+        },
+        {
+          "user": "0x048A6885aa828a287C7a2DCB6eA47d5c9b5e03be",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 2500,
+          "balance": 911.9623461197566,
+          "percentOfTotalVE": 0.008899676097
+        },
+        {
+          "user": "0x5D166006367856A7D8028f822c7c236f9EFA7A8D",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 3000,
+          "balance": 14798.257133930874,
+          "percentOfTotalVE": 0.144413523051
+        },
+        {
+          "user": "0xdA7a763BDE6ee9cafc3876eF33D67F8EED7891F7",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 4250,
+          "balance": 13683.322538714727,
+          "percentOfTotalVE": 0.133533077373
+        },
+        {
+          "user": "0xBa9f68316932aE306806df192455e011aF78ea1a",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 2500,
+          "balance": 1902.135187048174,
+          "percentOfTotalVE": 0.018562594311
+        },
+        {
+          "user": "0x2E216eF129f7446463D4865Df65576Df96e4308E",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 7000,
+          "balance": 506.20277417325286,
+          "percentOfTotalVE": 0.004939941598
+        },
+        {
+          "user": "0x4D98D36Ae16Fa325bC13A9cC15d64648bDA42D8c",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 966.6206050048846,
+          "percentOfTotalVE": 0.00943307619
+        },
+        {
+          "user": "0xA1094C4d9b850FC4CCE29ed14Df184Bc4752078e",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 34.707104564486315,
+          "percentOfTotalVE": 0.000338700375
+        },
+        {
+          "user": "0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 2900,
+          "balance": 920.8592551968017,
+          "percentOfTotalVE": 0.008986499428
+        },
+        {
+          "user": "0x19868B43Cc7e16f8a928c500400D24f1B5F2DcfF",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 134.58046547438227,
+          "percentOfTotalVE": 0.001313346496
+        },
+        {
+          "user": "0x8089186e8B3f7d79B8AEaB6D6d120C4214D464e8",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 7100,
+          "balance": 13.027264143287903,
+          "percentOfTotalVE": 0.000127130722
+        },
+        {
+          "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 4700,
+          "balance": 995.5051056807238,
+          "percentOfTotalVE": 0.009714954824
+        },
+        {
+          "user": "0xC3530D160B48F19c14FEc76F4C206441bA265c95",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 886.5383423667154,
+          "percentOfTotalVE": 0.008651567829
+        },
+        {
+          "user": "0x333C91876481F9e913367abC67eDe7B46985f7f7",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 1280,
+          "balance": 11.507493404657055,
+          "percentOfTotalVE": 0.000112299553
+        },
+        {
+          "user": "0xc1a17F2fd7DB9adf67De8a8F331d682923090Feb",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 4500,
+          "balance": 655.529415022395,
+          "percentOfTotalVE": 0.006397193361
+        },
+        {
+          "user": "0x7F6f11Fe804622f546c9E925f11e073d217321a7",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 51.20784292418328,
+          "percentOfTotalVE": 0.000499728106
+        },
+        {
+          "user": "0x10ee200eCCcFaA6046a1769cA5563c07CB8ab2B8",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 6.978810793173183,
+          "percentOfTotalVE": 0.000068104956
+        },
+        {
+          "user": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 1000,
+          "balance": 242.59943838354542,
+          "percentOfTotalVE": 0.002367484175
+        },
+        {
+          "user": "0xC66EFB4b2F4428e9d16f722B5c29c4cbebDEE9fA",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 0.416129907865589,
+          "percentOfTotalVE": 0.000004060937
+        },
+        {
+          "user": "0xd5C49c80cBeA2d5af7C4BEe4Ac2ce3f85A34A899",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 1613.5976953511417,
+          "percentOfTotalVE": 0.015746808956
+        },
+        {
+          "user": "0x3c58860b8019E6455A8dfdebE6eA845Ef9b3e3a0",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 302.5012160421239,
+          "percentOfTotalVE": 0.002952054822
+        }
+      ]
+    },
+    "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28": {
+      "bribes": [
+        {
+          "id": 478,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "amount": "350.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 90.28642661547406,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0x3ea86f7e255bf97658a5c9faf856b39f5d4a11101149c39040c0b6d3382f13fb"
+        },
+        {
+          "id": 487,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "amount": "1700.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 26.08997923183064,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0xe6dd0ac494a6faa732e77560a48541fcc37157915452681b7e88941671bd9324"
+        },
+        {
+          "id": 493,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "amount": "10.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 10.009999999999998,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x90c97f71e18723b0cf0dfa30ee176ab653e89f40",
+            "symbol": "FRAX",
+            "logoURI": "https://assets.coingecko.com/coins/images/13422/small/ethCanonicalFRAX.png?1669277108"
+          },
+          "merkleRoot": "0xb1bc0ac2e79162baa8e99e60371965e7f401980bea0d873c74805fb9b5c386e5"
+        },
+        {
+          "id": 494,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "amount": "20.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 20.019999999999996,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+            "symbol": "DAI",
+            "logoURI": "https://assets.coingecko.com/coins/images/9956/small/4943.png?1636636734"
+          },
+          "merkleRoot": "0x30f8cedbe886479b1c1c95b41240ec02c1a72f539e5f2a8baf2155382e1194d9"
+        },
+        {
+          "id": 496,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "amount": "20.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 20.04,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+            "symbol": "TUSD",
+            "logoURI": "https://assets.coingecko.com/coins/images/3449/small/tusd.png?1618395665"
+          },
+          "merkleRoot": "0x30f8cedbe886479b1c1c95b41240ec02c1a72f539e5f2a8baf2155382e1194d9"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0xA8CC3F0f9630864B4482Ff3E1dbDa71a0aAEc577",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 10000,
+          "balance": 0.7047406543710186,
+          "percentOfTotalVE": 0.000006877437
+        },
+        {
+          "user": "0x5ca7aed8F72328Fd52F1EC6d4958f201eF589E2f",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 10000,
+          "balance": 5.429864888133784,
+          "percentOfTotalVE": 0.000052989072
+        },
+        {
+          "user": "0xbC4E6A07646c564a333c971DEDaCDbC485fEe5a8",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 5800,
+          "balance": 680.5354064564923,
+          "percentOfTotalVE": 0.006641222322
+        },
+        {
+          "user": "0x048A6885aa828a287C7a2DCB6eA47d5c9b5e03be",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 5000,
+          "balance": 911.9623461197566,
+          "percentOfTotalVE": 0.008899676097
+        },
+        {
+          "user": "0x5D166006367856A7D8028f822c7c236f9EFA7A8D",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 500,
+          "balance": 14798.257133930874,
+          "percentOfTotalVE": 0.144413523051
+        },
+        {
+          "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 5000,
+          "balance": 6.307318819351318,
+          "percentOfTotalVE": 0.000061551987
+        },
+        {
+          "user": "0x0cD852539cc13267eadB82Be19E86eA1F61eb17e",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 5500,
+          "balance": 785.1215678714752,
+          "percentOfTotalVE": 0.007661859813
+        },
+        {
+          "user": "0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 1400,
+          "balance": 920.8592551968017,
+          "percentOfTotalVE": 0.008986499428
+        },
+        {
+          "user": "0xA12Be400f22C8cb89e29cD95a4031420374B5E8c",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 10000,
+          "balance": 261.78870709672077,
+          "percentOfTotalVE": 0.002554748789
+        },
+        {
+          "user": "0x339dFF5a1C592C04D15896BD9Ee233511F091bF6",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 1100,
+          "balance": 20.547636606620767,
+          "percentOfTotalVE": 0.000200520681
+        },
+        {
+          "user": "0x04DfFDe6ca95b0c002345014745bd75fbF7523Ce",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 10000,
+          "balance": 125.84308204638414,
+          "percentOfTotalVE": 0.001228079947
+        },
+        {
+          "user": "0x7da23BC4a403CAd82A8FFA90CcD4E15c94850443",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 2500,
+          "balance": 170.419118409359,
+          "percentOfTotalVE": 0.001663089448
+        },
+        {
+          "user": "0xD084D8b981A3Fa3232380fC569207054b31B2c0E",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 10000,
+          "balance": 31.438441475047735,
+          "percentOfTotalVE": 0.000306802082
+        },
+        {
+          "user": "0x6992Bd823bB63E189a827566C648eCE23adC6dE9",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 10000,
+          "balance": 1165.5078851322176,
+          "percentOfTotalVE": 0.011373981295
+        },
+        {
+          "user": "0x91C05e14F60c759398056EC06c1e44EB0d431817",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 1000,
+          "balance": 19.443540301789447,
+          "percentOfTotalVE": 0.000189746004
+        }
+      ]
+    },
+    "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f": {
+      "bribes": [
+        {
+          "id": 481,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "amount": "200.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 51.592243780270884,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0x4c67b9e8f030a6cc0c21e7d974be4c56d1ff77ce54887d7ed5d927bc8c0074ee"
+        },
+        {
+          "id": 488,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "amount": "1600.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 24.55527457113472,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0x62afb6951095b9ab3ba38c6347d7f97ebbb0b859304b5740a333d75002836fb3"
+        },
+        {
+          "id": 500,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "amount": "20.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 20.04,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+            "symbol": "USDC",
+            "logoURI": "https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png?1547042389"
+          },
+          "merkleRoot": "0xdbfec34946a68fd5d693fe4d780a0b999466690cc0c933f2e7171886479da47c"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 1500,
+          "balance": 4522.378690917059,
+          "percentOfTotalVE": 0.044133078201
+        },
+        {
+          "user": "0xB6355c2eac24bc6858ED594409E473902409D71F",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 2500,
+          "balance": 3065.8282231668127,
+          "percentOfTotalVE": 0.029918864821
+        },
+        {
+          "user": "0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 1400,
+          "balance": 920.8592551968017,
+          "percentOfTotalVE": 0.008986499428
+        },
+        {
+          "user": "0x73CbDF131364A3b8dc6110a6037ABA1F868167Ee",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 1500,
+          "balance": 0.1262416574242393,
+          "percentOfTotalVE": 0.00000123197
+        }
+      ]
+    },
+    "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e": {
+      "bribes": [
+        {
+          "id": 477,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "amount": "350.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 90.28642661547406,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0xb726670ed2c0bff8e790564543022eabd175040248d49de52fef91f3f86157e2"
+        },
+        {
+          "id": 489,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "amount": "2000.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 30.6940932139184,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0x724fd6169be8cae9600f882d60392737a07d158217c2f4f70c214c24e5ac13a6"
+        },
+        {
+          "id": 495,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "amount": "0.03",
+          "epochStartTime": 1678320000,
+          "valueUSD": 54.61769999999999,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+            "symbol": "WETH",
+            "logoURI": "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
+          },
+          "merkleRoot": "0x94e07e1ac0013cce93057b9018a7a3568ea87d62b0b2ac1d3a7780d473f8c56c"
+        },
+        {
+          "id": 497,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "amount": "0.0022",
+          "epochStartTime": 1678320000,
+          "valueUSD": 62.4558,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+            "symbol": "WBTC",
+            "logoURI": "https://assets.coingecko.com/coins/images/1/small/bitcoin.png?1547033579"
+          },
+          "merkleRoot": "0xeb234c195ed9f081d9aa8857611f4977d030f7615b16cef513bc21f0812c54e8"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x4b6e90Ce968E216592bAD2ebd17E660c9cf9312a",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 10000,
+          "balance": 2.640822174652464,
+          "percentOfTotalVE": 0.000025771307
+        },
+        {
+          "user": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 1500,
+          "balance": 4522.378690917059,
+          "percentOfTotalVE": 0.044133078201
+        },
+        {
+          "user": "0x5D166006367856A7D8028f822c7c236f9EFA7A8D",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 2500,
+          "balance": 14798.257133930874,
+          "percentOfTotalVE": 0.144413523051
+        },
+        {
+          "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 4000,
+          "balance": 6.307318819351318,
+          "percentOfTotalVE": 0.000061551987
+        },
+        {
+          "user": "0xdA7a763BDE6ee9cafc3876eF33D67F8EED7891F7",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 1500,
+          "balance": 13683.322538714727,
+          "percentOfTotalVE": 0.133533077373
+        },
+        {
+          "user": "0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 1400,
+          "balance": 920.8592551968017,
+          "percentOfTotalVE": 0.008986499428
+        },
+        {
+          "user": "0x333C91876481F9e913367abC67eDe7B46985f7f7",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 8460,
+          "balance": 11.507493404657055,
+          "percentOfTotalVE": 0.000112299553
+        },
+        {
+          "user": "0x32144A3F0ED8145Aa42896A811C7a7cEb1717F24",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 10000,
+          "balance": 1277.8070893662614,
+          "percentOfTotalVE": 0.01246988898
+        }
+      ]
+    },
+    "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193": {
+      "bribes": [
+        {
+          "id": 476,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "amount": "500.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 128.9806094506772,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0xb78b2bb8f08c4e4addf3d29e9e8473a88338a2cb3a85500cbdb7d52b78716dc7"
+        },
+        {
+          "id": 485,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "amount": "3900.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 59.85348176714088,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0xe1dabcf305eb994b5a6effcdbff7e68c165b58bc7ff8a81bc9c5396a2d496211"
+        },
+        {
+          "id": 491,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "amount": "50.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 50.05,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+            "symbol": "BUSD",
+            "logoURI": "https://assets.coingecko.com/coins/images/9576/small/BUSD.png?1568947766"
+          },
+          "merkleRoot": "0xe7cc3bd6a6afb152625e244a73e639d032e515dac83317017eeaaae2b74e818c"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x7da23BC4a403CAd82A8FFA90CcD4E15c94850443",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 2500,
+          "balance": 170.419118409359,
+          "percentOfTotalVE": 0.001663089448
+        },
+        {
+          "user": "0x154A1799C339F1D2EaB56b46A5985D79F9C42874",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 1000,
+          "balance": 70.868834844574,
+          "percentOfTotalVE": 0.000691596181
+        },
+        {
+          "user": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 3000,
+          "balance": 4522.378690917059,
+          "percentOfTotalVE": 0.044133078201
+        },
+        {
+          "user": "0x048A6885aa828a287C7a2DCB6eA47d5c9b5e03be",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 2500,
+          "balance": 911.9623461197566,
+          "percentOfTotalVE": 0.008899676097
+        },
+        {
+          "user": "0x5D166006367856A7D8028f822c7c236f9EFA7A8D",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 3000,
+          "balance": 14798.257133930874,
+          "percentOfTotalVE": 0.144413523051
+        },
+        {
+          "user": "0xdA7a763BDE6ee9cafc3876eF33D67F8EED7891F7",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 4250,
+          "balance": 13683.322538714727,
+          "percentOfTotalVE": 0.133533077373
+        },
+        {
+          "user": "0xBa9f68316932aE306806df192455e011aF78ea1a",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 2500,
+          "balance": 1902.135187048174,
+          "percentOfTotalVE": 0.018562594311
+        },
+        {
+          "user": "0x8b8535c33783752FfbDB461865FdcA1f26F74E4A",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 3300,
+          "balance": 1056.4680483583809,
+          "percentOfTotalVE": 0.010309881189
+        },
+        {
+          "user": "0x339dFF5a1C592C04D15896BD9Ee233511F091bF6",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 8900,
+          "balance": 20.547636606620767,
+          "percentOfTotalVE": 0.000200520681
+        },
+        {
+          "user": "0x333C91876481F9e913367abC67eDe7B46985f7f7",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 260,
+          "balance": 11.507493404657055,
+          "percentOfTotalVE": 0.000112299553
+        },
+        {
+          "user": "0x80e8B7110030Bf5ca709b6eC3Dff50899E8A3D10",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 4860,
+          "balance": 156.305877113152,
+          "percentOfTotalVE": 0.001525360871
+        },
+        {
+          "user": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 8000,
+          "balance": 242.59943838354542,
+          "percentOfTotalVE": 0.002367484175
+        }
+      ]
+    },
+    "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223": {
+      "bribes": [
+        {
+          "id": 479,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "amount": "350.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 90.28642661547406,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0x6b3c33a009a4458dd6454b0b232fe5157369c216dbccbfbb3bc1e2ad438f030c"
+        },
+        {
+          "id": 486,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "amount": "1700.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 26.08997923183064,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0x27125f94e1e90dac12f6043ae53b4ad0638ad5bf8c2c97c7fe5b3d486563caec"
+        },
+        {
+          "id": 492,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "amount": "10.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 10.009999999999998,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+            "symbol": "BUSD",
+            "logoURI": "https://assets.coingecko.com/coins/images/9576/small/BUSD.png?1568947766"
+          },
+          "merkleRoot": "0xbbb839a943445880c089cab5b27741e1a5f8c9e88d6462e726d4109bf671bf98"
+        },
+        {
+          "id": 498,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "amount": "10.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 10.02,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+            "symbol": "USDC",
+            "logoURI": "https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png?1547042389"
+          },
+          "merkleRoot": "0xbbb839a943445880c089cab5b27741e1a5f8c9e88d6462e726d4109bf671bf98"
+        },
+        {
+          "id": 499,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "amount": "10.0",
+          "epochStartTime": 1678320000,
+          "valueUSD": 10.03,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x55d398326f99059ff775485246999027b3197955",
+            "symbol": "USDT",
+            "logoURI": "https://assets.coingecko.com/coins/images/325/small/Tether-logo.png?1598003707"
+          },
+          "merkleRoot": "0xbbb839a943445880c089cab5b27741e1a5f8c9e88d6462e726d4109bf671bf98"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0xB6355c2eac24bc6858ED594409E473902409D71F",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 7500,
+          "balance": 3065.8282231668127,
+          "percentOfTotalVE": 0.029918864821
+        },
+        {
+          "user": "0x7cC57C78B9B304E9FFD0359bAe1396754E2FF5D5",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 10000,
+          "balance": 83.8944264539646,
+          "percentOfTotalVE": 0.000818710581
+        },
+        {
+          "user": "0x0C36922266e6cE0f92a357E20399F295c2b9ff10",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 10000,
+          "balance": 1.6564820475956952,
+          "percentOfTotalVE": 0.00001616531
+        },
+        {
+          "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 500,
+          "balance": 6.307318819351318,
+          "percentOfTotalVE": 0.000061551987
+        },
+        {
+          "user": "0x0cD852539cc13267eadB82Be19E86eA1F61eb17e",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 4500,
+          "balance": 785.1215678714752,
+          "percentOfTotalVE": 0.007661859813
+        },
+        {
+          "user": "0x8b8535c33783752FfbDB461865FdcA1f26F74E4A",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 3400,
+          "balance": 1056.4680483583809,
+          "percentOfTotalVE": 0.010309881189
+        },
+        {
+          "user": "0xbC4E6A07646c564a333c971DEDaCDbC485fEe5a8",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 1000,
+          "balance": 680.5354064564923,
+          "percentOfTotalVE": 0.006641222322
+        },
+        {
+          "user": "0xee02B046b42768e1Ba2FB32d97d55824f3eb6E51",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 1400,
+          "balance": 920.8592551968017,
+          "percentOfTotalVE": 0.008986499428
+        },
+        {
+          "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 3000,
+          "balance": 605.7489651481193,
+          "percentOfTotalVE": 0.005911394926
+        },
+        {
+          "user": "0xaCAe03CDbc0aF96A43F97dFD40E5EaeB0Ebf2E2F",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 10000,
+          "balance": 73.86378702713243,
+          "percentOfTotalVE": 0.000720823379
+        },
+        {
+          "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 5300,
+          "balance": 995.5051056807238,
+          "percentOfTotalVE": 0.009714954824
+        },
+        {
+          "user": "0x6A074a51Afb657C02146b0d0B4b22f4E34424849",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 10000,
+          "balance": 188.6558044857699,
+          "percentOfTotalVE": 0.001841057979
+        },
+        {
+          "user": "0x91C05e14F60c759398056EC06c1e44EB0d431817",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 5000,
+          "balance": 19.443540301789447,
+          "percentOfTotalVE": 0.000189746004
+        },
+        {
+          "user": "0x3e8c91472fC50A8528e448FF501AF9bf8C00Cceb",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 1000,
+          "balance": 242.59943838354542,
+          "percentOfTotalVE": 0.002367484175
+        },
+        {
+          "user": "0x771D1A7D23D30F9030bC607a559Ce3e7496D8422",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 500,
+          "balance": 5959.144288287863,
+          "percentOfTotalVE": 0.058154214598
+        }
+      ]
+    },
+    "0x148708d34F797473Cad01AC113CFD4208a57C081": {
+      "bribes": [
+        {
+          "id": 482,
+          "briber": "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "amount": "0.15",
+          "epochStartTime": 1678320000,
+          "valueUSD": 273.08849999999995,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+            "symbol": "WETH",
+            "logoURI": "https://assets.coingecko.com/coins/images/279/small/ethereum.png?1595348880"
+          },
+          "merkleRoot": "0x9c5253b3c2a33b825e2751c5a511d335e5b28ee7dfb612a392b8687510df8006"
+        },
+        {
+          "id": 483,
+          "briber": "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "amount": "0.45",
+          "epochStartTime": 1678320000,
+          "valueUSD": 217.74059304610898,
+          "epochWeekLabel": "2023-03-09T00:00:00Z 2023-03-16T00:00:00Z",
+          "token": {
+            "address": "0xc91324601b20ea0e238b63c9fafca18d32600722",
+            "symbol": "SWDB",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/c0c05793f4c0a1ba8ae5a9781cc394fd29cb0b98/images/Sword_token.png"
+          },
+          "merkleRoot": "0x97376cea641794f3ec7ea546a5f1fa3b04a7d7ea1d5375e99e0a51f820ff6fa0"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x7da23BC4a403CAd82A8FFA90CcD4E15c94850443",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 5000,
+          "balance": 170.419118409359,
+          "percentOfTotalVE": 0.001663089448
+        },
+        {
+          "user": "0x0075e788EB9cD476C2f2c13c0c7ef6e52DA8fcbF",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 10000,
+          "balance": 8.917237830897895,
+          "percentOfTotalVE": 0.000087021716
+        },
+        {
+          "user": "0x154A1799C339F1D2EaB56b46A5985D79F9C42874",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 1000,
+          "balance": 70.868834844574,
+          "percentOfTotalVE": 0.000691596181
+        },
+        {
+          "user": "0x4B0E0a664d5763Ba8d2aD434a4A565DC0D409900",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 10000,
+          "balance": 356.88257031790846,
+          "percentOfTotalVE": 0.003482752653
+        },
+        {
+          "user": "0x5D166006367856A7D8028f822c7c236f9EFA7A8D",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 1000,
+          "balance": 14798.257133930874,
+          "percentOfTotalVE": 0.144413523051
+        },
+        {
+          "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 500,
+          "balance": 6.307318819351318,
+          "percentOfTotalVE": 0.000061551987
+        },
+        {
+          "user": "0xBa9f68316932aE306806df192455e011aF78ea1a",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 1500,
+          "balance": 1902.135187048174,
+          "percentOfTotalVE": 0.018562594311
+        },
+        {
+          "user": "0x8F25818ff64Be1abee91ABca70c306B33b602062",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 10000,
+          "balance": 0.2634608491219634,
+          "percentOfTotalVE": 0.000002571067
+        },
+        {
+          "user": "0xe06500F6B2C463CB0fc384251ecC3e49001c696d",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 10000,
+          "balance": 168.95345374119526,
+          "percentOfTotalVE": 0.001648786291
+        },
+        {
+          "user": "0xbE1d324841B8310C6196514b23D8A7c04CD8282b",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 10000,
+          "balance": 184.01664944223282,
+          "percentOfTotalVE": 0.001795785301
+        },
+        {
+          "user": "0x37e014215902BA306dA13464A613F2E38578A6d0",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 10000,
+          "balance": 181.24772352977348,
+          "percentOfTotalVE": 0.001768763853
+        },
+        {
+          "user": "0x51dC3dD3Ff9a10B2842b51f1d655F26A86301b54",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 10000,
+          "balance": 85.70956807741241,
+          "percentOfTotalVE": 0.00083642422
+        },
+        {
+          "user": "0xc1a17F2fd7DB9adf67De8a8F331d682923090Feb",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 500,
+          "balance": 655.529415022395,
+          "percentOfTotalVE": 0.006397193361
+        },
+        {
+          "user": "0x91C05e14F60c759398056EC06c1e44EB0d431817",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 1500,
+          "balance": 19.443540301789447,
+          "percentOfTotalVE": 0.000189746004
+        },
+        {
+          "user": "0x73CbDF131364A3b8dc6110a6037ABA1F868167Ee",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 8500,
+          "balance": 0.1262416574242393,
+          "percentOfTotalVE": 0.00000123197
+        },
+        {
+          "user": "0xF24A6E2E1971b006f72a2eA061A45E1961F46189",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 10000,
+          "balance": 694.2159810173886,
+          "percentOfTotalVE": 0.006774728583
+        },
+        {
+          "user": "0x1a61Bf28f66451bd43E7be5fb788A2B1F5f4231f",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 10000,
+          "balance": 2075.1899183955484,
+          "percentOfTotalVE": 0.02025140423
+        }
+      ]
+    }
+  },
+  "1678924800": {
+    "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223": {
+      "bribes": [
+        {
+          "id": 430,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "amount": "600.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 154.77673134081266,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0xfb7fed8cb36517f787c16af4a8e0b22b5b18058d94b4078a42893ab3968afee0"
+        },
+        {
+          "id": 436,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "amount": "800.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 12.27763728556736,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0x45fd714f7fcee59d9e4189f42353ba9cba33664e1593f52ba88427f9cc8a97e3"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 1000,
+          "balance": 12.222865224378477,
+          "percentOfTotalVE": 0.000100756288
+        },
+        {
+          "user": "0x5B73422bf63ba9456Cf6f0d9F0878CaA759a729e",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 10000,
+          "balance": 0.237846601540376,
+          "percentOfTotalVE": 0.000001960632
+        },
+        {
+          "user": "0x8F81Ab6A9F1Ab8548756CD5a45E5df0E7Ed0350D",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 5000,
+          "balance": 302.0731237082392,
+          "percentOfTotalVE": 0.00249006808
+        },
+        {
+          "user": "0xB5FC79DBa65592603F7D5525ed462B2C8eE4FBA1",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 5000,
+          "balance": 69.66475678148828,
+          "percentOfTotalVE": 0.000574264883
+        },
+        {
+          "user": "0x12d26ABf06eB3499BccA8Be7f5381647B56D53Ee",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 10000,
+          "balance": 4.006800441660618,
+          "percentOfTotalVE": 0.000033029108
+        },
+        {
+          "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 500,
+          "balance": 6.1702032076292666,
+          "percentOfTotalVE": 0.000050862605
+        },
+        {
+          "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+          "gauge": "0xfB1B49d41E64D44eE5ab69cD6aC8576213CE2223",
+          "weightUsed": 5000,
+          "balance": 1194.737827875263,
+          "percentOfTotalVE": 0.009848537642
+        }
+      ]
+    },
+    "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f": {
+      "bribes": [
+        {
+          "id": 425,
+          "briber": "0xe73E4C5Bb944A2195c1cFD3aC474582025d368Ed",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "amount": "0.1932",
+          "epochStartTime": 1678924800,
+          "valueUSD": 0.6684720000000001,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0x9562ca0c2b05d089063f562fc3ecc95e4424ad02",
+            "symbol": "SHDB",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/c0c05793f4c0a1ba8ae5a9781cc394fd29cb0b98/images/Shield_token.png"
+          },
+          "merkleRoot": "0x10120bf12c341d02711efa69e9d875aae3198f5ff4aa8c68ae78eda9126da582"
+        },
+        {
+          "id": 426,
+          "briber": "0xe73E4C5Bb944A2195c1cFD3aC474582025d368Ed",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "amount": "1000.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 15.3470466069592,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0x8147349c9d2a40944a14e27bcaa1cddd2b7e854ab1f255a708ed3fea57c07856"
+        },
+        {
+          "id": 428,
+          "briber": "0xe73E4C5Bb944A2195c1cFD3aC474582025d368Ed",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "amount": "15.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 0.4825108893384366,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0xb9e05b4c168b56f73940980ae6ef366354357009",
+            "symbol": "AMES",
+            "logoURI": "https://assets.coingecko.com/coins/images/23973/small/ames.png?1645871205"
+          },
+          "merkleRoot": "0x647274a5d718736ac0355a720a3596718137ba26a6f5d6c7f55dc3cce0b17251"
+        },
+        {
+          "id": 434,
+          "briber": "0xe73E4C5Bb944A2195c1cFD3aC474582025d368Ed",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "amount": "850.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 219.26703606615126,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0x0fbe5d65787e22f167e2d30d08c237a738465bd14fe6e07f683f5cf12a807d9d"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x013a8A78d124B5dC34037Af09249A2cc4a5213a0",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 5000,
+          "balance": 401.6408771010389,
+          "percentOfTotalVE": 0.003310831217
+        },
+        {
+          "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 5000,
+          "balance": 51.11250113175271,
+          "percentOfTotalVE": 0.000421333768
+        },
+        {
+          "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 1000,
+          "balance": 12.222865224378477,
+          "percentOfTotalVE": 0.000100756288
+        },
+        {
+          "user": "0x7efDEc1D3fa35a11906928c5B4416c5c8eBb8ff6",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 49.93068199363195,
+          "percentOfTotalVE": 0.000411591723
+        },
+        {
+          "user": "0x4b5081599f538a788814fc753d16D99Ab0804885",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 141.6346038339595,
+          "percentOfTotalVE": 0.001167531231
+        },
+        {
+          "user": "0x9403f0502C70357b739b9484CaA4d190E23689dF",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 335,
+          "balance": 1.790128890517383,
+          "percentOfTotalVE": 0.000014756503
+        },
+        {
+          "user": "0xe73E4C5Bb944A2195c1cFD3aC474582025d368Ed",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 32.89841115391456,
+          "percentOfTotalVE": 0.000271190242
+        },
+        {
+          "user": "0x2Be237c75A2730B5EbAE1dE8F066CF57F59d12FE",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 1682.1867799520003,
+          "percentOfTotalVE": 0.013866707353
+        },
+        {
+          "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 5000,
+          "balance": 293.1989560908421,
+          "percentOfTotalVE": 0.002416915986
+        },
+        {
+          "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 2500,
+          "balance": 636.2354432136589,
+          "percentOfTotalVE": 0.005244655828
+        },
+        {
+          "user": "0xBb1AE82CD0604a008f14E299A2C3854B6F6e7fd1",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 5000,
+          "balance": 791.5687749724581,
+          "percentOfTotalVE": 0.006525109271
+        },
+        {
+          "user": "0x111fbf7b389e024d09F35fb091D7D4479b321B0A",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 5000,
+          "balance": 580.6819309334235,
+          "percentOfTotalVE": 0.004786713638
+        },
+        {
+          "user": "0x7da23BC4a403CAd82A8FFA90CcD4E15c94850443",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 5000,
+          "balance": 167.077567393002,
+          "percentOfTotalVE": 0.001377264261
+        },
+        {
+          "user": "0x7123df3d6f6813737Cc033659084ee834B12eC7B",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 1000,
+          "balance": 1047.878268113236,
+          "percentOfTotalVE": 0.008637935727
+        },
+        {
+          "user": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 3000,
+          "balance": 4909.406428046953,
+          "percentOfTotalVE": 0.04046952635
+        },
+        {
+          "user": "0x7cC57C78B9B304E9FFD0359bAe1396754E2FF5D5",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 82.28107225297968,
+          "percentOfTotalVE": 0.000678264485
+        },
+        {
+          "user": "0x5D166006367856A7D8028f822c7c236f9EFA7A8D",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 9000,
+          "balance": 16219.574242099305,
+          "percentOfTotalVE": 0.133702209584
+        },
+        {
+          "user": "0xbE1d324841B8310C6196514b23D8A7c04CD8282b",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 10000,
+          "balance": 180.4084801962609,
+          "percentOfTotalVE": 0.001487154476
+        },
+        {
+          "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 3500,
+          "balance": 6.1702032076292666,
+          "percentOfTotalVE": 0.000050862605
+        },
+        {
+          "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+          "gauge": "0x8601DFCeE55E9e238f7ED7c42f8E46a7779e3f6f",
+          "weightUsed": 4500,
+          "balance": 1194.737827875263,
+          "percentOfTotalVE": 0.009848537642
+        }
+      ]
+    },
+    "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e": {
+      "bribes": [
+        {
+          "id": 433,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "amount": "600.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 154.77673134081266,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0x72176e0b5e14d0a59b2a5a3431cb7d67a8195a0a9ac96fac4f8a3d1bb7b25a85"
+        },
+        {
+          "id": 444,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "amount": "2000.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 30.6940932139184,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0x386f62e014f155c7294e72243a22f54c9b59490be910069b4807958e48e67331"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 1000,
+          "balance": 12.222865224378477,
+          "percentOfTotalVE": 0.000100756288
+        },
+        {
+          "user": "0x03B4262C169670ba9f907B21152291b70484b373",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 10000,
+          "balance": 207.24306334915929,
+          "percentOfTotalVE": 0.001708358991
+        },
+        {
+          "user": "0x7123df3d6f6813737Cc033659084ee834B12eC7B",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 2000,
+          "balance": 1047.878268113236,
+          "percentOfTotalVE": 0.008637935727
+        },
+        {
+          "user": "0x2e86D29cFea7c4f422f7fCCF97986bbBa03e1a7F",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 4000,
+          "balance": 3.284112690771967,
+          "percentOfTotalVE": 0.000027071803
+        },
+        {
+          "user": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 2000,
+          "balance": 4909.406428046953,
+          "percentOfTotalVE": 0.04046952635
+        },
+        {
+          "user": "0x8F81Ab6A9F1Ab8548756CD5a45E5df0E7Ed0350D",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 5000,
+          "balance": 302.0731237082392,
+          "percentOfTotalVE": 0.00249006808
+        },
+        {
+          "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 1000,
+          "balance": 6.1702032076292666,
+          "percentOfTotalVE": 0.000050862605
+        },
+        {
+          "user": "0x0cD852539cc13267eadB82Be19E86eA1F61eb17e",
+          "gauge": "0xe05DE828EedCe4c4cAa532750F8f0d95a0Fd094e",
+          "weightUsed": 10000,
+          "balance": 930.1853129360065,
+          "percentOfTotalVE": 0.007667761792
+        }
+      ]
+    },
+    "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f": {
+      "bribes": [
+        {
+          "id": 432,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "amount": "300.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 77.38836567040633,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0x9b7d52dfcca70d160c066474ea57f2688e4b7b64b5cef588844e0b95180330c7"
+        },
+        {
+          "id": 438,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "amount": "1000.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 15.3470466069592,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0xda4786fad7eda26387dce9862250269437fcfa8b938416ae791c1898ca5935af"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 1000,
+          "balance": 12.222865224378477,
+          "percentOfTotalVE": 0.000100756288
+        },
+        {
+          "user": "0xd7B470De6FdAD29aDa4d52FEe70D7CaeAc3C21fB",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 10000,
+          "balance": 23.540203521249296,
+          "percentOfTotalVE": 0.000194048079
+        },
+        {
+          "user": "0xbB90c09dfc7CAe4a45e03Bc881a706Fdb36890e3",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 2200,
+          "balance": 2.3770122008157752,
+          "percentOfTotalVE": 0.000019594336
+        },
+        {
+          "user": "0x7123df3d6f6813737Cc033659084ee834B12eC7B",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 1000,
+          "balance": 1047.878268113236,
+          "percentOfTotalVE": 0.008637935727
+        },
+        {
+          "user": "0x2e86D29cFea7c4f422f7fCCF97986bbBa03e1a7F",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 1000,
+          "balance": 3.284112690771967,
+          "percentOfTotalVE": 0.000027071803
+        },
+        {
+          "user": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 1000,
+          "balance": 4909.406428046953,
+          "percentOfTotalVE": 0.04046952635
+        },
+        {
+          "user": "0x4B0E0a664d5763Ba8d2aD434a4A565DC0D409900",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 10000,
+          "balance": 374.9122302715034,
+          "percentOfTotalVE": 0.003090499963
+        },
+        {
+          "user": "0xAaeD7EF3807E3F38756CA52068371071b0F471b1",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 10000,
+          "balance": 3.4093206887585157,
+          "percentOfTotalVE": 0.000028103926
+        },
+        {
+          "user": "0xB7BbEa1200426defa0b7b76E3D23CF3DFDfBF21A",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 10000,
+          "balance": 398.9846550949909,
+          "percentOfTotalVE": 0.003288935282
+        },
+        {
+          "user": "0x9B4A54F384141265360bd93E4058f7FFCa6B4Aea",
+          "gauge": "0x2837b3A08Cbfc3Eb3E1FFe363Fb1E443667e287f",
+          "weightUsed": 10000,
+          "balance": 64.27403781552563,
+          "percentOfTotalVE": 0.000529827771
+        }
+      ]
+    },
+    "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28": {
+      "bribes": [
+        {
+          "id": 429,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "amount": "600.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 154.77673134081266,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0x10f96162df3d560b5700b519de40adc9b1bca51b7799777601b39cf95123b612"
+        },
+        {
+          "id": 437,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "amount": "1000.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 15.3470466069592,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0xa9b17e991b0cc43849f33986ff6b2f7e2225f31d610c372a36b42a8e3d6b1b62"
+        },
+        {
+          "id": 439,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "amount": "0.56",
+          "epochStartTime": 1678924800,
+          "valueUSD": 0.56056,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0x90c97f71e18723b0cf0dfa30ee176ab653e89f40",
+            "symbol": "FRAX",
+            "logoURI": "https://assets.coingecko.com/coins/images/13422/small/ethCanonicalFRAX.png?1669277108"
+          },
+          "merkleRoot": "0xcdd92f5a16a8a4c15b12da03785cd07ce199ca307acf9954b8d58dd612dd1239"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 1000,
+          "balance": 12.222865224378477,
+          "percentOfTotalVE": 0.000100756288
+        },
+        {
+          "user": "0x2e86D29cFea7c4f422f7fCCF97986bbBa03e1a7F",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 1000,
+          "balance": 3.284112690771967,
+          "percentOfTotalVE": 0.000027071803
+        },
+        {
+          "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 2000,
+          "balance": 636.2354432136589,
+          "percentOfTotalVE": 0.005244655828
+        },
+        {
+          "user": "0x7123df3d6f6813737Cc033659084ee834B12eC7B",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 1000,
+          "balance": 1047.878268113236,
+          "percentOfTotalVE": 0.008637935727
+        },
+        {
+          "user": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 1000,
+          "balance": 4909.406428046953,
+          "percentOfTotalVE": 0.04046952635
+        },
+        {
+          "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+          "gauge": "0x35756EB391B93Fe3457aC4A7fae198552AC3AC28",
+          "weightUsed": 1000,
+          "balance": 6.1702032076292666,
+          "percentOfTotalVE": 0.000050862605
+        }
+      ]
+    },
+    "0xC32389561da25C3AD66aBd55A2db0B6172F9C759": {
+      "bribes": [
+        {
+          "id": 431,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "amount": "200.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 51.592243780270884,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0xa18b1de21d9f965aa3ca556a2f030fb5dbb8078ed95c3c16a800205b9e2509d8"
+        },
+        {
+          "id": 443,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "amount": "200.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 51.592243780270884,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0xa18b1de21d9f965aa3ca556a2f030fb5dbb8078ed95c3c16a800205b9e2509d8"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "weightUsed": 1000,
+          "balance": 12.222865224378477,
+          "percentOfTotalVE": 0.000100756288
+        },
+        {
+          "user": "0x68a0187089E2d1addeE1FF35c4B0a7B5988931Ea",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "weightUsed": 10000,
+          "balance": 534.7606402507639,
+          "percentOfTotalVE": 0.004408172381
+        },
+        {
+          "user": "0x7123df3d6f6813737Cc033659084ee834B12eC7B",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "weightUsed": 1000,
+          "balance": 1047.878268113236,
+          "percentOfTotalVE": 0.008637935727
+        },
+        {
+          "user": "0x2e86D29cFea7c4f422f7fCCF97986bbBa03e1a7F",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "weightUsed": 1000,
+          "balance": 3.284112690771967,
+          "percentOfTotalVE": 0.000027071803
+        },
+        {
+          "user": "0x80e8B7110030Bf5ca709b6eC3Dff50899E8A3D10",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "weightUsed": 5140,
+          "balance": 153.049505009808,
+          "percentOfTotalVE": 0.001261627259
+        },
+        {
+          "user": "0x6d1B0BA383CD362F180cCFe01733b19260cA2459",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "weightUsed": 10000,
+          "balance": 9.27811316639067,
+          "percentOfTotalVE": 0.000076481923
+        },
+        {
+          "user": "0xC844E702F33F82baE0A5C70d6942ffd067c4D3CC",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "weightUsed": 10000,
+          "balance": 76.37500284970737,
+          "percentOfTotalVE": 0.000629579204
+        },
+        {
+          "user": "0xbB90c09dfc7CAe4a45e03Bc881a706Fdb36890e3",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "weightUsed": 2500,
+          "balance": 2.3770122008157752,
+          "percentOfTotalVE": 0.000019594336
+        },
+        {
+          "user": "0xC3530D160B48F19c14FEc76F4C206441bA265c95",
+          "gauge": "0xC32389561da25C3AD66aBd55A2db0B6172F9C759",
+          "weightUsed": 10000,
+          "balance": 1706.022136027751,
+          "percentOfTotalVE": 0.014063188453
+        }
+      ]
+    },
+    "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193": {
+      "bribes": [
+        {
+          "id": 427,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "amount": "1000.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 15.3470466069592,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0x12b70d84dab272dc5a24f49bdbf6a4c4605f15da",
+            "symbol": "wAALTO",
+            "logoURI": "https://github.com/0xBriz/token-list/blob/1336217076f0fcfa734d52bea28fe5e0bfa6e549/images/waalto-token-round.png?raw=true"
+          },
+          "merkleRoot": "0xb25746d9aababfad20ace004204007d8fae401891857ca6200de05b603132b33"
+        },
+        {
+          "id": 435,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "amount": "850.0",
+          "epochStartTime": 1678924800,
+          "valueUSD": 219.26703606615126,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0xed236c32f695c83efde232c288701d6f9c23e60e",
+            "symbol": "VRTK",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/786c88566c8249415294d4fc73274559c99b15df/images/vertek-token-round.png"
+          },
+          "merkleRoot": "0x92b5a516b6391cfcd50dba3c43d5f8c19aac354f5c78436d7bf1e9703b853d72"
+        },
+        {
+          "id": 442,
+          "briber": "0x59b596e080295F83d67431746f3Eabd70D8A3236",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "amount": "99.99",
+          "epochStartTime": 1678924800,
+          "valueUSD": 55.46713285368514,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0xfa4b16b0f63f5a6d0651592620d585d308f749a4",
+            "symbol": "ASHARE",
+            "logoURI": "https://assets.coingecko.com/coins/images/23974/small/ashare.png?1645871503"
+          },
+          "merkleRoot": "0x0bc52bf31d78ff101583b92e6adcc0b3f65923fd073d9e7c5d2086d05a39773a"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x4a895D96c988ac0d47de1aE4E6F20Dfc5fB51c2A",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 5000,
+          "balance": 51.11250113175271,
+          "percentOfTotalVE": 0.000421333768
+        },
+        {
+          "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 1000,
+          "balance": 12.222865224378477,
+          "percentOfTotalVE": 0.000100756288
+        },
+        {
+          "user": "0xc48983F3400965a483CDfCFC4288f369bbbF9F20",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 10000,
+          "balance": 663.7170055264162,
+          "percentOfTotalVE": 0.005471193562
+        },
+        {
+          "user": "0x65cc0a1A964a60B26F402B737762F41424Bb2c0E",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 10000,
+          "balance": 93.98202354771713,
+          "percentOfTotalVE": 0.000774718499
+        },
+        {
+          "user": "0x64f830A199Bf057b157e8F1B6aB56bC157a87b11",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 10000,
+          "balance": 507.2423407560609,
+          "percentOfTotalVE": 0.004181331812
+        },
+        {
+          "user": "0x84A51c92a653dc0e6AE11C9D873C55Ee7Af62106",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 5000,
+          "balance": 293.1989560908421,
+          "percentOfTotalVE": 0.002416915986
+        },
+        {
+          "user": "0x2e86D29cFea7c4f422f7fCCF97986bbBa03e1a7F",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 1000,
+          "balance": 3.284112690771967,
+          "percentOfTotalVE": 0.000027071803
+        },
+        {
+          "user": "0xF0C481024B0097916fB9aC0156cc8fB08A29F9F7",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 2500,
+          "balance": 636.2354432136589,
+          "percentOfTotalVE": 0.005244655828
+        },
+        {
+          "user": "0x111fbf7b389e024d09F35fb091D7D4479b321B0A",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 5000,
+          "balance": 580.6819309334235,
+          "percentOfTotalVE": 0.004786713638
+        },
+        {
+          "user": "0x4BFBa28B992863441B3d9169A41a7Eca310E7712",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 10000,
+          "balance": 111.51980861665223,
+          "percentOfTotalVE": 0.000919287066
+        },
+        {
+          "user": "0x7123df3d6f6813737Cc033659084ee834B12eC7B",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 3000,
+          "balance": 1047.878268113236,
+          "percentOfTotalVE": 0.008637935727
+        },
+        {
+          "user": "0x227c79a7464f08ea8aa5D9f8B22AA63ADeC79a9b",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 3000,
+          "balance": 4909.406428046953,
+          "percentOfTotalVE": 0.04046952635
+        },
+        {
+          "user": "0xB5FC79DBa65592603F7D5525ed462B2C8eE4FBA1",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 1000,
+          "balance": 69.66475678148828,
+          "percentOfTotalVE": 0.000574264883
+        },
+        {
+          "user": "0x8b8535c33783752FfbDB461865FdcA1f26F74E4A",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 10000,
+          "balance": 1143.4651154863627,
+          "percentOfTotalVE": 0.00942588321
+        },
+        {
+          "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 3500,
+          "balance": 6.1702032076292666,
+          "percentOfTotalVE": 0.000050862605
+        },
+        {
+          "user": "0x89A6CD7741BafEbB4f03471d949b70Cd5E439C99",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 10000,
+          "balance": 288.96533178787433,
+          "percentOfTotalVE": 0.002382017109
+        },
+        {
+          "user": "0xc2AA39a914c55B1d86Aac2d41cc09E15ba28adC8",
+          "gauge": "0x9DAb43a1D850eC820C88a19561C1fD87dEC09193",
+          "weightUsed": 500,
+          "balance": 1194.737827875263,
+          "percentOfTotalVE": 0.009848537642
+        }
+      ]
+    },
+    "0x148708d34F797473Cad01AC113CFD4208a57C081": {
+      "bribes": [
+        {
+          "id": 440,
+          "briber": "0xb4ce1A933E85720aF0Df9A6889A63e1309E3984E",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "amount": "0.5",
+          "epochStartTime": 1678924800,
+          "valueUSD": 241.9339922734544,
+          "epochWeekLabel": "2023-03-16T00:00:00Z 2023-03-23T00:00:00Z",
+          "token": {
+            "address": "0xc91324601b20ea0e238b63c9fafca18d32600722",
+            "symbol": "SWDB",
+            "logoURI": "https://raw.githubusercontent.com/vertekfi/token-list/c0c05793f4c0a1ba8ae5a9781cc394fd29cb0b98/images/Sword_token.png"
+          },
+          "merkleRoot": "0xb9180d3ab62c773bd1a7e8eb2966e70f8fc64468de17902774fe2ae973c74953"
+        }
+      ],
+      "voters": [
+        {
+          "user": "0x013a8A78d124B5dC34037Af09249A2cc4a5213a0",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 5000,
+          "balance": 401.6408771010389,
+          "percentOfTotalVE": 0.003310831217
+        },
+        {
+          "user": "0x25270EEae3ad2c6780Bda16Dd24933d416454B01",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 1000,
+          "balance": 12.222865224378477,
+          "percentOfTotalVE": 0.000100756288
+        },
+        {
+          "user": "0x3Db931AF572B1389DFB712a9fbD2026C283B4910",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 10000,
+          "balance": 632.1724661823783,
+          "percentOfTotalVE": 0.005211163641
+        },
+        {
+          "user": "0x1508b2672Fe55b6F5D216f4b9312e42540B6ee68",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 10000,
+          "balance": 585.1919088060989,
+          "percentOfTotalVE": 0.00482389057
+        },
+        {
+          "user": "0x2e86D29cFea7c4f422f7fCCF97986bbBa03e1a7F",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 1000,
+          "balance": 3.284112690771967,
+          "percentOfTotalVE": 0.000027071803
+        },
+        {
+          "user": "0x7123df3d6f6813737Cc033659084ee834B12eC7B",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 1000,
+          "balance": 1047.878268113236,
+          "percentOfTotalVE": 0.008637935727
+        },
+        {
+          "user": "0xb2325584DbbDE69Ff0d7Dd91682aACd33854c85a",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 10000,
+          "balance": 4303.562062404865,
+          "percentOfTotalVE": 0.035475392155
+        },
+        {
+          "user": "0xBb1AE82CD0604a008f14E299A2C3854B6F6e7fd1",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 5000,
+          "balance": 791.5687749724581,
+          "percentOfTotalVE": 0.006525109271
+        },
+        {
+          "user": "0xE01BEe6286540552F337a95EC2651510F7C92190",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 10000,
+          "balance": 245.51075974715124,
+          "percentOfTotalVE": 0.002023809661
+        },
+        {
+          "user": "0x98Be2f963343fa37b324070984Ffd72b0460eDbE",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 10000,
+          "balance": 1666.9400076298878,
+          "percentOfTotalVE": 0.013741024206
+        },
+        {
+          "user": "0x1fc7ba83E89BB974FE2D249dFa115A868dc864e5",
+          "gauge": "0x148708d34F797473Cad01AC113CFD4208a57C081",
+          "weightUsed": 500,
+          "balance": 6.1702032076292666,
+          "percentOfTotalVE": 0.000050862605
+        }
+      ]
+    }
+  }
+}

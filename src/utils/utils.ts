@@ -1,3 +1,6 @@
+import { BigNumber } from 'ethers';
+import { formatEther, parseUnits } from 'ethers/lib/utils';
+
 export function eToNumber(num) {
   function r() {
     return w.replace(new RegExp(`^(.{${pos}})(.)`), `$1${dot}$2`);
@@ -34,6 +37,14 @@ export function eToNumber(num) {
 
 export function getPrecisionNumber(value: number | string, precision: number) {
   return typeof value === 'string'
-    ? Number(Number(value).toFixed(precision))
-    : Number(value.toFixed(precision));
+    ? parseFloat(parseFloat(value).toFixed(precision))
+    : parseFloat(value.toFixed(precision));
+}
+
+export function bnStringToNumber(value: string, precision: number) {
+  return getPrecisionNumber(formatEther(value), precision);
+}
+
+export function ethNum(value: BigNumber) {
+  return parseFloat(formatEther(value));
 }
