@@ -48,7 +48,6 @@ import {
 } from 'src/utils/contract.utils';
 import { doTransaction } from 'src/utils/web3.utils';
 import { approveTokensIfNeeded } from 'src/utils/token.utils';
-import { AddUserBribeClaimInput } from 'src/services/backend/generated/vertek-subgraph-types';
 
 export async function prepForSnapshot() {
   // Remove any concerns about automation timing across services
@@ -115,25 +114,20 @@ export async function populateBaseDataForEpoch(epoch: number) {
   // await pushBribeClaimsToBackend(epoch)
 }
 
-export async function pushBribeClaimsToBackend(
-  epoch: number,
-  claims: AddUserBribeClaimInput[],
-) {
+export async function pushBribeClaimsToBackend(claims: any[]) {
   const chunks = chunk(claims, 25);
 
-  for (const data of chunks) {
-    try {
-      const result = await gqlService.sdk.AddBribeClaims({
-        epoch,
-        claims: data,
-        startOfStream: true,
-      });
+  // for (const data of chunks) {
+  //   try {
+  //     const result = await gqlService.sdk.AddBribeClaims({
+  //       claims: data,
+  //     });
 
-      console.log(result);
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  //     console.log(result);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 }
 
 export function getTokenDistributionAmounts(epoch: number) {

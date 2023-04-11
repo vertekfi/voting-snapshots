@@ -1,17 +1,13 @@
-mutation UpdateDistributions($input: [UpdateBribeDistributionsInput!]!) {
-  updateBribeDistributions(input: $input)
+mutation SetDistributionIds($input: [SetDistributionIdsInput!]!) {
+  setDistributionIds(input: $input)
 }
 
-mutation AddBribeClaims(
-  $epoch: Int!
-  $claims: [AddUserBribeClaimInput!]!
-  $startOfStream: Boolean!
-) {
-  addUserBribeClaims(
-    epoch: $epoch
-    claims: $claims
-    startOfStream: $startOfStream
-  )
+mutation GenerateAllGaugesVotingEpochInfo($epoch: Int!) {
+  generateAllGaugesVotingEpochInfo(epoch: $epoch)
+}
+
+mutation GenerateGaugeBribesMerkleRoots($epoch: Int!, $gauge: String!) {
+  setGaugeBribesUserData(epoch: $epoch, gauge: $gauge)
 }
 
 mutation SyncEpochs {
@@ -37,16 +33,16 @@ query GetCurrenTokentPrices {
   }
 }
 
-query GetAllBribesEpoch($epoch: Int!) {
-  getBribesForEpoch(epoch: $epoch) {
-    briber
-    token
-    amount
-    gauge
-    epochStartTime
-    txHash
-  }
-}
+# query GetAllBribesEpoch($epoch: Int!) {
+#   getBribesForEpoch(epoch: $epoch) {
+#     briber
+#     token
+#     amount
+#     gauge
+#     epochStartTime
+#     txHash
+#   }
+# }
 
 query GetGaugeEpochs {
   getGaugeEpochs {
@@ -64,82 +60,43 @@ query GetCurrentGaugesEpoch {
   }
 }
 
-query GetRawUserBribeClaimsInfo($user: String!) {
-  getUserPendingBribeClaims(user: $user) {
-    user
-    claimAmount
-    gauge
-    token
+query GetBribes($filter: GetBribesInput!) {
+  getBribes(filter: $filter) {
+    token {
+      address
+    }
     briber
-    merkleProof
-    epochStartTime
-  }
-}
-
-query GetUserRewards($user: String!) {
-  getUserBribeClaims(user: $user) {
-    distributionId
-    amountOwed
-    briber
-    gauge
-    token
-    merkleProof
-    epochStartTime
-  }
-}
-
-query GetDistributions($filter: GetDistributionsInput) {
-  getDistributions(filter: $filter) {
-    votingEpochStart
-    briber
-    merkleRoot
     amount
+    epochStartTime
+  }
+}
+
+query GetBribesNeedingDistribution($epoch: Int!) {
+  getBribesNeedingDistribution(epoch: $epoch) {
+    ...RawBribeFragement
+  }
+}
+
+query GetPendingDistributions($epoch: Int!) {
+  getPendingDistributions(epoch: $epoch) {
+    user
+    briber
+    bribeId
     token
-    txHash
     distributionId
-    blockNumber
+    gauge
+    epochStartTime
+    distributionComplete
+
+    bribe {
+      ...RawBribeFragement
+    }
   }
 }
 
 query GetBribesInfo($filter: GetBribesInput!) {
   getBribes(filter: $filter) {
     ...GaugeBribeFragment
-  }
-}
-
-query GetEpochBribesForGauge($epoch: Int!, $gauge: String!) {
-  getEpochBribesForGauge(epoch: $epoch, gauge: $gauge) {
-    bribes {
-      id
-      token
-      briber
-      amount
-      epochStartTime
-      gauge
-    }
-
-    votes {
-      userAddress
-      weightUsed
-      epochStartTime
-      gaugeId
-    }
-  }
-}
-
-query GetLastVoteSyncInfo {
-  getLastVoteSyncInfo {
-    blockNumber
-    dateTimeUTC
-    dateTimeLocale
-  }
-}
-
-query GetLastBribeSyncInfo {
-  getLastVoteSyncInfo {
-    blockNumber
-    dateTimeUTC
-    dateTimeLocale
   }
 }
 
@@ -180,6 +137,16 @@ query GetLiquidityGauges($epoch: Int!) {
       ...GaugeBribeFragment
     }
   }
+}
+
+fragment RawBribeFragement on GaugeBribeRaw {
+  id
+  briber
+  tokenAddress
+  amount
+  merkleRoot
+  distributionId
+  epochStartTime
 }
 
 fragment GaugeBribeFragment on GaugeBribe {
