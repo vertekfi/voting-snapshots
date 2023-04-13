@@ -78,6 +78,7 @@ export type GaugeBribeInfo = {
 export type GaugeBribeRaw = {
   __typename?: 'GaugeBribeRaw';
   amount: Scalars['String'];
+  bribeId: Scalars['Int'];
   briber: Scalars['String'];
   distributionComplete: Scalars['Boolean'];
   distributionId?: Maybe<Scalars['Int']>;
@@ -1911,6 +1912,25 @@ export type SyncVotesMutation = {
   syncGaugeVotes: number;
 };
 
+export type GetUserBribeClaimsQueryVariables = Exact<{
+  user: Scalars['String'];
+}>;
+
+export type GetUserBribeClaimsQuery = {
+  __typename?: 'Query';
+  getUserBribeClaims: Array<{
+    __typename?: 'UserBribeClaim';
+    distributionId?: string | null;
+    amountOwed: string;
+    claimAmount: string;
+    briber: string;
+    gauge: string;
+    token: string;
+    merkleProof: Array<string>;
+    epochStartTime: number;
+  } | null>;
+};
+
 export type GetCurrenTokentPricesQueryVariables = Exact<{
   [key: string]: never;
 }>;
@@ -2110,7 +2130,7 @@ export type GetLiquidityGaugesQuery = {
   } | null>;
 };
 
-export type RawBribeFragementFragment = {
+export type RawBribeFragmentFragment = {
   __typename?: 'GaugeBribeRaw';
   id: number;
   briber: string;
@@ -2138,8 +2158,8 @@ export type GaugeBribeFragmentFragment = {
   };
 };
 
-export const RawBribeFragementFragmentDoc = gql`
-  fragment RawBribeFragement on GaugeBribeRaw {
+export const RawBribeFragmentFragmentDoc = gql`
+  fragment RawBribeFragment on GaugeBribeRaw {
     id
     briber
     tokenAddress
@@ -2200,6 +2220,20 @@ export const SyncVotesDocument = gql`
     syncGaugeVotes(epochStartTime: $epochStartTime, blocksToScan: $blocksToScan)
   }
 `;
+export const GetUserBribeClaimsDocument = gql`
+  query GetUserBribeClaims($user: String!) {
+    getUserBribeClaims(user: $user) {
+      distributionId
+      amountOwed
+      claimAmount
+      briber
+      gauge
+      token
+      merkleProof
+      epochStartTime
+    }
+  }
+`;
 export const GetCurrenTokentPricesDocument = gql`
   query GetCurrenTokentPrices {
     tokenGetCurrentPrices {
@@ -2241,10 +2275,10 @@ export const GetBribesDocument = gql`
 export const GetBribesNeedingDistributionDocument = gql`
   query GetBribesNeedingDistribution($epoch: Int!) {
     getBribesNeedingDistribution(epoch: $epoch) {
-      ...RawBribeFragement
+      ...RawBribeFragment
     }
   }
-  ${RawBribeFragementFragmentDoc}
+  ${RawBribeFragmentFragmentDoc}
 `;
 export const GetPendingDistributionsDocument = gql`
   query GetPendingDistributions($epoch: Int!) {
@@ -2258,11 +2292,11 @@ export const GetPendingDistributionsDocument = gql`
       epochStartTime
       distributionComplete
       bribe {
-        ...RawBribeFragement
+        ...RawBribeFragment
       }
     }
   }
-  ${RawBribeFragementFragmentDoc}
+  ${RawBribeFragmentFragmentDoc}
 `;
 export const GetBribesInfoDocument = gql`
   query GetBribesInfo($filter: GetBribesInput!) {
@@ -2428,6 +2462,21 @@ export function getSdk(
           }),
         'SyncVotes',
         'mutation',
+      );
+    },
+    GetUserBribeClaims(
+      variables: GetUserBribeClaimsQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<GetUserBribeClaimsQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<GetUserBribeClaimsQuery>(
+            GetUserBribeClaimsDocument,
+            variables,
+            { ...requestHeaders, ...wrappedRequestHeaders },
+          ),
+        'GetUserBribeClaims',
+        'query',
       );
     },
     GetCurrenTokentPrices(

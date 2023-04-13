@@ -1,18 +1,17 @@
 import { NestFactory } from '@nestjs/core';
+import * as fs from 'fs-extra';
 import { AppModule } from './app.module';
 import { config } from 'dotenv';
-import { bscScanService } from './services/standalone/bsc-scan.service';
 import { gqlService } from './services/backend/gql.service';
-import { doBulkDistributions, getDistributionInfoForBribes } from './user-data';
-import * as fs from 'fs-extra';
-import { join } from 'path';
 import {
   getMerkleOrchard,
+  getOrchardMulticaller,
   getVertekAdminActions,
 } from './utils/contract.utils';
 import { GaugeBribeRaw } from './services/backend/generated/vertek-subgraph-types';
 import { formatEther, parseUnits } from 'ethers/lib/utils';
-import { doTransaction, getSigner } from './utils/web3.utils';
+import { doTransaction } from './utils/web3.utils';
+import { join } from 'path';
 import { approveTokensIfNeeded } from './utils/token.utils';
 
 export const epochs = [
@@ -87,111 +86,152 @@ async function bootstrap() {
     console.log('Listening on: ' + port);
   });
 
-  // TODO: Do new distributions for last 2/3 weeks
-  const epochs = [1679529600, 1680134400, 1680739200];
+  // TODO: Automation flow is
+  // SyncEpochs
+  // SyncEpochVotes
+  // SyncEpochBribes
+  // generateAllGaugesVotingEpochInfo
+  // getBribesNeedingDistribution
+  // bulk distribute
+  // update dist id's through backend. SetDistributionIds
 
-  const epoch = 1680134400;
-  // All user claims have been created for this epoch for all gauges
-  // So can go about generating the remainging roots for each bribe/token on all gauges
+  const epoch = 1678924800;
 
-  // TODO: NOW SYNC OTHER EPOCHS, CREATE DISTRIBUTIONS
+  // console.log(
+  //   await gqlService.sdk.SyncEpochVotes({
+  //     epoch,
+  //   }),
+  // );
+
+  // console.log(
+  //   await gqlService.sdk.SyncEpochBribes({
+  //     epoch,
+  //   }),
+  // );
 
   // await gqlService.sdk.GenerateAllGaugesVotingEpochInfo({
   //   epoch,
   // });
 
-  const { getBribesNeedingDistribution: bribes } =
-    await gqlService.sdk.GetBribesNeedingDistribution({
-      epoch,
-    });
-
-  const path = join(process.cwd(), `src/data/distributions/${epoch}.json`);
-  fs.ensureFileSync(path);
+  // const { getBribesNeedingDistribution } =
+  //   await gqlService.sdk.GetBribesNeedingDistribution({
+  //     epoch,
+  //   });
+  // // console.log(getBribesNeedingDistribution);
 
   // const orchard = getMerkleOrchard();
-  // const admin = getVertekAdminActions();
 
-  // const distributions = getDistributionInfoForBribes(bribes);
-  // // console.log(distributions[7]);
+  // const nice = '0x59b596e080295F83d67431746f3Eabd70D8A3236';
 
-  // const token = '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56';
-  // const amount = '20';
+  // const stables = [
+  //   '0x55d398326f99059ff775485246999027b3197955', // USDT
+  //   '0xe9e7cea3dedca5984780bafc599bd69add087d56', // BUSD
+  //   '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d', // USDC
+  //   '0x90c97f71e18723b0cf0dfa30ee176ab653e89f40', // FRAX
+  //   '0x14016e85a25aeb13065688cafb43044c2ef86784', // TUSD
+  //   '0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3', // DAI
+  // ];
+  // const excludes = ['0xd50c729cebb64604b99e1243a54e840527360581'];
+  // const nope = [...stables, ...excludes];
 
-  // let i = 0;
-  // for (const dist of distributions) {
-  //   try {
-  //     // console.log(bribes[i]);
-  //     const tx = await admin.callStatic.createBribeDistributions(
-  //       orchard.address,
-  //       [dist],
-  //     );
-  //     //  console.log(tx);
-  //   } catch (error) {
-  //     console.log(i);
-  //     console.log(bribes[i]);
-  //   }
-
-  //   i++;
-  // }
-
-  const tx = await doBulkDistributions(
-    bribes.map((bribe) => {
-      return {
-        briber: bribe.briber,
-        tokenAddress: bribe.tokenAddress,
-        amount: bribe.amount,
-        merkleRoot: bribe.merkleRoot,
-      };
-    }),
-  );
-
-  fs.writeJsonSync(path, tx);
-
-  const data = fs.readJsonSync(path);
-  console.log(data.logs.length);
-
-  parseDistributionLogs(data, bribes);
-  // console.log(bribes);
-
-  await gqlService.sdk.SetDistributionIds({
-    input: bribes.map((bribe) => {
-      return {
-        bribeId: bribe.id,
-        distributionId: bribe.distributionId,
-      };
-    }),
-  });
-
-  // console.log(
-  //   formatEther(
-  //     await orchard.getRemainingBalance(
-  //       token,
-  //       '0x59b596e080295F83d67431746f3Eabd70D8A3236',
-  //     ),
-  //   ),
+  // const todos = getBribesNeedingDistribution.filter(
+  //   (b) => b.briber === nice && !nope.includes(b.tokenAddress),
   // );
 
-  // await approveTokensIfNeeded([token], getSigner().address, orchard.address);
+  // console.log(todos.length);
 
+  // const tokenChecks = todos.reduce((prev, current) => {
+  //   if (!prev.includes(current.tokenAddress)) prev.push(current.tokenAddress);
+
+  //   return prev;
+  // }, []);
+  // // console.log(tokenChecks);
+  // console.log(getTokenAmountsOwed(tokenChecks, todos));
+
+  // const approveToken = '0xfa4b16b0f63f5a6d0651592620d585d308f749a4';
+  // await approveTokensIfNeeded(
+  //   [approveToken],
+  //   '0x891eFc56f5CD6580b2fEA416adC960F2A6156494',
+  //   orchard.address,
+  // );
   // await doTransaction(
-  //   orchard.operatorAddDistribution(
-  //     token,
-  //     '0x59b596e080295F83d67431746f3Eabd70D8A3236',
-  //     parseUnits(amount),
-  //   ),
+  //   orchard.operatorAddDistribution(approveToken, nice, parseUnits('11')),
   // );
 
+  // const txPath = join(process.cwd(), `src/data/distributions/${epoch}.json`);
+
+  // const distros = getDistributionInfoForBribes(todos);
+  // const tx = await doBulkDistributions(distros);
+
+  // fs.writeJSONSync(txPath, tx);
+
+  // // Will in memory set distribution id with on chain event logs
+  // parseDistributionLogs(tx, todos);
+
+  // const input = todos.map((dist) => {
+  //   return {
+  //     bribeId: dist.id,
+  //     distributionId: dist.distributionId,
+  //   };
+  // });
+
   // console.log(
-  //   formatEther(
-  //     await orchard.getRemainingBalance(
-  //       token,
-  //       '0x59b596e080295F83d67431746f3Eabd70D8A3236',
-  //     ),
-  //   ),
+  //   await gqlService.sdk.SetDistributionIds({
+  //     input,
+  //   }),
   // );
 }
 
 bootstrap();
+
+async function doBulkDistributions(
+  distributions: {
+    merkleRoot: string;
+    amount: string;
+    briber: string;
+    tokenAddress: string;
+  }[],
+) {
+  console.log(`Bulk distribution for (${distributions.length}) total bribes`);
+
+  //  const distributions = getDistributionInfoForBribes(bribes);
+
+  console.log(`
+  Distributions:`);
+  console.log(distributions);
+
+  const admin = getVertekAdminActions();
+
+  const tx = await doTransaction(
+    admin.createBribeDistributions(getMerkleOrchard().address, distributions),
+  );
+
+  return tx;
+}
+
+function getDistributionInfoForBribes(
+  bribes: {
+    merkleRoot?: string;
+    amount: string;
+    briber: string;
+    tokenAddress: string;
+  }[],
+) {
+  return bribes.reduce((prev, current) => {
+    if (!current.merkleRoot) {
+      throw new Error('Missing merkle root');
+    }
+
+    prev.push({
+      amount: parseUnits(current.amount),
+      token: current.tokenAddress,
+      briber: current.briber,
+      merkleRoot: current.merkleRoot,
+    });
+
+    return prev;
+  }, []);
+}
 
 // Set the distribution id and txHash for each distribution
 function parseDistributionLogs(data, bribes: Partial<GaugeBribeRaw>[]) {
@@ -233,4 +273,41 @@ function parseDistributionLogs(data, bribes: Partial<GaugeBribeRaw>[]) {
     bribes[idx].distributionId = evt.distributionId.toNumber();
     bribes[idx].txHash = data.transactionHash;
   });
+}
+
+function getTokenAmountsOwed(
+  tokenChecks: string[],
+  bribes: { tokenAddress: string; amount: string }[],
+) {
+  const tokenAmounts = {};
+
+  tokenChecks.forEach((token) => {
+    tokenAmounts[token] = bribes
+      .filter((b) => b.tokenAddress === token)
+      .reduce((prev, current) => (prev += parseFloat(current.amount)), 0);
+  });
+
+  return tokenAmounts;
+}
+
+async function getBriberBalances(bribers: { briber: string; token: string }[]) {
+  const orchard = getMerkleOrchard();
+  const multi = getOrchardMulticaller();
+
+  bribers.forEach((briber) => {
+    multi.call(
+      `${briber.briber}-${briber.token}`,
+      orchard.address,
+      'getRemainingBalance',
+      [briber.token, briber.briber],
+    );
+  });
+
+  const balances = await multi.execute('getBriberBalances');
+
+  for (const briber in balances) {
+    balances[briber] = formatEther(balances[briber]);
+  }
+
+  return balances;
 }

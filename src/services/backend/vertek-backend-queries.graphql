@@ -26,23 +26,25 @@ mutation SyncVotes($epochStartTime: Int, $blocksToScan: Int) {
   syncGaugeVotes(epochStartTime: $epochStartTime, blocksToScan: $blocksToScan)
 }
 
+query GetUserBribeClaims($user: String!) {
+  getUserBribeClaims(user: $user) {
+    distributionId
+    amountOwed
+    claimAmount
+    briber
+    gauge
+    token
+    merkleProof
+    epochStartTime
+  }
+}
+
 query GetCurrenTokentPrices {
   tokenGetCurrentPrices {
     address
     price
   }
 }
-
-# query GetAllBribesEpoch($epoch: Int!) {
-#   getBribesForEpoch(epoch: $epoch) {
-#     briber
-#     token
-#     amount
-#     gauge
-#     epochStartTime
-#     txHash
-#   }
-# }
 
 query GetGaugeEpochs {
   getGaugeEpochs {
@@ -73,7 +75,7 @@ query GetBribes($filter: GetBribesInput!) {
 
 query GetBribesNeedingDistribution($epoch: Int!) {
   getBribesNeedingDistribution(epoch: $epoch) {
-    ...RawBribeFragement
+    ...RawBribeFragment
   }
 }
 
@@ -89,7 +91,7 @@ query GetPendingDistributions($epoch: Int!) {
     distributionComplete
 
     bribe {
-      ...RawBribeFragement
+      ...RawBribeFragment
     }
   }
 }
@@ -110,8 +112,6 @@ query GetGaugeVotes($filter: GetVotesInput!) {
       epochWeekLabel
       blockNumber
       weightUsed
-      # txHash
-      # gauge: GqlPoolStakingGauge!
       gaugeId
     }
   }
@@ -139,7 +139,7 @@ query GetLiquidityGauges($epoch: Int!) {
   }
 }
 
-fragment RawBribeFragement on GaugeBribeRaw {
+fragment RawBribeFragment on GaugeBribeRaw {
   id
   briber
   tokenAddress
