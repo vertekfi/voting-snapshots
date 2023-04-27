@@ -10,7 +10,7 @@ import {
 } from './utils/contract.utils';
 import { GaugeBribeRaw } from './services/backend/generated/vertek-subgraph-types';
 import { formatEther, parseUnits } from 'ethers/lib/utils';
-import { doTransaction } from './utils/web3.utils';
+import { doTransaction, getSigner } from './utils/web3.utils';
 import { join } from 'path';
 import { approveTokensIfNeeded } from './utils/token.utils';
 
@@ -86,16 +86,8 @@ async function bootstrap() {
     console.log('Listening on: ' + port);
   });
 
-  // TODO: Automation flow is
-  // SyncEpochs
-  // SyncEpochVotes
-  // SyncEpochBribes
-  // generateAllGaugesVotingEpochInfo
-  // getBribesNeedingDistribution
-  // bulk distribute
-  // update dist id's through backend. SetDistributionIds
-
-  const epoch = 1678924800;
+  const epoch = 1681948800;
+  const orchard = getMerkleOrchard();
 
   // console.log(
   //   await gqlService.sdk.SyncEpochVotes({
@@ -109,66 +101,27 @@ async function bootstrap() {
   //   }),
   // );
 
-  // await gqlService.sdk.GenerateAllGaugesVotingEpochInfo({
-  //   epoch,
-  // });
+  // console.log(
+  //   await gqlService.sdk.GenerateAllGaugesVotingEpochInfo({
+  //     epoch,
+  //   }),
+  // );
 
   // const { getBribesNeedingDistribution } =
   //   await gqlService.sdk.GetBribesNeedingDistribution({
   //     epoch,
   //   });
-  // // console.log(getBribesNeedingDistribution);
-
-  // const orchard = getMerkleOrchard();
-
-  // const nice = '0x59b596e080295F83d67431746f3Eabd70D8A3236';
-
-  // const stables = [
-  //   '0x55d398326f99059ff775485246999027b3197955', // USDT
-  //   '0xe9e7cea3dedca5984780bafc599bd69add087d56', // BUSD
-  //   '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d', // USDC
-  //   '0x90c97f71e18723b0cf0dfa30ee176ab653e89f40', // FRAX
-  //   '0x14016e85a25aeb13065688cafb43044c2ef86784', // TUSD
-  //   '0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3', // DAI
-  // ];
-  // const excludes = ['0xd50c729cebb64604b99e1243a54e840527360581'];
-  // const nope = [...stables, ...excludes];
-
-  // const todos = getBribesNeedingDistribution.filter(
-  //   (b) => b.briber === nice && !nope.includes(b.tokenAddress),
-  // );
-
-  // console.log(todos.length);
-
-  // const tokenChecks = todos.reduce((prev, current) => {
-  //   if (!prev.includes(current.tokenAddress)) prev.push(current.tokenAddress);
-
-  //   return prev;
-  // }, []);
-  // // console.log(tokenChecks);
-  // console.log(getTokenAmountsOwed(tokenChecks, todos));
-
-  // const approveToken = '0xfa4b16b0f63f5a6d0651592620d585d308f749a4';
-  // await approveTokensIfNeeded(
-  //   [approveToken],
-  //   '0x891eFc56f5CD6580b2fEA416adC960F2A6156494',
-  //   orchard.address,
-  // );
-  // await doTransaction(
-  //   orchard.operatorAddDistribution(approveToken, nice, parseUnits('11')),
-  // );
 
   // const txPath = join(process.cwd(), `src/data/distributions/${epoch}.json`);
-
-  // const distros = getDistributionInfoForBribes(todos);
+  // const distros = getDistributionInfoForBribes(getBribesNeedingDistribution);
+  // // TODO: Chunk the inputs to avoid block gas limits in event of larger distros on other chains
   // const tx = await doBulkDistributions(distros);
-
   // fs.writeJSONSync(txPath, tx);
 
   // // Will in memory set distribution id with on chain event logs
-  // parseDistributionLogs(tx, todos);
+  // parseDistributionLogs(tx, getBribesNeedingDistribution);
 
-  // const input = todos.map((dist) => {
+  // const input = getBribesNeedingDistribution.map((dist) => {
   //   return {
   //     bribeId: dist.id,
   //     distributionId: dist.distributionId,
