@@ -26,6 +26,17 @@ mutation SyncVotes($epochStartTime: Int, $blocksToScan: Int) {
   syncGaugeVotes(epochStartTime: $epochStartTime, blocksToScan: $blocksToScan)
 }
 
+query GetClaims($filter: GetBribeClaimsInput!) {
+  getBribeClaims(filter: $filter) {
+    user
+    briber
+    token
+    gauge
+    epochStartTime
+    distributionId
+  }
+}
+
 query GetUserBribeClaims($user: String!) {
   getUserBribeClaims(user: $user) {
     distributionId
@@ -117,8 +128,8 @@ query GetGaugeVotes($filter: GetVotesInput!) {
   }
 }
 
-query GetLiquidityGauges($epoch: Int!) {
-  getLiquidityGauges(epoch: $epoch) {
+query GetLiquidityGauges {
+  getLiquidityGauges {
     id
     address
     symbol

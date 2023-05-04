@@ -13,6 +13,7 @@ import { formatEther, parseUnits } from 'ethers/lib/utils';
 import { doTransaction, getSigner } from './utils/web3.utils';
 import { join } from 'path';
 import { approveTokensIfNeeded } from './utils/token.utils';
+import * as moment from 'moment';
 
 export const epochs = [
   {
@@ -86,8 +87,22 @@ async function bootstrap() {
     console.log('Listening on: ' + port);
   });
 
-  const epoch = 1681948800;
-  const orchard = getMerkleOrchard();
+  // const epoch = 1682553600;
+  // Remember the epoch start thing for bribe syncs
+  // We need to send in week before voting start for initial syncing
+  // Rest of operations should use the actual epochStartTime for the bribe records
+
+  // console.log(await gqlService.sdk.GetGaugeEpochs());
+
+  // const { getCurrentGaugesEpoch: currentBefore } =
+  //   await gqlService.sdk.GetCurrentGaugesEpoch();
+  // console.log(currentBefore);
+
+  // console.log(await gqlService.sdk.SyncEpochs());
+
+  // const { getCurrentGaugesEpoch: epoch } =
+  //   await gqlService.sdk.GetCurrentGaugesEpoch();
+  // console.log(currentAfter);
 
   // console.log(
   //   await gqlService.sdk.SyncEpochVotes({
@@ -95,9 +110,12 @@ async function bootstrap() {
   //   }),
   // );
 
+  // const syncWeekStart = moment.unix(epoch).utc().subtract(1, 'week').unix()
+  // Sync start is the week the bribes were added on chain
+  // The epochStart will be the current epoch week after epochs table is synced/updated
   // console.log(
   //   await gqlService.sdk.SyncEpochBribes({
-  //     epoch,
+  //     epoch: syncWeekStart,
   //   }),
   // );
 

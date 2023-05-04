@@ -46,6 +46,12 @@ export type BribeDistribution = {
   txHash: Scalars['String'];
 };
 
+export type CurrentAndNextEpochBribes = {
+  __typename?: 'CurrentAndNextEpochBribes';
+  currentEpochBribes: Array<Maybe<GaugeBribe>>;
+  nextEpochBribes: Array<Maybe<GaugeBribe>>;
+};
+
 export type EpochBribeInfo = {
   __typename?: 'EpochBribeInfo';
   currentEpochBribes: Array<Maybe<GaugeBribe>>;
@@ -68,17 +74,14 @@ export type GaugeBribe = {
 
 export type GaugeBribeInfo = {
   __typename?: 'GaugeBribeInfo';
-  bribes: Array<Maybe<GaugeBribeRaw>>;
   currentEpochBribes: Array<Maybe<GaugeBribe>>;
-  gauge: LiquidityGauge;
+  gauge: Scalars['String'];
   nextEpochBribes: Array<Maybe<GaugeBribe>>;
-  votes: Array<Maybe<GaugeVoteRaw>>;
 };
 
 export type GaugeBribeRaw = {
   __typename?: 'GaugeBribeRaw';
   amount: Scalars['String'];
-  bribeId: Scalars['Int'];
   briber: Scalars['String'];
   distributionComplete: Scalars['Boolean'];
   distributionId?: Maybe<Scalars['Int']>;
@@ -177,6 +180,14 @@ export type GaugeVoteSyncInfo = {
   blockNumber: Scalars['Int'];
   dateTimeLocale: Scalars['String'];
   dateTimeUTC: Scalars['String'];
+};
+
+export type GetBribeClaimsInput = {
+  briber?: InputMaybe<Scalars['String']>;
+  epochStartTime?: InputMaybe<Scalars['Int']>;
+  gauge?: InputMaybe<Scalars['String']>;
+  token?: InputMaybe<Scalars['String']>;
+  user?: InputMaybe<Scalars['String']>;
 };
 
 export type GetBribesInput = {
@@ -366,6 +377,11 @@ export type GqlPoolBatchSwapSwap = {
   valueUSD: Scalars['Float'];
 };
 
+export type GqlPoolCategory = {
+  __typename?: 'GqlPoolCategory';
+  category?: Maybe<GqlPoolFilterCategory>;
+};
+
 export type GqlPoolDynamicData = {
   __typename?: 'GqlPoolDynamicData';
   apr: GqlPoolApr;
@@ -451,6 +467,7 @@ export type GqlPoolFilter = {
 
 export enum GqlPoolFilterCategory {
   BlackListed = 'BLACK_LISTED',
+  Community = 'COMMUNITY',
   Incentivized = 'INCENTIVIZED',
 }
 
@@ -638,6 +655,7 @@ export type GqlPoolMinimal = {
   __typename?: 'GqlPoolMinimal';
   address: Scalars['Bytes'];
   allTokens: Array<GqlPoolTokenExpanded>;
+  categories: Array<Maybe<GqlPoolCategory>>;
   createTime: Scalars['Int'];
   decimals: Scalars['Int'];
   displayTokens: Array<GqlPoolTokenDisplay>;
@@ -1122,6 +1140,7 @@ export type GqlToken = {
   address: Scalars['String'];
   chainId: Scalars['Int'];
   coingeckoTokenId?: Maybe<Scalars['String']>;
+  currentPrice?: Maybe<GqlTokenCurrentPrice>;
   decimals: Scalars['Int'];
   description?: Maybe<Scalars['String']>;
   discordUrl?: Maybe<Scalars['String']>;
@@ -1155,6 +1174,11 @@ export enum GqlTokenChartDataRange {
   ThirtyDay = 'THIRTY_DAY',
 }
 
+export type GqlTokenCurrentPrice = {
+  __typename?: 'GqlTokenCurrentPrice';
+  price: Scalars['Float'];
+};
+
 export type GqlTokenData = {
   __typename?: 'GqlTokenData';
   description?: Maybe<Scalars['String']>;
@@ -1183,6 +1207,13 @@ export type GqlTokenDynamicData = {
   priceChangePercent30d?: Maybe<Scalars['Float']>;
   tokenAddress: Scalars['String'];
   updatedAt: Scalars['String'];
+};
+
+export type GqlTokenPoolPriceConfig = {
+  __typename?: 'GqlTokenPoolPriceConfig';
+  poolId: Scalars['String'];
+  priceAgainst: GqlToken;
+  token: GqlToken;
 };
 
 export type GqlTokenPrice = {
@@ -1346,6 +1377,7 @@ export type Mutation = {
   poolSyncNewPoolsFromSubgraph: Array<Scalars['String']>;
   poolSyncPool: Scalars['String'];
   poolSyncPoolAllTokensRelationship: Scalars['String'];
+  poolSyncPoolPricingConfigs: Scalars['String'];
   poolSyncSanityPoolData: Scalars['String'];
   poolSyncSwapsForLast48Hours: Scalars['String'];
   poolSyncTotalShares: Scalars['String'];
@@ -1359,20 +1391,18 @@ export type Mutation = {
   setGaugeBribesUserData: Scalars['String'];
   syncAllBribesEpochs: Scalars['String'];
   syncAllGaugeVotes: Scalars['String'];
-  syncBribeDistributions: Scalars['Int'];
-  syncGaugeBribes: Scalars['Int'];
   syncGaugeBribesForEpoch: Scalars['Int'];
   syncGaugeData: Scalars['Boolean'];
   syncGaugeVotes: Scalars['Int'];
   syncGaugesEpoch: Scalars['String'];
-  syncVotesForEpoch: Scalars['Int'];
+  syncVotesForEpoch: Scalars['String'];
+  tokenAddPoolPricingConfigs: Scalars['String'];
   tokenDeletePrice: Scalars['Boolean'];
   tokenDeleteTokenType: Scalars['String'];
   tokenInitChartData: Scalars['String'];
   tokenReloadTokenPrices?: Maybe<Scalars['Boolean']>;
   tokenSyncTokenDefinitions: Scalars['String'];
   tokenSyncTokenDynamicData: Scalars['String'];
-  updateBribeDistributions: Scalars['String'];
   userInitStakedBalances: Scalars['String'];
   userInitWalletBalancesForAllPools: Scalars['String'];
   userInitWalletBalancesForPool: Scalars['String'];
@@ -1411,16 +1441,6 @@ export type MutationSetGaugeBribesUserDataArgs = {
   gauge: Scalars['String'];
 };
 
-export type MutationSyncBribeDistributionsArgs = {
-  distributionWeekStart: Scalars['Int'];
-  votingEpochStart: Scalars['Int'];
-};
-
-export type MutationSyncGaugeBribesArgs = {
-  blocksToScan?: InputMaybe<Scalars['Int']>;
-  forEpoch?: InputMaybe<Scalars['Boolean']>;
-};
-
 export type MutationSyncGaugeBribesForEpochArgs = {
   epoch: Scalars['Int'];
 };
@@ -1432,6 +1452,10 @@ export type MutationSyncGaugeVotesArgs = {
 
 export type MutationSyncVotesForEpochArgs = {
   epoch: Scalars['Int'];
+};
+
+export type MutationTokenAddPoolPricingConfigsArgs = {
+  configs: Array<PoolPricingConfigInput>;
 };
 
 export type MutationTokenDeletePriceArgs = {
@@ -1448,16 +1472,19 @@ export type MutationTokenInitChartDataArgs = {
   tokenAddress: Scalars['String'];
 };
 
-export type MutationUpdateBribeDistributionsArgs = {
-  input: Array<UpdateBribeDistributionsInput>;
-};
-
 export type MutationUserInitWalletBalancesForPoolArgs = {
   poolId: Scalars['String'];
 };
 
 export type MutationUserSyncBalanceArgs = {
   poolId: Scalars['String'];
+};
+
+export type PoolPricingConfigInput = {
+  chainId: Scalars['Int'];
+  poolId: Scalars['String'];
+  pricingTokenAddress: Scalars['String'];
+  tokenAddress: Scalars['String'];
 };
 
 export type Query = {
@@ -1474,17 +1501,22 @@ export type Query = {
   get24HourGaugeFees?: Maybe<Array<Maybe<Scalars['String']>>>;
   getAllGaugeBribes: Array<Maybe<EpochBribeInfo>>;
   getAllGaugesVotingInfo: Scalars['String'];
+  getBribeClaims: Array<Maybe<UserBribeClaim>>;
   getBribes: Array<Maybe<GaugeBribe>>;
   getBribesForEpoch: Array<Maybe<RawBribeClaim>>;
   getBribesNeedingDistribution: Array<Maybe<GaugeBribeRaw>>;
+  getCurrentAndNextEpochBribes: Array<Maybe<GaugeBribeInfo>>;
   getCurrentGaugesEpoch: GaugeEpoch;
   getEpochBribesForGauge: GaugeBribeInfo;
   getGaugeEpochs: Array<Maybe<GaugeEpoch>>;
+  getGaugeNativeApr: Scalars['String'];
   getGaugeVotes: GaugeVoteResult;
-  getLastBribeSyncInfo: GaugeVoteSyncInfo;
-  getLastVoteSyncInfo: GaugeVoteSyncInfo;
+  getGaugeWeeklyTokensPayable: Scalars['String'];
   getLiquidityGauges: Array<Maybe<LiquidityGauge>>;
   getPendingDistributions: Array<Maybe<RawBribeClaim>>;
+  getPoolAprs?: Maybe<GqlPoolApr>;
+  getPoolPricingConfigs: Array<Maybe<GqlTokenPoolPriceConfig>>;
+  getPoolSwapApr: Scalars['Float'];
   getProtocolPoolData: Array<Maybe<GqlProtocolGaugeInfo>>;
   getProtocolTokenList?: Maybe<Array<Maybe<Scalars['String']>>>;
   getRewardPools: Array<Maybe<RewardPool>>;
@@ -1545,6 +1577,10 @@ export type QueryGetAllGaugesVotingInfoArgs = {
   epoch: Scalars['Int'];
 };
 
+export type QueryGetBribeClaimsArgs = {
+  filter: GetBribeClaimsInput;
+};
+
 export type QueryGetBribesArgs = {
   filter: GetBribesInput;
 };
@@ -1562,16 +1598,28 @@ export type QueryGetEpochBribesForGaugeArgs = {
   gauge: Scalars['String'];
 };
 
+export type QueryGetGaugeNativeAprArgs = {
+  gauge: Scalars['String'];
+};
+
 export type QueryGetGaugeVotesArgs = {
   filter: GetVotesInput;
 };
 
-export type QueryGetLiquidityGaugesArgs = {
-  epoch: Scalars['Int'];
+export type QueryGetGaugeWeeklyTokensPayableArgs = {
+  gauge: Scalars['String'];
 };
 
 export type QueryGetPendingDistributionsArgs = {
   epoch: Scalars['Int'];
+};
+
+export type QueryGetPoolAprsArgs = {
+  poolId: Scalars['String'];
+};
+
+export type QueryGetPoolSwapAprArgs = {
+  poolId: Scalars['String'];
 };
 
 export type QueryGetRewardPoolsArgs = {
@@ -1821,6 +1869,7 @@ export type UserBribeClaim = {
   merkleProof: Array<Scalars['String']>;
   pool: GqlPoolMinimal;
   token: Scalars['String'];
+  user: Scalars['String'];
   valueUSD: Scalars['Float'];
 };
 
@@ -1899,7 +1948,7 @@ export type SyncEpochVotesMutationVariables = Exact<{
 
 export type SyncEpochVotesMutation = {
   __typename?: 'Mutation';
-  syncVotesForEpoch: number;
+  syncVotesForEpoch: string;
 };
 
 export type SyncVotesMutationVariables = Exact<{
@@ -1910,6 +1959,23 @@ export type SyncVotesMutationVariables = Exact<{
 export type SyncVotesMutation = {
   __typename?: 'Mutation';
   syncGaugeVotes: number;
+};
+
+export type GetClaimsQueryVariables = Exact<{
+  filter: GetBribeClaimsInput;
+}>;
+
+export type GetClaimsQuery = {
+  __typename?: 'Query';
+  getBribeClaims: Array<{
+    __typename?: 'UserBribeClaim';
+    user: string;
+    briber: string;
+    token: string;
+    gauge: string;
+    epochStartTime: number;
+    distributionId?: string | null;
+  } | null>;
 };
 
 export type GetUserBribeClaimsQueryVariables = Exact<{
@@ -2078,9 +2144,7 @@ export type GetGaugeVotesQuery = {
   };
 };
 
-export type GetLiquidityGaugesQueryVariables = Exact<{
-  epoch: Scalars['Int'];
-}>;
+export type GetLiquidityGaugesQueryVariables = Exact<{ [key: string]: never }>;
 
 export type GetLiquidityGaugesQuery = {
   __typename?: 'Query';
@@ -2220,6 +2284,18 @@ export const SyncVotesDocument = gql`
     syncGaugeVotes(epochStartTime: $epochStartTime, blocksToScan: $blocksToScan)
   }
 `;
+export const GetClaimsDocument = gql`
+  query GetClaims($filter: GetBribeClaimsInput!) {
+    getBribeClaims(filter: $filter) {
+      user
+      briber
+      token
+      gauge
+      epochStartTime
+      distributionId
+    }
+  }
+`;
 export const GetUserBribeClaimsDocument = gql`
   query GetUserBribeClaims($user: String!) {
     getUserBribeClaims(user: $user) {
@@ -2323,8 +2399,8 @@ export const GetGaugeVotesDocument = gql`
   }
 `;
 export const GetLiquidityGaugesDocument = gql`
-  query GetLiquidityGauges($epoch: Int!) {
-    getLiquidityGauges(epoch: $epoch) {
+  query GetLiquidityGauges {
+    getLiquidityGauges {
       id
       address
       symbol
@@ -2464,6 +2540,20 @@ export function getSdk(
         'mutation',
       );
     },
+    GetClaims(
+      variables: GetClaimsQueryVariables,
+      requestHeaders?: Dom.RequestInit['headers'],
+    ): Promise<GetClaimsQuery> {
+      return withWrapper(
+        (wrappedRequestHeaders) =>
+          client.request<GetClaimsQuery>(GetClaimsDocument, variables, {
+            ...requestHeaders,
+            ...wrappedRequestHeaders,
+          }),
+        'GetClaims',
+        'query',
+      );
+    },
     GetUserBribeClaims(
       variables: GetUserBribeClaimsQueryVariables,
       requestHeaders?: Dom.RequestInit['headers'],
@@ -2597,7 +2687,7 @@ export function getSdk(
       );
     },
     GetLiquidityGauges(
-      variables: GetLiquidityGaugesQueryVariables,
+      variables?: GetLiquidityGaugesQueryVariables,
       requestHeaders?: Dom.RequestInit['headers'],
     ): Promise<GetLiquidityGaugesQuery> {
       return withWrapper(
