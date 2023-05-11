@@ -14,64 +14,8 @@ import { doTransaction, getSigner } from './utils/web3.utils';
 import { join } from 'path';
 import { approveTokensIfNeeded } from './utils/token.utils';
 import * as moment from 'moment';
-
-export const epochs = [
-  {
-    epoch: 1674691200,
-    date: '2023-01-26T00:00:00Z',
-    blockNumber: 25105746,
-  },
-  {
-    epoch: 1675296000,
-    date: '2023-02-02T00:00:00Z',
-    blockNumber: 25304047,
-  },
-  {
-    epoch: 1675900800,
-    date: '2023-02-09T00:00:00Z',
-    blockNumber: 25502597,
-  },
-  {
-    epoch: 1676505600,
-    date: '2023-02-16T00:00:00Z',
-    blockNumber: 25702292,
-  },
-  {
-    epoch: 1677110400, // First epoch bribes were able to be created and then voted for starting at 1677715200
-    date: '2023-02-23T00:00:00Z',
-    blockNumber: 25901363,
-  },
-  {
-    epoch: 1677715200,
-    date: '2023-03-02T00:00:00Z',
-    blockNumber: 26100819,
-  },
-  {
-    epoch: 1678320000,
-    date: '2023-03-09T00:00:00Z',
-    blockNumber: 26300371,
-  },
-  {
-    epoch: 1678924800,
-    date: '2023-03-16T00:00:00Z',
-    blockNumber: 26499942,
-  },
-  {
-    epoch: 1679529600,
-    date: '2023-03-23T00:00:00Z',
-    blockNumber: 26699047,
-  },
-  {
-    epoch: 1680134400,
-    date: '2023-03-30T00:00:00Z',
-    blockNumber: 26898870,
-  },
-  {
-    epoch: 1680739200,
-    date: '2023-04-06T00:00:00Z',
-    blockNumber: 0,
-  },
-];
+import * as schedule from 'node-schedule';
+import { logger } from './utils/logger';
 
 async function bootstrap() {
   // App service will load env vars itself
@@ -87,50 +31,109 @@ async function bootstrap() {
     console.log('Listening on: ' + port);
   });
 
-  // const epoch = 1682553600;
+  await runEpochSyncs();
+
+  // // Wednesdays 8PM EST = 12:00AM UTC (on chain uses UTC timestamps)
+  // const syncRule = new schedule.RecurrenceRule();
+  // syncRule.dayOfWeek = 3; // Wednesday
+  // syncRule.hour = 20; // 8PM EST (0 - 23 hours)
+  // syncRule.minute = 1;
+
+  // schedule.scheduleJob(syncRule, async function () {
+  //   try {
+  //     logger.info(`Starting sync job: ${moment().utc().format()}`);
+  //     await runEpochSyncs();
+
+  //     logger.success(
+  //       `Sync jobs completed successfully: ${moment().utc().format()}`,
+  //     );
+  //   } catch (error) {
+  //     console.log(error);
+  //     console.log('Epoch syncs failed.....');
+  //   }
+  // });
+
+  // logger.success(
+  //   `Sync jobs scheduled: Current UTC time ${moment().utc().format()}`,
+  // );
+}
+
+bootstrap();
+
+async function runEpochSyncs() {
   // Remember the epoch start thing for bribe syncs
   // We need to send in week before voting start for initial syncing
   // Rest of operations should use the actual epochStartTime for the bribe records
 
-  // console.log(await gqlService.sdk.GetGaugeEpochs());
+  // @note GAUGE AUTOMATION MUST RUN BEFORE THIS TO UPDATE CONTROLLER EPOCH
+  // console.log(await gqlService.sdk.SyncEpochs());
 
-  // const { getCurrentGaugesEpoch: currentBefore } =
-  //   await gqlService.sdk.GetCurrentGaugesEpoch();
-  // console.log(currentBefore);
+  // const { getGaugeEpochs } = await gqlService.sdk.GetGaugeEpochs();
+  // const syncStartEpoch = getGaugeEpochs[getGaugeEpochs.length - 4];
+  // const voteStartEpoch = getGaugeEpochs[getGaugeEpochs.length - 3];
+  // console.log(getGaugeEpochs);
+  // console.log('syncStartEpoch:');
+  // console.log(syncStartEpoch);
+  // console.log('voteStartEpoch:');
+  // console.log(voteStartEpoch);
 
   // console.log(await gqlService.sdk.SyncEpochs());
 
-  // const { getCurrentGaugesEpoch: epoch } =
-  //   await gqlService.sdk.GetCurrentGaugesEpoch();
-  // console.log(currentAfter);
+  // @note GAUGE AUTOMATION MUST RUN BEFORE THIS TO UPDATE CONTROLLER EPOCH
+  const { getCurrentGaugesEpoch: currentEpoch } =
+    await gqlService.sdk.GetCurrentGaugesEpoch();
+  // console.log(`Current epoch: `);
+  // console.log(currentEpoch);
+
+  // @note GAUGE AUTOMATION MUST RUN BEFORE THIS TO UPDATE CONTROLLER EPOCH
+  // We're getting votes from previous week (after epochs sync update)
+  const lastVotingWeek = moment
+    .unix(currentEpoch.epoch)
+    .utc()
+    .subtract(1, 'week')
+    .unix();
+
+  // console.log(lastVotingWeek);
+
+  const bribesAddedWeek = moment
+    .unix(currentEpoch.epoch)
+    .utc()
+    .subtract(2, 'week')
+    .unix();
+
+  // Syncing bribes ADDED week start of 2023-04-27T00:00:00Z (1682553600)
+  // Voting for these bribes starts: 2023-05-04T00:00:00Z (1683158400)
+  // console.log(bribesAddedWeek); // 1682553600
 
   // console.log(
   //   await gqlService.sdk.SyncEpochVotes({
-  //     epoch,
+  //     epoch: lastVotingWeek,
   //   }),
   // );
 
-  // const syncWeekStart = moment.unix(epoch).utc().subtract(1, 'week').unix()
   // Sync start is the week the bribes were added on chain
-  // The epochStart will be the current epoch week after epochs table is synced/updated
   // console.log(
   //   await gqlService.sdk.SyncEpochBribes({
-  //     epoch: syncWeekStart,
+  //     epoch: bribesAddedWeek,
   //   }),
   // );
 
   // console.log(
   //   await gqlService.sdk.GenerateAllGaugesVotingEpochInfo({
-  //     epoch,
+  //     epoch: lastVotingWeek,
   //   }),
   // );
 
   // const { getBribesNeedingDistribution } =
   //   await gqlService.sdk.GetBribesNeedingDistribution({
-  //     epoch,
+  //     epoch: lastVotingWeek,
   //   });
+  // console.log(getBribesNeedingDistribution);
 
-  // const txPath = join(process.cwd(), `src/data/distributions/${epoch}.json`);
+  // const txPath = join(
+  //   process.cwd(),
+  //   `src/data/distributions/${lastVotingWeek}.json`,
+  // );
   // const distros = getDistributionInfoForBribes(getBribesNeedingDistribution);
   // // TODO: Chunk the inputs to avoid block gas limits in event of larger distros on other chains
   // const tx = await doBulkDistributions(distros);
@@ -152,8 +155,6 @@ async function bootstrap() {
   //   }),
   // );
 }
-
-bootstrap();
 
 async function doBulkDistributions(
   distributions: {
